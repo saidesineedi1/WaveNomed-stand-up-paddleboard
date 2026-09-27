@@ -1,232 +1,585 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Silver Hoof Stables</title>
+  <title>Contact &amp; Concierge | WaveNomad Stand-Up Paddleboard Adventures</title>
   <meta name="description"
-    content="Get in touch with Silver Hoof Stables. Contact our equestrian team for riding lessons, trail ride bookings, horse boarding, and facility tours.">
+    content="Connect with WaveNomad for rental enquiries, private instruction, guided lake tours, group expeditions, and personalized adventure concierge planning.">
+  <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/jpeg" href="favicon.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<link rel="stylesheet" href="index.css">
-  
-<link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
 </head>
 
-<body>
+<body class="contact-page-body">
 
-<header class="header" id="header">
-    <div class="container header-container">
+  <header class="site-header" id="site-header">
+    <div class="header-container">
 
-<a href="index.html" class="brand-logo">
-        <div class="logo-icon">
-          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+      <a href="index.html" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
+        <div class="brand-emblem-circle">
+          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
+              stroke-width="2" stroke-linejoin="round" />
+            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" />
+          </svg>
         </div>
-        <div class="brand-text">
-          <span class="brand-name">SILVER HOOF</span>
-          <span class="brand-sub">STABLES</span>
+        <div class="brand-text-group">
+          <span class="brand-name">WaveNomad</span>
+          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
         </div>
       </a>
 
-<nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item dropdown">
-            <a href="index.html" class="nav-link" id="home-dropdown-btn">
-              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+
+          <li class="nav-item dropdown" id="home-dropdown-item">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
             </a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
-              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            <ul class="dropdown-menu" id="home-dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="home1-option">
+                  <div class="dropdown-title">
+                    <span>Home 1: Classic</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="home2-option">
+                  <div class="dropdown-title">
+                    <span>Home 2: Premium</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
+                </a>
+              </li>
             </ul>
           </li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
-          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
-          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
-          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
-          <li class="nav-login-item">
-            <button class="btn btn-primary" onclick="openLoginModal()">
-              <i class="fa-solid fa-user"></i> Login
-            </button>
+
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link" id="nav-rentals-link">Rentals</a>
           </li>
+
+          <li class="nav-item">
+            <a href="lessons.html" class="nav-link" id="nav-lessons-link">Lessons &amp; Tours</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active" id="nav-contact-link" aria-current="page">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          </li>
+
         </ul>
       </nav>
 
-<div class="header-actions">
-        
-        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
-          <span class="btn-label">RTL</span>
+      <div class="header-actions">
+
+        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Light / Dark Mode">
+          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
 
-<button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
+          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
+          <span class="rtl-opt rtl-opt-ltr">LTR</span>
+          <span class="rtl-opt rtl-opt-rtl">RTL</span>
+          <span id="lang-label" style="display: none;">LTR</span>
         </button>
 
-<button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
-          <i class="fa-solid fa-user"></i> Login
+        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
+          <span>Login</span>
         </button>
 
-<button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-          <i class="fa-solid fa-bars"></i>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
 
     </div>
   </header>
 
-<main>
+  <main id="main-content">
 
-<section class="contact-hero-section">
-      <div class="contact-hero-bg" style="background-image: url('images/hero2_ranch_sunset.jpg');"></div>
-      <div class="contact-hero-overlay"></div>
+    <section class="hero-section contact-hero-section" id="hero-contact">
 
-      <div class="container contact-hero-container">
+      <div class="hero-canvas" aria-hidden="true">
+        <img class="hero-bg-img hero-bg-light" src="assets/images/contact-shoreline-hero.jpg"
+          alt="Calm pristine alpine lake shoreline with stand-up paddleboard resting in clear water"
+          fetchpriority="high">
+        <img class="hero-bg-img hero-bg-dark" src="assets/images/hero-dark.jpg"
+          alt="Peaceful alpine lake shoreline at twilight with gentle water reflections" loading="lazy">
+        <div class="hero-overlay-mask contact-hero-mask"></div>
+      </div>
 
-<div class="contact-hero-grid">
+      <div class="hero-inner contact-hero-inner">
 
-<div class="contact-hero-text-col">
-            <div class="gold-divider-wrap">
-              <span class="gold-line"></span>
-              <span class="hero-welcome">CONNECT WITH OUR STABLES</span>
-              <span class="gold-line"></span>
+        <div class="hero-content contact-hero-content">
+
+          <div class="hero-eyebrow-text contact-eyebrow">
+            <span>CONNECT &nbsp;·&nbsp; ASK &nbsp;·&nbsp; EXPLORE</span>
+          </div>
+
+          <h1 class="hero-headline font-serif contact-hero-title">
+            <span class="headline-word">Let's Get You</span>
+            <span class="headline-word highlight-accent">on the Water.</span>
+          </h1>
+
+          <p class="hero-description font-sans contact-hero-desc">
+            Have a question about rentals, lessons, tours, or your next paddleboarding experience? We're here to help.
+          </p>
+
+          <div class="hero-actions contact-hero-actions">
+            <a href="#contact-planning" class="cta-pill-primary" id="hero-start-conversation-btn">
+              <span>Start a Conversation</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#meet-us" class="cta-pill-secondary" id="hero-meet-water-btn">
+              <svg class="cta-pin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Visit the Pier</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="contact-hero-stage" id="contact-ripple-stage">
+          <div class="shoreline-ripple-wrapper" id="shoreline-ripple-container">
+            <div class="water-ripple ripple-ring-1" aria-hidden="true"></div>
+            <div class="water-ripple ripple-ring-2" aria-hidden="true"></div>
+            <div class="water-ripple ripple-ring-3" aria-hidden="true"></div>
+            <div class="water-ripple ripple-ring-core" aria-hidden="true"></div>
+
+            <div class="ripple-topic-pill pill-rentals" data-topic="Rental" role="button" tabindex="0"
+              aria-label="Enquire about Rentals">
+              <span class="topic-dot"></span>
+              <span class="topic-name">RENTALS</span>
             </div>
 
-            <h1 class="contact-hero-title">
-              We’re Here to Help You<br>
-              <span class="contact-hero-accent">Saddle Up &amp; Ride.</span>
-            </h1>
+            <div class="ripple-topic-pill pill-lessons" data-topic="Lesson" role="button" tabindex="0"
+              aria-label="Enquire about Lessons">
+              <span class="topic-dot"></span>
+              <span class="topic-name">LESSONS</span>
+            </div>
 
-            <p class="contact-hero-subtitle">
-              Have questions about riding lessons, scenic trail excursions, luxury horse boarding, or scheduling a private stable tour? Our dedicated equestrian advisors are ready to assist you.
+            <div class="ripple-topic-pill pill-tours" data-topic="Tour" role="button" tabindex="0"
+              aria-label="Enquire about Tours">
+              <span class="topic-dot"></span>
+              <span class="topic-name">TOURS</span>
+            </div>
+
+            <div class="ripple-topic-pill pill-questions" data-topic="General Question" role="button" tabindex="0"
+              aria-label="Ask General Questions">
+              <span class="topic-dot"></span>
+              <span class="topic-name">QUESTIONS</span>
+            </div>
+
+            <div class="ripple-center-beacon">
+              <span class="beacon-coords">39.165° N · 120.032° W</span>
+              <span class="beacon-label">SHORELINE CONCIERGE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div class="bottom-bar-left">
+          <svg class="sine-wave-svg" viewBox="0 0 100 20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M0 10 Q12.5 0 25 10 T50 10 T75 10 T100 10" />
+          </svg>
+          <span class="bottom-bar-tagline">PERSONAL CONNECTION &nbsp;·&nbsp; PREMIUM CONCIERGE</span>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <section class="contact-section-wrap contact-options-section" id="how-can-we-help">
+      <div class="contact-container">
+
+        <div class="section-title-wrap">
+          <span class="contact-eyebrow">COMMUNICATION CHANNELS</span>
+          <h2 class="contact-headline">How Can We Help?</h2>
+          <p class="contact-lead-desc">
+            Select a pathway below to connect directly with the appropriate specialist on our dockside team.
+          </p>
+        </div>
+
+        <div class="contact-options-grid">
+
+          <article class="contact-panel-card" data-topic="Rental" tabindex="0" role="button"
+            aria-label="Option 01: Rentals - Questions about boards, availability, pricing, or rental durations">
+            <div class="panel-image-canvas">
+              <img src="assets/images/rentals-fleet.jpg" alt="WaveNomad handcrafted SUP fleet lined up along shoreline"
+                class="panel-bg-img" loading="lazy">
+              <div class="panel-vignette-overlay"></div>
+              <div class="panel-ripple-cue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="panel-cue-icon">
+                  <path d="M4 20L20 4"/>
+                  <path d="M9.5 4.5C9.5 4.5 11 3 13 3s3.5 1.5 3.5 3.5S15 10 13 10s-3.5-2-3.5-2"/>
+                  <circle cx="6.5" cy="17.5" r="2.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="panel-content-body">
+              <div class="panel-header-row">
+                <span class="panel-index">01</span>
+                <span class="panel-tag">FLEET &amp; DOCK AVAILABILITY</span>
+              </div>
+              <h3 class="panel-title">Rentals</h3>
+              <p class="panel-desc">
+                Questions about boards, availability, pricing, or rental durations.
+              </p>
+              <div class="panel-cta-link">
+                <span>Talk About Rentals</span>
+                <svg class="panel-arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="contact-panel-card" data-topic="Lesson" tabindex="0" role="button"
+            aria-label="Option 02: Lessons - Looking for beginner instruction, private coaching, or group sessions?">
+            <div class="panel-image-canvas">
+              <img src="assets/images/lessons-tour.jpg" alt="Certified instructor coaching students on calm waters"
+                class="panel-bg-img" loading="lazy">
+              <div class="panel-vignette-overlay"></div>
+              <div class="panel-ripple-cue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="panel-cue-icon">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="panel-content-body">
+              <div class="panel-header-row">
+                <span class="panel-index">02</span>
+                <span class="panel-tag">PSUPA INSTRUCTION</span>
+              </div>
+              <h3 class="panel-title">Lessons</h3>
+              <p class="panel-desc">
+                Looking for beginner instruction, private coaching, or group sessions?
+              </p>
+              <div class="panel-cta-link">
+                <span>Ask About Lessons</span>
+                <svg class="panel-arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="contact-panel-card" data-topic="Tour" tabindex="0" role="button"
+            aria-label="Option 03: Tours - Interested in scenic paddles, sunset sessions, or guided adventures?">
+            <div class="panel-image-canvas">
+              <img src="assets/images/moment-sunset-glow.jpg" alt="Paddler gliding on golden sunset glassy water"
+                class="panel-bg-img" loading="lazy">
+              <div class="panel-vignette-overlay"></div>
+              <div class="panel-ripple-cue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="panel-cue-icon">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </div>
+            </div>
+            <div class="panel-content-body">
+              <div class="panel-header-row">
+                <span class="panel-index">03</span>
+                <span class="panel-tag">GUIDED EXPEDITIONS</span>
+              </div>
+              <h3 class="panel-title">Tours</h3>
+              <p class="panel-desc">
+                Interested in scenic paddles, sunset sessions, or guided adventures?
+              </p>
+              <div class="panel-cta-link">
+                <span>Explore Tour Questions</span>
+                <svg class="panel-arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="contact-panel-card" data-topic="Something Else" tabindex="0" role="button"
+            aria-label="Option 04: Something Else - Have another question? We'd love to hear from you.">
+            <div class="panel-image-canvas">
+              <img src="assets/images/moment-cove-explore.jpg" alt="Secluded emerald cove along pine-fringed shoreline"
+                class="panel-bg-img" loading="lazy">
+              <div class="panel-vignette-overlay"></div>
+              <div class="panel-ripple-cue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="panel-cue-icon">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="panel-content-body">
+              <div class="panel-header-row">
+                <span class="panel-index">04</span>
+                <span class="panel-tag">GENERAL &amp; CONCIERGE</span>
+              </div>
+              <h3 class="panel-title">Something Else</h3>
+              <p class="panel-desc">
+                Have another question? We'd love to hear from you.
+              </p>
+              <div class="panel-cta-link">
+                <span>Start a Conversation</span>
+                <svg class="panel-arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="contact-section-wrap alt-bg planning-experience-section" id="contact-planning">
+      <div class="contact-container">
+
+        <div class="planning-split-grid">
+
+          <div class="planning-editorial-column">
+            <span class="contact-eyebrow">DEDICATED CONCIERGE</span>
+            <h2 class="planning-main-headline font-serif">
+              Tell Us What You're Planning.
+            </h2>
+            <p class="planning-lead-text font-sans">
+              Whether you're choosing your first board, planning a guided tour, or simply have a question, send us a
+              note
+              and our team will get back to you.
             </p>
 
-<div class="contact-hero-cta-btns">
-              <a href="#contact-page-form" class="btn btn-primary" id="contact-hero-msg-btn">
-                <i class="fa-solid fa-paper-plane"></i> Send Direct Message
-              </a>
-              <a href="tel:18005554663" class="btn btn-outline-hero" id="contact-hero-call-btn">
-                <i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF
-              </a>
+            <div class="planning-info-blocks">
+
+              <div class="info-block-item">
+                <div class="info-block-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-label">TYPICAL RESPONSE</span>
+                  <span class="info-value">Within 1 business day</span>
+                </div>
+              </div>
+
+              <div class="info-block-item">
+                <div class="info-block-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-label">AVAILABLE FOR</span>
+                  <span class="info-value">Rentals · Lessons · Tours</span>
+                </div>
+              </div>
+
+              <div class="info-block-item">
+                <div class="info-block-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="info-block-content">
+                  <span class="info-label">BEST FOR</span>
+                  <span class="info-value">Trip planning · Questions · Group enquiries</span>
+                </div>
+              </div>
+
             </div>
 
-<div class="contact-hero-stats">
-              <div class="contact-stat">
-                <span class="stat-num"><i class="fa-solid fa-location-dot"></i></span>
-                <span class="stat-lbl">Rolling Hills, CA</span>
+            <div class="concierge-guarantee-note">
+              <div class="guarantee-emblem">
+                <span>WN</span>
               </div>
-              <div class="stat-line"></div>
-              <div class="contact-stat">
-                <span class="stat-num">2-4 Hrs</span>
-                <span class="stat-lbl">Fast Response</span>
-              </div>
-              <div class="stat-line"></div>
-              <div class="contact-stat">
-                <span class="stat-num">7 Days</span>
-                <span class="stat-lbl">Visitor Center</span>
-              </div>
-              <div class="stat-line"></div>
-              <div class="contact-stat">
-                <span class="stat-num">100%</span>
-                <span class="stat-lbl">Dedicated Care</span>
-              </div>
+              <p class="guarantee-quote">
+                "We paddle the lake daily. When you write to us, you receive local, honest advice tailored to the
+                conditions and your skill level."
+              </p>
             </div>
           </div>
 
-<div class="contact-hero-media-col">
-            <div class="hero-quad-composition">
+          <div class="planning-form-column">
+            <div class="floating-form-card" id="contact-form-wrapper">
 
-<div class="hero-quad-ambient-glow"></div>
-
-<div class="quad-cards-grid">
-
-<div class="quad-card card-top-left">
-                  <div class="image-frame-wrapper">
-                    <img src="images/our_story_ranch.jpg" alt="Silver Hoof Stables Historic Grounds" class="quad-img">
-                    <div class="image-overlay-tint"></div>
-                  </div>
-                  
-                  <div class="quad-badge badge-top-left">
-                    <div class="badge-icon-wrap">
-                      <i class="fa-solid fa-landmark"></i>
-                    </div>
-                    <div class="badge-text-wrap">
-                      <span class="badge-title">Sanctuary Grounds</span>
-                      <span class="badge-caption">45 Pristine Acres</span>
-                    </div>
-                  </div>
-                </div>
-
-<div class="quad-card card-top-right">
-                  <div class="image-frame-wrapper">
-                    <img src="images/instructor_marcus.jpg" alt="Silver Hoof Master Trainer Coach Marcus" class="quad-img">
-                    <div class="image-overlay-tint"></div>
-                  </div>
-                  
-                  <div class="quad-badge badge-top-right">
-                    <div class="badge-icon-wrap gold-glow">
-                      <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <div class="badge-text-wrap">
-                      <span class="badge-title">Master Trainers</span>
-                      <span class="badge-caption">Direct Guidance</span>
-                    </div>
-                  </div>
-                </div>
-
-<div class="quad-card card-bottom-left">
-                  <div class="image-frame-wrapper">
-                    <img src="images/gallery_stable_bonding.jpg" alt="VIP Stable Bonding & Horse Care" class="quad-img">
-                    <div class="image-overlay-tint"></div>
-                  </div>
-                  
-                  <div class="quad-badge badge-bottom-left">
-                    <div class="badge-icon-wrap">
-                      <i class="fa-solid fa-building-wheat"></i>
-                    </div>
-                    <div class="badge-text-wrap">
-                      <span class="badge-title">VIP Stable Tours</span>
-                      <span class="badge-caption">Daily 8am - 6pm</span>
-                    </div>
-                  </div>
-                </div>
-
-<div class="quad-card card-bottom-right">
-                  <div class="image-frame-wrapper">
-                    <img src="images/hero2_rider_portrait.jpg" alt="5-Star Concierge Rider Care" class="quad-img">
-                    <div class="image-overlay-tint"></div>
-                  </div>
-                  
-                  <div class="quad-badge badge-bottom-right">
-                    <div class="stars-row">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <span class="badge-title">5.0 Star Rated</span>
-                    <span class="badge-caption">Concierge Care</span>
-                  </div>
-                </div>
-
+              <div class="form-card-header">
+                <span class="form-eyebrow">MESSAGE OUR CONCIERGE</span>
+                <h3 class="form-title">Send a Direct Note</h3>
+                <p class="form-sub">Fill in the details below and we'll craft your personalized itinerary.</p>
               </div>
 
-<div class="quad-center-badge">
-                <i class="fa-solid fa-shield-halved icon-gold"></i>
-                <span>Concierge Equestrian Care</span>
-              </div>
+              <form id="contact-planning-form" class="floating-contact-form" novalidate>
 
-<div class="hero-quad-geometric-accent"></div>
+                <div class="form-field-group">
+                  <input type="text" id="contact-full-name" name="fullName" class="floating-input" required
+                    placeholder=" " autocomplete="name">
+                  <label for="contact-full-name" class="floating-label">Full Name *</label>
+                  <span class="field-ripple-highlight" aria-hidden="true"></span>
+                  <span class="field-error-msg" id="name-error-msg">Please enter your full name.</span>
+                </div>
+
+                <div class="form-field-group">
+                  <input type="email" id="contact-email" name="email" class="floating-input" required placeholder=" "
+                    autocomplete="email">
+                  <label for="contact-email" class="floating-label">Email Address *</label>
+                  <span class="field-ripple-highlight" aria-hidden="true"></span>
+                  <span class="field-error-msg" id="email-error-msg">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-field-group">
+                  <input type="tel" id="contact-phone" name="phone" class="floating-input" placeholder=" "
+                    autocomplete="tel">
+                  <label for="contact-phone" class="floating-label">Phone Number (Optional)</label>
+                  <span class="field-ripple-highlight" aria-hidden="true"></span>
+                </div>
+
+                <div class="form-field-row">
+
+                  <div class="form-field-group">
+                    <select id="contact-topic" name="topic" class="floating-select" required>
+                      <option value="" disabled selected hidden></option>
+                      <option value="Rental">Rental</option>
+                      <option value="Lesson">Lesson</option>
+                      <option value="Tour">Tour</option>
+                      <option value="Group Experience">Group Experience</option>
+                      <option value="General Question">General Question</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <label for="contact-topic" class="floating-label select-label">What can we help with? *</label>
+                    <svg class="select-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="field-ripple-highlight" aria-hidden="true"></span>
+                    <span class="field-error-msg" id="topic-error-msg">Please select an enquiry category.</span>
+                  </div>
+
+                  <div class="form-field-group">
+                    <input type="date" id="contact-date" name="preferredDate" class="floating-input date-input"
+                      placeholder=" ">
+                    <label for="contact-date" class="floating-label date-label">Preferred Date (Optional)</label>
+                    <span class="field-ripple-highlight" aria-hidden="true"></span>
+                  </div>
+
+                </div>
+
+                <div class="form-field-group textarea-group">
+                  <textarea id="contact-message" name="message" class="floating-textarea" rows="4" required
+                    placeholder=" "></textarea>
+                  <label for="contact-message" class="floating-label">How can we assist your water journey? *</label>
+                  <span class="field-ripple-highlight" aria-hidden="true"></span>
+                  <span class="field-error-msg" id="msg-error-msg">Please share a brief note about your request.</span>
+                </div>
+
+                <button type="submit" class="cta-pill-primary form-submit-btn" id="contact-submit-btn">
+                  <span class="btn-text">Send Your Message</span>
+                  <span class="cta-arrow" aria-hidden="true">→</span>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+
+                <span class="form-privacy-note">
+                  We respect your privacy. No spam — only personalized paddle adventure correspondence.
+                </span>
+
+              </form>
+
+              <div class="form-success-card" id="form-success-state" style="display: none;" role="status"
+                aria-live="polite">
+                <div class="success-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" class="success-checkmark">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <span class="success-eyebrow">MESSAGE RECEIVED</span>
+                <h4 class="success-title">Thank you for reaching out.</h4>
+                <p class="success-desc">
+                  We'll be in touch soon with tailored recommendations and answers to your questions.
+                </p>
+                <div class="success-receipt-pill">
+                  <span>✓ Your message has been received</span>
+                </div>
+                <button type="button" class="btn-send-another" id="btn-send-another">
+                  <span>Send Another Note</span>
+                </button>
+              </div>
 
             </div>
           </div>
@@ -236,296 +589,174 @@
       </div>
     </section>
 
-<section class="section contact-main-section">
-      <div class="container">
 
-        <div class="section-header text-center">
-          <div class="section-tag-row center">
-            <div class="section-tag">
-              <span class="tag-line"></span>
-              GET IN TOUCH
-              <span class="tag-line"></span>
-            </div>
-          </div>
-          <h2 class="section-title">Send Us a Message or Visit</h2>
-          <p class="section-description">
-            Our friendly equestrian advisors typically respond within 2 to 4 business hours.
+    <section class="contact-section-wrap location-water-section" id="meet-us">
+      <div class="contact-container">
+
+        <div class="section-title-wrap">
+          <span class="contact-eyebrow">THE SHORELINE BASECAMP</span>
+          <h2 class="contact-headline">Meet Us by the Water.</h2>
+          <p class="contact-lead-desc">
+            Located directly on the quiet shoreline of Emerald Basin with dedicated launch docks and private valet
+            parking.
           </p>
         </div>
 
-        <div class="contact-split-grid">
+        <div class="location-split-stage">
 
-<div class="contact-form-card">
-            <h3 class="form-card-title"><i class="fa-solid fa-paper-plane icon-gold"></i> Direct Message Form</h3>
-            <p class="form-card-sub">Fill out the fields below and we'll reach out promptly.</p>
+          <div class="minimal-map-canvas-card" id="waterfront-map-card">
+            <svg class="stylized-map-svg" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Stylized map showing WaveNomad location at Emerald Basin Pier 4">
+              <path class="map-water-body"
+                d="M0,0 L600,0 L600,320 C520,310 440,290 380,310 C320,330 260,370 190,360 C120,350 60,390 0,400 Z"
+                fill="currentColor" />
 
-            <form id="contact-page-form" onsubmit="handleContactPageSubmit(event)">
-              <div class="form-group-row">
-                <div class="form-group">
-                  <label for="c-name">Full Name *</label>
-                  <input type="text" id="c-name" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                  <label for="c-email">Email Address *</label>
-                  <input type="email" id="c-email" placeholder="john@example.com" required>
-                </div>
+              <path class="map-shoreline"
+                d="M0,400 C60,390 120,350 190,360 C260,370 320,330 380,310 C440,290 520,310 600,320"
+                stroke="var(--primary-accent)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4" />
+
+              <ellipse cx="280" cy="180" rx="140" ry="60" stroke="currentColor" stroke-opacity="0.12"
+                stroke-width="1.5" />
+              <ellipse cx="280" cy="180" rx="220" ry="95" stroke="currentColor" stroke-opacity="0.08"
+                stroke-width="1.5" />
+
+              <rect x="274" y="270" width="12" height="60" rx="2" fill="var(--primary-accent)" fill-opacity="0.4"
+                stroke="var(--primary-accent)" stroke-width="1.5" />
+              <line x1="264" y1="290" x2="296" y2="290" stroke="var(--primary-accent)" stroke-width="2" />
+              <line x1="264" y1="310" x2="296" y2="310" stroke="var(--primary-accent)" stroke-width="2" />
+
+              <path class="map-route-line" id="map-route-path"
+                d="M80,430 C120,410 180,410 240,380 C270,365 280,345 280,325" fill="none" stroke="var(--primary-accent)"
+                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+              <g class="map-location-marker" transform="translate(280, 265)">
+                <circle class="marker-pulse-ring-1" cx="0" cy="0" r="28" fill="none" stroke="var(--primary-accent)"
+                  stroke-width="1.5" />
+                <circle class="marker-pulse-ring-2" cx="0" cy="0" r="16" fill="none" stroke="var(--primary-accent)"
+                  stroke-width="2" />
+                <circle class="marker-center-dot" cx="0" cy="0" r="7" fill="var(--primary-accent)" />
+              </g>
+
+              <path d="M120,130 Q160,115 200,130" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M360,110 Q400,95 440,110" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"
+                stroke-linecap="round" />
+              <path d="M220,90 Q260,75 300,90" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+
+            <div class="map-hud-overlay">
+              <div class="map-hud-badge">
+                <span class="hud-live-pulse"></span>
+                <span>PIER 4 DOCKSIDE BASECAMP</span>
               </div>
-
-              <div class="form-group-row">
-                <div class="form-group">
-                  <label for="c-phone">Phone Number *</label>
-                  <input type="tel" id="c-phone" placeholder="+1 (555) 000-0000" required>
-                </div>
-                <div class="form-group">
-                  <label for="c-inquiry">Inquiry Category *</label>
-                  <select id="c-inquiry" required>
-                    <option value="Riding Lessons">Riding Lessons & Programs</option>
-                    <option value="Trail Rides">Guided Wilderness Trail Rides</option>
-                    <option value="Horse Boarding">Full-Care Horse Boarding</option>
-                    <option value="Private Event">Private Events & Group Clinics</option>
-                    <option value="General Inquiry">General Information</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="c-contact-pref">Preferred Contact Method</label>
-                <div class="radio-options-row">
-                  <label class="radio-label">
-                    <input type="radio" name="c-pref" value="Email" checked> Email
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" name="c-pref" value="Phone"> Phone Call
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" name="c-pref" value="WhatsApp"> WhatsApp / SMS
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="c-message">Your Message or Questions *</label>
-                <textarea id="c-message" rows="5" placeholder="Tell us about your riding experience, preferred dates, or specific questions..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-gold-pill btn-full">
-                Send Message Now <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </form>
-          </div>
-
-<div class="contact-info-stack">
-
-<div class="info-card">
-              <div class="info-icon-box">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="info-content">
-                <h4>Stable Ranch Address</h4>
-                <p>450 Equestrian Trail, Rolling Hills, CA 90274</p>
-                <div class="info-detail">
-                  <i class="fa-solid fa-clock icon-gold"></i>
-                  <span>Mon – Sun: 7:00 AM – 7:00 PM</span>
-                </div>
-              </div>
-            </div>
-
-<div class="info-card">
-              <div class="info-icon-box">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="info-content">
-                <h4>Direct Phone & Email</h4>
-                <p>Office: +1 (800) 555-HOOF (4663)</p>
-                <p>Email: info@silverhoofstables.com</p>
-                <div class="info-detail">
-                  <i class="fa-solid fa-comments icon-gold"></i>
-                  <span>Live Office Support Available Daily</span>
-                </div>
-              </div>
-            </div>
-
-<div class="info-card highlight-info">
-              <div class="info-icon-box">
-                <i class="fa-solid fa-shield-heart"></i>
-              </div>
-              <div class="info-content">
-                <h4>24/7 Stables Emergency Line</h4>
-                <p>Dedicated helpline for horse boarders & medical emergencies.</p>
-                <strong class="emergency-num">+1 (800) 555-VET1</strong>
-              </div>
-            </div>
-
-<div class="info-card">
-              <div class="info-icon-box">
-                <i class="fa-solid fa-share-nodes"></i>
-              </div>
-              <div class="info-content">
-                <h4>Follow & Connect Online</h4>
-                <p>Stay updated with ranch events, trail photos, and rider accomplishments.</p>
-                <div class="contact-social-links">
-                  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                  <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-<section class="section contact-map-section">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag-row center">
-            <div class="section-tag">
-              <span class="tag-line"></span>
-              RANCH LOCATION MAP
-              <span class="tag-line"></span>
-            </div>
-          </div>
-          <h2 class="section-title">Find Us in Rolling Hills</h2>
-          <p class="section-description">
-            Conveniently located 20 minutes from downtown with private visitor parking.
-          </p>
-        </div>
-
-        <div class="map-card-container">
-          <div class="map-iframe-wrap">
-            <iframe
-              title="Silver Hoof Stables Map Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106000.0000000000!2d-118.358!3d33.758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4a4444444444%3A0x4444444444444444!2sRolling%20Hills%2C%20CA%2090274!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
-              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-
-          <div class="map-info-bar">
-            <div class="map-info-item">
-              <i class="fa-solid fa-square-parking icon-gold"></i>
-              <div>
-                <strong>Free Parking</strong>
-                <span>Spacious lot for vehicles & horse trailers</span>
-              </div>
-            </div>
-
-            <div class="map-info-item">
-              <i class="fa-solid fa-route icon-gold"></i>
-              <div>
-                <strong>Easy Access</strong>
-                <span>Paved access road leading directly to main courtyard</span>
-              </div>
-            </div>
-
-            <div class="map-info-item">
-              <i class="fa-solid fa-tree icon-gold"></i>
-              <div>
-                <strong>150 Acres Ranch</strong>
-                <span>Private arena, round pens, and backcountry trailheads</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-<section class="section contact-faq-section">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag-row center">
-            <div class="section-tag">
-              <span class="tag-line"></span>
-              COMMON QUESTIONS
-              <span class="tag-line"></span>
-            </div>
-          </div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-description">
-            Quick answers regarding visiting, lesson policies, and trail scheduling.
-          </p>
-        </div>
-
-        <div class="faq-accordion-wrap">
-
-          <div class="faq-accordion-item">
-            <button class="faq-accordion-q">
-              <span>How far in advance should I book riding lessons or trail rides?</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-accordion-a">
-              <p>We recommend booking at least 48 to 72 hours in advance, especially for weekend sunset trail rides and peak afternoon lesson slots. Online bookings can be made up to 30 days ahead.</p>
+              <span class="map-hud-coords">39.1654° N, 120.0321° W</span>
             </div>
           </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-accordion-q">
-              <span>What is your cancellation and rescheduling policy?</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-accordion-a">
-              <p>Cancellations or rescheduling requests made at least 24 hours prior to your scheduled session receive a 100% refund or credit. Same-day cancellations may incur a nominal rebooking fee.</p>
+          <div class="location-details-card">
+
+            <div class="location-header-block">
+              <span class="location-brand-eyebrow">WAVE NOMAD</span>
+              <h3 class="location-title">By the Water</h3>
+              <p class="location-address">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>123 Waterfront Way, Lake District, Tahoe CA</span>
+              </p>
             </div>
-          </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-accordion-q">
-              <span>Are family members allowed to watch riding lessons?</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-accordion-a">
-              <p>Yes! We have comfortable indoor and outdoor clubhouse seating areas with panoramic arena views where friends and family can relax during lessons.</p>
+            <div class="location-hours-box">
+              <span class="hours-label">OPENING HOURS</span>
+              <div class="hours-row">
+                <span class="hours-day">Mon — Fri</span>
+                <span class="hours-time">8:00 AM — 6:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sat — Sun</span>
+                <span class="hours-time">7:00 AM — 7:00 PM</span>
+              </div>
+              <span class="hours-note">Early bird launches available by prior concierge arrangement.</span>
             </div>
-          </div>
 
-          <div class="faq-accordion-item">
-            <button class="faq-accordion-q">
-              <span>Do you offer gift certificates or private group packages?</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-accordion-a">
-              <p>We offer customized digital and physical gift certificates for all riding packages, as well as private group bookings for birthday celebrations, corporate retreats, and family trail excursions.</p>
-            </div>
-          </div>
+            <div class="location-action-links">
+              <a href="tel:+18005559283" class="location-action-btn" id="loc-call-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span>Call Us</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
+              </a>
 
-          <div class="faq-accordion-item">
-            <button class="faq-accordion-q">
-              <span>What should I wear for my first visit to Silver Hoof Stables?</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="faq-accordion-a">
-              <p>Please wear comfortable long pants (breeches or sturdy denim jeans) and closed-toe boots with a 1-inch heel. We provide ASTM/SEI-certified riding helmets for all guests at no extra charge.</p>
-            </div>
-          </div>
+              <a href="mailto:explore@wavenomad.com" class="location-action-btn" id="loc-email-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email Us</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
+              </a>
 
-        </div>
-
-      </div>
-    </section>
-
-<section class="section contact-cta-section">
-      <div class="container">
-        <div class="contact-cta-card">
-          <div class="cta-glow-overlay"></div>
-          <div class="contact-cta-content">
-
-            <h2 class="contact-cta-title">Ready to Experience Silver Hoof Stables?</h2>
-            <p class="contact-cta-sub">
-              Book your first session online or call our stables office to schedule a personal ranch tour.
-            </p>
-            <div class="contact-cta-btns">
-              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
-                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
-              </button>
-              <a href="lessons.html" class="btn btn-outline-hero btn-large">
-                Explore All Lessons <i class="fa-solid fa-list"></i>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
+                class="location-action-btn highlight" id="loc-directions-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                </svg>
+                <span>Get Directions</span>
+                <span class="arrow-glyph" aria-hidden="true">→</span>
               </a>
             </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="final-connection-section" id="final-connection">
+      <div class="final-connection-canvas" aria-hidden="true">
+        <img src="assets/images/contact-golden-shoreline.jpg"
+          alt="Stand-up paddleboard on tranquil sandy shoreline at sunset with glowing mountain reflections"
+          class="final-connection-bg" loading="lazy">
+        <div class="final-connection-overlay"></div>
+      </div>
+
+      <div class="contact-container final-connection-container">
+        <div class="final-connection-card">
+          <span class="final-eyebrow">YOUR NEXT JOURNEY</span>
+          <h2 class="final-headline font-serif">
+            The Water Is Closer Than You Think.
+          </h2>
+          <p class="final-subtext font-sans">
+            Your next paddle starts with a conversation.
+          </p>
+
+          <div class="final-action-row">
+            <a href="#contact-planning" class="cta-pill-primary final-cta-btn" id="final-start-conversation-btn">
+              <span>Start a Conversation</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="final-category-strip">
+            <span class="final-cat-item">RENTALS</span>
+            <span class="final-cat-sep" aria-hidden="true">·</span>
+            <span class="final-cat-item">LESSONS</span>
+            <span class="final-cat-sep" aria-hidden="true">·</span>
+            <span class="final-cat-item">TOURS</span>
+            <span class="final-cat-sep" aria-hidden="true">·</span>
+            <span class="final-cat-item">GROUP EXPERIENCES</span>
           </div>
         </div>
       </div>
@@ -533,168 +764,104 @@
 
   </main>
 
-<footer class="footer">
-    <div class="container footer-container">
 
-<div class="footer-col footer-brand-col">
-        <a href="index.html" class="brand-logo footer-logo">
-          <div class="logo-icon">
-            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+            <div class="brand-emblem-circle">
+              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2" />
+                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">WaveNomad</span>
+              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+            </div>
+          </a>
+          <p class="footer-brand-paratext">
+            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries. Premium touring fleets.
+          </p>
+          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+            </a>
           </div>
-          <div class="brand-text">
-            <span class="brand-name">SILVER HOOF</span>
-            <span class="brand-sub">STABLES</span>
-          </div>
-        </a>
-        <p class="footer-about">
-          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
-          equine welfare, and unforgettable trail experiences.
-        </p>
-        <div class="footer-socials">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2</a></li>
+            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
+            <li><a href="lessons.html" class="footer-link">Lessons &amp; Tours</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#collection" class="footer-link">Carbon Touring SUPs</a></li>
+            <li><a href="rentals.html#collection" class="footer-link">Inflatable Expedition Kits</a></li>
+            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
+            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
+            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
+            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col footer-contact-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-links-list footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Timing:</span><span class="contact-value">Daily: 06:00 AM – 08:30 PM</span></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Location:</span><span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Mail:</span><a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Support:</span><a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a></div>
+            </li>
+          </ul>
         </div>
       </div>
-
-<div class="footer-col">
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
-          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
-        </ul>
-      </div>
-
-<div class="footer-col">
-        <h4 class="footer-title">Additional Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
-          <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> 404</a></li>
-          <li><a href="coming-soon.html"><i class="fa-solid fa-chevron-right"></i> cooming soon</a></li>
-          <li><a href="lessons.html#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
-        </ul>
-      </div>
-
-<div class="footer-col">
-        <h4 class="footer-title">Contact & Stables</h4>
-        <div class="footer-contact-details">
-          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
-          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
-          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
-          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
-        </div>
-      </div>
-
-    </div>
-
-<div class="footer-bottom">
-      <div class="container footer-bottom-content">
-        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
-        <div class="footer-terms-links">
-          <a href="#"
-            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
-            & Conditions</a>
-          <span class="sep">|</span>
-          <a href="#"
-            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
-            Policy</a>
-          <span class="sep">|</span>
-          <a href="#"
-            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
-            Policy</a>
+      <div class="footer-bottom-bar">
+        <span class="footer-legal-text">&copy; 2026 WaveNomad Adventures Inc. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Privacy Policy</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
         </div>
       </div>
     </div>
   </footer>
 
-<div class="modal-backdrop" id="booking-modal">
-    <div class="modal-card">
-      <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
-      <div class="modal-header">
-        <h3>Book Your Lesson</h3>
-        <p>Select your program and preferred schedule</p>
-      </div>
-      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
-        <div class="form-group">
-          <label for="b-program">Select Program / Plan *</label>
-          <select id="b-program" required>
-            <option value="Beginner Riding Foundations">Beginner Riding Foundations ($65)</option>
-            <option value="Hunter & Show Jumping Mastery">Hunter & Show Jumping Mastery ($110)</option>
-            <option value="Classical Dressage & Precision">Classical Dressage & Precision ($145)</option>
-            <option value="Groundwork & Equine Horsemanship">Groundwork & Equine Horsemanship ($75)</option>
-            <option value="Guided Wilderness & Sunset Trails">Guided Wilderness & Sunset Trails ($95)</option>
-            <option value="Youth & Junior Equestrian Academy">Youth & Junior Equestrian Academy ($80)</option>
-          </select>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label for="b-name">Your Full Name *</label>
-            <input type="text" id="b-name" placeholder="John Doe" required>
-          </div>
-          <div class="form-group">
-            <label for="b-phone">Phone Number *</label>
-            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
-          </div>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label for="b-date">Preferred Date *</label>
-            <input type="date" id="b-date" required>
-          </div>
-          <div class="form-group">
-            <label for="b-time">Preferred Time Slot *</label>
-            <select id="b-time" required>
-              <option value="08:00 AM">08:00 AM - Morning</option>
-              <option value="10:30 AM">10:30 AM - Morning</option>
-              <option value="02:00 PM">02:00 PM - Afternoon</option>
-              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="b-notes">Experience Level & Special Requests</label>
-          <textarea id="b-notes" rows="3"
-            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-gold-pill btn-full">
-          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-
-<div class="modal-backdrop" id="login-modal">
-    <div class="modal-card">
-      <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
-      <div class="modal-header">
-        <i class="fa-solid fa-user-lock modal-header-icon"></i>
-        <h3>Rider Portal Login</h3>
-        <p>Enter your credentials to access your account & schedules</p>
-      </div>
-      <form id="login-form" onsubmit="handleLoginSubmit(event)">
-        <div class="form-group">
-          <label for="l-email">Email Address *</label>
-          <input type="email" id="l-email" placeholder="rider@example.com" required value="rider@silverhoof.com">
-        </div>
-        <div class="form-group">
-          <label for="l-password">Password *</label>
-          <input type="password" id="l-password" placeholder="••••••••" required value="password123">
-        </div>
-        <button type="submit" class="btn btn-gold-pill btn-full">
-          Sign In to Portal <i class="fa-solid fa-right-to-bracket"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-
-<script src="index.js"></script>
   <script src="contact.js"></script>
 </body>
 

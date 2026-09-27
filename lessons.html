@@ -1,710 +1,974 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riding Lessons & Academy | Silver Hoof Stables</title>
+  <title>Lessons &amp; Guided Tours | WaveNomad Stand-Up Paddleboards</title>
   <meta name="description"
-    content="Explore our premier riding lesson programs. Beginner riding foundations, show jumping, classical dressage, groundwork horsemanship, and guided trail rides.">
+    content="Experience certified stand-up paddleboard lessons, progressive skills coaching, and scenic guided tours on pristine alpine waters with WaveNomad. Learn the water. Live the adventure.">
+  <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/jpeg" href="favicon.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<link rel="stylesheet" href="index.css">
-  
-<link rel="stylesheet" href="lessons.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lessons.css">
 </head>
 
-<body>
+<body class="lessons-page-body">
 
-<header class="header" id="header">
-    <div class="container header-container">
+  <header class="site-header" id="site-header">
+    <div class="header-container">
 
-<a href="index.html" class="brand-logo">
-        <div class="logo-icon">
-          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+      <a href="index.html" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
+        <div class="brand-emblem-circle">
+          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
+              stroke-width="2" stroke-linejoin="round" />
+            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" />
+          </svg>
         </div>
-        <div class="brand-text">
-          <span class="brand-name">SILVER HOOF</span>
-          <span class="brand-sub">STABLES</span>
+        <div class="brand-text-group">
+          <span class="brand-name">WaveNomad</span>
+          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
         </div>
       </a>
 
-<nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-item dropdown">
-            <a href="index.html" class="nav-link" id="home-dropdown-btn">
-              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+
+          <li class="nav-item dropdown" id="home-dropdown-item">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
             </a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
-              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            <ul class="dropdown-menu" id="home-dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="home1-option">
+                  <div class="dropdown-title">
+                    <span>Home 1: Classic</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="home2-option">
+                  <div class="dropdown-title">
+                    <span>Home 2: Premium</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
+                </a>
+              </li>
             </ul>
           </li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="lessons.html" class="nav-link active">Lessons</a></li>
-          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
-          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
-          <li class="nav-login-item">
-            <button class="btn btn-primary" onclick="openLoginModal()">
-              <i class="fa-solid fa-user"></i> Login
-            </button>
+
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link" id="nav-rentals-link">Rentals</a>
           </li>
+
+          <li class="nav-item">
+            <a href="lessons.html" class="nav-link active" id="nav-lessons-link" aria-current="page">Lessons &amp;
+              Tours</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          </li>
+
         </ul>
       </nav>
 
-<div class="header-actions">
-        
-        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
-          <span class="btn-label">RTL</span>
+      <div class="header-actions">
+
+        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Light / Dark Mode">
+          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
 
-<button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
+          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
+          <span class="rtl-opt rtl-opt-ltr">LTR</span>
+          <span class="rtl-opt rtl-opt-rtl">RTL</span>
+          <span id="lang-label" style="display: none;">LTR</span>
         </button>
 
-<button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
-          <i class="fa-solid fa-user"></i> Login
+        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member Login">
+          <span>Login</span>
         </button>
 
-<button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-          <i class="fa-solid fa-bars"></i>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+
       </div>
 
     </div>
   </header>
 
-<main>
 
-<section class="lessons-hero-section">
-      <div class="lessons-hero-bg" style="background-image: url('images/lesson_beginner_foundations.jpg');"></div>
-      <div class="lessons-hero-overlay"></div>
+  <main id="main-content">
 
-      <div class="container lessons-hero-container">
+    <section class="lessons-hero" id="hero">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
 
-<div class="lessons-hero-grid">
+      <div class="lessons-container">
+        <div class="lessons-hero-grid">
 
-<div class="lessons-hero-text-col">
-            <div class="gold-divider-wrap">
-              <span class="gold-line"></span>
-              <span class="hero-welcome">WORLD-CLASS ACADEMY</span>
-              <span class="gold-line"></span>
+          <div class="hero-copy-column">
+            <div class="hero-pill-badge">
+              <span class="hero-live-pulse" aria-hidden="true"></span>
+              <span>LEARN · EXPLORE · EXPERIENCE</span>
             </div>
 
-            <h1 class="lessons-hero-title">
-              Master the Art of<br>
-              <span class="lessons-hero-accent">Equestrian Horsemanship.</span>
+            <h1 class="hero-display-title">
+              Learn the Water.<br>
+              Live the <span class="highlight-script">Adventure.</span>
             </h1>
 
-            <p class="lessons-hero-subtitle">
-              From foundational posture and gentle pony care to championship hunter jumping and precision dressage — experience 6 progressive instruction tiers guided by certified equestrian masters.
+            <p class="hero-subtext">
+              From your first paddle to unforgettable guided journeys, discover experiences designed for every level.
             </p>
 
-<div class="lessons-hero-cta-btns">
-              <a href="#lessons-grid" class="btn btn-primary" id="lessons-hero-explore-btn">
-                <i class="fa-solid fa-graduation-cap"></i> Explore All Programs
+            <div class="hero-actions-group">
+              <a href="#progression" class="cta-btn-primary" id="hero-explore-lessons-btn">
+                <span>Explore Lessons</span>
+                <span aria-hidden="true">→</span>
               </a>
-              <button class="btn btn-outline-hero" onclick="openBookingModal()" id="lessons-hero-book-btn">
-                <i class="fa-solid fa-calendar-check"></i> Book Trial Lesson
+              <a href="#tours" class="cta-btn-secondary" id="hero-discover-tours-btn">
+                <span>Discover Tours</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="hero-stats-band">
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">100%</span>
+                <span class="hero-stat-label">Certified PSUPA</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">4 : 1</span>
+                <span class="hero-stat-label">Max Student Ratio</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">4.9 ★</span>
+                <span class="hero-stat-label">Guest Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-stage">
+            <div class="hero-main-photo-frame">
+              <img src="assets/images/lessons-tour.jpg"
+                alt="Lead female paddleboard instructor guiding three students across a pristine turquoise mountain lake"
+                class="hero-main-img" id="hero-session-img">
+
+              <div class="hero-water-caustic-layer" aria-hidden="true"></div>
+
+              <div class="hero-floating-chip chip-instructor">
+                <div class="chip-instructor-icon" aria-hidden="true">AM</div>
+                <div class="chip-text-group">
+                  <span class="chip-title">Alex Morgan · Lead Guide</span>
+                  <span class="chip-sub">Now Navigating Moraine Basin</span>
+                </div>
+              </div>
+
+              <div class="hero-floating-chip chip-weather">
+                <span class="chip-weather-metric">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                  </svg>
+                  68°F · Glassy Calm Water
+                </span>
+              </div>
+
+              <svg class="hero-svg-trail" viewBox="0 0 500 60" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M 0,50 Q 150,10 320,38 T 500,20" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"
+                  stroke-dasharray="6 6" />
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="lessons-section-wrap alt-bg lessons-catalog-section" id="progression">
+      <div class="lessons-container">
+
+        <div class="lessons-catalog-header text-center">
+          <span class="section-tag-eyebrow">ACCREDITED LESSON PROGRAMS</span>
+          <h2 class="lessons-headline">Master the Water at Every Stage.</h2>
+          <p class="lessons-lead-desc">
+            From your very first calm-water glide to advanced deep-water navigation, choose a structured lesson taught
+            by PSUPA-certified master instructors.
+          </p>
+        </div>
+
+        <div class="lessons-card-grid">
+
+          <article class="lesson-program-card" id="lesson-card-beginner">
+            <div class="lesson-card-media">
+              <img src="assets/images/lesson-beginner-hero.jpg" alt="Beginner paddler learning balance on calm water"
+                class="lesson-card-img" loading="lazy">
+              <span class="lesson-card-badge badge-beginner">STAGE 01 · BEGINNER</span>
+              <div class="lesson-card-price-pill">
+                <span class="price-currency">$</span><span class="price-val">65</span><span class="price-unit">/ paddler</span>
+              </div>
+            </div>
+
+            <div class="lesson-card-body">
+              <div class="lesson-card-meta-strip">
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  90 Mins
+                </span>
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Max 4:1 Ratio
+                </span>
+              </div>
+
+              <h3 class="lesson-card-title">Beginner SUP Fundamentals</h3>
+              <p class="lesson-card-desc">
+                Ideal for first-timers and nervous paddlers. Master wide-beam board balance, correct paddle sizing, zero-roll stance, and safe dock recoveries.
+              </p>
+
+              <ul class="lesson-card-features">
+                <li><span class="feat-check">✓</span> Zero-roll balance &amp; stance</li>
+                <li><span class="feat-check">✓</span> Forward stroke &amp; turn mechanics</li>
+                <li><span class="feat-check">✓</span> Premium board &amp; paddle included</li>
+              </ul>
+
+              <div class="lesson-card-footer">
+                <a href="lessons details.html?lesson=beginner" class="lesson-view-btn" id="btn-view-beginner">
+                  <span>View Details</span>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="lesson-program-card featured" id="lesson-card-intermediate">
+            <div class="lesson-card-media">
+              <img src="assets/images/lesson-intermediate-hero.jpg" alt="Intermediate paddler executing dynamic turn"
+                class="lesson-card-img" loading="lazy">
+              <span class="lesson-card-badge badge-popular">MOST POPULAR · STAGE 02</span>
+              <div class="lesson-card-price-pill">
+                <span class="price-currency">$</span><span class="price-val">95</span><span class="price-unit">/ paddler</span>
+              </div>
+            </div>
+
+            <div class="lesson-card-body">
+              <div class="lesson-card-meta-strip">
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  2.0 Hours
+                </span>
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Max 3:1 Ratio
+                </span>
+              </div>
+
+              <h3 class="lesson-card-title">Intermediate Technique &amp; Glide</h3>
+              <p class="lesson-card-desc">
+                For paddlers ready to eliminate fatigue and conquer open water. Master cantilever power stroke, pivot turns, cadence acceleration, and chop handling.
+              </p>
+
+              <ul class="lesson-card-features">
+                <li><span class="feat-check">✓</span> Core power transfer &amp; cadence</li>
+                <li><span class="feat-check">✓</span> Step-back pivot &amp; buoy turns</li>
+                <li><span class="feat-check">✓</span> High-modulus carbon race paddle</li>
+              </ul>
+
+              <div class="lesson-card-footer">
+                <a href="lessons details.html?lesson=intermediate" class="lesson-view-btn primary" id="btn-view-intermediate">
+                  <span>View Details</span>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="lesson-program-card" id="lesson-card-advanced">
+            <div class="lesson-card-media">
+              <img src="assets/images/lesson-advanced-hero.jpg" alt="Elite paddle coaching on alpine lake"
+                class="lesson-card-img" loading="lazy">
+              <span class="lesson-card-badge badge-elite">1-ON-1 ELITE · ALL LEVELS</span>
+              <div class="lesson-card-price-pill">
+                <span class="price-currency">$</span><span class="price-val">145</span><span class="price-unit">/ session</span>
+              </div>
+            </div>
+
+            <div class="lesson-card-body">
+              <div class="lesson-card-meta-strip">
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  2.5 Hours
+                </span>
+                <span class="meta-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  1:1 Private Coach
+                </span>
+              </div>
+
+              <h3 class="lesson-card-title">Private Masterclass Coaching</h3>
+              <p class="lesson-card-desc">
+                Bespoke private mentorship tailored to your personal goals: 4K stroke biomechanics video analysis, downwind routing, or endurance pacing.
+              </p>
+
+              <ul class="lesson-card-features">
+                <li><span class="feat-check">✓</span> Dedicated PSUPA Master Trainer</li>
+                <li><span class="feat-check">✓</span> 4K video biomechanics review</li>
+                <li><span class="feat-check">✓</span> Custom touring route &amp; photo set</li>
+              </ul>
+
+              <div class="lesson-card-footer">
+                <a href="lessons details.html?lesson=advanced" class="lesson-view-btn" id="btn-view-advanced">
+                  <span>View Details</span>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="lessons-section-wrap tours-section" id="tours">
+      <div class="lessons-container">
+
+        <div class="tours-header-wrap text-center">
+          <span class="section-tag-eyebrow">SIGNATURE EXPEDITIONS &amp; SCENIC ROUTES</span>
+          <h2 class="lessons-headline">Follow the Water.</h2>
+          <p class="lessons-lead-desc">
+            Paddle beyond the dock. Journey across secret emerald bays, sunset glassy coves, and high-altitude mountain
+            fjords with our senior water naturalists.
+          </p>
+        </div>
+
+        <div class="tours-layout-grid">
+
+          <div class="tours-map-canvas" id="tours-map-canvas">
+
+            <svg class="map-svg-art" viewBox="0 0 600 460" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Interactive Lake Tahoe Route Topography">
+
+              <path class="map-water-body"
+                d="M 60,110 C 130,50 310,40 430,90 C 530,130 560,250 510,340 C 470,410 320,440 210,420 C 90,400 40,290 45,210 Z" />
+
+              <path class="map-contour-land" d="M 20,40 Q 180,20 320,15 T 580,50" />
+              <path class="map-contour-land" d="M 500,80 Q 570,180 580,290 T 520,440" />
+              <path class="map-contour-land" d="M 40,320 Q 90,420 220,440 T 480,450" />
+
+              <path class="route-path-line active" data-tour="sunset" id="svg-route-sunset"
+                d="M 170,300 C 210,240 280,210 370,225" />
+
+              <path class="route-path-line" data-tour="scenic" id="svg-route-scenic"
+                d="M 170,300 C 140,220 180,120 270,115 C 330,110 360,170 310,210 Z" />
+
+              <path class="route-path-line" data-tour="expedition" id="svg-route-expedition"
+                d="M 170,300 C 230,340 340,380 440,330 C 490,300 470,200 410,160" />
+
+              <path class="route-path-line" data-tour="private" id="svg-route-private"
+                d="M 170,300 C 240,280 320,310 400,260 T 455,200" />
+
+              <g class="map-waypoint-marker active" data-tour="base" transform="translate(170, 300)">
+                <circle class="marker-outer-ring" cx="0" cy="0" r="10"></circle>
+                <circle class="marker-core" cx="0" cy="0" r="6"></circle>
+                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800"
+                  fill="currentColor">PIER 4 DOCK</text>
+              </g>
+
+              <g class="map-waypoint-marker active" data-tour="sunset" transform="translate(370, 225)">
+                <circle class="marker-outer-ring" cx="0" cy="0" r="10"></circle>
+                <circle class="marker-core" cx="0" cy="0" r="6"></circle>
+                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700"
+                  fill="currentColor">Sunset Lookout</text>
+              </g>
+
+              <g class="map-waypoint-marker" data-tour="scenic" transform="translate(270, 115)">
+                <circle class="marker-outer-ring" cx="0" cy="0" r="10"></circle>
+                <circle class="marker-core" cx="0" cy="0" r="6"></circle>
+                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700"
+                  fill="currentColor">Granite Coves</text>
+              </g>
+
+              <g class="map-waypoint-marker" data-tour="expedition" transform="translate(440, 330)">
+                <circle class="marker-outer-ring" cx="0" cy="0" r="10"></circle>
+                <circle class="marker-core" cx="0" cy="0" r="6"></circle>
+                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700"
+                  fill="currentColor">Fjord Crossing</text>
+              </g>
+
+              <g class="map-waypoint-marker" data-tour="private" transform="translate(455, 200)">
+                <circle class="marker-outer-ring" cx="0" cy="0" r="10"></circle>
+                <circle class="marker-core" cx="0" cy="0" r="6"></circle>
+                <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700"
+                  fill="currentColor">Private Sanctuary</text>
+              </g>
+
+            </svg>
+
+            <div class="map-compass-emblem" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 15 10 12 8 9 10 12 2" fill="currentColor"></polygon>
+                <polygon points="12 22 15 14 12 16 9 14 12 22" fill="none"></polygon>
+                <circle cx="12" cy="12" r="9"></circle>
+              </svg>
+            </div>
+            <div class="map-lake-label">Emerald Basin Navigation Map</div>
+
+          </div>
+
+          <div class="tours-card-stack" role="tablist" aria-label="Guided Tour Options">
+
+            <div class="tour-route-card active" data-tour="sunset" role="tab" aria-selected="true" tabindex="0">
+              <div class="tour-card-header">
+                <h3 class="tour-card-title">Sunset Drift</h3>
+                <span class="tour-difficulty-pill">All Levels</span>
+              </div>
+              <p class="tour-card-desc">
+                A calm evening paddle beneath the fading sun. Watch amber hues bounce across mirror-like water while
+                learning
+                tranquil glide rhythms.
+              </p>
+              <div class="tour-card-metrics">
+                <span class="metric-pill-item">⏱ 1.5 Hours</span>
+                <span class="metric-pill-item"><svg class="metric-icon" width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg> 2.4 Miles</span>
+                <span class="metric-pill-item">👥 Max 8</span>
+                <span class="metric-pill-item">✓ Guide Included</span>
+              </div>
+            </div>
+
+            <div class="tour-route-card" data-tour="scenic" role="tab" aria-selected="false" tabindex="0">
+              <div class="tour-card-header">
+                <h3 class="tour-card-title">Scenic Lake Tour</h3>
+                <span class="tour-difficulty-pill">Easy-Moderate</span>
+              </div>
+              <p class="tour-card-desc">
+                Explore hidden corners of the lake with an experienced guide. Glide past towering granite boulders and
+                turquoise submerged coves.
+              </p>
+              <div class="tour-card-metrics">
+                <span class="metric-pill-item">⏱ 2.5 Hours</span>
+                <span class="metric-pill-item"><svg class="metric-icon" width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg> 4.8 Miles</span>
+                <span class="metric-pill-item">👥 Max 6</span>
+                <span class="metric-pill-item">✓ Guide Included</span>
+              </div>
+            </div>
+
+            <div class="tour-route-card" data-tour="expedition" role="tab" aria-selected="false" tabindex="0">
+              <div class="tour-card-header">
+                <h3 class="tour-card-title">Mountain Water Expedition</h3>
+                <span class="tour-difficulty-pill">Active</span>
+              </div>
+              <p class="tour-card-desc">
+                A longer guided experience surrounded by alpine scenery. Navigate deep granite chasms, cross open lake
+                passages, and enjoy pristine vistas.
+              </p>
+              <div class="tour-card-metrics">
+                <span class="metric-pill-item">⏱ 4.0 Hours</span>
+                <span class="metric-pill-item"><svg class="metric-icon" width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg> 8.2 Miles</span>
+                <span class="metric-pill-item">👥 Max 5</span>
+                <span class="metric-pill-item">✓ Guide Included</span>
+              </div>
+            </div>
+
+            <div class="tour-route-card" data-tour="private" role="tab" aria-selected="false" tabindex="0">
+              <div class="tour-card-header">
+                <h3 class="tour-card-title">Private Water Escape</h3>
+                <span class="tour-difficulty-pill">Tailored</span>
+              </div>
+              <p class="tour-card-desc">
+                A personalised experience designed around your pace. Tailor the duration, coaching intensity, and scenic
+                stops
+                with a dedicated private mentor.
+              </p>
+              <div class="tour-card-metrics">
+                <span class="metric-pill-item">⏱ 2-3 Hours</span>
+                <span class="metric-pill-item"><svg class="metric-icon" width="13" height="13" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg> Custom Pace</span>
+                <span class="metric-pill-item">👥 1-4 Private</span>
+                <span class="metric-pill-item">✓ Private Mentor</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="lessons-section-wrap alt-bg guides-section" id="guides">
+      <div class="lessons-container">
+
+        <div class="text-center">
+          <span class="section-tag-eyebrow">CERTIFIED PSUPA INSTRUCTORS &amp; NATURALISTS</span>
+          <h2 class="lessons-headline">Guided by People Who Know the Water.</h2>
+          <p class="lessons-lead-desc">
+            Our instructors aren't just athletes; they are lifelong water stewards, swiftwater rescue certified, and
+            dedicated to building your lifelong connection to stand-up paddling.
+          </p>
+        </div>
+
+        <div class="guides-carousel-container" id="guides-showcase">
+
+          <div class="guide-portrait-column">
+            <div class="guide-portrait-frame">
+              <img src="assets/images/lessons-tour.jpg" alt="Alex Morgan — Lead Paddle Instructor"
+                class="guide-portrait-img" id="guide-portrait-img">
+              <span class="guide-exp-badge" id="guide-exp-badge">12+ Years On The Water</span>
+            </div>
+          </div>
+
+          <div class="guide-bio-column">
+            <span class="guide-role-title" id="guide-role-title">Lead Paddle Instructor</span>
+            <h3 class="guide-name" id="guide-name">Alex Morgan</h3>
+
+            <div class="guide-quote-box">
+              <p class="guide-quote-text" id="guide-quote-text">
+                "The best part isn't learning to stand. It's discovering what happens once you start moving."
+              </p>
+            </div>
+
+            <div class="guide-stats-grid">
+              <div class="guide-stat-box">
+                <span class="guide-stat-value" id="guide-stat-1">1,200+</span>
+                <span class="guide-stat-label" id="guide-stat-1-lab">Sessions Guided</span>
+              </div>
+              <div class="guide-stat-box">
+                <span class="guide-stat-value" id="guide-stat-2">8+ Yrs</span>
+                <span class="guide-stat-label" id="guide-stat-2-lab">Teaching Exp</span>
+              </div>
+              <div class="guide-stat-box">
+                <span class="guide-stat-value" id="guide-stat-3">100%</span>
+                <span class="guide-stat-label" id="guide-stat-3-lab">Safety Record</span>
+              </div>
+            </div>
+
+            <div class="guide-certs-wrap">
+              <span class="certs-label">Credentials &amp; Certifications</span>
+              <div class="certs-pill-list" id="guide-certs-list">
+                <span class="cert-pill">✓ PSUPA Master Instructor</span>
+                <span class="cert-pill">✓ Open Water Guide</span>
+                <span class="cert-pill">✓ Wilderness First Aid</span>
+              </div>
+            </div>
+
+            <div class="guides-carousel-controls">
+              <div class="guide-thumbs-list" role="tablist" aria-label="Select Instructor">
+                <button class="guide-avatar-btn active" title="Alex Morgan" data-index="0">
+                  <img src="assets/images/lessons-tour.jpg" alt="Alex Morgan thumbnail">
+                </button>
+                <button class="guide-avatar-btn" title="Marcus Vance" data-index="1">
+                  <img src="assets/images/moment-dog-pilot.jpg" alt="Marcus Vance thumbnail">
+                </button>
+                <button class="guide-avatar-btn" title="Elena Rostova" data-index="2">
+                  <img src="assets/images/moment-sunrise-glide.jpg" alt="Elena Rostova thumbnail">
+                </button>
+                <button class="guide-avatar-btn" title="Maya Lin" data-index="3">
+                  <img src="assets/images/moment-sup-yoga.jpg" alt="Maya Lin thumbnail">
+                </button>
+              </div>
+
+              <div class="guide-arrow-btns">
+                <button class="guide-nav-arrow" id="guide-prev-btn" aria-label="Previous Instructor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="guide-nav-arrow" id="guide-next-btn" aria-label="Next Instructor">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="lessons-section-wrap booking-section" id="booking">
+      <div class="lessons-container">
+
+        <div class="booking-cta-card">
+          <div class="booking-cta-canvas" aria-hidden="true">
+            <img src="assets/images/cta-paddleboard-waves.jpg" alt="Pristine Lake Water at Sunrise"
+              class="booking-cta-bg">
+            <div class="booking-cta-overlay"></div>
+          </div>
+
+          <div class="booking-cta-content">
+            <span class="booking-cta-eyebrow">YOUR NEXT ADVENTURE</span>
+            <h2 class="booking-cta-title">Ready to Experience the Water?</h2>
+            <p class="booking-cta-desc">
+              Whether taking your first stroke or exploring scenic alpine routes, our dockside team has your board and
+              certified guide ready at Pier 4.
+            </p>
+
+            <div class="booking-cta-actions">
+              <button class="booking-cta-btn" id="book-experience-btn">
+                <span>Book Your Experience</span>
+                <svg class="btn-arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
               </button>
+
+              <a href="contact.html#how-can-we-help" class="booking-secondary-btn">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Contact Concierge</span>
+              </a>
             </div>
 
-<div class="lessons-hero-stats">
-              <div class="lessons-stat">
-                <span class="stat-num">06</span>
-                <span class="stat-lbl">Signature Programs</span>
-              </div>
-              <div class="stat-line"></div>
-              <div class="lessons-stat">
-                <span class="stat-num">100%</span>
-                <span class="stat-lbl">Safety Certified</span>
-              </div>
-              <div class="stat-line"></div>
-              <div class="lessons-stat">
-                <span class="stat-num">35+</span>
-                <span class="stat-lbl">Champion Horses</span>
-              </div>
-              <div class="stat-line"></div>
-              <div class="lessons-stat">
-                <span class="stat-num">1:1 &amp; Group</span>
-                <span class="stat-lbl">Custom Formats</span>
-              </div>
-            </div>
-          </div>
-
-<div class="lessons-hero-media-col">
-            <div class="hero-circle-composition">
-              
-              <div class="hero-circle-ambient-glow" aria-hidden="true"></div>
-
-              <div class="hero-circle-orbit-ring" aria-hidden="true">
-                <span class="orbit-sparkle"></span>
-              </div>
-
-              <div class="hero-circle-dashed-ring" aria-hidden="true"></div>
-
-              <div class="hero-circle-frame">
-                <img src="images/hero_horse_jumping_circle.jpg" alt="Champion Equestrian Horse Jumping" class="hero-circle-img">
-                <div class="hero-circle-tint"></div>
-              </div>
-
-              <div class="hero-circle-badge">
-                <div class="circle-badge-icon">
-                  <i class="fa-solid fa-trophy"></i>
-                </div>
-                <div class="circle-badge-info">
-                  <span class="badge-title">Hunter Jumper Mastery</span>
-                  <span class="badge-caption">Olympic Regulation Arena</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-<section class="section lessons-grid-section" id="lessons-grid">
-      <div class="container">
-
-        <div class="section-tag-row center">
-          <div class="section-tag">
-            <span class="tag-line"></span>
-            CURATED RIDING PROGRAMS
-            <span class="tag-line"></span>
-          </div>
-        </div>
-        <h2 class="section-title text-center">Explore Our 6 Specialized Lessons</h2>
-        <p class="section-subtitle text-center">Each lesson is thoughtfully structured to build confidence, skill precision, and a deep bond with your horse.</p>
-
-        <div class="lessons-cards-grid">
-
-<div class="lesson-card">
-            <div class="lesson-card-img-wrap">
-              <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Riding Foundations">
-              <span class="lesson-card-badge">BEGINNER FRIENDLY</span>
-            </div>
-            <div class="lesson-card-body">
-              <div class="lesson-meta-row">
-                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
-                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Max 4 Riders</span>
-              </div>
-              <h3 class="lesson-card-title">Beginner Riding Foundations</h3>
-              <p class="lesson-card-desc">
-                Learn fundamental posture, rein controls, walk-trot transitions, and safe grooming etiquette with calm, experienced lesson horses.
-              </p>
-              <div class="lesson-card-footer">
-                <div class="lesson-price">
-                  <span class="price-val">$65</span>
-                  <span class="price-unit">/ session</span>
-                </div>
-                <a href="lesson-detail.html?id=beginner-foundations" class="btn btn-gold-pill btn-sm">
-                  Details <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-<div class="lesson-card">
-            <div class="lesson-card-img-wrap">
-              <img src="images/lesson_hunter_jumper.jpg" alt="Hunter & Show Jumping Mastery">
-              <span class="lesson-card-badge gold-badge">POPULAR</span>
-            </div>
-            <div class="lesson-card-body">
-              <div class="lesson-meta-row">
-                <span class="meta-item"><i class="fa-solid fa-clock"></i> 75 Mins</span>
-                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Max 3 Riders</span>
-              </div>
-              <h3 class="lesson-card-title">Hunter & Show Jumping Mastery</h3>
-              <p class="lesson-card-desc">
-                Refine two-point position, course navigation rhythm, stride counting, and jumping technical barriers up to 1.20m height.
-              </p>
-              <div class="lesson-card-footer">
-                <div class="lesson-price">
-                  <span class="price-val">$110</span>
-                  <span class="price-unit">/ session</span>
-                </div>
-                <a href="lesson-detail.html?id=hunter-jumper" class="btn btn-gold-pill btn-sm">
-                  Details <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-<div class="lesson-card">
-            <div class="lesson-card-img-wrap">
-              <img src="images/lesson_dressage_precision.jpg" alt="Classical Dressage & Precision">
-              <span class="lesson-card-badge">ADVANCED</span>
-            </div>
-            <div class="lesson-card-body">
-              <div class="lesson-meta-row">
-                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
-                <span class="meta-item"><i class="fa-solid fa-user"></i> Private 1-on-1</span>
-              </div>
-              <h3 class="lesson-card-title">Classical Dressage & Precision</h3>
-              <p class="lesson-card-desc">
-                Elevate seat sensitivity, collection, lateral movements, half-halts, and expressive trots inside our regulation indoor dressage arena.
-              </p>
-              <div class="lesson-card-footer">
-                <div class="lesson-price">
-                  <span class="price-val">$145</span>
-                  <span class="price-unit">/ session</span>
-                </div>
-                <a href="lesson-detail.html?id=dressage-precision" class="btn btn-gold-pill btn-sm">
-                  Details <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-<div class="lesson-card">
-            <div class="lesson-card-img-wrap">
-              <img src="images/lesson_horsemanship.jpg" alt="Groundwork & Equine Horsemanship">
-              <span class="lesson-card-badge">ALL SKILL LEVELS</span>
-            </div>
-            <div class="lesson-card-body">
-              <div class="lesson-meta-row">
-                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
-                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Max 5 Riders</span>
-              </div>
-              <h3 class="lesson-card-title">Groundwork & Equine Horsemanship</h3>
-              <p class="lesson-card-desc">
-                Master round-pen lunging, horse psychology, halter control, desensitization techniques, and grooming bond rituals.
-              </p>
-              <div class="lesson-card-footer">
-                <div class="lesson-price">
-                  <span class="price-val">$75</span>
-                  <span class="price-unit">/ session</span>
-                </div>
-                <a href="lesson-detail.html?id=equine-horsemanship" class="btn btn-gold-pill btn-sm">
-                  Details <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-<div class="lesson-card">
-            <div class="lesson-card-img-wrap">
-              <img src="images/lesson_sunset_trail.jpg" alt="Guided Wilderness & Sunset Trails">
-              <span class="lesson-card-badge gold-badge">MOST POPULAR</span>
-            </div>
-            <div class="lesson-card-body">
-              <div class="lesson-meta-row">
-                <span class="meta-item"><i class="fa-solid fa-clock"></i> 90 Mins</span>
-                <span class="meta-item"><i class="fa-solid fa-compass"></i> Outdoor Trail</span>
-              </div>
-              <h3 class="lesson-card-title">Guided Wilderness & Sunset Trails</h3>
-              <p class="lesson-card-desc">
-                Ride along pine-lined forest streams and open meadow pastures during golden hour with certified trail guides.
-              </p>
-              <div class="lesson-card-footer">
-                <div class="lesson-price">
-                  <span class="price-val">$95</span>
-                  <span class="price-unit">/ session</span>
-                </div>
-                <a href="lesson-detail.html?id=sunset-trail" class="btn btn-gold-pill btn-sm">
-                  Details <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-<div class="lesson-card">
-            <div class="lesson-card-img-wrap">
-              <img src="images/lesson_youth_academy.jpg" alt="Youth & Junior Equestrian Academy">
-              <span class="lesson-card-badge">AGES 6-15</span>
-            </div>
-            <div class="lesson-card-body">
-              <div class="lesson-meta-row">
-                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
-                <span class="meta-item"><i class="fa-solid fa-child"></i> Junior Group</span>
-              </div>
-              <h3 class="lesson-card-title">Youth & Junior Equestrian Academy</h3>
-              <p class="lesson-card-desc">
-                Fun, supportive, safety-first riding instruction on gentle ponies, building balance, responsibility, and horsemanship skills.
-              </p>
-              <div class="lesson-card-footer">
-                <div class="lesson-price">
-                  <span class="price-val">$80</span>
-                  <span class="price-unit">/ session</span>
-                </div>
-                <a href="lesson-detail.html?id=youth-academy" class="btn btn-gold-pill btn-sm">
-                  Details <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-<section class="section testimonials-section" id="testimonials">
-      <div class="container">
-
-        <div class="section-tag-row center">
-          <div class="section-tag">
-            <span class="tag-line"></span>
-            STUDENT REVIEWS
-            <span class="tag-line"></span>
-          </div>
-        </div>
-        <h2 class="section-title text-center">Stories from Our Riding Community</h2>
-        <p class="section-subtitle text-center">Hear how our riding lessons transformed confidence, skill levels, and horse bonding.</p>
-
-        <div class="testimonials-grid">
-
-<div class="testi-card">
-            <div class="testi-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testi-text">
-              “Taking Beginner Foundations at Silver Hoof was the best decision I made. Coach Eleanor is incredibly patient, and my lesson horse Apollo made me feel safe from minute one!”
-            </p>
-            <div class="testi-user">
-              <div class="testi-avatar">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div>
-                <h4 class="testi-name">Claire Montgomery</h4>
-                <span class="testi-role">Beginner Foundations Student</span>
-              </div>
-            </div>
-          </div>
-
-<div class="testi-card">
-            <div class="testi-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testi-text">
-              “The Show Jumping Mastery program elevated my competition technique dramatically. Coach Marcus helped me fix my stride counting, and we qualified for regionals!”
-            </p>
-            <div class="testi-user">
-              <div class="testi-avatar">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div>
-                <h4 class="testi-name">David Sterling</h4>
-                <span class="testi-role">Show Jumping Competitor</span>
-              </div>
-            </div>
-          </div>
-
-<div class="testi-card">
-            <div class="testi-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testi-text">
-              “My 8-year-old daughter enrolled in the Youth Academy and she looks forward to Saturday mornings all week long! Incredible instructors and immaculate facilities.”
-            </p>
-            <div class="testi-user">
-              <div class="testi-avatar">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div>
-                <h4 class="testi-name">Samantha Vance</h4>
-                <span class="testi-role">Parent of Youth Rider</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-<section class="section faq-section" id="faqs">
-      <div class="container">
-
-        <div class="section-tag-row center">
-          <div class="section-tag">
-            <span class="tag-line"></span>
-            LESSON QUESTIONS & ANSWERS
-            <span class="tag-line"></span>
-          </div>
-        </div>
-        <h2 class="section-title text-center">Frequently Asked Questions</h2>
-        <p class="section-subtitle text-center">Got questions about scheduling, riding gear, or lesson logistics? We've got answers.</p>
-
-        <div class="faq-accordion-wrap">
-
-<div class="faq-card active">
-            <div class="faq-header" onclick="toggleFaq(this)">
-              <h3 class="faq-question">
-                <i class="fa-solid fa-circle-question icon-gold"></i>
-                Are riding helmets and protective gear provided?
-              </h3>
-              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-            <div class="faq-body">
-              <p>
-                Yes! We provide complimentary ASTM/SEI-certified riding helmets for all students. We require long pants (breeches or jeans) and closed-toe boots with a small 1-inch heel.
-              </p>
-            </div>
-          </div>
-
-<div class="faq-card">
-            <div class="faq-header" onclick="toggleFaq(this)">
-              <h3 class="faq-question">
-                <i class="fa-solid fa-circle-question icon-gold"></i>
-                Can I choose a specific horse for my lesson?
-              </h3>
-              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-            <div class="faq-body">
-              <p>
-                Our head trainer pairs each student with a horse that matches their height, skill level, and temperament goals. Returning students can request their favorite horse subject to availability!
-              </p>
-            </div>
-          </div>
-
-<div class="faq-card">
-            <div class="faq-header" onclick="toggleFaq(this)">
-              <h3 class="faq-question">
-                <i class="fa-solid fa-circle-question icon-gold"></i>
-                What happens in case of bad weather?
-              </h3>
-              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-            <div class="faq-body">
-              <p>
-                Rain or shine, our state-of-the-art climate-controlled covered indoor arena allows lessons to proceed uninterrupted. Trail rides may be rescheduled if weather poses a safety hazard.
-              </p>
-            </div>
-          </div>
-
-<div class="faq-card">
-            <div class="faq-header" onclick="toggleFaq(this)">
-              <h3 class="faq-question">
-                <i class="fa-solid fa-circle-question icon-gold"></i>
-                Do you offer discounted multi-lesson packages?
-              </h3>
-              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-            <div class="faq-body">
-              <p>
-                Yes! We offer 5-session and 10-session lesson packages with up to 15% savings, as well as monthly subscription plans for dedicated riders.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-<section class="section lessons-cta-section" id="cta">
-      <div class="container">
-        <div class="lessons-cta-card">
-          <div class="cta-glow-overlay"></div>
-          <div class="lessons-cta-content">
-            <span class="cta-badge-tag">START YOUR EQUESTRIAN JOURNEY</span>
-            <h2 class="lessons-cta-title">Ready to Take Your First Lesson?</h2>
-            <p class="lessons-cta-sub">
-              Reserve your spot online today or speak with our lesson coordinator to pick the perfect program for you.
-            </p>
-            <div class="lessons-cta-btns">
-              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
-                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
-              </button>
-              <button class="btn btn-outline-hero btn-large" onclick="openLoginModal()">
-                Rider Login <i class="fa-solid fa-user"></i>
-              </button>
+            <div class="booking-cta-perks">
+              <span>✓ Certified PSUPA Instructors</span>
+              <span>✓ Premium Fleet &amp; Gear</span>
+              <span>✓ 100% Weather Guarantee</span>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
   </main>
 
-<footer class="footer">
-    <div class="container footer-container">
 
-<div class="footer-col footer-brand-col">
-        <a href="index.html" class="brand-logo footer-logo">
-          <div class="logo-icon">
-            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
-          </div>
-          <div class="brand-text">
-            <span class="brand-name">SILVER HOOF</span>
-            <span class="brand-sub">STABLES</span>
-          </div>
-        </a>
-        <p class="footer-about">
-          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
-          equine welfare, and unforgettable trail experiences.
-        </p>
-        <div class="footer-socials">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+  <div class="lessons-modal-backdrop" id="lessons-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-booking-title">
+    <div class="lessons-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">×</button>
+
+      <div class="modal-header-icon" aria-hidden="true">🌊</div>
+      <h3 class="modal-title" id="modal-booking-title">Complete Your Reservation</h3>
+      <p class="modal-desc">Your water experience is held for 15 minutes. Enter your guest details to issue your digital
+        pass.</p>
+
+      <div class="modal-summary-box">
+        <div>
+          <span class="summary-item-label">EXPERIENCE</span>
+          <div class="summary-item-val" id="modal-summary-activity">Group Lesson</div>
+        </div>
+        <div>
+          <span class="summary-item-label">PADDLERS</span>
+          <div class="summary-item-val" id="modal-summary-guests">1 Guest</div>
+        </div>
+        <div>
+          <span class="summary-item-label">DATE &amp; TIME</span>
+          <div class="summary-item-val" id="modal-summary-date">Tomorrow (10:00 AM)</div>
+        </div>
+        <div>
+          <span class="summary-item-label">AMOUNT</span>
+          <div class="summary-item-val" id="modal-summary-price">$65 USD</div>
         </div>
       </div>
 
-<div class="footer-col">
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
-          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
-        </ul>
-      </div>
-
-<div class="footer-col">
-        <h4 class="footer-title">Additional Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
-          <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> 404</a></li>
-          <li><a href="coming-soon.html"><i class="fa-solid fa-chevron-right"></i> cooming soon</a></li>
-          <li><a href="lessons.html#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
-        </ul>
-      </div>
-
-<div class="footer-col">
-        <h4 class="footer-title">Contact & Stables</h4>
-        <div class="footer-contact-details">
-          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
-          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
-          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
-          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
+      <form id="modal-booking-form">
+        <div class="modal-form-group">
+          <label for="lead-guest-name" class="config-label">PRIMARY GUEST NAME</label>
+          <input type="text" id="lead-guest-name" class="modal-input" placeholder="e.g. Jordan Miller" required>
         </div>
-      </div>
-
+        <div class="modal-form-group">
+          <label for="lead-guest-email" class="config-label">EMAIL ADDRESS</label>
+          <input type="email" id="lead-guest-email" class="modal-input" placeholder="jordan@example.com" required>
+        </div>
+        <div class="modal-form-group">
+          <label for="lead-guest-phone" class="config-label">PHONE NUMBER (FOR WATER TELEMETRY UPDATES)</label>
+          <input type="tel" id="lead-guest-phone" class="modal-input" placeholder="+1 (555) 000-0000" required>
+        </div>
+        <button type="submit" class="modal-confirm-btn">Confirm Concierge Pass</button>
+      </form>
     </div>
+  </div>
 
-<div class="footer-bottom">
-      <div class="container footer-bottom-content">
-        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
-        <div class="footer-terms-links">
-          <a href="#"
-            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
-            & Conditions</a>
-          <span class="sep">|</span>
-          <a href="#"
-            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
-            Policy</a>
-          <span class="sep">|</span>
-          <a href="#"
-            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
-            Policy</a>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top-grid">
+
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+            <div class="brand-emblem-circle">
+              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
+                  stroke="currentColor" stroke-width="2" />
+                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">WaveNomad</span>
+              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+            </div>
+          </a>
+          <p class="footer-brand-paratext">
+            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries.
+            Premium touring fleets.
+          </p>
+
+          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2</a></li>
+            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
+            <li><a href="lessons.html" class="footer-link">Lessons &amp; Tours</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#collection" class="footer-link">Carbon Touring SUPs</a></li>
+            <li><a href="rentals.html#collection" class="footer-link">Inflatable Expedition Kits</a></li>
+            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
+            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
+            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
+            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col footer-contact-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-links-list footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Timing:</span>
+                <span class="contact-value">Daily: 06:00 AM – 08:30 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Location:</span>
+                <span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Mail:</span>
+                <a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Support:</span>
+                <a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span class="footer-legal-text">
+          &copy; 2026 WaveNomad Adventures Inc. All rights reserved.
+        </span>
+
+        <div class="footer-bottom-links">
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a>
+          <span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Privacy Policy</a>
+          <span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
         </div>
       </div>
+
     </div>
   </footer>
 
-<div class="modal-backdrop" id="booking-modal">
-    <div class="modal-card">
-      <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
-      <div class="modal-header">
-        <h3>Book Your Lesson</h3>
-        <p>Select your program and preferred schedule</p>
-      </div>
-      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
-        <div class="form-group">
-          <label for="b-program">Select Program / Plan *</label>
-          <select id="b-program" required>
-            <option value="Beginner Riding Foundations">Beginner Riding Foundations ($65)</option>
-            <option value="Hunter & Show Jumping Mastery">Hunter & Show Jumping Mastery ($110)</option>
-            <option value="Classical Dressage & Precision">Classical Dressage & Precision ($145)</option>
-            <option value="Groundwork & Equine Horsemanship">Groundwork & Equine Horsemanship ($75)</option>
-            <option value="Guided Wilderness & Sunset Trails">Guided Wilderness & Sunset Trails ($95)</option>
-            <option value="Youth & Junior Equestrian Academy">Youth & Junior Equestrian Academy ($80)</option>
-          </select>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label for="b-name">Your Full Name *</label>
-            <input type="text" id="b-name" placeholder="John Doe" required>
-          </div>
-          <div class="form-group">
-            <label for="b-phone">Phone Number *</label>
-            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
-          </div>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label for="b-date">Preferred Date *</label>
-            <input type="date" id="b-date" required>
-          </div>
-          <div class="form-group">
-            <label for="b-time">Preferred Time Slot *</label>
-            <select id="b-time" required>
-              <option value="08:00 AM">08:00 AM - Morning</option>
-              <option value="10:30 AM">10:30 AM - Morning</option>
-              <option value="02:00 PM">02:00 PM - Afternoon</option>
-              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="b-notes">Experience Level & Special Requests</label>
-          <textarea id="b-notes" rows="3"
-            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-gold-pill btn-full">
-          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-
-<div class="modal-backdrop" id="login-modal">
-    <div class="modal-card">
-      <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
-      <div class="modal-header">
-        <i class="fa-solid fa-user-lock modal-header-icon"></i>
-        <h3>Rider Portal Login</h3>
-        <p>Enter your credentials to access your account & schedules</p>
-      </div>
-      <form id="login-form" onsubmit="handleLoginSubmit(event)">
-        <div class="form-group">
-          <label for="l-email">Email Address *</label>
-          <input type="email" id="l-email" placeholder="rider@example.com" required value="rider@silverhoof.com">
-        </div>
-        <div class="form-group">
-          <label for="l-password">Password *</label>
-          <input type="password" id="l-password" placeholder="••••••••" required value="password123">
-        </div>
-        <button type="submit" class="btn btn-gold-pill btn-full">
-          Sign In to Portal <i class="fa-solid fa-right-to-bracket"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-
-<script src="index.js"></script>
   <script src="lessons.js"></script>
 </body>
 

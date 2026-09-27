@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentals Showroom &amp; Fleet Configurator | WaveNomad Stand-Up Paddleboards</title>
+  <meta name="description"
+    content="Explore WaveNomad's luxury paddleboard rental showroom. Discover carbon touring SUPs, all-round cruisers, flexible hourly & full-day rental durations, and dockside concierge prep.">
+  <meta name="theme-color" content="#1597B8">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rentals.css">
+</head>
+
+<body class="rentals-page-body">
+
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <a href="index.html" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
+        <div class="brand-emblem-circle">
+          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
+              stroke-width="2" stroke-linejoin="round" />
+            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">WaveNomad</span>
+          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+
+          <li class="nav-item dropdown" id="home-dropdown-item">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu" id="home-dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="home1-option">
+                  <div class="dropdown-title">
+                    <span>Home 1: Classic</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="home2-option">
+                  <div class="dropdown-title">
+                    <span>Home 2: Premium</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link active" id="nav-rentals-link" aria-current="page">Rentals</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="lessons.html" class="nav-link" id="nav-lessons-link">Lessons &amp; Tours</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Light / Dark Mode">
+          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
+          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
+          <span class="rtl-opt rtl-opt-ltr">LTR</span>
+          <span class="rtl-opt rtl-opt-rtl">RTL</span>
+          <span id="lang-label" style="display: none;">LTR</span>
+        </button>
+
+        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
+          <span>Login</span>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="rentals-hero-section" id="hero">
+      <div class="rentals-hero-canvas" aria-hidden="true">
+        <img class="rentals-hero-img" src="assets/images/rentals-hero.jpg"
+          alt="Luxury stand-up paddleboard floating diagonally on turquoise alpine lake water" fetchpriority="high">
+
+        <div class="hero-ripple ripple-1"></div>
+        <div class="hero-ripple ripple-2"></div>
+        <div class="hero-ripple ripple-3"></div>
+
+        <div class="hero-light-sweep"></div>
+        <div class="hero-vignette-overlay"></div>
+        <div class="hero-caustics-layer"></div>
+      </div>
+
+      <div class="rentals-hero-container">
+        <div class="rentals-hero-text-block">
+
+          <div class="rentals-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span class="eyebrow-text">LUXURY FLEET SHOWROOM · 2026 EDITION</span>
+          </div>
+
+          <h1 class="rentals-hero-headline font-serif">
+            Find Your <br>
+            <span class="hero-headline-accent">Perfect Paddle.</span>
+          </h1>
+
+          <p class="rentals-hero-desc font-sans">
+            Premium paddleboards, flexible rental durations, and everything you need for a day on the water.
+          </p>
+
+          <div class="rentals-hero-actions">
+            <a href="#collection" class="btn-primary-action" id="hero-primary-cta">
+              <span>Explore Boards</span>
+              <svg class="btn-arrow-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+
+            <a href="#plans" class="btn-secondary-action" id="hero-secondary-cta">
+              <span>View Rental Options</span>
+            </a>
+          </div>
+
+          <div class="rentals-hero-perks">
+            <div class="perk-item">
+              <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>100% Pre-Calibrated Fleet</span>
+            </div>
+            <div class="perk-item">
+              <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Valet Dock Departure</span>
+            </div>
+            <div class="perk-item">
+              <svg class="perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Zero Weather Penalty</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="#collection" class="hero-scroll-cue" aria-label="Scroll to Board Collection">
+
+        <div class="scroll-cue-line"></div>
+      </a>
+    </section>
+
+
+    <section class="section-wrap alt-bg rentals-collection-section" id="collection">
+      <div class="section-container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow">HANDCRAFTED SUP FLEET</span>
+          <h2 class="section-headline font-serif">Choose Your Board.</h2>
+          <p class="section-desc font-sans">
+            Each WaveNomad board is custom-shaped with aerospace carbon rails and optimized displacement geometry.
+            Select your discipline to configure your water experience.
+          </p>
+        </div>
+
+        <div class="collection-category-bar" role="tablist" aria-label="Paddleboard Categories">
+          <button class="category-pill-btn active" role="tab" aria-selected="true" data-category="allround"
+            id="cat-allround">
+            <span class="cat-pill-indicator"></span>
+            <span>All-Round SUP</span>
+          </button>
+          <button class="category-pill-btn" role="tab" aria-selected="false" data-category="touring" id="cat-touring">
+            <span class="cat-pill-indicator"></span>
+            <span>Touring SUP</span>
+          </button>
+          <button class="category-pill-btn" role="tab" aria-selected="false" data-category="performance"
+            id="cat-performance">
+            <span class="cat-pill-indicator"></span>
+            <span>Performance SUP</span>
+          </button>
+          <button class="category-pill-btn" role="tab" aria-selected="false" data-category="beginner" id="cat-beginner">
+            <span class="cat-pill-indicator"></span>
+            <span>Beginner SUP</span>
+          </button>
+          <button class="category-pill-btn" role="tab" aria-selected="false" data-category="premium" id="cat-premium">
+            <span class="cat-pill-indicator"></span>
+            <span>Premium SUP</span>
+          </button>
+        </div>
+
+        <div class="showroom-stage" id="showroom-stage">
+
+          <button class="showroom-nav-arrow arrow-prev" id="board-prev-btn" aria-label="Previous Paddleboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="showroom-nav-arrow arrow-next" id="board-next-btn" aria-label="Next Paddleboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="showroom-grid">
+
+            <div class="showroom-visual-wrap">
+              <div class="showroom-board-card">
+                <div class="showroom-img-frame">
+                  <img src="assets/images/rentals-board-allround.jpg" alt="All-Round SUP" class="showroom-board-img"
+                    id="featured-board-img">
+                  <div class="stage-water-ripple"></div>
+                  <span class="stage-tag-badge" id="featured-board-badge">MOST POPULAR CRUISER</span>
+                </div>
+                <div class="stage-hull-glow"></div>
+              </div>
+
+              <div class="showroom-thumb-strip" id="showroom-thumb-strip">
+                <button class="thumb-btn active" data-category="allround" title="All-Round SUP">
+                  <img src="assets/images/rentals-board-allround.jpg" alt="All-Round Thumbnail">
+                  <span class="thumb-title">All-Round</span>
+                </button>
+                <button class="thumb-btn" data-category="touring" title="Touring SUP">
+                  <img src="assets/images/rentals-board-touring.jpg" alt="Touring Thumbnail">
+                  <span class="thumb-title">Touring</span>
+                </button>
+                <button class="thumb-btn" data-category="performance" title="Performance SUP">
+                  <img src="assets/images/rentals-board-performance.jpg" alt="Performance Thumbnail">
+                  <span class="thumb-title">Performance</span>
+                </button>
+                <button class="thumb-btn" data-category="beginner" title="Beginner SUP">
+                  <img src="assets/images/rentals-board-beginner.jpg" alt="Beginner Thumbnail">
+                  <span class="thumb-title">Beginner</span>
+                </button>
+                <button class="thumb-btn" data-category="premium" title="Premium SUP">
+                  <img src="assets/images/rentals-board-premium.jpg" alt="Premium Thumbnail">
+                  <span class="thumb-title">Premium</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showroom-specs-card">
+
+              <div class="specs-header-row">
+                <div class="specs-meta-pill" id="featured-board-category-tag">ALL-ROUND DISCIPLINE</div>
+                <div class="specs-live-indicator">
+                  <span class="live-dot"></span>
+                  <span>Ready at Pier 4</span>
+                </div>
+              </div>
+
+              <h3 class="specs-board-title font-serif" id="featured-board-name">The Horizon All-Round 10'6"</h3>
+              <p class="specs-board-desc font-sans" id="featured-board-desc">
+                Stable, versatile and perfect for relaxed paddling. Designed with an ultra-buoyant volume profile, soft
+                diamond-traction deck pad, and effortless glide across glass and light chop.
+              </p>
+
+              <div class="specs-data-grid">
+
+                <div class="spec-data-item">
+                  <span class="data-label">Capacity</span>
+                  <span class="data-value" id="featured-board-capacity">1 Person (310 lbs)</span>
+                </div>
+
+                <div class="spec-data-item">
+                  <span class="data-label">Skill Level</span>
+                  <span class="data-value" id="featured-board-skill">Beginner to All</span>
+                </div>
+
+                <div class="spec-data-item">
+                  <span class="data-label">Board Length</span>
+                  <span class="data-value" id="featured-board-length">10'6" × 32"</span>
+                </div>
+
+                <div class="spec-data-item">
+                  <span class="data-label">Stability Index</span>
+                  <div class="stability-gauge-wrap">
+                    <span class="data-value" id="featured-board-stability">9.6 / 10</span>
+                    <div class="stability-meter-bar">
+                      <div class="stability-fill" id="featured-stability-fill" style="width: 96%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="specs-included-box">
+                <span class="included-title">Standard Concierge Kit Included:</span>
+                <ul class="included-list">
+                  <li>✓ Lightweight Carbon Hybrid Paddle</li>
+                  <li>✓ Ergonomic USCG Approved PFD Vest</li>
+                  <li>✓ 10ft Coiled Heavy-Duty Safety </li>
+                  <li>✓ 20L Waterproof Sealed Deck Bag</li>
+                </ul>
+              </div>
+
+              <div class="specs-footer-action">
+                <div class="specs-price-wrap">
+                  <span class="price-eyebrow">STARTING FROM</span>
+                  <div class="price-value-row">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount" id="featured-board-price">35</span>
+                    <span class="price-period">/ day</span>
+                  </div>
+                </div>
+
+                <button class="btn-primary-reserve" id="reserve-board-btn" data-board-id="allround">
+                  <span>Reserve Board</span>
+                  <svg class="btn-arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-wrap rentals-detail-section" id="details">
+      <div class="section-container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow">PRECISION ENGINEERING</span>
+          <h2 class="section-headline font-serif">Built for Your Water.</h2>
+          <p class="section-desc font-sans">
+            Aerospace carbon construction meets hydrodynamic alpine tuning. Every contour is engineered for zero-drag
+            glide and unmatched stability.
+          </p>
+        </div>
+
+        <div class="interactive-board-stage" id="interactive-board-stage">
+
+          <div class="detail-board-container" id="detail-board-wrap">
+            <img src="assets/images/rentals-board-detail.jpg" alt="WaveNomad Precision Engineered Carbon SUP"
+              class="detail-board-img" id="detail-board-img">
+
+            <div class="detail-caustics-glow" aria-hidden="true"></div>
+
+            <div class="board-hotspot-pin pin-stability" data-spec="stability" title="Inspect Stability">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">01</span>
+            </div>
+            <div class="board-hotspot-pin pin-lightweight" data-spec="lightweight" title="Inspect Lightweight">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">02</span>
+            </div>
+            <div class="board-hotspot-pin pin-durability" data-spec="durability" title="Inspect Durability">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">03</span>
+            </div>
+            <div class="board-hotspot-pin pin-tracking" data-spec="tracking" title="Inspect Tracking">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">04</span>
+            </div>
+            <div class="board-hotspot-pin pin-comfort" data-spec="comfort" title="Inspect Comfort">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">05</span>
+            </div>
+          </div>
+
+          <div class="spec-callout-card callout-stability" id="callout-stability" data-spec="stability">
+            <div class="callout-badge-num">01</div>
+            <div class="callout-content">
+              <h4 class="callout-title">Stability</h4>
+              <p class="callout-desc">
+                Tri-plane wide center hull with a 33" beam provides effortless balance even through mountain boat wake
+                and cross-currents.
+              </p>
+              <div class="callout-metric-tag">33" Beam Width · Zero Roll</div>
+            </div>
+            <div class="callout-connector connector-stability" aria-hidden="true"></div>
+          </div>
+
+          <div class="spec-callout-card callout-lightweight" id="callout-lightweight" data-spec="lightweight">
+            <div class="callout-badge-num">02</div>
+            <div class="callout-content">
+              <h4 class="callout-title">Lightweight</h4>
+              <p class="callout-desc">
+                Aerospace-grade Nomex honeycomb core infused with pre-preg carbon weave. Total carry weight is under 19
+                lbs.
+              </p>
+              <div class="callout-metric-tag">18.4 lbs Total Rig Weight</div>
+            </div>
+            <div class="callout-connector connector-lightweight" aria-hidden="true"></div>
+          </div>
+
+          <div class="spec-callout-card callout-durability" id="callout-durability" data-spec="durability">
+            <div class="callout-badge-num">03</div>
+            <div class="callout-content">
+              <h4 class="callout-title">Durability</h4>
+              <p class="callout-desc">
+                Reinforced Kevlar rail perimeter with double-walled drop-stitch casing shields against granite boulder
+                beaches and dock friction.
+              </p>
+              <div class="callout-metric-tag">Dual-Layer Kevlar Shield</div>
+            </div>
+            <div class="callout-connector connector-durability" aria-hidden="true"></div>
+          </div>
+
+          <div class="spec-callout-card callout-tracking" id="callout-tracking" data-spec="tracking">
+            <div class="callout-badge-num">04</div>
+            <div class="callout-content">
+              <h4 class="callout-title">Tracking</h4>
+              <p class="callout-desc">
+                Displacement prow bow cuts surface water smoothly while the custom US box touring keel holds dead-true
+                heading in 15kt breeze.
+              </p>
+              <div class="callout-metric-tag">Hydrodynamic US Box Keel</div>
+            </div>
+            <div class="callout-connector connector-tracking" aria-hidden="true"></div>
+          </div>
+
+          <div class="spec-callout-card callout-comfort" id="callout-comfort" data-spec="comfort">
+            <div class="callout-badge-num">05</div>
+            <div class="callout-content">
+              <h4 class="callout-title">Comfort</h4>
+              <p class="callout-desc">
+                Diamond-grooved thermoformed EVA deck pad with micro-texture arch bar ensures all-day foot support and
+                fatigue-free touring.
+              </p>
+              <div class="callout-metric-tag">EVA Arch Support Cushion</div>
+            </div>
+            <div class="callout-connector connector-comfort" aria-hidden="true"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-wrap alt-bg rentals-plans-section" id="plans">
+      <div class="section-container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow">FLEXIBLE WATER INTERVALS</span>
+          <h2 class="section-headline font-serif">Your Time. Your Pace.</h2>
+          <p class="section-desc font-sans">
+            Whether you desire a spontaneous morning paddle or a full sunrise-to-starlight alpine excursion, our
+            flexible passes include complete concierge equipment.
+          </p>
+        </div>
+
+        <div class="duration-selector-bar" role="tablist" aria-label="Rental Duration Selector">
+          <button class="duration-tab-btn" role="tab" aria-selected="false" data-duration="1hr" id="dur-1hr">
+            <span class="dur-code">1 HR</span>
+            <span class="dur-label">Quick Glide</span>
+          </button>
+          <button class="duration-tab-btn active" role="tab" aria-selected="true" data-duration="2hr" id="dur-2hr">
+            <span class="dur-badge-pop">MOST POPULAR</span>
+            <span class="dur-code">2 HR</span>
+            <span class="dur-label">Lake Explorer</span>
+          </button>
+          <button class="duration-tab-btn" role="tab" aria-selected="false" data-duration="halfday" id="dur-halfday">
+            <span class="dur-code">HALF DAY</span>
+            <span class="dur-label">4 Hours</span>
+          </button>
+          <button class="duration-tab-btn" role="tab" aria-selected="false" data-duration="fullday" id="dur-fullday">
+            <span class="dur-badge-sav">BEST VALUE</span>
+            <span class="dur-code">FULL DAY</span>
+            <span class="dur-label">8+ Hours</span>
+          </button>
+        </div>
+
+        <div class="selected-plan-card" id="selected-plan-card">
+
+          <div class="plan-hero-column">
+
+            <div class="plan-status-row">
+              <span class="plan-tier-badge" id="plan-tier-name">2 HOURS · LAKE DISCOVERY</span>
+              <div class="plan-avail-tag" id="plan-avail-tag">
+                <span class="avail-pulse-dot"></span>
+                <span id="plan-avail-text">🟢 High Availability · 18 Boards on Dock</span>
+              </div>
+            </div>
+
+            <div class="plan-pricing-display">
+              <div class="plan-price-main">
+                <span class="plan-price-dollar">$</span>
+                <span class="plan-price-number" id="plan-price-val">45</span>
+                <span class="plan-price-meta">/ total pass</span>
+              </div>
+              <p class="plan-price-note" id="plan-price-note">
+                Zero security deposit. Complimentary valet staging at Pier 4.
+              </p>
+            </div>
+
+            <div class="plan-experience-fit">
+              <span class="fit-title">Best Suited For:</span>
+              <p class="fit-desc" id="plan-experience-desc">
+                Ideal for paddling to Granite Cove and Emerald Bay, enjoying a restorative swim, and capturing
+                reflective photographs in tranquil morning or sunset light.
+              </p>
+            </div>
+
+
+            <div class="plan-quick-stats" id="plan-quick-stats">
+              <div class="plan-stat-chip">
+                <svg class="stat-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <div class="stat-chip-body">
+                  <span class="stat-chip-val" id="plan-stat-time">2 hrs</span>
+                  <span class="stat-chip-label">Active Water Time</span>
+                </div>
+              </div>
+              <div class="plan-stat-chip">
+                <svg class="stat-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path d="M3 12h18M12 3l9 9-9 9" />
+                </svg>
+                <div class="stat-chip-body">
+                  <span class="stat-chip-val" id="plan-stat-distance">4–6 mi</span>
+                  <span class="stat-chip-label">Typical Range</span>
+                </div>
+              </div>
+              <div class="plan-stat-chip">
+                <svg class="stat-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <div class="stat-chip-body">
+                  <span class="stat-chip-val" id="plan-stat-window">6–10 AM</span>
+                  <span class="stat-chip-label">Best Launch Window</span>
+                </div>
+              </div>
+            </div>
+
+
+            <button class="btn-primary-reserve plan-action-btn" id="plan-reserve-btn">
+              <span id="plan-btn-text">Reserve for 2 Hours →</span>
+            </button>
+          </div>
+
+          <div class="plan-features-column">
+
+            <h4 class="plan-features-heading">Included with Every Pass:</h4>
+
+            <ul class="plan-features-checklist" id="plan-features-list">
+              <li>
+                <div class="feat-check">✓</div>
+                <div class="feat-text">
+                  <strong>Pre-Calibrated Carbon Touring SUP</strong>
+                  <span>Tuned to your height, weight, and preferred water stability.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-check">✓</div>
+                <div class="feat-text">
+                  <strong>Ultralight Carbon Fiber Hybrid Paddle</strong>
+                  <span>Ergonomic carbon shaft with anti-twist nylon blade for effortless power.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-check">✓</div>
+                <div class="feat-text">
+                  <strong>USCG Certified Low-Profile PFD Vest</strong>
+                  <span>Breathable mesh comfort vest with reflective distress trims.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-check">✓</div>
+                <div class="feat-text">
+                  <strong>Heavy-Duty Coiled Ankle Leash</strong>
+                  <span>Dual stainless-steel swivels to prevent tangle and deck drag.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-check">✓</div>
+                <div class="feat-text">
+                  <strong>25L Watertight Adventure Drybag</strong>
+                  <span>Keep extra clothes, towels, snacks, and electronics completely dry.</span>
+                </div>
+              </li>
+              <li>
+                <div class="feat-check">✓</div>
+                <div class="feat-text">
+                  <strong>Dock Valet Launch &amp; Return Concierge</strong>
+                  <span>Step directly onto mirrored water without carrying equipment.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="plan-guarantee-footer">
+              <svg class="guarantee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Weather Assurance: Free cancellation or schedule transfer if alpine wind exceeds 12 knots.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-wrap rentals-journey-section" id="journey">
+      <div class="section-container">
+
+        <div class="section-header text-center">
+          <span class="section-eyebrow">SEAMLESS ON-WATER PROTOCOL</span>
+          <h2 class="section-headline font-serif">From Shore to Open Water.</h2>
+          <p class="section-desc font-sans">
+            Our five-stage protocol guarantees zero waiting and maximum time exploring mirror waters.
+          </p>
+        </div>
+
+        <div class="journey-track-wrap">
+
+          <div class="journey-waterline" id="journey-waterline" aria-hidden="true">
+            <div class="waterline-fill" id="waterline-fill"></div>
+            <div class="waterline-glow-cursor" id="waterline-cursor"></div>
+          </div>
+
+          <div class="journey-stages-grid">
+
+            <div class="journey-stage-card" data-stage="1">
+              <div class="stage-top-meta">
+                <span class="stage-step-num font-serif">01</span>
+                <div class="stage-node-circle active">
+                  <span class="stage-node-dot"></span>
+                </div>
+              </div>
+              <h3 class="stage-title">SELECT</h3>
+              <p class="stage-desc">
+                Choose your board from our carbon fleet tailored to your skill and excursion goals.
+              </p>
+              <span class="stage-badge-tag">Custom Sized</span>
+            </div>
+
+            <div class="journey-stage-card" data-stage="2">
+              <div class="stage-top-meta">
+                <span class="stage-step-num font-serif">02</span>
+                <div class="stage-node-circle">
+                  <span class="stage-node-dot"></span>
+                </div>
+              </div>
+              <h3 class="stage-title">RESERVE</h3>
+              <p class="stage-desc">
+                Choose your duration and launch window with instant contactless mobile check-in.
+              </p>
+              <span class="stage-badge-tag">Instant Confirm</span>
+            </div>
+
+            <div class="journey-stage-card" data-stage="3">
+              <div class="stage-top-meta">
+                <span class="stage-step-num font-serif">03</span>
+                <div class="stage-node-circle">
+                  <span class="stage-node-dot"></span>
+                </div>
+              </div>
+              <h3 class="stage-title">ARRIVE</h3>
+              <p class="stage-desc">
+                Step onto Dock 4 where your board, paddle, PFD, and dry bag are staged and ready.
+              </p>
+              <span class="stage-badge-tag">Valet Launch</span>
+            </div>
+
+            <div class="journey-stage-card" data-stage="4">
+              <div class="stage-top-meta">
+                <span class="stage-step-num font-serif">04</span>
+                <div class="stage-node-circle">
+                  <span class="stage-node-dot"></span>
+                </div>
+              </div>
+              <h3 class="stage-title">PADDLE</h3>
+              <p class="stage-desc">
+                Glide across alpine waters, explore hidden granite lagoons, and enjoy Sierra solitude.
+              </p>
+              <span class="stage-badge-tag">Open Water</span>
+            </div>
+
+            <div class="journey-stage-card" data-stage="5">
+              <div class="stage-top-meta">
+                <span class="stage-step-num font-serif">05</span>
+                <div class="stage-node-circle">
+                  <span class="stage-node-dot"></span>
+                </div>
+              </div>
+              <h3 class="stage-title">RETURN</h3>
+              <p class="stage-desc">
+                Dock effortlessly. Our valet team handles board wash, drying, and gear sanitization.
+              </p>
+              <span class="stage-badge-tag">Zero Hassle</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="rentals-final-cta-banner" id="rentals-final-cta">
+
+          <div class="final-cta-canvas" aria-hidden="true">
+            <img src="assets/images/cta-paddleboard-waves.jpg" alt="Pristine Alpine Lake Water at Sunset"
+              class="final-cta-bg">
+            <div class="final-cta-overlay"></div>
+          </div>
+
+          <div class="final-cta-content">
+            <span class="final-cta-eyebrow">DOCK 4 VALET IS READY</span>
+
+            <h2 class="final-cta-headline font-serif">
+              The Water Is Waiting.
+            </h2>
+
+            <p class="final-cta-desc font-sans">
+              Choose your board. Pick your time. Start paddling.
+            </p>
+
+            <div class="final-cta-actions">
+              <button class="btn-primary-reserve final-cta-btn" id="final-reserve-btn">
+                <span>Reserve Your Board</span>
+                <svg class="btn-arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <a href="tel:+18005559283" class="btn-secondary-phone">
+                <svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span>Call Concierge: +1 (800) 555-PADDLE</span>
+              </a>
+            </div>
+
+            <div class="final-cta-perk-row">
+              <span>✓ Instant Mobile Pass</span>
+              <span>✓ Complimentary Valet Staging</span>
+              <span>✓ 100% Weather Protection</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <div class="reservation-modal-backdrop" id="reservation-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
+    <div class="reservation-modal-container">
+
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Reservation Modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <span class="modal-eyebrow">WAVENOMAD CONCIERGE BOOKING</span>
+        <h3 class="modal-title font-serif" id="modal-title">Configure Your Water Journey</h3>
+        <p class="modal-desc font-sans">
+          Select your board model, rental duration, and preferred launch time at Pier 4.
+        </p>
+      </div>
+
+      <form class="modal-form" id="rental-config-form">
+
+        <div class="form-group">
+          <label class="form-label" for="modal-board-select">Select Paddleboard Model</label>
+          <select class="form-select" id="modal-board-select">
+            <option value="allround" data-price-multiplier="1">The Horizon All-Round 10'6" (Stable &amp; Versatile)
+            </option>
+            <option value="touring" data-price-multiplier="1.2">The Expedition Touring 12'6" (High Efficiency Glide)
+            </option>
+            <option value="performance" data-price-multiplier="1.35">The Apex Carbon Race 14'0" (Aerospace Speed)
+            </option>
+            <option value="beginner" data-price-multiplier="0.95">The Haven Oasis 10'8" (Maximum Stability Cruiser)
+            </option>
+            <option value="premium" data-price-multiplier="1.5">The Vanguard Heritage Edition 11'6" (Luxury Teak /
+              Carbon)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Rental Duration</label>
+          <div class="modal-duration-grid">
+            <label class="radio-pill">
+              <input type="radio" name="modal-duration" value="1hr" data-base-price="30">
+              <span class="radio-pill-content">
+                <strong>1 Hour</strong>
+                <small>$30 base</small>
+              </span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="modal-duration" value="2hr" data-base-price="45" checked>
+              <span class="radio-pill-content">
+                <strong>2 Hours</strong>
+                <small>$45 base</small>
+              </span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="modal-duration" value="halfday" data-base-price="75">
+              <span class="radio-pill-content">
+                <strong>Half Day (4h)</strong>
+                <small>$75 base</small>
+              </span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="modal-duration" value="fullday" data-base-price="110">
+              <span class="radio-pill-content">
+                <strong>Full Day (8h)</strong>
+                <small>$110 base</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row-dual">
+          <div class="form-group">
+            <label class="form-label" for="modal-date-input">Launch Date</label>
+            <input type="date" class="form-input" id="modal-date-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modal-time-select">Departure Window</label>
+            <select class="form-select" id="modal-time-select">
+              <option value="08:00 AM">08:00 AM — Mirror Morning</option>
+              <option value="10:30 AM">10:30 AM — Crystal High Sun</option>
+              <option value="02:00 PM">02:00 PM — Afternoon Cove Tour</option>
+              <option value="05:30 PM" selected>05:30 PM — Golden Hour Sunset</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-dual">
+          <div class="form-group">
+            <label class="form-label" for="guest-name">Explorer Name</label>
+            <input type="text" class="form-input" id="guest-name" placeholder="E.g. Elena Rostova" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="guest-email">Confirmation Email</label>
+            <input type="email" class="form-input" id="guest-email" placeholder="elena@example.com" required>
+          </div>
+        </div>
+
+        <div class="modal-summary-box">
+          <div class="summary-line">
+            <span>Pass Type:</span>
+            <strong id="summary-pass-type">The Horizon All-Round 10'6" (2 Hours)</strong>
+          </div>
+          <div class="summary-line">
+            <span>Valet Dock Departure:</span>
+            <span>Pier 4, Lake Tahoe</span>
+          </div>
+          <div class="summary-line summary-total">
+            <span>Total Amount Due:</span>
+            <span class="summary-price" id="summary-total-price">$45.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary-reserve modal-submit-btn">
+          <span>Confirm Dock Reservation</span>
+          <svg class="btn-arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+
+      </form>
+
+      <div class="modal-success-state" id="modal-success-box" style="display: none;">
+        <div class="success-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h4 class="success-title font-serif">Your Board Is Reserved!</h4>
+        <p class="success-text" id="success-confirmation-text">
+          Confirmation and mobile dock voucher have been sent to your email. Your board will be calibrated and waiting
+          on Dock 4.
+        </p>
+        <button class="btn-secondary-action" id="success-done-btn">Done</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="reservation-modal-backdrop" id="login-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="reservation-modal-container login-modal-box">
+      <button class="modal-close-btn" id="login-close-btn" aria-label="Close Login Modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header text-center">
+        <span class="modal-eyebrow">WAVENOMAD MEMBER ACCESS</span>
+        <h3 class="modal-title font-serif">Sign In to Your Account</h3>
+        <p class="modal-desc font-sans">
+          Access your digital rental locker, view reservations, and track telemetry stats.
+        </p>
+      </div>
+
+      <form class="modal-form" id="login-form">
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input type="email" class="form-input" id="login-email" placeholder="explorer@wavenomad.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="login-password">Password</label>
+          <input type="password" class="form-input" id="login-password" placeholder="••••••••••••" required>
+        </div>
+        <button type="submit" class="btn-primary-reserve modal-submit-btn">
+          <span>Sign In to WaveNomad</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-top-grid">
+
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+            <div class="brand-emblem-circle">
+              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
+                  stroke="currentColor" stroke-width="2" />
+                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">WaveNomad</span>
+              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+            </div>
+          </a>
+          <p class="footer-brand-paratext">
+            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries.
+            Premium touring fleets.
+          </p>
+
+          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2</a></li>
+            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
+            <li><a href="lessons.html" class="footer-link">Lessons &amp; Tours</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#collection" class="footer-link">Carbon Touring SUPs</a></li>
+            <li><a href="rentals.html#collection" class="footer-link">Inflatable Expedition Kits</a></li>
+            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
+            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
+            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
+            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col footer-contact-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-links-list footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Timing:</span>
+                <span class="contact-value">Daily: 06:00 AM – 08:30 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Location:</span>
+                <span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Mail:</span>
+                <a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <div class="contact-text-wrap">
+                <span class="contact-label">Support:</span>
+                <a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span class="footer-legal-text">
+          &copy; 2026 WaveNomad Adventures Inc. All rights reserved.
+        </span>
+
+        <div class="footer-bottom-links">
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a>
+          <span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Privacy Policy</a>
+          <span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="rentals.js"></script>
+</body>
+
+</html>

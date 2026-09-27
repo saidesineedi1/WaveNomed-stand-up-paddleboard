@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Expedition Dashboard | WaveNomad Stand-Up Paddleboards</title>
+  <meta name="description"
+    content="WaveNomad Guest Portal for booking paddleboard rental slots or lessons, tracking equipment reservation status, viewing weather and water condition alerts, accessing waiver forms, and managing payments.">
+  <meta name="theme-color" content="#1597B8">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dashboard-app-body">
+
+  <div class="dashboard-app-layout" id="app-layout">
+
+    <aside class="dashboard-sidebar" id="dashboard-sidebar" aria-label="Portal Navigation">
+
+      <div class="sidebar-brand-wrap">
+        <a href="index.html" class="sidebar-brand-link" title="WaveNomad Home">
+          <div class="sidebar-brand-emblem">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+              <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.25" stroke="currentColor"
+                stroke-width="2" stroke-linejoin="round" />
+              <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="sidebar-brand-text">
+            <span class="sidebar-brand-title">WAVENOMAD</span>
+            <span class="sidebar-brand-sub">PADDLEBOARD CLUB</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <span class="sidebar-section-label">PORTAL NAVIGATION</span>
+
+        <nav class="sidebar-nav-list" role="tablist" aria-label="Dashboard sections">
+
+          <button class="sidebar-nav-item active" id="nav-item-overview" role="tab" aria-selected="true"
+            data-target="view-overview">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+            </span>
+            <span class="nav-item-label">Overview &amp; Telemetry</span>
+          </button>
+
+          <button class="sidebar-nav-item" id="nav-item-bookings" role="tab" aria-selected="false"
+            data-target="view-bookings">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            <span class="nav-item-label">Bookings &amp; Slots</span>
+            <span class="sidebar-badge badge-purple" id="sidebar-booking-badge">2</span>
+          </button>
+
+          <button class="sidebar-nav-item" id="nav-item-equipment" role="tab" aria-selected="false"
+            data-target="view-equipment">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </span>
+            <span class="nav-item-label">Equipment &amp; Lockers</span>
+            <span class="sidebar-badge badge-cyan">#14</span>
+          </button>
+
+          <button class="sidebar-nav-item" id="nav-item-weather" role="tab" aria-selected="false"
+            data-target="view-weather">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </span>
+            <span class="nav-item-label">Weather &amp; Water Radar</span>
+            <span class="sidebar-live-dot" title="Live Sensor Sync"></span>
+          </button>
+
+          <button class="sidebar-nav-item" id="nav-item-waivers" role="tab" aria-selected="false"
+            data-target="view-waivers">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </span>
+            <span class="nav-item-label">Waivers &amp; Safety Forms</span>
+            <span class="sidebar-badge badge-green">100%</span>
+          </button>
+
+          <button class="sidebar-nav-item" id="nav-item-billing" role="tab" aria-selected="false"
+            data-target="view-billing">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </span>
+            <span class="nav-item-label">Billing &amp; Invoices</span>
+          </button>
+
+          <button class="sidebar-nav-item" id="nav-item-settings" role="tab" aria-selected="false"
+            data-target="view-settings">
+            <span class="nav-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+            </span>
+            <span class="nav-item-label">Settings &amp; Prefs</span>
+          </button>
+
+        </nav>
+      </div>
+
+      <div class="sidebar-footer-card">
+        <div class="sidebar-member-badge">
+          <div class="member-shield-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="member-badge-meta">
+            <span class="badge-title">VIP PADDLER</span>
+            <span class="badge-num" id="sidebar-member-num">Member #WN-8849</span>
+          </div>
+        </div>
+
+        <div class="sidebar-return-dropdown-wrap" id="return-menu-wrap">
+          <button class="btn-sidebar-return" id="btn-sidebar-return" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Return to Main Website</span>
+            <svg class="return-caret" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <div class="sidebar-return-menu" id="sidebar-return-menu">
+            <a href="index.html" class="return-menu-link">
+              <span class="rml-dot"></span>
+              <span>Home 1: Classic Morning</span>
+            </a>
+            <a href="home2.html" class="return-menu-link">
+              <span class="rml-dot"></span>
+              <span>Home 2: Sunset &amp; Twilight</span>
+            </a>
+            <a href="rentals.html" class="return-menu-link">
+              <span class="rml-dot"></span>
+              <span>Paddleboard Rentals Fleet</span>
+            </a>
+            <a href="lessons.html" class="return-menu-link">
+              <span class="rml-dot"></span>
+              <span>PSUPA Lessons &amp; Tours</span>
+            </a>
+            <a href="safety.html" class="return-menu-link">
+              <span class="rml-dot"></span>
+              <span>Safety &amp; Water Radar</span>
+            </a>
+            <a href="contact.html" class="return-menu-link">
+              <span class="rml-dot"></span>
+              <span>Contact &amp; Concierge</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <div class="dashboard-viewport">
+
+      <header class="dashboard-topbar">
+
+        <div class="topbar-welcome-block">
+          <div class="topbar-eyebrow">
+            <span class="diamond-icon">◆</span>
+            <span>GUEST EXPEDITION PORTAL</span>
+          </div>
+          <h1 class="topbar-heading">
+            Welcome back, <span id="topbar-user-name">Dashboard</span>
+          </h1>
+        </div>
+
+        <div class="topbar-controls-block">
+
+          <button class="topbar-mobile-toggle" id="sidebar-mobile-toggle" aria-label="Toggle Portal Sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="topbar-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="topbar-search-input" placeholder="Search orders, slots, lessons..."
+              aria-label="Search bookings and lessons">
+          </div>
+
+          <button class="topbar-pill-btn rtl-toggle-btn" id="lang-toggle-btn" aria-label="Toggle RTL reading direction"
+            title="Toggle RTL mode">
+            <span class="rtl-opt rtl-opt-ltr">LTR</span>
+            <span class="rtl-opt rtl-opt-rtl">RTL</span>
+            <span id="lang-label" style="display: none;">LTR</span>
+          </button>
+
+          <button class="topbar-icon-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Theme"
+            title="Toggle Light / Dark Mode">
+            <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="theme-icon-sun" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <div class="topbar-notif-wrap" id="notif-wrap">
+            <button class="topbar-icon-btn notif-btn" id="notif-btn" aria-label="Notifications" title="Notifications">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="notif-count-badge" id="notif-count-badge">3</span>
+            </button>
+
+            <div class="topbar-notif-dropdown" id="notif-dropdown">
+              <div class="notif-dropdown-header">
+                <strong>Portal Notifications</strong>
+                <span class="notif-clear-btn" id="btn-clear-notifs">Mark all read</span>
+              </div>
+              <div class="notif-list">
+                <div class="notif-item unread">
+                  <span class="notif-item-dot green"></span>
+                  <div class="notif-item-text">
+                    <strong>Smart Locker #14 Ready</strong>
+                    <span>Your Red Paddle Co 11'3" SUP is disinfected and staged at Pier 4. PIN: 8492</span>
+                  </div>
+                </div>
+                <div class="notif-item unread">
+                  <span class="notif-item-dot cyan"></span>
+                  <div class="notif-item-text">
+                    <strong>PSUPA Lesson Confirmed</strong>
+                    <span>Tomorrow at 09:30 AM with Coach Liam Becker at Crystal Bay Cove.</span>
+                  </div>
+                </div>
+                <div class="notif-item unread">
+                  <span class="notif-item-dot amber"></span>
+                  <div class="notif-item-text">
+                    <strong>Water Telemetry Update</strong>
+                    <span>Lake Tahoe water temp 61.4°F with glassy calm water (4.2 kts wind).</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="topbar-user-wrap" id="topbar-user-wrap">
+            <button class="topbar-user-pill" id="topbar-user-btn" aria-haspopup="true" aria-expanded="false">
+              <img src="assets/images/contact-golden-shoreline.jpg" alt="Elena Vance Avatar" class="topbar-avatar-img">
+              <div class="topbar-user-info">
+                <span class="topbar-user-name-text" id="header-user-name">Elena Vance</span>
+                <span class="topbar-user-role" id="header-user-role">Explorer VIP</span>
+              </div>
+              <svg class="topbar-user-caret" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <div class="topbar-user-dropdown" id="topbar-user-dropdown">
+              <div class="tud-header">
+                <span>Active Account</span>
+                <strong id="dropdown-guest-name">Elena Vance</strong>
+                <span class="tud-email">elena.vance@adventure.io</span>
+              </div>
+              <div class="tud-divider"></div>
+              <span class="tud-section-title">Switch Demo Guest:</span>
+              <button class="tud-switch-btn active" data-guest="elena">
+                <span class="tud-avatar-circle">EV</span>
+                <div class="tud-btn-info">
+                  <strong>Elena Vance</strong>
+                  <span>2 Active Bookings · Waiver Complete</span>
+                </div>
+              </button>
+              <button class="tud-switch-btn" data-guest="marcus">
+                <span class="tud-avatar-circle">MR</span>
+                <div class="tud-btn-info">
+                  <strong>Marcus Reed</strong>
+                  <span>1 Lesson Booked · Pending Waiver</span>
+                </div>
+              </button>
+              <button class="tud-switch-btn" data-guest="sarah">
+                <span class="tud-avatar-circle">SK</span>
+                <div class="tud-btn-info">
+                  <strong>Sarah Kim</strong>
+                  <span>Season Pro Gold · VIP Locker</span>
+                </div>
+              </button>
+              <div class="tud-divider"></div>
+              <a href="index.html" class="tud-action-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span>Sign Out &amp; Exit to Home</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </header>
+
+      <main class="dashboard-main-view" id="main-view-container">
+
+        <section class="portal-view active" id="view-overview">
+
+          <div class="portal-metrics-grid">
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">MONTHLY EXPEDITIONS</span>
+                <div class="metric-icon-circle icon-purple">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-big-num" id="metric-val-revenue">$48,250.00</span>
+              </div>
+              <div class="metric-trend-row">
+                <span class="trend-pill trend-up">
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M12 7a1 1 0 011 1v6a1 1 0 11-2 0V9.414l-4.293 4.293a1 1 0 01-1.414-1.414L9.586 8H8a1 1 0 010-2h4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>+18.4%</span>
+                </span>
+                <span class="trend-subtext">vs last month</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">TOTAL FLEET SLOTS</span>
+                <div class="metric-icon-circle icon-green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-big-num" id="metric-val-orders">1,420</span>
+              </div>
+              <div class="metric-trend-row">
+                <span class="trend-pill trend-up">
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M12 7a1 1 0 011 1v6a1 1 0 11-2 0V9.414l-4.293 4.293a1 1 0 01-1.414-1.414L9.586 8H8a1 1 0 010-2h4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>+12.1%</span>
+                </span>
+                <span class="trend-subtext">vs last month</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">ACTIVE MEMBERS</span>
+                <div class="metric-icon-circle icon-amber">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-big-num" id="metric-val-members">3,890</span>
+              </div>
+              <div class="metric-trend-row">
+                <span class="trend-pill trend-up">
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M12 7a1 1 0 011 1v6a1 1 0 11-2 0V9.414l-4.293 4.293a1 1 0 01-1.414-1.414L9.586 8H8a1 1 0 010-2h4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>+24.8%</span>
+                </span>
+                <span class="trend-subtext">repeat lake explorers</span>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">FLEET &amp; DOCK HEALTH</span>
+                <div class="metric-icon-circle icon-cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-big-num" id="metric-val-stock">98.4%</span>
+              </div>
+              <div class="metric-trend-row">
+                <span class="trend-pill trend-optimal">
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Optimal</span>
+                </span>
+                <span class="trend-subtext">42 active dock lockers</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="portal-charts-grid">
+
+            <div class="portal-card chart-card-large">
+              <div class="pcard-header">
+                <div>
+                  <h2 class="pcard-title">Revenue &amp; Visitor Growth</h2>
+                  <span class="pcard-subtitle">Monthly trend comparison for board rentals &amp; PSUPA clinics</span>
+                </div>
+                <div class="chart-filter-toggle">
+                  <button class="cfilter-btn active" data-range="6m">6 Months</button>
+                  <button class="cfilter-btn" data-range="1y">1 Year</button>
+                </div>
+              </div>
+
+              <div class="chart-legend-strip">
+                <div class="legend-item">
+                  <span class="legend-box color-purple"></span>
+                  <span>Monthly Revenue ($)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-box color-cyan-dashed"></span>
+                  <span>Unique Lake Visitors</span>
+                </div>
+              </div>
+
+              <div class="svg-chart-container">
+                <svg class="line-chart-svg" viewBox="0 0 680 280" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="cyanGlowGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#1597B8" stop-opacity="0.45" />
+                      <stop offset="100%" stop-color="#1597B8" stop-opacity="0.0" />
+                    </linearGradient>
+                  </defs>
+
+                  <line x1="50" y1="40" x2="650" y2="40" stroke="rgba(21, 151, 184, 0.15)" stroke-dasharray="3 3" />
+                  <line x1="50" y1="90" x2="650" y2="90" stroke="rgba(21, 151, 184, 0.15)" stroke-dasharray="3 3" />
+                  <line x1="50" y1="140" x2="650" y2="140" stroke="rgba(21, 151, 184, 0.15)" stroke-dasharray="3 3" />
+                  <line x1="50" y1="190" x2="650" y2="190" stroke="rgba(21, 151, 184, 0.15)" stroke-dasharray="3 3" />
+                  <line x1="50" y1="240" x2="650" y2="240" stroke="rgba(21, 151, 184, 0.2)" />
+
+                  <text x="40" y="45" text-anchor="end" class="chart-axis-text">$50,000</text>
+                  <text x="40" y="95" text-anchor="end" class="chart-axis-text">$45,000</text>
+                  <text x="40" y="145" text-anchor="end" class="chart-axis-text">$40,000</text>
+                  <text x="40" y="195" text-anchor="end" class="chart-axis-text">$35,000</text>
+                  <text x="40" y="245" text-anchor="end" class="chart-axis-text">$30,000</text>
+
+                  <path
+                    d="M 90 220 C 180 205, 240 180, 310 160 C 370 140, 420 170, 480 135 C 550 95, 600 65, 620 50 L 620 240 L 90 240 Z"
+                    fill="url(#cyanGlowGradient)" />
+
+                  <path d="M 90 220 C 180 205, 240 180, 310 160 C 370 140, 420 170, 480 135 C 550 95, 600 65, 620 50"
+                    fill="none" stroke="#1597B8" stroke-width="4" stroke-linecap="round" />
+
+                  <path d="M 90 240 C 180 230, 240 220, 310 210 C 370 200, 420 190, 480 180 C 550 170, 600 162, 620 155"
+                    fill="none" stroke="#48D2E5" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" />
+
+                  <circle cx="90" cy="220" r="6" fill="#1597B8" stroke="#FFFFFF" stroke-width="2" />
+                  <circle cx="210" cy="200" r="6" fill="#1597B8" stroke="#FFFFFF" stroke-width="2" />
+                  <circle cx="310" cy="160" r="6" fill="#1597B8" stroke="#FFFFFF" stroke-width="2" />
+                  <circle cx="420" cy="168" r="6" fill="#1597B8" stroke="#FFFFFF" stroke-width="2" />
+                  <circle cx="620" cy="50" r="7" fill="#1597B8" stroke="#FFFFFF" stroke-width="2.5" />
+
+                  <circle cx="90" cy="240" r="4.5" fill="#48D2E5" />
+                  <circle cx="210" cy="223" r="4.5" fill="#48D2E5" />
+                  <circle cx="310" cy="210" r="4.5" fill="#48D2E5" />
+                  <circle cx="420" cy="190" r="4.5" fill="#48D2E5" />
+                  <circle cx="620" cy="155" r="4.5" fill="#48D2E5" />
+
+                  <text x="90" y="265" text-anchor="middle" class="chart-axis-text">Mar</text>
+                  <text x="210" y="265" text-anchor="middle" class="chart-axis-text">Apr</text>
+                  <text x="310" y="265" text-anchor="middle" class="chart-axis-text">May</text>
+                  <text x="420" y="265" text-anchor="middle" class="chart-axis-text">Jun</text>
+                  <text x="520" y="265" text-anchor="middle" class="chart-axis-text">Jul</text>
+                  <text x="620" y="265" text-anchor="middle" class="chart-axis-text">Aug</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="portal-card chart-card-side">
+              <div class="pcard-header">
+                <div>
+                  <h2 class="pcard-title">Fleet Activity &amp; Disciplines</h2>
+                  <span class="pcard-subtitle">Volume across rental fleet, coaching clinics &amp; sunset tours</span>
+                </div>
+              </div>
+
+              <div class="category-bars-chart">
+                <div class="cbars-y-axis">
+                  <span>600</span>
+                  <span>500</span>
+                  <span>400</span>
+                  <span>300</span>
+                  <span>200</span>
+                  <span>100</span>
+                  <span>0</span>
+                </div>
+
+                <div class="cbars-columns-wrap">
+                  <div class="cbar-col">
+                    <div class="cbar-fill-track">
+                      <div class="cbar-fill-bar bar-purple" style="height: 92%;" title="Touring SUP: 560 sessions">
+                      </div>
+                    </div>
+                    <span class="cbar-name">Touring SUP</span>
+                  </div>
+
+                  <div class="cbar-col">
+                    <div class="cbar-fill-track">
+                      <div class="cbar-fill-bar bar-purple-light" style="height: 74%;" title="All-Round: 440 sessions">
+                      </div>
+                    </div>
+                    <span class="cbar-name">All-Round</span>
+                  </div>
+
+                  <div class="cbar-col">
+                    <div class="cbar-fill-track">
+                      <div class="cbar-fill-bar bar-teal" style="height: 56%;" title="PSUPA Clinics: 320 paddlers">
+                      </div>
+                    </div>
+                    <span class="cbar-name">Clinics</span>
+                  </div>
+
+                  <div class="cbar-col">
+                    <div class="cbar-fill-track">
+                      <div class="cbar-fill-bar bar-amber" style="height: 48%;" title="Sunset Tours: 280 guests"></div>
+                    </div>
+                    <span class="cbar-name">Tours</span>
+                  </div>
+
+                  <div class="cbar-col">
+                    <div class="cbar-fill-track">
+                      <div class="cbar-fill-bar bar-coral" style="height: 32%;" title="Carbon Race: 180 slots"></div>
+                    </div>
+                    <span class="cbar-name">Race Pro</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chart-slider-track">
+                <div class="chart-slider-thumb"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="overview-quick-strip">
+            <div class="quick-strip-card">
+              <div class="qs-left">
+                <span class="qs-badge">ACTIVE DOCK PASS</span>
+                <h3 class="qs-title">Red Paddle Co 11'3" Sport MSL · Locker #14</h3>
+                <span class="qs-meta">Today · 02:00 PM – 05:00 PM · Emerald Basin Pier 4 · PIN: <strong
+                    class="highlight-cyan">8492</strong></span>
+              </div>
+              <div class="qs-actions">
+                <button class="dash-btn dash-btn-primary" id="btn-quick-open-qr">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>View Locker QR Pass</span>
+                </button>
+                <button class="dash-btn dash-btn-secondary" id="btn-quick-new-booking">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"></path>
+                  </svg>
+                  <span>Book New Slot</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="portal-view" id="view-bookings">
+          <div class="view-header-strip">
+            <div>
+              <h2 class="view-title">Bookings &amp; Rental Slots</h2>
+              <p class="view-desc">Schedule high-performance paddleboards, certified technique coaching, and view
+                equipment readiness.</p>
+            </div>
+            <button class="dash-btn dash-btn-primary" id="btn-portal-book-slot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"></path>
+              </svg>
+              <span>+ New Reservation</span>
+            </button>
+          </div>
+
+          <div class="portal-reservations-stream">
+
+            <div class="stream-booking-card">
+              <div class="sbc-header">
+                <div class="sbc-badge-group">
+                  <span class="status-pill status-ready">Ready in Locker #14</span>
+                  <span class="type-pill">Rental Fleet · 3 Hours</span>
+                </div>
+                <span class="sbc-id mono-font">#WN-9041</span>
+              </div>
+              <div class="sbc-body">
+                <div class="sbc-thumb">
+                  <img src="assets/images/rentals-board-premium.jpg" alt="Red Paddle Co 11'3 Sport">
+                </div>
+                <div class="sbc-info">
+                  <h3>Red Paddle Co 11'3" Sport MSL Carbon Kit</h3>
+                  <div class="sbc-meta-grid">
+                    <div><span>Slot Timing:</span><strong>Today, 02:00 PM – 05:00 PM</strong></div>
+                    <div><span>Launch Dock:</span><strong>Emerald Basin Pier 4</strong></div>
+                    <div><span>Locker PIN:</span><strong class="highlight-cyan">8492</strong></div>
+                    <div><span>Waiver:</span><strong class="text-green">✓ Signed &amp; Attached</strong></div>
+                  </div>
+                </div>
+              </div>
+              <div class="sbc-footer">
+                <button class="dash-btn dash-btn-primary btn-qr-trigger" data-pin="8492" data-locker="14">View QR
+                  Key</button>
+                <button class="dash-btn dash-btn-secondary btn-extend-trigger">Extend +1 Hr ($20)</button>
+                <button class="dash-btn dash-btn-outline btn-cancel-trigger">Cancel Booking</button>
+              </div>
+            </div>
+
+            <div class="stream-booking-card">
+              <div class="sbc-header">
+                <div class="sbc-badge-group">
+                  <span class="status-pill status-confirmed">Confirmed · Coach Assigned</span>
+                  <span class="type-pill">PSUPA Level 2 Clinic</span>
+                </div>
+                <span class="sbc-id mono-font">#WN-8812</span>
+              </div>
+              <div class="sbc-body">
+                <div class="sbc-thumb">
+                  <img src="assets/images/lesson-intermediate-hero.jpg" alt="Mastering Glide PSUPA Clinic">
+                </div>
+                <div class="sbc-info">
+                  <h3>Mastering Glide &amp; Cross-Bow Pivot Turns</h3>
+                  <div class="sbc-meta-grid">
+                    <div><span>Session Timing:</span><strong>Tomorrow, 09:30 AM – 11:30 AM</strong></div>
+                    <div><span>Lead Instructor:</span><strong>Coach Liam Becker (PSUPA Pro)</strong></div>
+                    <div><span>Meeting Point:</span><strong>Crystal Bay Cove Pavilion</strong></div>
+                    <div><span>Gear Included:</span><strong>Starboard Race 14' + Werner Paddle</strong></div>
+                  </div>
+                </div>
+              </div>
+              <div class="sbc-footer">
+                <button class="dash-btn dash-btn-secondary btn-msg-coach-trigger">Message Coach</button>
+                <button class="dash-btn dash-btn-outline btn-cal-trigger">Add to Calendar</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="portal-view" id="view-equipment">
+          <div class="view-header-strip">
+            <div>
+              <h2 class="view-title">Smart Dock Lockers &amp; Live Telemetry</h2>
+              <p class="view-desc">Contactless dock access keys, automated PIN code dispensing, and live GPS safety
+                beacon telemetry.</p>
+            </div>
+            <button class="dash-btn dash-btn-primary" id="btn-view3-nfc-sim">
+              <span>Simulate NFC Tap Unlock</span>
+            </button>
+          </div>
+
+          <div class="equipment-portal-grid">
+            <div class="portal-card locker-key-card">
+              <div class="lk-header">
+                <span class="lk-tag">PIER 4 DOCK KEY</span>
+                <span class="status-pill status-ready">BAY #14 ACTIVE</span>
+              </div>
+              <div class="lk-qr-display">
+                <svg viewBox="0 0 120 120" class="qr-svg-sim">
+                  <rect x="0" y="0" width="120" height="120" fill="white" rx="8" />
+                  <rect x="10" y="10" width="30" height="30" fill="#102A43" rx="4" />
+                  <rect x="16" y="16" width="18" height="18" fill="white" />
+                  <rect x="20" y="20" width="10" height="10" fill="#1597B8" />
+                  <rect x="80" y="10" width="30" height="30" fill="#102A43" rx="4" />
+                  <rect x="86" y="16" width="18" height="18" fill="white" />
+                  <rect x="90" y="20" width="10" height="10" fill="#1597B8" />
+                  <rect x="10" y="80" width="30" height="30" fill="#102A43" rx="4" />
+                  <rect x="16" y="86" width="18" height="18" fill="white" />
+                  <rect x="20" y="90" width="10" height="10" fill="#1597B8" />
+                  <circle cx="50" cy="50" r="5" fill="#102A43" />
+                  <circle cx="70" cy="50" r="4" fill="#1597B8" />
+                  <circle cx="50" cy="85" r="4" fill="#102A43" />
+                  <circle cx="75" cy="85" r="5" fill="#1597B8" />
+                </svg>
+                <div class="lk-pin-digits">
+                  <span>8</span><span>4</span><span>9</span><span>2</span>
+                </div>
+              </div>
+              <p class="lk-hint">Hold screen to locker optical reader or enter 4-digit PIN on keypad.</p>
+              <button class="dash-btn dash-btn-secondary" id="btn-copy-pin-main">Copy PIN Code</button>
+            </div>
+
+            <div class="portal-card gps-live-card">
+              <div class="pcard-header">
+                <div>
+                  <h3 class="pcard-title">Live GPS Safety Beacon #WN-14</h3>
+                  <span class="pcard-subtitle">5G Satellite Sync · 39.0968° N, 120.0324° W</span>
+                </div>
+                <span class="badge-status-green">Signal 98%</span>
+              </div>
+              <div class="gps-map-box">
+                <svg class="lake-vector-map" viewBox="0 0 400 200" fill="none">
+                  <path d="M0 0 H400 V200 H0 Z" fill="rgba(32, 184, 209, 0.12)" />
+                  <path d="M0 160 C90 140 160 190 240 170 C320 150 360 180 400 160 V200 H0 Z"
+                    fill="rgba(16, 42, 67, 0.25)" />
+                  <ellipse cx="270" cy="100" rx="30" ry="18" fill="rgba(32, 184, 209, 0.25)" stroke="#20B8D1"
+                    stroke-width="1.5" />
+                  <text x="270" y="104" text-anchor="middle" font-size="9" fill="currentColor">Fannette Island</text>
+                  <circle cx="160" cy="110" r="6" fill="#20B8D1" stroke="#FFFFFF" stroke-width="2" />
+                </svg>
+              </div>
+              <div class="gps-stats-ribbon">
+                <div><span>Depth under Fin:</span><strong>14.2 ft (Clear)</strong></div>
+                <div><span>Distance from Dock:</span><strong>420 meters</strong></div>
+                <div><span>Geofence Zone:</span><strong class="text-green">Zone Alpha (Safe)</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="portal-view" id="view-weather">
+          <div class="view-header-strip">
+            <div>
+              <h2 class="view-title">Lake Tahoe Weather &amp; Ultrasonic Telemetry</h2>
+              <p class="view-desc">Live environmental telemetry from Emerald Basin Buoy #04 with real-time gust
+                warnings.</p>
+            </div>
+            <span class="telemetry-pill-live">
+              <span class="live-dot green"></span> Live Ultrasonic Sync
+            </span>
+          </div>
+
+          <div class="weather-grid-cards">
+            <div class="metric-card">
+              <span class="metric-label">WATER TEMPERATURE</span>
+              <span class="metric-big-num text-cyan">61.4°F</span>
+              <span class="trend-subtext">Depth: 1.2m · Thermal Category: Mild Cold</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">SURFACE WIND</span>
+              <span class="metric-big-num text-green">4.2 kts</span>
+              <span class="trend-subtext">WNW · Mirror Glass Surface</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">WAVE / CHOP</span>
+              <span class="metric-big-num">0.3 ft</span>
+              <span class="trend-subtext">Period 2.1s · Perfect for Beginners</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">SECCHI CLARITY</span>
+              <span class="metric-big-num text-cyan">9.8 m</span>
+              <span class="trend-subtext">32.1 ft High Altitude Visibility</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="portal-view" id="view-waivers">
+          <div class="view-header-strip">
+            <div>
+              <h2 class="view-title">Digital Liability Waivers &amp; Safety Compliance</h2>
+              <p class="view-desc">Legally binding electronic waivers and cold-water hypothermia acknowledgements.</p>
+            </div>
+            <button class="dash-btn dash-btn-primary" id="btn-open-sign-pad-main">
+              <span>Sign / Renew Waiver Form</span>
+            </button>
+          </div>
+
+          <div class="portal-card waiver-cert-box">
+            <div class="wcert-top">
+              <div>
+                <span class="wcert-tag">WAVENOMAD COMPLIANCE CERTIFICATE</span>
+                <h3 class="wcert-title">2026 Master SUP Liability &amp; Cold Water Release</h3>
+              </div>
+              <span class="seal-pill">✓ VERIFIED 2026</span>
+            </div>
+            <div class="wcert-grid">
+              <div><span>Guest Name:</span><strong id="wcert-name">Elena Vance</strong></div>
+              <div><span>Digital Hash:</span><strong class="mono-font" id="wcert-hash">SHA256:
+                  8a7c-99d2-44e1-WN</strong></div>
+              <div><span>Date Executed:</span><strong>Sep 15, 2026 · 10:42 AM PST</strong></div>
+              <div><span>Status:</span><strong class="text-green">Active through Dec 31, 2026</strong></div>
+            </div>
+            <div class="wcert-actions">
+              <button class="dash-btn dash-btn-secondary" id="btn-download-waiver">Download Signed PDF</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="portal-view" id="view-billing">
+          <div class="view-header-strip">
+            <div>
+              <h2 class="view-title">Billing, Invoices &amp; WaveRewards</h2>
+              <p class="view-desc">Manage encrypted payment cards, track security deposit holds, and download tax
+                receipts.</p>
+            </div>
+            <button class="dash-btn dash-btn-primary" id="btn-add-card-main">
+              <span>+ Add Payment Card</span>
+            </button>
+          </div>
+
+          <div class="billing-table-card portal-card">
+            <table class="portal-doc-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Method</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono-font">#WN-INV-9041</td>
+                  <td>Sep 26, 2026</td>
+                  <td>Red Paddle Co 11'3" Sport (3-Hr Rental)</td>
+                  <td>Apple Pay (Visa *4289)</td>
+                  <td><strong>$65.00</strong></td>
+                  <td><span class="status-pill status-ready">Paid</span></td>
+                  <td><button class="btn-receipt-view" data-inv="#WN-INV-9041" data-amount="$65.00">PDF Receipt</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mono-font">#WN-INV-8812</td>
+                  <td>Sep 27, 2026</td>
+                  <td>PSUPA Intermediate Technique Clinic</td>
+                  <td>Visa ending 4289</td>
+                  <td><strong>$85.00</strong></td>
+                  <td><span class="status-pill status-ready">Paid</span></td>
+                  <td><button class="btn-receipt-view" data-inv="#WN-INV-8812" data-amount="$85.00">PDF Receipt</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="portal-view" id="view-settings">
+          <div class="view-header-strip">
+            <div>
+              <h2 class="view-title">Portal Settings &amp; Preferences</h2>
+              <p class="view-desc">Configure notification alerts, preferred board sizing, and linked emergency contacts.
+              </p>
+            </div>
+          </div>
+          <div class="portal-card">
+            <div class="settings-form-grid">
+              <div class="form-group">
+                <label class="form-label">Full Legal Name</label>
+                <input type="text" class="form-control" value="Elena Vance">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Notification Address</label>
+                <input type="email" class="form-control" value="elena.vance@adventure.io">
+              </div>
+              <div class="form-group">
+                <label class="form-label">SMS Alert Phone Number</label>
+                <input type="tel" class="form-control" value="+1 (800) 555-0199">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Default Launch Hub</label>
+                <select class="form-control">
+                  <option selected>Emerald Basin Pier 4, Lake Tahoe</option>
+                  <option>Crystal Bay Launch Cove, Lake Tahoe</option>
+                  <option>Sand Harbor Point, Lake Tahoe</option>
+                </select>
+              </div>
+            </div>
+            <button class="dash-btn dash-btn-primary" style="margin-top: 1.5rem;" id="btn-save-settings">Save
+              Preferences</button>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+
+  <div class="portal-modal-overlay" id="modal-booking-wizard">
+    <div class="portal-modal-window">
+      <div class="pmodal-header">
+        <h2>Book Paddleboard Rental or Lesson</h2>
+        <button class="pmodal-close" id="btn-close-booking">&times;</button>
+      </div>
+      <form id="portal-booking-form" class="pmodal-form">
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <select class="form-control" id="select-category">
+            <option value="rental">Paddleboard Rental Slot</option>
+            <option value="lesson">PSUPA Certified Lesson Clinic</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Gear Fleet</label>
+          <select class="form-control" id="select-gear">
+            <option value="red-113">Red Paddle Co 11'3" Sport ($25/hr)</option>
+            <option value="starboard-126">Starboard 12'6" Touring Deluxe ($30/hr)</option>
+            <option value="clinic-intermediate">Mastering Glide Clinic ($85)</option>
+          </select>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" id="input-date" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Time</label>
+            <select class="form-control" id="input-time">
+              <option>09:00 AM (Morning Calm)</option>
+              <option selected>02:00 PM (Afternoon Warmth)</option>
+              <option>05:30 PM (Golden Hour Sunset)</option>
+            </select>
+          </div>
+        </div>
+        <div class="pmodal-footer">
+          <button type="button" class="dash-btn dash-btn-outline" id="btn-cancel-booking-modal">Cancel</button>
+          <button type="submit" class="dash-btn dash-btn-primary">Confirm &amp; Assign Locker</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="portal-modal-overlay" id="modal-qr-pass">
+    <div class="portal-modal-window modal-narrow text-center">
+      <div class="pmodal-header">
+        <h2>Dock Locker Access Key</h2>
+        <button class="pmodal-close" id="btn-close-qr">&times;</button>
+      </div>
+      <div class="modal-qr-body">
+        <span class="status-pill status-ready">BAY LOCKER #14</span>
+        <div class="qr-big-frame">
+          <svg viewBox="0 0 120 120" class="qr-svg-sim">
+            <rect x="0" y="0" width="120" height="120" fill="white" rx="8" />
+            <rect x="10" y="10" width="30" height="30" fill="#102A43" rx="4" />
+            <rect x="16" y="16" width="18" height="18" fill="white" />
+            <rect x="20" y="20" width="10" height="10" fill="#1597B8" />
+            <rect x="80" y="10" width="30" height="30" fill="#102A43" rx="4" />
+            <rect x="86" y="16" width="18" height="18" fill="white" />
+            <rect x="90" y="20" width="10" height="10" fill="#1597B8" />
+            <rect x="10" y="80" width="30" height="30" fill="#102A43" rx="4" />
+            <rect x="16" y="86" width="18" height="18" fill="white" />
+            <rect x="20" y="90" width="10" height="10" fill="#1597B8" />
+          </svg>
+        </div>
+        <div class="pin-big-text">8 4 9 2</div>
+        <p class="text-secondary text-sm">Scan QR at Locker #14 or punch PIN followed by #.</p>
+        <button class="dash-btn dash-btn-primary" id="btn-modal-nfc-tap">Simulate NFC Tap Unlock</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="portal-modal-overlay" id="modal-waiver-pad">
+    <div class="portal-modal-window">
+      <div class="pmodal-header">
+        <h2>Sign Safety Liability &amp; Cold Water Release</h2>
+        <button class="pmodal-close" id="btn-close-waiver">&times;</button>
+      </div>
+      <form id="portal-waiver-form">
+        <p class="text-secondary text-sm" style="margin-bottom: 1rem;">
+          I acknowledge cold-water hazards, mandatory PFD leash compliance, and affirm good physical condition for SUP
+          participation.
+        </p>
+        <div class="signature-canvas-wrapper">
+          <canvas id="signature-canvas" width="500" height="120"></canvas>
+          <button type="button" class="btn-clear-canvas" id="btn-clear-sig">Clear</button>
+        </div>
+        <div class="pmodal-footer" style="margin-top: 1rem;">
+          <button type="button" class="dash-btn dash-btn-outline" id="btn-cancel-waiver">Cancel</button>
+          <button type="submit" class="dash-btn dash-btn-primary">Affix Signature</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="portal-toast-container" id="dash-toast-container"></div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+
+</html>

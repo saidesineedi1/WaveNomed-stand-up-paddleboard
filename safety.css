@@ -1,0 +1,1437 @@
+/* ==========================================================================
+   WaveNomad — Safety & Conditions Water Intelligence Stylesheet
+   Focus: Water Intelligence, Radar Telemetry, Conditions Guide, Readiness
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   00. BASE & CONTAINER UTILITIES
+   -------------------------------------------------------------------------- */
+.safety-page-body {
+  background-color: var(--bg-primary);
+  color: var(--primary-text);
+  overflow-x: hidden;
+}
+
+.safety-section-wrap {
+  position: relative;
+  padding: 6.5rem var(--site-gutter);
+}
+
+.safety-section-wrap.alt-bg {
+  background-color: var(--bg-secondary);
+}
+
+.safety-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-title-wrap .safety-eyebrow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.safety-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+  margin-bottom: 0.85rem;
+}
+
+.safety-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: var(--primary-accent);
+  border-radius: 999px;
+}
+
+.safety-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--primary-text);
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+.safety-lead-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--secondary-text);
+  max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+.section-title-wrap .safety-lead-desc,
+.text-center .safety-lead-desc {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* Monospace telemetry data chip style */
+.telemetry-tag {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+}
+
+/* --------------------------------------------------------------------------
+   01. SECTION 01 — HERO BANNER (EXACT HOME 1 SYSTEM ALIGNMENT)
+   -------------------------------------------------------------------------- */
+.safety-hero-section {
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+@media (min-width: 1121px) {
+  .safety-hero-section {
+    height: 100vh;
+    min-height: 680px;
+    max-height: 1080px;
+  }
+}
+
+.safety-hero-mask {
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.72) 42%,
+    rgba(255, 255, 255, 0.45) 75%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+[data-theme="dark"] .safety-hero-mask {
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(7, 25, 35, 0.86) 0%,
+    rgba(7, 25, 35, 0.76) 48%,
+    rgba(7, 25, 35, 0.52) 80%,
+    rgba(7, 25, 35, 0.35) 100%
+  );
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+.safety-hero-inner {
+  position: relative;
+  z-index: 5;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 8.5rem var(--site-gutter) 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.safety-hero-content {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInHero 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.safety-hero-content .hero-eyebrow-text {
+  margin: 0 auto 1.35rem;
+  box-shadow: 0 4px 16px rgba(16, 42, 67, 0.08);
+}
+
+.safety-hero-content .hero-headline {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  font-size: clamp(3.2rem, 5.2vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.safety-hero-content .headline-word {
+  display: inline-block;
+  margin: 0 0.35rem;
+}
+
+.safety-hero-content .hero-description {
+  max-width: 680px;
+  text-align: center;
+  margin: 0 auto 2.25rem;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.68;
+  color: #10334c;
+}
+
+[data-theme="dark"] .safety-hero-content .hero-description {
+  color: #d8edf7;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.safety-hero-content .hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+  margin: 0 auto 2.5rem;
+}
+
+.safety-hero-content .hero-features-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.15rem 2.2rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(21, 151, 184, 0.25);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(16, 42, 67, 0.09), 0 0 15px rgba(32, 184, 209, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.safety-hero-content .hero-features-inline:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-accent);
+  box-shadow: 0 14px 36px rgba(16, 42, 67, 0.12), 0 0 22px rgba(32, 184, 209, 0.16);
+}
+
+[data-theme="dark"] .safety-hero-content .hero-features-inline {
+  background: rgba(7, 25, 35, 0.75);
+  border-color: rgba(32, 184, 209, 0.32);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45), 0 0 18px rgba(32, 184, 209, 0.12);
+}
+
+[data-theme="dark"] .safety-hero-content .hero-features-inline:hover {
+  border-color: #48d2e5;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 26px rgba(32, 184, 209, 0.22);
+}
+
+@media (max-width: 1120px) {
+  .safety-hero-inner {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .safety-hero-content .hero-features-inline {
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .safety-hero-content .feature-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .safety-hero-section {
+    min-height: 100vh;
+  }
+
+  .safety-hero-content .hero-headline {
+    font-size: clamp(2.6rem, 9vw, 3.4rem);
+  }
+
+  .safety-hero-content .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .safety-hero-content .cta-pill-primary,
+  .safety-hero-content .cta-pill-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   02. SECTION 02 — LIVE WATER CONDITIONS (WATER INTELLIGENCE RADAR)
+   -------------------------------------------------------------------------- */
+.conditions-intel-section {
+  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.telemetry-stage-wrapper {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: stretch;
+  margin-top: 2.5rem;
+}
+
+/* Circular Marine Telemetry / Radar Radar Stage (Left) */
+.marine-radar-display {
+  position: relative;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 32px;
+  padding: 3rem;
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Background Circular Compass Coordinate Grid */
+.radar-grid-rings {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-grid-rings::before {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: 1px dashed var(--border-color);
+}
+
+.radar-grid-rings::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+.radar-sweep-scanner {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg at 50% 50%, rgba(21, 151, 184, 0.3) 0deg, transparent 75deg, transparent 360deg);
+  animation: radarRotate 5s linear infinite;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .radar-sweep-scanner {
+  background: conic-gradient(from 0deg at 50% 50%, rgba(32, 184, 209, 0.45) 0deg, transparent 80deg, transparent 360deg);
+}
+
+.radar-crosshair-h {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.radar-crosshair-v {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--border-color);
+}
+
+/* Live Sensor Node Pings on Radar */
+.radar-sensor-ping {
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.radar-sensor-ping:hover {
+  transform: scale(1.2);
+}
+
+.ping-core {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  border: 2px solid #FFFFFF;
+}
+
+.ping-wave {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-accent);
+  animation: pingOut 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes pingOut {
+  0% { transform: scale(0.4); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.ping-label-pill {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--primary-accent);
+  white-space: nowrap;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Sensor Locations on Radar Map */
+.sensor-pier4 { top: 62%; left: 38%; }
+.sensor-emerald { top: 32%; left: 68%; }
+.sensor-fjord { top: 24%; left: 28%; }
+
+/* Radar Coordinate Stamp */
+.radar-coord-stamp {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.8rem;
+  font-family: monospace;
+  font-size: 0.72rem;
+  color: var(--secondary-text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Telemetry Data Details Deck (Right) */
+.telemetry-details-deck {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.telemetry-status-banner {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.4rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-subtle);
+}
+
+.status-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Telemetry Grid (6 Metrics) */
+.telemetry-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  flex-grow: 1;
+}
+
+.telemetry-metric-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.3rem 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.telemetry-metric-card:hover {
+  border-color: var(--primary-accent);
+  transform: translateY(-2px);
+}
+
+.metric-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-accent);
+}
+
+.metric-card-name {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+}
+
+.metric-card-value {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  line-height: 1.1;
+}
+
+.metric-card-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+/* --------------------------------------------------------------------------
+   03. SECTION 03 — SAFETY PROTOCOL (CONTINUOUS VERTICAL TIMELINE)
+   -------------------------------------------------------------------------- */
+.safety-protocol-section {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.protocol-timeline-wrap {
+  position: relative;
+  max-width: 900px;
+  margin: 3.5rem auto 0;
+  padding: 1rem 0;
+}
+
+/* Continuous Vertical Animated Safety Line */
+.protocol-spine-line {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  transform: translateX(-50%);
+  width: 3px;
+  background: var(--border-color);
+  border-radius: 999px;
+}
+
+.protocol-spine-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: linear-gradient(180deg, var(--primary-accent) 0%, #20B8D1 100%);
+  border-radius: 999px;
+  transition: height 0.6s ease;
+}
+
+/* Protocol Step Item */
+.protocol-step-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.2rem;
+  margin-bottom: 1.75rem;
+}
+
+.protocol-step-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Node Bullet */
+.protocol-step-node {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--surface-card);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--secondary-text);
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.protocol-step-row.active .protocol-step-node {
+  background: var(--primary-accent);
+  color: var(--btn-text);
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 22px rgba(21, 151, 184, 0.45);
+}
+
+/* Step Content Card - Compact Height with Preserved Width */
+.protocol-step-card {
+  flex-grow: 1;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.25rem 2.5rem;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.protocol-step-row.active .protocol-step-card {
+  border-color: var(--primary-accent);
+  box-shadow: var(--shadow-elevated);
+}
+
+.protocol-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+
+.protocol-phase-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+  background: var(--soft-accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.protocol-step-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.35rem;
+}
+
+.protocol-step-desc {
+  font-size: 0.9rem;
+  line-height: 1.48;
+  color: var(--secondary-text);
+  margin-bottom: 0.75rem;
+}
+
+/* Bulleted Sub-checklist */
+.protocol-check-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 1.2rem;
+}
+
+.protocol-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  line-height: 1.3;
+}
+
+.protocol-check-item span.icon {
+  color: #10B981;
+  font-size: 0.88rem;
+}
+
+/* --------------------------------------------------------------------------
+   04. SECTION 04 — CONDITIONS GUIDE (INTERACTIVE WATER CONDITION SLIDER)
+   -------------------------------------------------------------------------- */
+.conditions-guide-section {
+  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Large Horizontal Condition Slider Bar */
+.condition-slider-track-wrap {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+}
+
+.condition-tier-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.condition-tier-btn.active {
+  background: var(--primary-accent);
+  color: var(--btn-text);
+  box-shadow: 0 4px 18px rgba(21, 151, 184, 0.35);
+}
+
+.tier-dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Condition Simulator Showcase Deck */
+.condition-sim-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 32px;
+  padding: 3rem 3.5rem;
+  box-shadow: var(--shadow-elevated);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dynamic Animated Water Surface Canvas (Left) */
+.wave-sim-canvas-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, #102A43 0%, #071923 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sim-water-skyline {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.8rem;
+  right: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.sim-state-tag {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #20B8D1;
+  background: rgba(7, 25, 35, 0.7);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.sim-wind-speed-badge {
+  font-family: monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: rgba(7, 25, 35, 0.7);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+}
+
+/* Animated SVG Wave Layers */
+.sim-waves-svg {
+  width: 100%;
+  height: 180px;
+  z-index: 3;
+}
+
+.wave-layer-1 {
+  fill: rgba(32, 184, 209, 0.35);
+  animation: waveMotion 4s ease-in-out infinite alternate;
+}
+
+.wave-layer-2 {
+  fill: rgba(21, 151, 184, 0.65);
+  animation: waveMotion 3s ease-in-out infinite alternate-reverse;
+}
+
+.wave-layer-3 {
+  fill: #0B2632;
+}
+
+@keyframes waveMotion {
+  from { transform: translateX(0); }
+  to { transform: translateX(-40px); }
+}
+
+/* Condition Details Text (Right) */
+.condition-details-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.condition-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  color: var(--primary-text);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.condition-suitability-pill {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #10B981;
+  margin-bottom: 1.2rem;
+}
+
+.condition-desc {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--secondary-text);
+  margin-bottom: 2rem;
+}
+
+/* Key Parameters Matrix */
+.condition-param-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  padding: 1.4rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+}
+
+.param-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.param-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text);
+}
+
+.param-val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+/* --------------------------------------------------------------------------
+   05. SECTION 05 — WATER READINESS (PRE-PADDLE LAUNCH READINESS CHECK)
+   -------------------------------------------------------------------------- */
+.readiness-section {
+  position: relative;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.readiness-hero-backdrop {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 2.25rem 3.5rem;
+  box-shadow: var(--shadow-elevated);
+  border: 1px solid var(--border-color);
+}
+
+/* Photographic Backdrop Canvas */
+.readiness-backdrop-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.readiness-backdrop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.38) contrast(1.15);
+}
+
+.readiness-backdrop-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7, 25, 35, 0.94) 0%, rgba(7, 25, 35, 0.82) 50%, rgba(16, 47, 59, 0.92) 100%);
+}
+
+.readiness-panel-content {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.readiness-header-block {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.readiness-header-block .safety-eyebrow {
+  color: #20B8D1;
+}
+
+.readiness-header-block .safety-eyebrow::before {
+  background: #20B8D1;
+}
+
+.readiness-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.45rem;
+}
+
+.readiness-sub {
+  color: #E2F1F8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* Luxury Readiness Check Deck - Compact Height */
+.readiness-check-deck {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 1.35rem 2.8rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #102A43;
+}
+
+[data-theme="dark"] .readiness-check-deck {
+  background: rgba(16, 47, 59, 0.94);
+  border-color: rgba(36, 80, 93, 0.6);
+  color: #F3FAFC;
+}
+
+.checklist-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.checklist-title-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+}
+
+.checklist-clearance-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #10B981;
+}
+
+/* Interactive Checklist Items - Compact Spacing */
+.readiness-checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 1.15rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.checklist-item:hover {
+  border-color: var(--primary-accent);
+}
+
+.checklist-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checklist-checkbox-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-accent);
+  background: var(--primary-accent);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.checklist-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+.checklist-tag-mini {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--primary-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Compact Deck Clearance Footer */
+.readiness-deck-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.82rem;
+}
+
+.readiness-dock-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-text);
+}
+
+.readiness-dock-status strong {
+  color: var(--primary-text);
+}
+
+[data-theme="dark"] .readiness-dock-status strong {
+  color: #FFFFFF;
+}
+
+.readiness-recheck-link {
+  color: var(--primary-accent);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.readiness-recheck-link:hover {
+  color: #48D2E5;
+  transform: translateX(3px);
+}
+
+/* Supporting Trust Indicators Row */
+.readiness-trust-band {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.35rem;
+  text-align: center;
+}
+
+.trust-item-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.trust-item-headline {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #20B8D1;
+  letter-spacing: 0.05em;
+}
+
+.trust-item-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #E2F1F8;
+}
+
+/* --------------------------------------------------------------------------
+   06. SECTION 06 — SAFETY CTA CARD (COMPACT LUXURY CTA)
+   -------------------------------------------------------------------------- */
+.safety-cta-section {
+  padding: 1.5rem var(--site-gutter) 4.5rem;
+}
+
+.compact-safety-cta {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 2.2rem 2.8rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-elevated);
+  background: var(--surface-card);
+}
+
+.compact-safety-cta .cta-backdrop-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.compact-safety-cta .cta-backdrop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: brightness(0.28) contrast(1.15);
+}
+
+.compact-safety-cta .cta-backdrop-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(7, 25, 35, 0.92) 0%,
+    rgba(7, 25, 35, 0.78) 55%,
+    rgba(16, 47, 59, 0.88) 100%
+  );
+}
+
+.compact-safety-cta .cta-card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.compact-safety-cta .cta-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #20B8D1;
+  background: rgba(32, 184, 209, 0.12);
+  border: 1px solid rgba(32, 184, 209, 0.28);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.compact-safety-cta .cta-card-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.015em;
+}
+
+.compact-safety-cta .cta-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #E2F1F8;
+  max-width: 580px;
+  margin: 0 auto 1.35rem;
+}
+
+.compact-safety-cta .cta-card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.compact-safety-cta .cta-pill-primary {
+  padding: 0.7rem 1.8rem;
+  font-size: 0.9rem;
+}
+
+.compact-safety-cta .cta-pill-secondary {
+  padding: 0.7rem 1.8rem;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.compact-safety-cta .cta-pill-secondary:hover {
+  background: rgba(32, 184, 209, 0.25);
+  border-color: #20B8D1;
+  color: #FFFFFF;
+}
+
+.compact-safety-cta .cta-trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #A0C4D8;
+}
+
+.compact-safety-cta .cta-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   06. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .safety-conditions-hud {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+  .hud-header-block {
+    grid-column: 1 / -1;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 1rem;
+  }
+  .telemetry-stage-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .condition-sim-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .telemetry-stage-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .condition-sim-card {
+    grid-template-columns: 1fr;
+  }
+  .marine-radar-display {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .safety-section-wrap {
+    padding: 4.5rem var(--site-gutter);
+  }
+  .safety-hero-canvas-frame {
+    padding: 2rem 1.4rem;
+  }
+  .hero-radar-sweep-disk {
+    display: none;
+  }
+  .safety-conditions-hud {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .protocol-step-row {
+    gap: 1.2rem;
+  }
+  .protocol-spine-line {
+    left: 23px;
+    top: 23px;
+    bottom: 23px;
+    transform: translateX(-50%);
+  }
+  .protocol-step-node {
+    width: 46px;
+    height: 46px;
+    font-size: 0.95rem;
+  }
+  .protocol-step-card {
+    padding: 1.1rem 1.35rem;
+  }
+  .protocol-check-pills {
+    grid-template-columns: 1fr;
+  }
+  .condition-slider-track-wrap {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+  .condition-tier-btn {
+    width: 100%;
+  }
+  .readiness-hero-backdrop {
+    padding: 1.85rem 1.25rem;
+  }
+  .readiness-check-deck {
+    padding: 1.2rem 1.15rem;
+  }
+  .readiness-deck-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .compact-safety-cta {
+    padding: 1.75rem 1.25rem;
+  }
+  .compact-safety-cta .cta-card-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .compact-safety-cta .cta-pill-primary,
+  .compact-safety-cta .cta-pill-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .readiness-trust-band {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .protocol-spine-line {
+  left: auto;
+  right: 30px;
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .protocol-step-row {
+  flex-direction: row;
+}
+
+[dir="rtl"] .radar-coord-stamp {
+  left: auto;
+  right: 1.8rem;
+  text-align: right;
+}
+
+[dir="rtl"] .hud-header-block {
+  padding-right: 0;
+  padding-left: 1.5rem;
+  border-right: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[dir="rtl"] .hud-metric-item {
+  padding-left: 0;
+  padding-right: 1.5rem;
+  border-left: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+[dir="rtl"] .safety-eyebrow::before {
+  margin-left: 0.6rem;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .protocol-spine-line {
+    left: auto;
+    right: 23px;
+    transform: translateX(50%);
+  }
+}

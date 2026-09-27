@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety &amp; Conditions | WaveNomad Stand-Up Paddleboard Intelligence</title>
+  <meta name="description"
+    content="Real-time water conditions, lake telemetry, safety protocols, and comprehensive pre-paddle preparation for confident exploration on WaveNomad stand-up paddleboards.">
+  <meta name="theme-color" content="#1597B8">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="safety.css">
+</head>
+
+<body class="safety-page-body">
+
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <a href="index.html" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
+        <div class="brand-emblem-circle">
+          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
+              stroke-width="2" stroke-linejoin="round" />
+            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">WaveNomad</span>
+          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+
+          <li class="nav-item dropdown" id="home-dropdown-item">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu" id="home-dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="home1-option">
+                  <div class="dropdown-title">
+                    <span>Home 1: Classic</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="home2-option">
+                  <div class="dropdown-title">
+                    <span>Home 2: Premium</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link" id="nav-rentals-link">Rentals</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="lessons.html" class="nav-link" id="nav-lessons-link">Lessons &amp; Tours</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="safety.html" class="nav-link active" id="nav-safety-link" aria-current="page">Safety</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Light / Dark Mode">
+          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
+          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
+          <span class="rtl-opt rtl-opt-ltr">LTR</span>
+          <span class="rtl-opt rtl-opt-rtl">RTL</span>
+          <span id="lang-label" style="display: none;">LTR</span>
+        </button>
+
+        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
+          <span>Login</span>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero-section safety-hero-section" id="hero-safety">
+
+      <div class="hero-canvas" aria-hidden="true">
+        <img class="hero-bg-img hero-bg-light" src="assets/images/safety-hero-bg.jpg"
+          alt="Stand-up paddleboarder wearing safety vest on pristine crystal clear alpine lake water"
+          fetchpriority="high">
+        <img class="hero-bg-img hero-bg-dark" src="assets/images/safety-hero-dark.jpg"
+          alt="Tranquil alpine lake twilight water conditions for stand-up paddleboarding with safety gear"
+          loading="lazy">
+        <div class="hero-overlay-mask safety-hero-mask"></div>
+      </div>
+
+      <div class="hero-inner safety-hero-inner">
+
+        <div class="hero-content safety-hero-content">
+
+          <div class="hero-eyebrow-text">
+            <span>SAFETY &nbsp;·&nbsp; LAKE TELEMETRY &nbsp;·&nbsp; CONFIDENCE</span>
+          </div>
+
+          <h1 class="hero-headline font-serif">
+            <span class="headline-word">Know Before</span>
+            <span class="headline-word">You Paddle</span>
+          </h1>
+
+          <p class="hero-description font-sans">
+            Real-time conditions, lake telemetry, safety protocols, and essential information for a confident day on the
+            water.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#live-conditions" class="cta-pill-primary" id="hero-check-btn">
+              <span>Check Live Conditions</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a href="#safety-protocol" class="cta-pill-secondary" id="hero-guide-btn">
+              <svg class="cta-pin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Safety Guide</span>
+            </a>
+          </div>
+
+          <div class="hero-features-inline">
+            <div class="feature-col">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 8v4l3 3"></path>
+                </svg>
+              </div>
+              <span class="feature-name">Live Buoy<br>Telemetry</span>
+            </div>
+
+            <div class="feature-divider" aria-hidden="true"></div>
+
+            <div class="feature-col">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <span class="feature-name">USCG / PSUPA<br>Standards</span>
+            </div>
+
+            <div class="feature-divider" aria-hidden="true"></div>
+
+            <div class="feature-col">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                  <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                  <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                  <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                </svg>
+              </div>
+              <span class="feature-name">100% PFD<br>Equipped</span>
+            </div>
+
+            <div class="feature-divider" aria-hidden="true"></div>
+
+            <div class="feature-col">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+              </div>
+              <span class="feature-name">Dynamic<br>Alerts</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-bottom-bar">
+        <div class="bottom-bar-left">
+          <svg class="sine-wave-svg" viewBox="0 0 100 20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M0 10 Q12.5 0 25 10 T50 10 T75 10 T100 10" />
+          </svg>
+          <span class="bottom-bar-tagline">SAFETY FIRST &nbsp;·&nbsp; EXPLORE WITH CONFIDENCE</span>
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <section class="safety-section-wrap alt-bg conditions-intel-section" id="live-conditions">
+      <div class="safety-container">
+
+        <div class="section-title-wrap text-center">
+          <span class="safety-eyebrow">WATER INTELLIGENCE RADAR</span>
+          <h2 class="safety-headline">Read the Water.</h2>
+          <p class="safety-lead-desc">
+            Direct telemetry streams from calibrated alpine water monitoring buoys. Our integrated radar telemetry
+            provides continuous data on surface temperatures, chop, wind vectors, and underwater clarity.
+          </p>
+        </div>
+
+        <div class="telemetry-stage-wrapper">
+
+          <div class="marine-radar-display" id="marine-radar-card" role="region"
+            aria-label="Marine Radar Basin Telemetry">
+            <div class="radar-grid-rings">
+              <div class="radar-sweep-scanner" aria-hidden="true"></div>
+
+              <div class="radar-crosshair-h" aria-hidden="true"></div>
+              <div class="radar-crosshair-v" aria-hidden="true"></div>
+
+              <div class="radar-sensor-ping sensor-pier4 active" id="sensor-btn-pier4" title="Pier 4 Launch Station">
+                <div class="ping-wave"></div>
+                <div class="ping-core"></div>
+                <span class="ping-label-pill">Pier 4 (Active)</span>
+              </div>
+
+              <div class="radar-sensor-ping sensor-emerald" id="sensor-btn-emerald" title="Emerald Cove Outer Buoy">
+                <div class="ping-wave"></div>
+                <div class="ping-core"></div>
+                <span class="ping-label-pill">Emerald Bay</span>
+              </div>
+
+              <div class="radar-sensor-ping sensor-fjord" id="sensor-btn-fjord" title="Glacier Pass Sensor">
+                <div class="ping-wave"></div>
+                <div class="ping-core"></div>
+                <span class="ping-label-pill">West Shelf</span>
+              </div>
+            </div>
+
+            <div class="radar-coord-stamp">
+              <span>LAT: 39° 05′ 44″ N &nbsp;|&nbsp; LON: 120° 02′ 38″ W</span>
+              <span style="opacity: 0.75; margin-top: 2px;">TELEMETRY FREQ: 868.4 MHz · SATELLITE SYNC</span>
+            </div>
+          </div>
+
+          <div class="telemetry-details-deck">
+
+            <div class="telemetry-status-banner">
+              <div>
+                <span class="telemetry-tag">PRIMARY LAUNCH SECTOR</span>
+                <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; margin-top: 0.2rem;"
+                  id="active-sensor-name">
+                  Pier 4 Shore Basin
+                </h4>
+              </div>
+              <span class="status-badge-live" id="active-sensor-status">
+                <span class="hud-pulse-ring" style="width: 8px; height: 8px;"></span>
+                <span>Suitable for paddling</span>
+              </span>
+            </div>
+
+            <div class="telemetry-metrics-grid">
+
+              <div class="telemetry-metric-card" id="metric-temp-card">
+                <div class="metric-card-header">
+                  <span class="metric-card-name">Water Temperature</span>
+                  <svg class="metric-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+                  </svg>
+                </div>
+                <span class="metric-card-value" id="radar-temp-val">22°C</span>
+                <span class="metric-card-sub">Comfortable · 2mm Shorty / Boardshorts</span>
+              </div>
+
+              <div class="telemetry-metric-card" id="metric-wind-card">
+                <div class="metric-card-header">
+                  <span class="metric-card-name">Wind Speed</span>
+                  <svg class="metric-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2">
+                    </path>
+                  </svg>
+                </div>
+                <span class="metric-card-value" id="radar-wind-val">12 km/h</span>
+                <span class="metric-card-sub">Southwest 210° · Gentle morning draft</span>
+              </div>
+
+              <div class="telemetry-metric-card" id="metric-wave-card">
+                <div class="metric-card-header">
+                  <span class="metric-card-name">Wave Height</span>
+                  <svg class="metric-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 12c2.5-3 5 3 7.5 0s5-3 7.5 0 5 3 7 0"></path>
+                    <path d="M2 17c2.5-3 5 3 7.5 0s5-3 7.5 0 5 3 7 0" opacity="0.6"></path>
+                  </svg>
+                </div>
+                <span class="metric-card-value" id="radar-wave-val">0.5 m</span>
+                <span class="metric-card-sub">Minor rolling ripples · Glassy surface</span>
+              </div>
+
+              <div class="telemetry-metric-card" id="metric-vis-card">
+                <div class="metric-card-header">
+                  <span class="metric-card-name">Visibility</span>
+                  <svg class="metric-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                </div>
+                <span class="metric-card-value" style="color: #10B981;" id="radar-vis-val">Excellent</span>
+                <span class="metric-card-sub">14 km Horizon · 10m depth penetration</span>
+              </div>
+
+              <div class="telemetry-metric-card" id="metric-quality-card">
+                <div class="metric-card-header">
+                  <span class="metric-card-name">Water Quality</span>
+                  <svg class="metric-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+                <span class="metric-card-value" id="radar-quality-val">Clear</span>
+                <span class="metric-card-sub">pH 7.4 · Grade-A Alpine Snowmelt</span>
+              </div>
+
+              <div class="telemetry-metric-card" id="metric-overall-card"
+                style="background: var(--soft-accent); border-color: rgba(32, 184, 209, 0.4);">
+                <div class="metric-card-header">
+                  <span class="metric-card-name" style="color: var(--primary-accent);">Overall Conditions</span>
+                  <svg class="metric-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <span class="metric-card-value"
+                  style="font-size: 1.35rem; color: var(--primary-accent); margin-top: 0.15rem;" id="radar-overall-val">
+                  Suitable for paddling
+                </span>
+                <span class="metric-card-sub">All Fleet Categories Authorized</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="safety-section-wrap safety-protocol-section" id="safety-protocol">
+      <div class="safety-container">
+
+        <div class="section-title-wrap text-center">
+          <span class="safety-eyebrow">SAFETY PROTOCOL</span>
+          <h2 class="safety-headline">Every Paddle Starts With Preparation.</h2>
+          <p class="safety-lead-desc">
+            A continuous, five-stage protocol engineered with marine safety standards. From pre-departure analysis to
+            dockside debrief, every step guarantees confidence and situational awareness.
+          </p>
+        </div>
+
+        <div class="protocol-timeline-wrap" id="protocol-timeline">
+          <div class="protocol-spine-line" aria-hidden="true">
+            <div class="protocol-spine-fill" id="protocol-spine-fill"></div>
+          </div>
+
+          <div class="protocol-step-row active" data-step="1">
+            <div class="protocol-step-node" aria-label="Step 01">
+              <span>01</span>
+            </div>
+            <div class="protocol-step-card">
+              <div class="protocol-step-header">
+                <span class="protocol-phase-tag">PHASE 01 · RADAR &amp; AMBIENT</span>
+                <span class="telemetry-tag">EST. TIME: 5 MIN</span>
+              </div>
+              <h3 class="protocol-step-title">CHECK</h3>
+              <p class="protocol-step-desc">
+                Evaluate regional weather conditions, thermal winds, alpine water temperature, and lake visibility
+                before launching your craft.
+              </p>
+              <div class="protocol-check-pills">
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Weather trends &amp; incoming fronts</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Wind velocity &amp; thermal vectors</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Water conditions &amp; surface swell</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Visibility &amp; sunrise / sunset light</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-step-row active" data-step="2">
+            <div class="protocol-step-node" aria-label="Step 02">
+              <span>02</span>
+            </div>
+            <div class="protocol-step-card">
+              <div class="protocol-step-header">
+                <span class="protocol-phase-tag">PHASE 02 · EQUIPMENT RIGGING</span>
+                <span class="telemetry-tag">EST. TIME: 8 MIN</span>
+              </div>
+              <h3 class="protocol-step-title">GEAR</h3>
+              <p class="protocol-step-desc">
+                Ensure every essential hardware component is inspected, sized correctly to the paddler's height, and
+                securely fastened before entering water.
+              </p>
+              <div class="protocol-check-pills">
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Paddleboard hull &amp; fin integrity</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Paddle height calibrated (+20cm)</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Coiled safety leash affixed securely</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Personal flotation device (PFD) fitted</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-step-row" data-step="3">
+            <div class="protocol-step-node" aria-label="Step 03">
+              <span>03</span>
+            </div>
+            <div class="protocol-step-card">
+              <div class="protocol-step-header">
+                <span class="protocol-phase-tag">PHASE 03 · SHORELINE BRIEFING</span>
+                <span class="telemetry-tag">EST. TIME: 5 MIN</span>
+              </div>
+              <h3 class="protocol-step-title">PREPARE</h3>
+              <p class="protocol-step-desc">
+                Conduct shore-side stability checks, secure personal gear in dry bags, and review the launch corridor
+                and shallow reef hazards.
+              </p>
+              <div class="protocol-check-pills">
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Secure equipment &amp; dry storage bags</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Check board deck traction pad</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Check paddle blade orientation</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Understand launch area boundaries</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-step-row" data-step="4">
+            <div class="protocol-step-node" aria-label="Step 04">
+              <span>04</span>
+            </div>
+            <div class="protocol-step-card">
+              <div class="protocol-step-header">
+                <span class="protocol-phase-tag">PHASE 04 · ON-WATER DISCIPLINE</span>
+                <span class="telemetry-tag">SESSION TIME</span>
+              </div>
+              <h3 class="protocol-step-title">PADDLE</h3>
+              <p class="protocol-step-desc">
+                Remain engaged with your environment, respect right-of-way watercraft lanes, stay within designated
+                zones, and heed guide signals.
+              </p>
+              <div class="protocol-check-pills">
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Stay within designated navigation areas</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Monitor conditions for sudden shifts</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Maintain 360° situational awareness</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Follow guide &amp; patrol instructions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-step-row" data-step="5">
+            <div class="protocol-step-node" aria-label="Step 05">
+              <span>05</span>
+            </div>
+            <div class="protocol-step-card">
+              <div class="protocol-step-header">
+                <span class="protocol-phase-tag">PHASE 05 · RECOVERY &amp; DEBRIEF</span>
+                <span class="telemetry-tag">EST. TIME: 5 MIN</span>
+              </div>
+              <h3 class="protocol-step-title">RETURN</h3>
+              <p class="protocol-step-desc">
+                Approach the pontoon with speed dampened, safely disembark, rinse equipment, and log session completion
+                with the dockmaster.
+              </p>
+              <div class="protocol-check-pills">
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Return equipment to dock slips</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Report any hardware or seal issues</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Confirm session completion on ledger</span>
+                </div>
+                <div class="protocol-check-item">
+                  <span class="icon">✓</span>
+                  <span>Enjoy shoreline lounge refreshments</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="safety-section-wrap alt-bg conditions-guide-section" id="conditions-guide">
+      <div class="safety-container">
+
+        <div class="section-title-wrap text-center">
+          <span class="safety-eyebrow">CONDITIONS GUIDE</span>
+          <h2 class="safety-headline">Understand the Water.</h2>
+          <p class="safety-lead-desc">
+            Water is fluid, living energy. Toggle through water condition tiers to visualize how wind speed, wave
+            crests, and atmospheric pressure transform paddleboard stability and stroke cadence.
+          </p>
+        </div>
+
+        <div class="condition-slider-track-wrap" role="tablist" aria-label="Water Condition States">
+          <button class="condition-tier-btn active" id="btn-state-calm" role="tab" aria-selected="true"
+            data-tier="calm">
+            <span class="tier-dot-indicator" style="color: #10B981;"></span>
+            <span>CALM</span>
+          </button>
+          <button class="condition-tier-btn" id="btn-state-moderate" role="tab" aria-selected="false"
+            data-tier="moderate">
+            <span class="tier-dot-indicator" style="color: #F59E0B;"></span>
+            <span>MODERATE</span>
+          </button>
+          <button class="condition-tier-btn" id="btn-state-challenging" role="tab" aria-selected="false"
+            data-tier="challenging">
+            <span class="tier-dot-indicator" style="color: #EF4444;"></span>
+            <span>CHALLENGING</span>
+          </button>
+        </div>
+
+        <div class="condition-sim-card" id="condition-sim-display">
+
+          <div class="wave-sim-canvas-box" id="wave-canvas-box">
+            <div class="sim-water-skyline">
+              <span class="sim-state-tag" id="sim-state-label">CALM STATE</span>
+              <span class="sim-wind-speed-badge" id="sim-wind-badge">WIND: 4–10 KM/H</span>
+            </div>
+
+            <svg class="sim-waves-svg" viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true">
+              <path class="wave-layer-1" id="wave-path-1"
+                d="M 0 60 C 150 40 300 80 450 50 C 600 20 750 70 900 45 L 900 180 L 0 180 Z"></path>
+              <path class="wave-layer-2" id="wave-path-2"
+                d="M 0 80 C 180 55 320 95 480 75 C 640 55 780 100 900 70 L 900 180 L 0 180 Z"></path>
+              <path class="wave-layer-3" id="wave-path-3"
+                d="M 0 110 C 140 95 280 120 420 105 C 560 90 700 125 900 100 L 900 180 L 0 180 Z"></path>
+            </svg>
+          </div>
+
+          <div class="condition-details-box">
+            <span class="telemetry-tag" id="sim-water-type-tag">MIRROR SHORELINE</span>
+            <h3 class="condition-title" id="sim-display-title">Calm Conditions</h3>
+            <span class="condition-suitability-pill" id="sim-suitability-badge">
+              ✓ Ideal for beginners &amp; first-timers
+            </span>
+            <p class="condition-desc" id="sim-display-desc">
+              Glass-like morning water with low ambient wind and minimal wake. The premier condition for effortless
+              cruising, touring photography, sunrise yoga, and beginner skills development.
+            </p>
+
+            <div class="condition-param-grid">
+              <div class="param-item">
+                <span class="param-label">WIND VECTOR</span>
+                <span class="param-val" id="sim-param-wind">0 – 12 km/h</span>
+              </div>
+              <div class="param-item">
+                <span class="param-label">WAVE AMPLITUDE</span>
+                <span class="param-val" id="sim-param-wave">&lt; 0.3 m (Glass)</span>
+              </div>
+              <div class="param-item">
+                <span class="param-label">SKILL LEVEL</span>
+                <span class="param-val" id="sim-param-skill">All Levels Welcome</span>
+              </div>
+              <div class="param-item">
+                <span class="param-label">CRAFT MATCH</span>
+                <span class="param-val" id="sim-param-board">All-Around &amp; Touring</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="safety-section-wrap readiness-section" id="water-readiness">
+      <div class="safety-container">
+
+        <div class="readiness-hero-backdrop">
+          <div class="readiness-backdrop-canvas" aria-hidden="true">
+            <img class="readiness-backdrop-img" src="assets/images/home2-day-dock.jpg"
+              alt="Paddleboards lined along the wooden dock ready for morning launch" loading="lazy">
+            <div class="readiness-backdrop-gradient"></div>
+          </div>
+
+          <div class="readiness-panel-content">
+
+            <div class="readiness-header-block">
+              <span class="safety-eyebrow">PRE-LAUNCH CLEARANCE</span>
+              <h2 class="readiness-title">Safety First. Adventure Always.</h2>
+              <p class="readiness-sub">
+                Review your session checklist before casting off the dock line. Seamless verification ensures total
+                water readiness and uninterrupted alpine joy.
+              </p>
+            </div>
+
+            <div class="readiness-check-deck" role="region" aria-label="Pre-Session Readiness Checklist">
+
+              <div class="checklist-title-row">
+                <span class="checklist-title-label">YOUR SESSION CHECK</span>
+                <div class="checklist-clearance-status">
+                  <span class="hud-pulse-ring" style="width: 8px; height: 8px;"></span>
+                  <span id="readiness-status-text">5 of 5 Complete · Cleared for Launch</span>
+                </div>
+              </div>
+
+              <div class="readiness-checklist-list" id="readiness-checklist-group">
+
+                <div class="checklist-item" data-check="1">
+                  <div class="checklist-item-left">
+                    <div class="checklist-checkbox-box">✓</div>
+                    <span class="checklist-text">Conditions Checked</span>
+                  </div>
+                  <span class="checklist-tag-mini">Real-Time Verified</span>
+                </div>
+
+                <div class="checklist-item" data-check="2">
+                  <div class="checklist-item-left">
+                    <div class="checklist-checkbox-box">✓</div>
+                    <span class="checklist-text">Equipment Ready</span>
+                  </div>
+                  <span class="checklist-tag-mini">Pressure &amp; Fin Secured</span>
+                </div>
+
+                <div class="checklist-item" data-check="3">
+                  <div class="checklist-item-left">
+                    <div class="checklist-checkbox-box">✓</div>
+                    <span class="checklist-text">Safety Gear Ready</span>
+                  </div>
+                  <span class="checklist-tag-mini">PFD &amp; Leash Fitted</span>
+                </div>
+
+                <div class="checklist-item" data-check="4">
+                  <div class="checklist-item-left">
+                    <div class="checklist-checkbox-box">✓</div>
+                    <span class="checklist-text">Waiver Completed</span>
+                  </div>
+                  <span class="checklist-tag-mini">Digital File Active</span>
+                </div>
+
+                <div class="checklist-item" data-check="5">
+                  <div class="checklist-item-left">
+                    <div class="checklist-checkbox-box">✓</div>
+                    <span class="checklist-text">Session Confirmed</span>
+                  </div>
+                  <span class="checklist-tag-mini">Dock Slip Assigned</span>
+                </div>
+
+              </div>
+
+              <div class="readiness-deck-footer">
+                <div class="readiness-dock-status">
+                  <span class="hud-status-dot"></span>
+                  <span><strong>Pier 4 Dock Valet:</strong> Telemetry Synchronized · All Fleet Categories Cleared</span>
+                </div>
+                <a href="#live-conditions" class="readiness-recheck-link">View Buoys →</a>
+              </div>
+
+            </div>
+
+            <div class="readiness-trust-band">
+              <div class="trust-item-box">
+                <span class="trust-item-headline">24/7</span>
+                <span class="trust-item-label">Condition Monitoring</span>
+              </div>
+              <div class="trust-item-box">
+                <span class="trust-item-headline">CERTIFIED</span>
+                <span class="trust-item-label">Safety Protocols</span>
+              </div>
+              <div class="trust-item-box">
+                <span class="trust-item-headline">READY</span>
+                <span class="trust-item-label">Premium Equipment</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="safety-section-wrap safety-cta-section" id="safety-cta">
+      <div class="safety-container">
+
+        <div class="luxury-cta-card compact-safety-cta" id="cta-safety-card">
+          <div class="cta-backdrop-canvas" aria-hidden="true">
+            <img src="assets/images/cta-paddleboard-waves.jpg" alt="Pristine alpine lake water"
+              class="cta-backdrop-img">
+            <div class="cta-backdrop-gradient"></div>
+          </div>
+
+          <div class="cta-card-content">
+            <span class="cta-card-badge">
+              <span class="hud-pulse-ring" style="width: 7px; height: 7px;"></span>
+              SAFE PADDLING · CERTIFIED FLEET
+            </span>
+            <h2 class="cta-card-headline font-serif">Ready to Explore with Complete Confidence?</h2>
+            <p class="cta-card-desc font-sans">
+              From calibrated board hulls to real-time lake intelligence, our certified dockside team ensures every
+              paddle is safe, smooth, and unforgettable.
+            </p>
+            <div class="cta-card-buttons">
+              <a href="rentals.html" class="cta-pill-primary" id="safety-cta-reserve-btn">
+                <span>Book Your Board</span>
+                <span class="cta-arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="contact.html" class="cta-pill-secondary" id="safety-cta-contact-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Contact Concierge</span>
+              </a>
+            </div>
+            <div class="cta-trust-bar">
+              <span class="cta-trust-item">✓ 100% USCG PFD Equipped</span>
+              <span class="cta-trust-item">✓ Real-Time Buoy Telemetry</span>
+              <span class="cta-trust-item">✓ PSUPA Certified Guides</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+            <div class="brand-emblem-circle">
+              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2" />
+                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">WaveNomad</span>
+              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+            </div>
+          </a>
+          <p class="footer-brand-paratext">
+            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries. Premium touring fleets.
+          </p>
+          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2</a></li>
+            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
+            <li><a href="lessons.html" class="footer-link">Lessons &amp; Tours</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#collection" class="footer-link">Carbon Touring SUPs</a></li>
+            <li><a href="rentals.html#collection" class="footer-link">Inflatable Expedition Kits</a></li>
+            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
+            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
+            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
+            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col footer-contact-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-links-list footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Timing:</span><span class="contact-value">Daily: 06:00 AM – 08:30 PM</span></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Location:</span><span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Mail:</span><a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Support:</span><a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span class="footer-legal-text">&copy; 2026 WaveNomad Adventures Inc. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Privacy Policy</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="safety.js"></script>
+</body>
+
+</html>

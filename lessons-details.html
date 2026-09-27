@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Program Details | WaveNomad Stand-Up Paddleboards</title>
+  <meta name="description"
+    content="Explore detailed curriculum, gear specifications, certified instructor credentials, and live reservation scheduling for WaveNomad SUP lessons.">
+  <meta name="theme-color" content="#1597B8">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lessons-details.css">
+</head>
+
+<body class="details-page-body">
+
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+
+      <a href="index.html#home" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
+        <div class="brand-emblem-circle">
+          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
+              stroke-width="2" stroke-linejoin="round" />
+            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name">WaveNomad</span>
+          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+
+          <li class="nav-item dropdown" id="home-dropdown-item">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn" aria-haspopup="true"
+              aria-expanded="false">
+              <span>Home</span>
+              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+            <ul class="dropdown-menu" id="home-dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link" id="home1-option">
+                  <div class="dropdown-title">
+                    <span>Home 1: Classic</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
+                </a>
+              </li>
+              <li>
+                <a href="home2.html" class="dropdown-link" id="home2-option">
+                  <div class="dropdown-title">
+                    <span>Home 2: Premium</span>
+                    <span class="dropdown-badge"
+                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
+                  </div>
+                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link" id="nav-rentals-link">Rentals</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="lessons.html" class="nav-link active" id="nav-lessons-link"
+              aria-current="page">Lessons &amp; Tours</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="nav-contact-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+          title="Toggle Light / Dark Mode">
+          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
+          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
+          <span class="rtl-opt rtl-opt-ltr">LTR</span>
+          <span class="rtl-opt rtl-opt-rtl">RTL</span>
+          <span id="lang-label" style="display: none;">LTR</span>
+        </button>
+
+        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member Login">
+          <span>Login</span>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main id="main-content">
+
+    <section class="lesson-hero-section">
+      <div class="details-container">
+        
+        <div class="lesson-hero-split-grid">
+          
+          <div class="hero-image-card-col">
+            <div class="hero-image-showcase-card">
+              <div class="hero-image-frame">
+                <img src="assets/images/lesson-beginner-hero.jpg" alt="Paddleboard lesson in action" class="hero-showcase-img"
+                  id="hero-dynamic-image">
+                <div class="hero-image-ambient-shimmer" aria-hidden="true"></div>
+
+                <div class="hero-card-floating-badge top-left">
+                  <span class="badge-pulse-dot" aria-hidden="true"></span>
+                  <span id="hero-card-stage-pill">STAGE 01 · ACCREDITED</span>
+                </div>
+
+                <div class="hero-card-floating-badge top-right rating-badge">
+                  <span class="star-icon">★</span>
+                  <span id="hero-card-rating-text">4.98 (240+)</span>
+                </div>
+
+                <div class="hero-card-coach-chip">
+                  <div class="coach-chip-avatar">
+                    <img src="assets/images/lesson-beginner-hero.jpg" alt="Coach photo" id="hero-card-coach-avatar">
+                  </div>
+                  <div class="coach-chip-meta">
+                    <span class="coach-chip-title" id="hero-card-coach-name">Marcus Vance</span>
+                    <span class="coach-chip-sub" id="hero-card-coach-role">Head PSUPA Trainer · Pier 4 Staging</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-image-footer-strip">
+                <div class="footer-strip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span>100% Safety Record</span>
+                </div>
+                <div class="footer-strip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Live Staging Daily</span>
+                </div>
+                <div class="footer-strip-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                  <span>4K Action Photos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-content-col">
+            <div class="hero-eyebrow-row">
+              <span class="hero-stage-badge" id="hero-stage-badge">STAGE 01 · ACCREDITED PROGRAM</span>
+              <span class="hero-experience-badge">
+                <span class="star-icon">★</span>
+                <span id="hero-rating-text">4.98 (240+ verified paddlers)</span>
+              </span>
+            </div>
+
+            <h1 class="hero-main-title" id="hero-main-title">Beginner SUP Fundamentals</h1>
+            <p class="hero-subtitle" id="hero-subtitle">First Stroke &amp; Calm Water Balance</p>
+
+            <p class="hero-lead-synopsis" id="hero-lead-synopsis">
+              Eliminate all fear in minutes. Learn zero-roll stance, knee-to-feet transition drills, and smooth
+              blade propulsion on mirror-flat waters with our patient PSUPA-certified instructors.
+            </p>
+
+            <div class="hero-metric-strip">
+              <div class="metric-chip">
+                <span class="chip-label">DURATION</span>
+                <span class="chip-val" id="metric-duration">90 Minutes</span>
+              </div>
+              <div class="metric-chip">
+                <span class="chip-label">COACH RATIO</span>
+                <span class="chip-val" id="metric-ratio">Max 4:1 Ratio</span>
+              </div>
+              <div class="metric-chip">
+                <span class="chip-label">SKILL LEVEL</span>
+                <span class="chip-val" id="metric-level">Beginner (No exp.)</span>
+              </div>
+              <div class="metric-chip">
+                <span class="chip-label">DEPARTURE</span>
+                <span class="chip-val">Pier 4 Staging</span>
+              </div>
+              <div class="metric-chip price-chip">
+                <span class="chip-label">PER PADDLER</span>
+                <span class="chip-val price-highlight" id="metric-price">$65 USD</span>
+              </div>
+            </div>
+
+            <div class="hero-actions-row">
+              <button type="button" class="btn-hero-reserve-cta" id="btn-hero-reserve-cta">
+                <span>Book This Program</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <a href="#curriculum-block" class="btn-hero-curriculum-link">
+                <span>View Full Curriculum</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+              </a>
+            </div>
+
+            <div class="hero-trust-indicators">
+              <span class="trust-pill">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                Complete Premium Gear
+              </span>
+              <span class="trust-pill">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                Free 24h Rescheduling
+              </span>
+              <span class="trust-pill">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                Mirror-Flat Guarantee
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="lesson-details-body-section">
+      <div class="details-container">
+        
+        <div class="details-layout-grid">
+
+          <div class="details-content-column">
+
+            <div class="details-card-block">
+              <span class="block-eyebrow">PROGRAM OVERVIEW</span>
+              <h2 class="block-title" id="overview-title">What Makes This Lesson Transformative</h2>
+              <div class="block-text" id="overview-desc">
+                <p>
+                  Most beginner paddlers struggle because generic rental facilities hand them unsuitable gear and push
+                  them straight into rolling boat wake. At WaveNomad, our methodology is built around confidence-first
+                  biomechanics.
+                </p>
+                <p>
+                  We start dockside with balance orientation, dry-dock stance drills, and custom paddle sizing. Once on
+                  the water in our protected calm-water lagoon, you'll naturally find your center of gravity without
+                  feeling tippy or unstable.
+                </p>
+              </div>
+
+              <div class="competencies-grid" id="competencies-container">
+              </div>
+            </div>
+
+            <div class="details-card-block" id="curriculum-block">
+              <span class="block-eyebrow">STEP-BY-STEP PROGRESSION</span>
+              <h2 class="block-title">Session Curriculum Breakdown</h2>
+              <p class="block-sub">Every minute of your lesson is engineered for smooth, progressive mastery.</p>
+
+              <div class="curriculum-timeline" id="curriculum-timeline-container">
+              </div>
+            </div>
+
+            <div class="details-card-block">
+              <span class="block-eyebrow">EQUIPMENT &amp; CONCIERGE VALET</span>
+              <h2 class="block-title">Everything Included in Your Pass</h2>
+              <p class="block-sub">We supply top-tier carbon equipment so you focus entirely on your glide.</p>
+
+              <div class="included-perks-grid">
+                <div class="perk-box">
+                  <div class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2C9 6 7 11 8 16c.6 3 4 4 4 4s3.4-1 4-4c1-5-1-10-4-14z"></path>
+                      <path d="M12 5v13"></path>
+                      <path d="M3 21c3-1.5 6-1.5 9 0 3-1.5 6-1.5 9 0"></path>
+                    </svg>
+                  </div>
+                  <h4 class="perk-title">Custom Fleet Board</h4>
+                  <p class="perk-desc">Custom-sized wide touring or displacement board calibrated to your weight and skill.</p>
+                </div>
+                <div class="perk-box">
+                  <div class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 3h6"></path>
+                      <path d="M12 3v10"></path>
+                      <path d="M12 13c-2.4 0-4 1.8-4 4.2 0 2.2 1.8 3.8 4 3.8s4-1.6 4-3.8c0-2.4-1.6-4.2-4-4.2z"></path>
+                      <path d="M12 13v6"></path>
+                    </svg>
+                  </div>
+                  <h4 class="perk-title">Carbon Fiber Paddle</h4>
+                  <p class="perk-desc">Ultra-light composite shaft adjusted to your exact eye-level for effortless stroke cadence.</p>
+                </div>
+                <div class="perk-box">
+                  <div class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                      <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                      <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                      <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                    </svg>
+                  </div>
+                  <h4 class="perk-title">USCG Type III PFD</h4>
+                  <p class="perk-desc">Low-profile ergonomic personal flotation vest and quick-release coil ankle leash.</p>
+                </div>
+                <div class="perk-box">
+                  <div class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                  </div>
+                  <h4 class="perk-title">4K Digital Photo Set</h4>
+                  <p class="perk-desc">High-resolution water action photos captured by your instructor, airdropped dockside.</p>
+                </div>
+                <div class="perk-box">
+                  <div class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
+                  <h4 class="perk-title">Dockside Lockers</h4>
+                  <p class="perk-desc">Private heated changing cabins, digital phone lockers, and post-session hot tea service.</p>
+                </div>
+                <div class="perk-box">
+                  <div class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="5"></circle>
+                      <line x1="12" y1="1" x2="12" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="23"></line>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                      <line x1="1" y1="12" x2="3" y2="12"></line>
+                      <line x1="21" y1="12" x2="23" y2="12"></line>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                  </div>
+                  <h4 class="perk-title">100% Weather Guarantee</h4>
+                  <p class="perk-desc">If wind speeds exceed safe calm thresholds, enjoy free rescheduling or 100% refund.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-card-block coach-profile-block">
+              <span class="block-eyebrow">YOUR LEAD INSTRUCTOR</span>
+              <h2 class="block-title">Learn from World-Class Guides</h2>
+
+              <div class="coach-profile-card">
+                <div class="coach-avatar-frame">
+                  <img src="assets/images/scenic-experience.jpg" alt="PSUPA Certified Coach" class="coach-avatar-img"
+                    id="coach-avatar-img">
+                  <span class="coach-badge-seal">PSUPA ELITE</span>
+                </div>
+                <div class="coach-bio-content">
+                  <h3 class="coach-name" id="coach-name">Marcus Vance</h3>
+                  <span class="coach-role" id="coach-role">Head of Water Instruction · PSUPA Level 3 Master Trainer</span>
+                  <p class="coach-quote" id="coach-quote">
+                    "Once you realize the water supports you rather than opposes you, balance ceases to be effort and
+                    becomes second nature."
+                  </p>
+                  <div class="coach-stats-row">
+                    <div class="coach-stat">
+                      <span class="stat-number">12+</span>
+                      <span class="stat-desc">Years Coaching</span>
+                    </div>
+                    <div class="coach-stat">
+                      <span class="stat-number">2,400+</span>
+                      <span class="stat-desc">Paddlers Certified</span>
+                    </div>
+                    <div class="coach-stat">
+                      <span class="stat-number">100%</span>
+                      <span class="stat-desc">Safety Record</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-card-block">
+              <span class="block-eyebrow">PREPARATION &amp; CHECKLIST</span>
+              <h2 class="block-title">What to Bring to Pier 4</h2>
+
+              <div class="preparation-dual-grid">
+                <div class="prep-column">
+                  <h4 class="prep-heading">✓ We Recommend Bringing:</h4>
+                  <ul class="prep-list">
+                    <li>Swimwear or quick-drying athletic shorts/top</li>
+                    <li>Mineral reef-safe sunscreen and UV lip balm</li>
+                    <li>Waterproof sun hat or sunglasses with retention cord</li>
+                    <li>Reusable water bottle (filtered cold refills at dock)</li>
+                    <li>Dry change of warm clothing for post-paddle lounge</li>
+                  </ul>
+                </div>
+                <div class="prep-column">
+                  <h4 class="prep-heading">ℹ️ Prerequisites &amp; Eligibility:</h4>
+                  <ul class="prep-list">
+                    <li>Basic swimming comfort in open freshwater</li>
+                    <li>Minimum participant age: 8+ (accompanied by adult)</li>
+                    <li>No previous stand-up paddleboarding experience required</li>
+                    <li>Signed digital water safety liability waiver prior to staging</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-card-block">
+              <span class="block-eyebrow">COMMON QUESTIONS</span>
+              <h2 class="block-title">Frequently Asked Questions</h2>
+
+              <div class="faq-accordion-group" id="faq-container">
+                <div class="faq-item active">
+                  <button class="faq-question-btn" aria-expanded="true">
+                    <span>What if I have never stood on a board and feel nervous?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="faq-answer-pane">
+                    <p>
+                      More than 65% of our guests have zero prior experience. We begin kneeling, sizing your paddle, and
+                      practicing balance in protected, motionless coves. Our coaches never rush you into standing until
+                      you feel 100% confident.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question-btn" aria-expanded="false">
+                    <span>What is your weather and wave cancellation policy?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="faq-answer-pane">
+                    <p>
+                      Safety and enjoyment are paramount. If wind, whitecaps, or storms develop beyond our certified
+                      calm thresholds, we notify you 2 hours in advance and offer instant free rescheduling or a 100%
+                      full refund.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question-btn" aria-expanded="false">
+                    <span>Will my phone and car keys stay dry while I'm on the water?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="faq-answer-pane">
+                    <p>
+                      Yes! You have complimentary access to digital keypad dock lockers. If you want to carry your phone
+                      on water, we provide waterproof lanyard dry-pouches rated to 10 meters depth.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question-btn" aria-expanded="false">
+                    <span>Can I bring my family or book a private group?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                  </button>
+                  <div class="faq-answer-pane">
+                    <p>
+                      Absolutely. Select the number of paddlers in the reservation card on the right, or choose the
+                      1-on-1 Masterclass for private family/group bookings where you receive a dedicated coach.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <aside class="details-booking-column">
+            
+            <div class="sticky-booking-card" id="sticky-booking-widget">
+              
+              <div class="card-header-badge">
+                <span class="pulse-indicator"></span>
+                <span>PIER 4 DOCK CONCIERGE IS READY</span>
+              </div>
+
+              <h3 class="widget-title">Reserve Your Experience</h3>
+              <p class="widget-sub">Secure your certified instructor &amp; carbon gear pass.</p>
+
+              <div class="booking-active-program-pill">
+                <span class="program-label">SELECTED LESSON</span>
+                <span class="program-name" id="widget-program-name">Beginner SUP Fundamentals</span>
+              </div>
+
+              <div class="widget-inputs-wrap">
+                
+                <div class="widget-input-group">
+                  <label for="widget-date-input" class="widget-label">PREFERRED DATE</label>
+                  <input type="date" id="widget-date-input" class="widget-field">
+                </div>
+
+                <div class="widget-input-group">
+                  <label for="widget-time-select" class="widget-label">PREFERRED WATER TIME</label>
+                  <select id="widget-time-select" class="widget-field">
+                    <option value="07:30 AM">07:30 AM (Morning Glass &amp; Sunrise)</option>
+                    <option value="10:00 AM" selected>10:00 AM (Calm Conditions)</option>
+                    <option value="02:00 PM">02:00 PM (Afternoon Warmth)</option>
+                    <option value="06:00 PM">06:00 PM (Golden Hour Sunset)</option>
+                  </select>
+                </div>
+
+                <div class="widget-input-group">
+                  <span class="widget-label">NUMBER OF PADDLERS</span>
+                  <div class="widget-stepper-wrap">
+                    <button type="button" class="stepper-ctrl-btn" id="stepper-minus-btn"
+                      aria-label="Decrease guest count">−</button>
+                    <span class="stepper-count-display" id="stepper-count-val">1</span>
+                    <button type="button" class="stepper-ctrl-btn" id="stepper-plus-btn"
+                      aria-label="Increase guest count">+</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="widget-pricing-box">
+                <div class="pricing-breakdown-row">
+                  <span id="widget-rate-label">$65 × 1 Paddler</span>
+                  <span id="widget-subtotal-val">$65.00</span>
+                </div>
+                <div class="pricing-breakdown-row">
+                  <span>Carbon Fleet &amp; PFD Valet</span>
+                  <span class="text-free">INCLUDED</span>
+                </div>
+                <div class="pricing-divider"></div>
+                <div class="pricing-total-row">
+                  <span class="total-label">Total Due at Pier:</span>
+                  <span class="total-amount" id="widget-total-val">$65 USD</span>
+                </div>
+              </div>
+
+              <button type="button" class="btn-confirm-reservation" id="btn-open-reserve-modal">
+                <span>Confirm Concierge Pass</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <span class="widget-guarantee-note">
+                <svg class="guarantee-note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                No cancellation fees up to 24h prior. Instant mobile boarding pass.
+              </span>
+
+              <div class="widget-hotline-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  class="hotline-icon">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <div class="hotline-text">
+                  <span>Need bespoke group arrangements?</span>
+                  <a href="contact.html#how-can-we-help" class="hotline-link">Contact Dock Concierge</a>
+                </div>
+              </div>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="other-programs-section">
+      <div class="details-container">
+        
+        <div class="other-programs-header text-center">
+          <span class="section-tag-eyebrow">EXPLORE ALTERNATIVE EXPERIENCES</span>
+          <h2 class="lessons-headline">Compare All Lessons &amp; Tours</h2>
+          <p class="lessons-lead-desc">Discover our complete range of certified water programs.</p>
+        </div>
+
+        <div class="other-programs-grid">
+          <div class="other-program-card" id="other-card-1">
+            <img src="assets/images/lessons-tour.jpg" alt="Beginner lesson" class="other-card-img">
+            <div class="other-card-body">
+              <span class="other-badge">STAGE 01</span>
+              <h4>Beginner SUP Fundamentals</h4>
+              <p>90 Mins · $65 / paddler</p>
+              <button class="switch-program-btn" data-target="beginner">View Details →</button>
+            </div>
+          </div>
+
+          <div class="other-program-card" id="other-card-2">
+            <img src="assets/images/scenic-experience.jpg" alt="Intermediate clinic" class="other-card-img">
+            <div class="other-card-body">
+              <span class="other-badge">STAGE 02</span>
+              <h4>Intermediate Technique &amp; Glide</h4>
+              <p>2.0 Hours · $95 / paddler</p>
+              <button class="switch-program-btn" data-target="intermediate">View Details →</button>
+            </div>
+          </div>
+
+          <div class="other-program-card" id="other-card-3">
+            <img src="assets/images/home2-experience-carbon.jpg" alt="1-on-1 private coaching" class="other-card-img">
+            <div class="other-card-body">
+              <span class="other-badge">1-ON-1 ELITE</span>
+              <h4>Private Masterclass Coaching</h4>
+              <p>2.5 Hours · $145 / session</p>
+              <button class="switch-program-btn" data-target="advanced">View Details →</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <div class="details-modal-backdrop" id="reserve-modal" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modal-pass-title">
+    <div class="details-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">×</button>
+
+      <div class="modal-header-icon" aria-hidden="true">🌊</div>
+      <h3 class="modal-title" id="modal-pass-title">Complete Your Water Pass</h3>
+      <p class="modal-desc">
+        Your staging slot is held for 15 minutes. Enter your guest credentials to issue your digital pass.
+      </p>
+
+      <div class="modal-summary-box">
+        <div>
+          <span class="summary-label">LESSON PROGRAM</span>
+          <div class="summary-val" id="modal-summary-program">Beginner SUP Fundamentals</div>
+        </div>
+        <div>
+          <span class="summary-label">PADDLERS</span>
+          <div class="summary-val" id="modal-summary-guests">1 Paddler</div>
+        </div>
+        <div>
+          <span class="summary-label">DATE &amp; TIME</span>
+          <div class="summary-val" id="modal-summary-datetime">Tomorrow at 10:00 AM</div>
+        </div>
+        <div>
+          <span class="summary-label">TOTAL RATE</span>
+          <div class="summary-val text-cyan" id="modal-summary-price">$65 USD</div>
+        </div>
+      </div>
+
+      <form id="reservation-modal-form">
+        <div class="modal-form-group">
+          <label for="guest-full-name" class="modal-field-label">PRIMARY GUEST FULL NAME</label>
+          <input type="text" id="guest-full-name" class="modal-input" placeholder="e.g. Alexis Jordan" required>
+        </div>
+        <div class="modal-form-group">
+          <label for="guest-email" class="modal-field-label">EMAIL ADDRESS (FOR DIGITAL PASS)</label>
+          <input type="email" id="guest-email" class="modal-input" placeholder="alexis@example.com" required>
+        </div>
+        <div class="modal-form-group">
+          <label for="guest-phone" class="modal-field-label">CELL PHONE (WATER CONDITIONS SMS)</label>
+          <input type="tel" id="guest-phone" class="modal-input" placeholder="+1 (555) 234-5678" required>
+        </div>
+        <button type="submit" class="btn-submit-pass" id="btn-submit-pass">
+          <span>Issue My Concierge Water Pass</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <div class="modal-success-state" id="modal-success-state" style="display: none;">
+        <div class="success-icon-ring">✓</div>
+        <h4 class="success-title">Pass Confirmed! We'll See You on the Water.</h4>
+        <p class="success-copy">
+          A confirmation with your dock staging PIN, instructor details, and Pier 4 directions has been dispatched to your email.
+        </p>
+        <button type="button" class="btn-done-modal" id="btn-done-modal">Done</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+            <div class="brand-emblem-circle">
+              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
+                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2" />
+                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text-group">
+              <span class="brand-name">WaveNomad</span>
+              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+            </div>
+          </a>
+          <p class="footer-brand-paratext">
+            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries. Premium touring fleets.
+          </p>
+          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2</a></li>
+            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
+            <li><a href="lessons.html" class="footer-link">Lessons &amp; Tours</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#collection" class="footer-link">Carbon Touring SUPs</a></li>
+            <li><a href="rentals.html#collection" class="footer-link">Inflatable Expedition Kits</a></li>
+            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
+            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
+            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
+            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col footer-contact-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-links-list footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Timing:</span><span class="contact-value">Daily: 06:00 AM – 08:30 PM</span></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Location:</span><span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Mail:</span><a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div class="contact-text-wrap"><span class="contact-label">Support:</span><a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <span class="footer-legal-text">&copy; 2026 WaveNomad Adventures Inc. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Privacy Policy</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="lessons-details.js"></script>
+</body>
+
+</html>

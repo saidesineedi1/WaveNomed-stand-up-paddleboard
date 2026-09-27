@@ -1,7 +1,7 @@
 ﻿
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Silver Hoof Stables - Lessons Page Loaded');
+  console.log('Silver Hoof Stables - Trail Rides Page Loaded');
   initFaqAccordion();
 });
 

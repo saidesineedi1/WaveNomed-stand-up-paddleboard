@@ -1,143 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" dir="ltr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WaveNomad Home 2 | The Sunset & Twilight Paddleboard Experience</title>
+  <title>Silver Hoof Stables | Luxury Ranch & Equestrian Experience (Home 2)</title>
   <meta name="description"
-    content="WaveNomad Home 2: Experience luxury carbon stand-up paddleboard rentals, twilight alpenglow tours, live lake intelligence, and seamless dock valet service.">
-  <meta name="theme-color" content="#1597B8">
+    content="Experience luxury horseback riding, trail rides, lessons, and stabling at Silver Hoof Stables. More than a ride. It's a lifestyle.">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
 
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="home2.css">
 </head>
 
 <body>
 
-  <header class="site-header" id="site-header">
-    <div class="header-container">
+  <header class="header" id="header">
+    <div class="container header-container">
 
-      <a href="home2.html#home" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
-        <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+      <a href="home2.html" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
         </div>
-        <div class="brand-text-group">
-          <span class="brand-name">WaveNomad</span>
-          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
         </div>
       </a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu" id="nav-menu">
-
-          <li class="nav-item dropdown" id="home-dropdown-item">
-            <a href="home2.html#home" class="nav-link active" id="home-dropdown-btn" aria-haspopup="true"
-              aria-expanded="false">
-              <span>Home</span>
-              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-              </svg>
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="home2.html" class="nav-link active" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
             </a>
-            <ul class="dropdown-menu" id="home-dropdown-menu">
-              <li>
-                <a href="index.html" class="dropdown-link" id="home1-option">
-                  <div class="dropdown-title">
-                    <span>Home 1: Classic</span>
-                    <span class="dropdown-badge"
-                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
-                  </div>
-                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
-                </a>
-              </li>
-              <li>
-                <a href="home2.html" class="dropdown-link active" id="home2-option">
-                  <div class="dropdown-title">
-                    <span>Home 2: Premium</span>
-                    <span class="dropdown-badge" id="home-active-badge">Active</span>
-                  </div>
-                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
-                </a>
-              </li>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item active" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
             </ul>
           </li>
-
-          <li class="nav-item">
-            <a href="rentals.html" class="nav-link" id="nav-rentals-link">Rentals</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="lessons.html" class="nav-link" id="nav-lessons-link">Lessons &amp; Tours</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link" id="nav-contact-link">Contact</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+          <li class="nav-login-item">
+            <button class="btn btn-primary" onclick="openLoginModal()">
+              <i class="fa-solid fa-user"></i> Login
+            </button>
           </li>
         </ul>
       </nav>
 
       <div class="header-actions">
 
-        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
-          title="Toggle Light / Dark Mode">
-          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4.5"></circle>
-            <line x1="12" y1="2" x2="12" y2="4"></line>
-            <line x1="12" y1="20" x2="12" y2="22"></line>
-            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
-            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
-            <line x1="2" y1="12" x2="4" y2="12"></line>
-            <line x1="20" y1="12" x2="22" y2="12"></line>
-            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
-            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
-          </svg>
-          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
-        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
-          <span>Login</span>
+        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+          <i class="fa-solid fa-user"></i> Login
         </button>
 
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
 
@@ -146,1321 +86,932 @@
 
   <main>
 
-    <section class="home2-hero" id="home">
-      <div class="home2-hero-canvas" aria-hidden="true">
-        <video class="home2-hero-bg" autoplay muted loop playsinline
-          poster="assets/images/13534137-uhd_3840_2160_60fps.mp4" aria-label="Sunset paddleboard video">
-          <source src="assets/images/13534137-uhd_3840_2160_60fps.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="home2-hero-overlay"></div>
-      </div>
+    <section class="hero2-section" id="hero">
+      <div class="container hero2-container">
+        <div class="hero2-grid">
 
-
-      <div class="home2-hero-container">
-        <div class="home2-hero-grid">
-
-          <div class="home2-hero-copy">
-            <div class="home2-live-telemetry-badge">
-              <span class="live-dot-pulse"></span>
-              <span class="telemetry-label">SUNSET GLOW EXPEDITIONS · LAKE GLASS INDEX: 9.8/10</span>
+          <div class="hero2-text-col">
+            <div class="gold-divider-wrap align-left">
+              <span class="gold-line"></span>
+              <span class="hero-welcome">LUXURY RANCH EXPERIENCE</span>
             </div>
 
-            <h1 class="home2-hero-title font-serif">
-              Glide Into The <span class="title-highlight">Golden Hour</span> &amp; Alpine Silence
+            <h1 class="hero2-title">
+              More Than a Ride.<br>
+              <span class="hero2-accent">It’s a Lifestyle.</span>
             </h1>
 
-            <p class="home2-hero-desc font-sans">
-              Handcrafted aerospace carbon paddleboards, certified glacial guides, and illuminated evening tours across
-              still, mirrored alpine sanctuaries.
+            <p class="hero2-subtitle">
+              Expert instruction. Well-cared-for horses. Unforgettable experiences across scenic ranch trails.
             </p>
 
-            <div class="home2-hero-actions">
-              <a href="#passes" class="cta-pill-primary" id="home2-hero-cta">
-                <span>Reserve Your Board</span>
-                <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-
-              <a href="#intelligence" class="cta-pill-secondary">
-                <svg class="cta-pin-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                <span>Live Dock Conditions</span>
-              </a>
+            <div class="hero2-buttons">
+              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-outline-hero btn-large" onclick="scrollToSection('trail-rides')">
+                Explore Trail Rides <i class="fa-solid fa-compass"></i>
+              </button>
             </div>
 
-            <div class="home2-hero-trust-bar">
-              <div class="trust-stat">
-                <span class="stat-big font-serif">4.98★</span>
-                <span class="stat-sub">Top Glacial Outfitter</span>
+            <div class="hero2-stats-grid">
+              <div class="hero2-stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years Experience</span>
               </div>
-              <div class="trust-divider"></div>
-              <div class="trust-stat">
-                <span class="stat-big font-serif">100%</span>
-                <span class="stat-sub">Carbon Weave Fleet</span>
+              <div class="stat-divider"></div>
+              <div class="hero2-stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Well-Cared Horses</span>
               </div>
-              <div class="trust-divider"></div>
-              <div class="trust-stat">
-                <span class="stat-big font-serif">0 Fee</span>
-                <span class="stat-sub">Weather Rescheduling</span>
+              <div class="stat-divider"></div>
+              <div class="hero2-stat-item">
+                <span class="stat-number">1,200+</span>
+                <span class="stat-label">Riders Trained</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-spacer" aria-hidden="true"></div>
+          <div class="hero2-images-col">
+            <div class="hero2-image-composition">
+
+              <div class="hero2-img-card hero2-img-main">
+                <img src="images/hero2_rider_portrait.jpg" alt="Equestrian Rider Portrait">
+                <div class="img-badge top-badge">
+                  <i class="fa-solid fa-award"></i> Premier Riding Academy
+                </div>
+              </div>
+
+              <div class="hero2-img-card hero2-img-secondary">
+                <img src="images/hero2_gallop_meadow.jpg" alt="Galloping Stallion in Meadow">
+                <div class="img-caption-tag">Open Fields & Trails</div>
+              </div>
+
+              <div class="hero2-img-card hero2-img-tertiary">
+                <img src="images/hero2_ranch_sunset.jpg" alt="Luxury Ranch Stables at Sunset">
+                <div class="img-caption-tag">5-Star Facility</div>
+              </div>
+
+              <div class="hero2-deco-ring"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero2-scroll-indicator" onclick="scrollToSection('our-stable')">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <section class="section our-stable-section" id="our-stable">
+      <div class="container">
+        <div class="split-layout align-center">
+
+          <div class="split-text-col">
+            <div class="section-tag-row">
+              <div class="section-tag">
+                <span class="tag-line"></span>
+                OUR STABLE
+              </div>
+            </div>
+
+            <h2 class="section-title">A Home for Horses, a Place for You.</h2>
+            <p class="section-lead">
+              Silver Hoof Stables is a sanctuary dedicated to horse-centered learning, professional riding instruction,
+              and supportive growth in breathtaking countryside surroundings.
+            </p>
+            <p class="section-body">
+              Whether you are taking your very first step in the saddle or refining advanced dressage techniques, our
+              ranch offers a welcoming community built around care, safety, and mutual trust.
+            </p>
+
+            <div class="cta-wrap">
+              <button class="btn btn-gold-pill" onclick="openBookingModal()">
+                Discover Our Stable <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="split-image-col">
+            <div class="composite-image-wrapper">
+
+              <svg class="decorative-motif-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="150" r="140" stroke="var(--clr-antique-gold)" stroke-opacity="0.25"
+                  stroke-dasharray="6 6" />
+                <path d="M50 150 C100 50, 200 50, 250 150 C200 250, 100 250, 50 150 Z" stroke="var(--clr-antique-gold)"
+                  stroke-opacity="0.15" stroke-width="1.5" />
+              </svg>
+
+              <div class="main-composite-card">
+                <img src="images/gallery_stable_bonding.jpg" alt="Rider with Gray Horse in Stables"
+                  class="composite-img-main">
+              </div>
+              <div class="inset-composite-card">
+                <img src="images/horse_dakota.jpg" alt="Countryside Stable View" class="composite-img-inset">
+                <div class="inset-badge">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>100% Care Standard</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <section class="section-wrap" id="experience" data-section="experience">
-      <div class="section-container">
+    <section class="section lessons-home2-section">
+      <div class="container">
 
-        <div class="section-header">
-          <span class="section-eyebrow"> THE PADDLEBOARD EXPERIENCE</span>
-          <h2 class="section-headline font-serif">Engineering The Purest Glide on Alpine Water</h2>
-          <p class="section-desc font-sans">
-            Every WaveNomad craft is sculpted from aerospace-grade carbon weave with dual-chamber safety, delivering
-            unmatched stiffness, silent hydrodynamics, and effortless stability across still mountain waters.
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            HORSEBACK RIDING LESSONS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Lessons for Every Rider</h2>
+          <p class="section-description">
+            All Ages &bull; All Skill Levels
           </p>
         </div>
 
-        <div class="experience-showcase-grid">
+        <div class="lessons-cards-grid">
 
-          <div class="experience-pillars-col">
-
-            <div class="exp-pillar-card active" data-pillar="carbon">
-              <div class="pillar-num font-serif">01</div>
-              <div class="pillar-info">
-                <h3 class="pillar-title">Aerospace Carbon Matrix &amp; Zero-Flex Rigidity</h3>
-                <p class="pillar-desc">
-                  Utilizing 3K carbon rail stringers with 18 PSI dual-chamber construction. Eliminates board sag, giving
-                  you the precise responsive glide of a hardboard with ultra-lightweight portability.
-                </p>
-                <div class="pillar-metric-tag">
-                  <span>+38% Structural Rigidity</span>
-                  <span>·</span>
-                  <span>18.4 lbs Total Weight</span>
-                </div>
-              </div>
+          <div class="lesson-card">
+            <div class="lesson-img-wrap">
+              <img src="images/horse_sierra.jpg" alt="Beginner Rider Lesson">
+              <span class="skill-badge">All Ages Novice</span>
             </div>
-
-            <div class="exp-pillar-card" data-pillar="hydrodynamics">
-              <div class="pillar-num font-serif">02</div>
-              <div class="pillar-info">
-                <h3 class="pillar-title">Wave-Piercing Bow &amp; Silent Displacement</h3>
-                <p class="pillar-desc">
-                  A sharpened displacement bow cuts effortlessly through wind chop and glass ripples, generating zero
-                  slap noise so you hear only wind through the pines and water lapping your hull.
-                </p>
-                <div class="pillar-metric-tag">
-                  <span>-35% Drag Coefficient</span>
-                  <span>·</span>
-                  <span>Silent Acoustic Float</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-pillar-card" data-pillar="traction">
-              <div class="pillar-num font-serif">03</div>
-              <div class="pillar-info">
-                <h3 class="pillar-title">Ergonomic Diamond Grip &amp; Pet-Safe Deck Pad</h3>
-                <p class="pillar-desc">
-                  Marine-grade brushed EVA traction pad running from nose to tail. Non-abrasive for barefoot yoga poses,
-                  yet engineered with claw-resistant durability for canine first mates.
-                </p>
-                <div class="pillar-metric-tag">
-                  <span>34-Inch Ultra Stability Beam</span>
-                  <span>·</span>
-                  <span>360 lbs Capacity</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="experience-visual-col">
-            <div class="experience-media-card">
-              <img src="assets/images/home2-experience-carbon.jpg"
-                alt="Close-up macro shot of carbon fiber paddleboard hull slicing through crystal clear alpine water"
-                class="exp-main-img" loading="lazy">
-              <div class="exp-media-overlay"></div>
-
-              <div class="hotspot-pin pin-bow" style="top: 28%; left: 32%;" data-tooltip="Wave-Piercing Carbon Nose">
-                <span class="hotspot-pulse"></span>
-                <span class="hotspot-dot">+</span>
-              </div>
-              <div class="hotspot-pin pin-deck" style="top: 52%; left: 56%;"
-                data-tooltip="Brushed Diamond EVA Traction">
-                <span class="hotspot-pulse"></span>
-                <span class="hotspot-dot">+</span>
-              </div>
-              <div class="hotspot-pin pin-hull" style="top: 75%; left: 44%;" data-tooltip="Sub-Surface Hydrofoil Keel">
-                <span class="hotspot-pulse"></span>
-                <span class="hotspot-dot">+</span>
-              </div>
-
-              <div class="exp-badge-floating">
-                <span class="exp-badge-title">Apex Carbon Touring 12'6"</span>
-                <span class="exp-badge-sub">Standard in all full-day &amp; sunset rentals</span>
-              </div>
+            <div class="lesson-card-body">
+              <h3>Beginner</h3>
+              <p>Build confidence & learn the basics. Gentle introduction to mounting, rein guidance, and school horse
+                balance in a safe environment.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Beginner Rider Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
           </div>
 
+          <div class="lesson-card featured-lesson">
+            <div class="featured-ribbon">Most Popular</div>
+            <div class="lesson-img-wrap">
+              <img src="images/gallery_jumping.jpg" alt="Intermediate Rider Lesson">
+              <span class="skill-badge">Trot & Canter</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Intermediate</h3>
+              <p>Improve skills & ride with control. Canter transitions, low hurdle prep, trail readiness, and
+                developing harmonious saddle balance.</p>
+              <button class="btn-text-gold lesson-arrow-btn"
+                onclick="openBookingWithProgram('Intermediate Rider Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="lesson-card">
+            <div class="lesson-img-wrap">
+              <img src="images/horse_valkyrie.jpg" alt="Advanced Dressage Lesson">
+              <span class="skill-badge">Jumping & Dressage</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Advanced</h3>
+              <p>Refine technique & reach your goals. Precision dressage maneuvers, obstacle hurdle jumps, competition
+                prep, and biomechanics.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Advanced Rider Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="lesson-card">
+            <div class="lesson-img-wrap">
+              <img src="images/horse_apollo.jpg" alt="Kids & Youth Riding Lessons">
+              <span class="skill-badge">Ages 5 – 15</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Kids & Youth</h3>
+              <p>Fun, safe & engaging for young riders. Helmet safety, pony grooming, balance games, and friendly
+                instruction for kids.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Youth Riding Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center margin-top-lg">
+          <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+            Book Your Lesson
+          </button>
         </div>
 
       </div>
     </section>
 
-    <section class="section-wrap alt-bg" id="adventures" data-section="adventures">
-      <span id="lessons" class="nav-anchor" aria-hidden="true"></span>
-      <div class="section-container">
+    <section class="section trail-rides-section">
+      <div class="container-full">
+        <div class="dramatic-split-grid">
 
-        <div class="section-header">
-          <span class="section-eyebrow"> CHOOSE YOUR ADVENTURE</span>
-          <h2 class="section-headline font-serif">Tailored Journeys Across Pristine Glacial Waters</h2>
-          <p class="section-desc font-sans">
-            Whether seeking meditative stillness at first light or paddling between sheer granite cliffs into glowing
-            sunset waters, select your dream alpine route.
+          <div class="dramatic-image-side">
+            <img src="images/gallery_trail_creek.jpg" alt="Guided Trail Ride Stream Crossing">
+            <div class="dramatic-image-overlay">
+              <div class="trail-badge-overlay">
+                <i class="fa-solid fa-compass"></i>
+                <span>150 Acres of Private Countryside Trails</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dramatic-content-side">
+            <div class="dramatic-content-inner">
+              <div class="section-tag-row">
+                <div class="section-tag">
+                  <span class="tag-line"></span>
+                  GUIDED TRAIL TREKS
+                </div>
+              </div>
+
+              <h2 class="section-title">Trail Rides</h2>
+              <p class="section-subtitle">Scenic Trails &bull; Real Adventures</p>
+              <p class="section-body">
+                Explore breathtaking landscapes, fresh mountain air, and peaceful trails on horseback. Guided trail
+                rides create a memorable connection between rider, horse, and nature.
+              </p>
+
+              <div class="trail-feature-rows">
+                <div class="trail-feature-row">
+                  <div class="trail-icon-box">
+                    <i class="fa-solid fa-tree"></i>
+                  </div>
+                  <div>
+                    <h4>Scenic Routes</h4>
+                    <p>Forests, rivers & open mountain trails</p>
+                  </div>
+                </div>
+
+                <div class="trail-feature-row">
+                  <div class="trail-icon-box">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <div>
+                    <h4>Flexible Durations</h4>
+                    <p>1 hr &bull; 2 hr &bull; Half Day &bull; Full Day</p>
+                  </div>
+                </div>
+
+                <div class="trail-feature-row">
+                  <div class="trail-icon-box">
+                    <i class="fa-solid fa-shield"></i>
+                  </div>
+                  <div>
+                    <h4>All Skill Levels</h4>
+                    <p>Beginner friendly to advanced trail treks</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-wrap">
+                <button class="btn btn-gold-pill" onclick="openBookingWithProgram('Guided Sunset Trail Rides')">
+                  View Trail Rides <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section instructors-section" id="instructors">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            OUR MASTER TRAINERS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Meet Our Instructors</h2>
+          <p class="section-description">
+            Experience &bull; Passion &bull; Dedication
+          </p>
+          <p class="section-lead-sm">
+            Our certified equestrian instructors focus on rider progress, confidence, technique, and horse safety.
           </p>
         </div>
 
-        <div class="adventures-card-grid">
+        <div class="instructors-grid">
 
-          <article class="adventure-card">
-            <div class="adventure-media">
-              <img src="assets/images/home2-adventure-fjord.jpg"
-                alt="Two stand-up paddleboarders paddling through a narrow granite fjord with emerald alpine water"
-                class="adv-img" loading="lazy">
-              <div class="adventure-badge-top">
-                <span class="adv-badge">Granite Narrows</span>
-                <span class="adv-time">3 Hours</span>
-              </div>
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/instructor_marcus.jpg" alt="Daniel Carter Head Instructor">
+              <span class="exp-tag">15+ Yrs Exp</span>
             </div>
-            <div class="adventure-content">
-              <div class="adv-meta-row">
-                <span class="adv-difficulty">Moderate Exploration</span>
-                <span class="adv-clarity">28ft Water Clarity</span>
-              </div>
-              <h3 class="adventure-title font-serif">Granite Fjord Secret Narrows</h3>
-              <p class="adventure-desc">
-                Navigate between dramatic 400-foot monolithic rock walls into secluded emerald lagoons inaccessible by
-                motorized boats. Includes digital offline topo map.
-              </p>
-              <div class="adventure-card-footer">
-                <div class="adv-price-box">
-                  <span class="adv-price font-serif">$68</span>
-                  <span class="adv-price-unit">/ paddler</span>
-                </div>
-                <a href="#passes" class="btn-card-reserve">Book Adventure</a>
-              </div>
+            <div class="instructor-info">
+              <h3>Daniel Carter</h3>
+              <p class="role-text">Head Instructor & Master Trainer</p>
+              <p class="bio-text">Specializes in advanced biomechanics, and equestrian mindset
+                coaching.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Instruction with Daniel Carter')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-          </article>
+          </div>
 
-          <article class="adventure-card">
-            <div class="adventure-media">
-              <img src="assets/images/moment-sunrise-glide.jpg"
-                alt="Paddleboarder gliding on calm glass lake at misty sunrise" class="adv-img" loading="lazy">
-              <div class="adventure-badge-top">
-                <span class="adv-badge">Dawn Patrol</span>
-                <span class="adv-time">2.5 Hours</span>
-              </div>
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/instructor_eleanor.jpg" alt="Emily Roberts Training Specialist">
+              <span class="exp-tag">10+ Yrs Exp</span>
             </div>
-            <div class="adventure-content">
-              <div class="adv-meta-row">
-                <span class="adv-difficulty">Gentle / All Levels</span>
-                <span class="adv-clarity">Zero Wind Waves</span>
-              </div>
-              <h3 class="adventure-title font-serif">Dawn Patrol Mirror Glass</h3>
-              <p class="adventure-desc">
-                First light glide across mirror lake surfaces before breezes stir. Includes dockside French-press coffee
-                and insulated flasks for warm sunrise sips.
-              </p>
-              <div class="adventure-card-footer">
-                <div class="adv-price-box">
-                  <span class="adv-price font-serif">$54</span>
-                  <span class="adv-price-unit">/ paddler</span>
-                </div>
-                <a href="#passes" class="btn-card-reserve">Book Adventure</a>
-              </div>
+            <div class="instructor-info">
+              <h3>Emily Roberts</h3>
+              <p class="role-text">Training Specialist & Dressage Coach</p>
+              <p class="bio-text">Dedicated to seat alignment, soft hands rein communication, and dressage movement
+                mastery.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Instruction with Emily Roberts')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-          </article>
+          </div>
 
-          <article class="adventure-card">
-            <div class="adventure-media">
-              <img src="assets/images/home2-night-stargazing.jpg"
-                alt="Night paddleboarder with glowing cyan LED hull under starry Milky Way sky" class="adv-img"
-                loading="lazy">
-              <div class="adventure-badge-top">
-                <span class="adv-badge">Twilight &amp; Night</span>
-                <span class="adv-time">2 Hours</span>
-              </div>
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/gallery_trail_creek.jpg" alt="James Miller Trail Guide">
+              <span class="exp-tag">12+ Yrs Exp</span>
             </div>
-            <div class="adventure-content">
-              <div class="adv-meta-row">
-                <span class="adv-difficulty">Guided Celestial</span>
-                <span class="adv-clarity">LED Halo Glow</span>
-              </div>
-              <h3 class="adventure-title font-serif">Milky Way Sub-Hull LED Glow</h3>
-              <p class="adventure-desc">
-                Experience the lake after dusk. Waterproof submersible 2,000-lumen LED arrays illuminate the crystal
-                depths beneath your board as the galaxy turns overhead.
-              </p>
-              <div class="adventure-card-footer">
-                <div class="adv-price-box">
-                  <span class="adv-price font-serif">$79</span>
-                  <span class="adv-price-unit">/ paddler</span>
-                </div>
-                <a href="#passes" class="btn-card-reserve">Book Adventure</a>
-              </div>
+            <div class="instructor-info">
+              <h3>James Miller</h3>
+              <p class="role-text">Senior Trail Guide & Wilderness Specialist</p>
+              <p class="bio-text">Passionate about wilderness navigation, trail safety, and creating unforgettable
+                outdoor treks.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Trail Ride with James Miller')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-          </article>
+          </div>
 
-          <article class="adventure-card">
-            <div class="adventure-media">
-              <img src="assets/images/moment-dog-pilot.jpg"
-                alt="Golden retriever in life jacket on inflatable paddleboard" class="adv-img" loading="lazy">
-              <div class="adventure-badge-top">
-                <span class="adv-badge">Canine &amp; Family</span>
-                <span class="adv-time">Half Day (4 hrs)</span>
-              </div>
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/gallery_stable_bonding.jpg" alt="Sophia Bennett Beginner Coach">
+              <span class="exp-tag">8+ Yrs Exp</span>
             </div>
-            <div class="adventure-content">
-              <div class="adv-meta-row">
-                <span class="adv-difficulty">Super Stable</span>
-                <span class="adv-clarity">Sandy Bottom Shallows</span>
-              </div>
-              <h3 class="adventure-title font-serif">Canine Co-Pilot Shallows Cruise</h3>
-              <p class="adventure-desc">
-                Ultra-wide 34-inch stability platform equipped with claw-guard deck pads and certified canine
-                lifejackets.
-                Explore shallow sandy bays where four-legged friends can swim.
-              </p>
-              <div class="adventure-card-footer">
-                <div class="adv-price-box">
-                  <span class="adv-price font-serif">$62</span>
-                  <span class="adv-price-unit">/ board</span>
-                </div>
-                <a href="#passes" class="btn-card-reserve">Book Adventure</a>
-              </div>
+            <div class="instructor-info">
+              <h3>Sophia Bennett</h3>
+              <p class="role-text">Beginner Coach & Youth Instructor</p>
+              <p class="bio-text">Fosters rider confidence, gentle mounting practices, and nurturing horse care for new
+                riders.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Instruction with Sophia Bennett')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-          </article>
+          </div>
 
+        </div>
+
+        <div class="text-center margin-top-lg">
+          <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+            Meet the Team <i class="fa-solid fa-user-group"></i>
+          </button>
         </div>
 
       </div>
     </section>
 
-    <section class="section-wrap" id="day-on-water" data-section="day-on-water">
-      <span id="dashboard" class="nav-anchor" aria-hidden="true"></span>
-      <div class="section-container">
+    <section class="section boarding-home2-section">
+      <div class="container">
+        <div class="split-layout align-center reverse-mobile">
 
-        <div class="section-header">
-          <span class="section-eyebrow">YOUR DAY ON THE WATER</span>
-          <h2 class="section-headline font-serif">From Dock Arrival to Sunset Glow: Your Seamless Day</h2>
-          <p class="section-desc font-sans">
-            We’ve eliminated friction from outdoor recreation. Zero gear hauling, zero pump fatigue, and zero logistical
-            stress. Here is how your day unfolds.
-          </p>
-        </div>
-
-        <div class="day-flow-wrapper">
-
-          <div class="day-flow-media-col">
-            <div class="day-rotator-container" id="day-cards-rotator">
-              <div class="rotator-fade-top" aria-hidden="true"></div>
-              <div class="rotator-fade-bottom" aria-hidden="true"></div>
-
-              <div class="rotator-header-bar">
-                <div class="rotator-live-indicator">
-                  <span class="rotator-live-pulse"></span>
-                  <span class="rotator-live-text">Continuous Day Flow</span>
-                </div>
-                <div class="rotator-nav-pills">
-                  <button class="rotator-nav-btn" id="rotator-btn-prev" aria-label="Rotate up">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.5">
-                      <polyline points="18 15 12 9 6 15" />
-                    </svg>
-                  </button>
-                  <button class="rotator-nav-btn" id="rotator-btn-next" aria-label="Rotate down">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.5">
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              <div class="day-rotator-track" id="day-rotator-track">
-
-                <article class="rotator-card" data-step-ref="1">
-                  <div class="rotator-card-inner">
-                    <img src="assets/images/home2-day-dock.jpg"
-                      alt="Morning dock valet and paddle fitting at cedar outpost" class="rotator-img" loading="lazy">
-                    <div class="rotator-card-overlay"></div>
-                    <div class="rotator-card-top-row">
-                      <span class="rotator-phase-pill">08:30 AM · Phase 01</span>
-                      <span class="rotator-status-tag">Dock Valet</span>
-                    </div>
-                    <div class="rotator-card-bottom">
-                      <h4 class="rotator-card-title font-serif">Express Dock Launch &amp; Wing-Span Paddle Fitting</h4>
-                      <p class="rotator-card-desc">Boards pre-floated on launch slips with bespoke wingspan paddle
-                        calibration.</p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="rotator-card" data-step-ref="3">
-                  <div class="rotator-card-inner">
-                    <img src="assets/images/moment-cove-explore.jpg"
-                      alt="Stand-up paddleboarder navigating crystal emerald granite lagoon" class="rotator-img"
-                      loading="lazy">
-                    <div class="rotator-card-overlay"></div>
-                    <div class="rotator-card-top-row">
-                      <span class="rotator-phase-pill">11:30 AM · Phase 02</span>
-                      <span class="rotator-status-tag">Secret Inlets</span>
-                    </div>
-                    <div class="rotator-card-bottom">
-                      <h4 class="rotator-card-title font-serif">Granite Cove Solitude &amp; Glacial Lagoon Plunge</h4>
-                      <p class="rotator-card-desc">Tie off to granite shore anchors for 28ft clarity swimming and cove
-                        relaxation.</p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="rotator-card" data-step-ref="4">
-                  <div class="rotator-card-inner">
-                    <img src="assets/images/moment-sunset-glow.jpg"
-                      alt="Stand-up paddleboarder bathed in golden hour sunset alpenglow" class="rotator-img"
-                      loading="lazy">
-                    <div class="rotator-card-overlay"></div>
-                    <div class="rotator-card-top-row">
-                      <span class="rotator-phase-pill">05:30 PM · Phase 03</span>
-                      <span class="rotator-status-tag">Twilight Return</span>
-                    </div>
-                    <div class="rotator-card-bottom">
-                      <h4 class="rotator-card-title font-serif">Sunset Alpenglow Glide &amp; Floating Sauna Ritual</h4>
-                      <p class="rotator-card-desc">Effortless dock slip retrieval, warm pine sauna steam, and timber
-                        lounge cider.</p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="rotator-card" aria-hidden="true">
-                  <div class="rotator-card-inner">
-                    <img src="assets/images/home2-day-dock.jpg" alt="" class="rotator-img" loading="lazy">
-                    <div class="rotator-card-overlay"></div>
-                    <div class="rotator-card-top-row">
-                      <span class="rotator-phase-pill">08:30 AM · Phase 01</span>
-                      <span class="rotator-status-tag">Dock Valet</span>
-                    </div>
-                    <div class="rotator-card-bottom">
-                      <h4 class="rotator-card-title font-serif">Express Dock Launch &amp; Wing-Span Paddle Fitting</h4>
-                      <p class="rotator-card-desc">Boards pre-floated on launch slips with bespoke wingspan paddle
-                        calibration.</p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="rotator-card" aria-hidden="true">
-                  <div class="rotator-card-inner">
-                    <img src="assets/images/moment-cove-explore.jpg" alt="" class="rotator-img" loading="lazy">
-                    <div class="rotator-card-overlay"></div>
-                    <div class="rotator-card-top-row">
-                      <span class="rotator-phase-pill">11:30 AM · Phase 02</span>
-                      <span class="rotator-status-tag">Secret Inlets</span>
-                    </div>
-                    <div class="rotator-card-bottom">
-                      <h4 class="rotator-card-title font-serif">Granite Cove Solitude &amp; Glacial Lagoon Plunge</h4>
-                      <p class="rotator-card-desc">Tie off to granite shore anchors for 28ft clarity swimming and cove
-                        relaxation.</p>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="rotator-card" aria-hidden="true">
-                  <div class="rotator-card-inner">
-                    <img src="assets/images/moment-sunset-glow.jpg" alt="" class="rotator-img" loading="lazy">
-                    <div class="rotator-card-overlay"></div>
-                    <div class="rotator-card-top-row">
-                      <span class="rotator-phase-pill">05:30 PM · Phase 03</span>
-                      <span class="rotator-status-tag">Twilight Return</span>
-                    </div>
-                    <div class="rotator-card-bottom">
-                      <h4 class="rotator-card-title font-serif">Sunset Alpenglow Glide &amp; Floating Sauna Ritual</h4>
-                      <p class="rotator-card-desc">Effortless dock slip retrieval, warm pine sauna steam, and timber
-                        lounge cider.</p>
-                    </div>
-                  </div>
-                </article>
-
+          <div class="split-image-col">
+            <div class="boarding-image-card">
+              <img src="images/our_story_ranch.jpg" alt="Spacious Horse Stable Lodge">
+              <div class="boarding-overlay-tag">
+                <i class="fa-solid fa-crown"></i>
+                <span>Royal Stabling Standards</span>
               </div>
             </div>
           </div>
 
-          <div class="day-flow-steps-col">
-
-            <div class="flow-step-item active" data-step="1">
-              <div class="flow-step-marker">
-                <span class="marker-circle">1</span>
-                <span class="marker-time">08:30 AM</span>
-              </div>
-              <div class="flow-step-content">
-                <h3 class="step-title">Express Dock Valet &amp; Custom Paddle Fitting</h3>
-                <p class="step-desc">
-                  Arrive at our heated cedar outpost. Your carbon board is already fully prepped and floating on launch
-                  slips. Our dock master measures your wingspan to dial in your feather-light paddle.
-                </p>
+          <div class="split-text-col">
+            <div class="section-tag-row">
+              <div class="section-tag">
+                <span class="tag-line"></span>
+                HORSE CARE & STABLING
               </div>
             </div>
 
-            <div class="flow-step-item" data-step="2">
-              <div class="flow-step-marker">
-                <span class="marker-circle">2</span>
-                <span class="marker-time">09:00 AM</span>
+            <h2 class="section-title">Boarding & Horse Care</h2>
+            <p class="section-subtitle">Comfort &bull; Safety &bull; Well-being</p>
+            <p class="section-body">
+              Providing a clean, safe, comfortable environment and attentive daily care for boarded horses in our
+              climate-controlled wooden stables and spacious pastures.
+            </p>
+
+            <div class="boarding-features-grid">
+              <div class="b-feature-item">
+                <i class="fa-solid fa-house-chimney-window icon-gold"></i>
+                <div>
+                  <h4>Spacious Stalls</h4>
+                  <p>Clean & comfortable 14'x14' oak stalls</p>
+                </div>
               </div>
-              <div class="flow-step-content">
-                <h3 class="step-title">GPS Route Briefing &amp; Waterproof Gear Pack</h3>
-                <p class="step-desc">
-                  Slip your phone into our provided floating waterproof lanyard pouch. We sync real-time wind forecasts
-                  and scenic cove GPS waypoints directly to your device before gentle launch.
-                </p>
+
+              <div class="b-feature-item">
+                <i class="fa-solid fa-mountain-sun icon-gold"></i>
+                <div>
+                  <h4>Pasture Access</h4>
+                  <p>Room to roam on 10-acre green pastures</p>
+                </div>
+              </div>
+
+              <div class="b-feature-item">
+                <i class="fa-solid fa-wheat-awn icon-gold"></i>
+                <div>
+                  <h4>Daily Care</h4>
+                  <p>Feeding, grooming & health checks 3x daily</p>
+                </div>
+              </div>
+
+              <div class="b-feature-item">
+                <i class="fa-solid fa-user-shield icon-gold"></i>
+                <div>
+                  <h4>Professional Staff</h4>
+                  <p>Dedicated 24/7 equestrian supervision</p>
+                </div>
               </div>
             </div>
 
-            <div class="flow-step-item" data-step="3">
-              <div class="flow-step-marker">
-                <span class="marker-circle">3</span>
-                <span class="marker-time">11:30 AM</span>
-              </div>
-              <div class="flow-step-content">
-                <h3 class="step-title">Secret Granite Cove Solitude &amp; Swim Stop</h3>
-                <p class="step-desc">
-                  Tie off to granite shore anchors. Enjoy organic trail snacks, dip into 28-foot crystal clear water, or
-                  practice lakeside yoga on your ultra-wide board platform.
-                </p>
-              </div>
+            <div class="cta-wrap">
+              <button class="btn btn-gold-pill" onclick="openBookingWithProgram('Full-Care Boarding')">
+                Explore Boarding <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
-
-            <div class="flow-step-item" data-step="4">
-              <div class="flow-step-marker">
-                <span class="marker-circle">4</span>
-                <span class="marker-time">01:30 PM</span>
-              </div>
-              <div class="flow-step-content">
-                <h3 class="step-title">Effortless Dock Valet Return &amp; Timber Lounge</h3>
-                <p class="step-desc">
-                  Simply glide into our slips. Our crew takes your board right out of the water. Warm cedar towels, hot
-                  cider, and high-pressure hot outdoor showers await you at the outpost.
-                </p>
-              </div>
-            </div>
-
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <section class="section-wrap alt-bg" id="intelligence" data-section="intelligence">
-      <span id="safety" class="nav-anchor" aria-hidden="true"></span>
-      <div class="section-container">
+    <section class="section cta-banner-section" id="cta">
+      <div class="container">
+        <div class="cta-card">
 
-        <div class="section-header">
-          <span class="section-eyebrow">LIVE WATER INTELLIGENCE</span>
-          <h2 class="section-headline font-serif">Real-Time Glacial Lake Telemetry &amp; Glass Index</h2>
-          <p class="section-desc font-sans">
-            Live environmental sensor data beamed continuously from offshore solar buoys. Know water transparency, wind
-            gusts, and surface glass index before you step foot on the dock.
-          </p>
-        </div>
+          <svg class="cta-bg-leaf-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none"
+            aria-hidden="true">
+            <path d="M250 50C150 150 50 250 150 400C250 450 350 350 400 250C450 150 350 50 250 50Z"
+              stroke="var(--clr-antique-gold)" stroke-opacity="0.12" stroke-width="2" />
+            <path d="M250 50C250 150 220 280 150 400" stroke="var(--clr-antique-gold)" stroke-opacity="0.12"
+              stroke-width="1.5" />
+            <path d="M200 180C170 170 140 180 120 200" stroke="var(--clr-antique-gold)" stroke-opacity="0.12"
+              stroke-width="1.5" />
+            <path d="M225 260C190 260 160 280 140 310" stroke="var(--clr-antique-gold)" stroke-opacity="0.12"
+              stroke-width="1.5" />
+          </svg>
 
-        <div class="intel-dashboard-card">
+          <div class="cta-left-content">
 
-          <div class="intel-header-strip">
-            <div class="intel-station-meta">
-              <span class="live-dot-pulse"></span>
-              <span class="station-name">BUOY 04 · EMERALD DEEP BASIN</span>
-              <span class="station-timestamp" id="intel-time-display">Telemetry Updated: Live Just Now</span>
-            </div>
-            <div class="intel-status-pill">
-              <span class="status-indicator"></span> Glassy Water · Optimal Launch Conditions
-            </div>
-          </div>
 
-          <div class="intel-metrics-grid">
+            <h2 class="cta-main-title">
+              Transform Your Riding with
+              <span class="cta-highlight-italic">Silver Hoof's Finest Experience</span>
+            </h2>
 
-            <div class="intel-metric-box">
-              <div class="metric-top-row">
-                <span class="metric-label">Secchi Water Clarity</span>
-                <div class="metric-icon-wrap" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                </div>
-              </div>
-              <div class="metric-main-val font-serif">28.4 <span class="metric-unit">Feet</span></div>
-              <div class="metric-badge-slot">
-                <span class="intel-pill">
-                  <span class="intel-pill-dot"></span>
-                  <span>92% Glacial Transparency</span>
-                </span>
-              </div>
-              <span class="metric-note">Crystal transparent glacial visibility</span>
-            </div>
-
-            <div class="intel-metric-box">
-              <div class="metric-top-row">
-                <span class="metric-label">Surface Water Temp</span>
-                <div class="metric-icon-wrap" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
-                  </svg>
-                </div>
-              </div>
-              <div class="metric-main-val font-serif">64.2 <span class="metric-unit">°F</span></div>
-              <div class="metric-badge-slot">
-                <span class="intel-pill">
-                  <span class="intel-pill-dot"></span>
-                  <span>Comfort Range: 62°F – 68°F</span>
-                </span>
-              </div>
-              <span class="metric-note">Ideal for swimming &amp; SUP yoga</span>
-            </div>
-
-            <div class="intel-metric-box">
-              <div class="metric-top-row">
-                <span class="metric-label">Wind Velocity &amp; Heading</span>
-                <div class="metric-icon-wrap" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
-                    <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
-                    <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
-                  </svg>
-                </div>
-              </div>
-              <div class="metric-main-val font-serif">2.8 <span class="metric-unit">Knots SSE</span></div>
-              <div class="metric-badge-slot">
-                <span class="intel-pill">
-                  <span class="intel-pill-dot"></span>
-                  <span>Beaufort Scale 1 (Calm Mirror)</span>
-                </span>
-              </div>
-              <span class="metric-note">Zero whitecaps · Effortless return paddle</span>
-            </div>
-
-            <div class="intel-metric-box">
-              <div class="metric-top-row">
-                <span class="metric-label">Glass Index Rating</span>
-                <div class="metric-icon-wrap" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                      d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z" />
-                  </svg>
-                </div>
-              </div>
-              <div class="metric-main-val font-serif">9.8 <span class="metric-unit">/ 10</span></div>
-              <div class="metric-badge-slot">
-                <span class="intel-pill">
-                  <span class="intel-pill-dot"></span>
-                  <span id="sunset-timer">Sunset Alpenglow in 2h 45m</span>
-                </span>
-              </div>
-              <span class="metric-note">Evening golden-hour window: 06:15 PM</span>
-            </div>
-
-          </div>
-
-          <div class="intel-safety-bar">
-            <div class="safety-recom-col">
-              <span class="recom-title">DOCK MASTER RECOMMENDATION FOR TODAY:</span>
-              <p class="recom-text">
-                "Mirror conditions across all northern granite inlets. Recommended board: Apex Touring 12'6 for long
-                glides or Zen Bamboo for calm yoga and sunset photography."
-              </p>
-            </div>
-            <a href="#passes" class="cta-pill-primary">Reserve Today's Glass Session →</a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section-wrap" id="passes" data-section="passes">
-      <span id="rentals" class="nav-anchor" aria-hidden="true"></span>
-      <div class="section-container">
-
-        <div class="section-header">
-          <span class="section-eyebrow"> YOUR ADVENTURE PASS</span>
-          <h2 class="section-headline font-serif">Transparent Passes with Everything Included</h2>
-          <p class="section-desc font-sans">
-            No surprise equipment fees at the dock. Every WaveNomad pass includes carbon paddleboard, lightweight PFD,
-            waterproof phone case, safety tether, and full dock valet service.
-          </p>
-        </div>
-
-        <div class="passes-card-grid">
-
-          <div class="pass-card">
-            <div class="pass-card-header">
-              <span class="pass-badge">POPULAR FOR FIRST-TIMERS</span>
-              <h3 class="pass-name font-serif">2-Hour Lake Session</h3>
-              <p class="pass-tagline">Perfect for a morning workout or scenic lunch paddle.</p>
-            </div>
-            <div class="pass-pricing">
-              <span class="pass-currency">$</span>
-              <span class="pass-amount font-serif">48</span>
-              <span class="pass-term">/ session</span>
-            </div>
-            <ul class="pass-features-list">
-              <li>✓ Apex or Bamboo Carbon Board</li>
-              <li>✓ Carbon Composite Light Paddle</li>
-              <li>✓ USCG Approved Inflatable PFD</li>
-              <li>✓ Floating Waterproof Phone Case</li>
-              <li>✓ Express Dock Valet Launch</li>
+            <ul class="cta-features-list">
+              <li class="cta-feature-item">
+                <i class="fa-solid fa-check cta-check-icon"></i>
+                <span>Free safety gear & helmet rental on first lesson</span>
+              </li>
+              <li class="cta-feature-item">
+                <i class="fa-solid fa-check cta-check-icon"></i>
+                <span>30-day rider satisfaction guarantee</span>
+              </li>
+              <li class="cta-feature-item">
+                <i class="fa-solid fa-check cta-check-icon"></i>
+                <span>Personalised instructor & horse matching</span>
+              </li>
             </ul>
-            <button class="btn-card-reserve btn-pass-action" data-pass="2-hour">Select 2-Hour Pass</button>
+
+            <div class="cta-buttons-row">
+              <button class="btn btn-cta-primary" onclick="openBookingModal()">
+                Start My Journey <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-cta-secondary" onclick="openRiderDashboard()">
+                Explore Dashboard <i class="fa-solid fa-gauge-high"></i>
+              </button>
+            </div>
+
+            <p class="cta-subtext">No commitment. Cancel anytime. 100% satisfaction guaranteed.</p>
           </div>
 
-          <div class="pass-card pass-featured">
-            <div class="featured-ribbon">BEST VALUE</div>
-            <div class="pass-card-header">
-              <span class="pass-badge highlight-badge">ALL-DAY FREEDOM</span>
-              <h3 class="pass-name font-serif">Full-Day Alpine Nomad</h3>
-              <p class="pass-tagline">Explore remote granite coves at your own unrushed pace.</p>
-            </div>
-            <div class="pass-pricing">
-              <span class="pass-currency">$</span>
-              <span class="pass-amount font-serif">76</span>
-              <span class="pass-term">/ full day (8 hrs)</span>
-            </div>
-            <ul class="pass-features-list">
-              <li>✓ Everything in 2-Hour Pass</li>
-              <li>✓ 30L Roll-Top Waterproof Dry Bag</li>
-              <li>✓ Insulated Beverage Thermos Included</li>
-              <li>✓ Offline GPS Secret Cove Navigation</li>
-              <li>✓ Midday Board Swaps at Any Dock Slip</li>
-              <li>✓ Complimentary Hot Towel &amp; Lounge Cider</li>
-            </ul>
-            <button class="btn-card-reserve btn-pass-action" data-pass="full-day">Select Full-Day Pass</button>
-          </div>
-
-          <div class="pass-card">
-            <div class="pass-card-header">
-              <span class="pass-badge">EXPEDITION READY</span>
-              <h3 class="pass-name font-serif">3-Day Multi-Lake Nomad</h3>
-              <p class="pass-tagline">Take portable inflatable or rigid carbon boards to any alpine lake.</p>
-            </div>
-            <div class="pass-pricing">
-              <span class="pass-currency">$</span>
-              <span class="pass-amount font-serif">148</span>
-              <span class="pass-term">/ 3 full days</span>
-            </div>
-            <ul class="pass-features-list">
-              <li>✓ Ultra-Rigid Inflatable with 12V Electric Car Pump</li>
-              <li>✓ Heavy-Duty Rolling Backpack Case</li>
-              <li>✓ Multi-Lake Launch Permits Included</li>
-              <li>✓ Free Canine Lifejacket &amp; Pad Included</li>
-              <li>✓ Zero Penalty Weather Extensions</li>
-            </ul>
-            <button class="btn-card-reserve btn-pass-action" data-pass="multi-day">Select 3-Day Pass</button>
-          </div>
-
-        </div>
-
-
-      </div>
-    </section>
-
-    <section class="section-wrap alt-bg snake-timeline-section" id="timeline" data-section="timeline">
-      <span id="beyond" class="nav-anchor" aria-hidden="true"></span>
-      <span id="dashboard" class="nav-anchor" aria-hidden="true"></span>
-      <div class="section-container">
-
-        <div class="section-header">
-          <span class="section-eyebrow">EXPEDITION CHRONOLOGY</span>
-          <h2 class="section-headline font-serif">The Twilight Sequence: Continuous Chain Order</h2>
-          <p class="section-desc font-sans">
-            Follow the interlocking chain of your alpine water journey. Flow from afternoon dock check-in through hidden
-            cove exploration, sunset alpenglow, and starry night illumination to our floating cedar sauna.
-          </p>
-        </div>
-
-        <div class="snake-timeline-wrap">
-
-          <div class="snake-row snake-row-forward">
-
-            <div class="snake-card" data-link="1">
-              <div class="snake-card-inner">
-                <div class="snake-card-header">
-                  <div class="chain-badge">
-                    <svg class="chain-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                    <span class="chain-badge-text">LINK 01</span>
-                  </div>
-                  <span class="timeline-time-pill">03:30 PM</span>
-                </div>
-
-                <div class="snake-card-media">
-                  <img src="assets/images/home2-day-dock.jpg" alt="Outpost Arrival and Dock Valet at Pier 4"
-                    loading="lazy" class="snake-card-img">
-                  <span class="snake-milestone-marker">START</span>
-                </div>
-
-                <div class="snake-card-body">
-                  <h3 class="snake-card-title font-serif">Outpost Arrival &amp; Dock Valet</h3>
-                  <p class="snake-card-desc">
-                    Arrive at Pier 4. Meet your lake concierge, collect pre-calibrated carbon touring boards,
-                    ultra-light paddle, GPS beacon, and waterproof deck bag.
-                  </p>
-                </div>
-
-                <div class="snake-card-footer">
-                  <span class="waypoint-tag">
-                    <svg class="waypoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      aria-hidden="true">
-                      <circle cx="12" cy="10" r="3" />
-                      <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
-                    </svg>
-                    Pier 4 · Elev. 6,225'
-                  </span>
-                  <span class="chain-pulse-dot" title="Active Waypoint"></span>
-                </div>
-              </div>
-
-              <div class="card-arrow-connector arrow-right" aria-hidden="true">
-                <div class="card-arrow-circle">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
+          <div class="cta-right-visual">
+            <div class="cta-bg-circles">
+              <div class="circle-ring ring-outer"></div>
+              <div class="circle-ring ring-inner"></div>
             </div>
 
-            <div class="snake-card" data-link="2">
-              <div class="snake-card-inner">
-                <div class="snake-card-header">
-                  <div class="chain-badge">
-                    <svg class="chain-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                    <span class="chain-badge-text">LINK 02</span>
-                  </div>
-                  <span class="timeline-time-pill">04:30 PM</span>
-                </div>
+            <div class="cta-circle-img-wrap">
+              <img src="images/hero_sunset_riding.jpg" alt="Equestrian Riding Experience" class="cta-circle-img">
 
-                <div class="snake-card-media">
-                  <img src="assets/images/home2-adventure-fjord.jpg" alt="Glacial Narrows and Fjord Passage"
-                    loading="lazy" class="snake-card-img">
-                </div>
 
-                <div class="snake-card-body">
-                  <h3 class="snake-card-title font-serif">Glacial Narrows &amp; Fjord Passage</h3>
-                  <p class="snake-card-desc">
-                    Glide past granite spires and ancient cedar cliffs. The narrow channel blocks surface wind, creating
-                    crystal-clear turquoise waters with 40-foot visibility.
-                  </p>
-                </div>
-
-                <div class="snake-card-footer">
-                  <span class="waypoint-tag">
-                    <svg class="waypoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      aria-hidden="true">
-                      <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                      <polyline points="2 17 12 22 22 17" />
-                      <polyline points="2 12 12 17 22 12" />
-                    </svg>
-                    Emerald Fjord · 1.4 mi
-                  </span>
-                  <span class="chain-pulse-dot"></span>
-                </div>
-              </div>
-
-              <div class="card-arrow-connector arrow-right" aria-hidden="true">
-                <div class="card-arrow-circle">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="snake-card snake-turn-source" data-link="3">
-              <div class="snake-card-inner">
-                <div class="snake-card-header">
-                  <div class="chain-badge">
-                    <svg class="chain-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                    <span class="chain-badge-text">LINK 03</span>
-                  </div>
-                  <span class="timeline-time-pill">05:45 PM</span>
-                </div>
-
-                <div class="snake-card-media">
-                  <img src="assets/images/moment-cove-explore.jpg" alt="Secret Cove Mooring and Glacial Dip"
-                    loading="lazy" class="snake-card-img">
-                  <span class="snake-milestone-marker">MIDWAY COVE</span>
-                </div>
-
-                <div class="snake-card-body">
-                  <h3 class="snake-card-title font-serif">Secret Cove Mooring &amp; Glacial Dip</h3>
-                  <p class="snake-card-desc">
-                    Tether to submerged mooring rings at granite boulder beach. Enjoy cold-pressed refreshments, a
-                    refreshing mountain dip, or restorative shore contemplation.
-                  </p>
-                </div>
-
-                <div class="snake-card-footer">
-                  <span class="waypoint-tag">
-                    <svg class="waypoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      aria-hidden="true">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                    </svg>
-                    Granite Lagoon · 2.8 mi
-                  </span>
-                  <span class="chain-pulse-dot"></span>
-                </div>
-              </div>
-
-              <div class="card-arrow-connector mobile-only-arrow" aria-hidden="true">
-                <div class="card-arrow-circle">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <polyline points="19 12 12 19 5 12"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="snake-row-connector" aria-hidden="true">
-            <div class="snake-turn-track">
-              <span class="turn-line-dash"></span>
-              <div class="card-arrow-circle turn-arrow-circle" title="Sequence continues to Link 04">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <polyline points="19 12 12 19 5 12"></polyline>
-                </svg>
-              </div>
-              <span class="turn-line-dash"></span>
-            </div>
-          </div>
-
-          <div class="snake-row snake-row-reverse">
-
-            <div class="snake-card snake-turn-dest" data-link="4">
-              <div class="snake-card-inner">
-                <div class="snake-card-header">
-                  <div class="chain-badge">
-                    <svg class="chain-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                    <span class="chain-badge-text">LINK 04</span>
-                  </div>
-                  <span class="timeline-time-pill highlight-pill">06:45 PM</span>
-                </div>
-
-                <div class="snake-card-media">
-                  <img src="assets/images/moment-sunset-glow.jpg" alt="Sunset Alpenglow and Mirror Water" loading="lazy"
-                    class="snake-card-img">
-                  <span class="snake-milestone-marker">GOLDEN HOUR</span>
-                </div>
-
-                <div class="snake-card-body">
-                  <h3 class="snake-card-title font-serif">Sunset Alpenglow &amp; Mirror Water</h3>
-                  <p class="snake-card-desc">
-                    Sierra peaks ignite in amber and violet. As thermal winds die completely, paddle onto glassy water
-                    mirroring alpine ridges in tranquil silence.
-                  </p>
-                </div>
-
-                <div class="snake-card-footer">
-                  <span class="waypoint-tag">
-                    <svg class="waypoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      aria-hidden="true">
-                      <circle cx="12" cy="12" r="4" />
-                      <path d="M12 2v2" />
-                      <path d="M12 20v2" />
-                      <path d="M4.93 4.93l1.41 1.41" />
-                      <path d="M17.66 17.66l1.41 1.41" />
-                      <path d="M2 12h2" />
-                      <path d="M20 12h2" />
-                      <path d="M6.34 17.66l-1.41 1.41" />
-                      <path d="M19.07 4.93l-1.41 1.41" />
-                    </svg>
-                    Mirror Shoals · Sunset Peak
-                  </span>
-                  <span class="chain-pulse-dot"></span>
-                </div>
-              </div>
-
-              <div class="card-arrow-connector arrow-left" aria-hidden="true">
-                <div class="card-arrow-circle">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="snake-card" data-link="5">
-              <div class="snake-card-inner">
-                <div class="snake-card-header">
-                  <div class="chain-badge">
-                    <svg class="chain-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                    <span class="chain-badge-text">LINK 05</span>
-                  </div>
-                  <span class="timeline-time-pill">07:45 PM</span>
-                </div>
-
-                <div class="snake-card-media">
-                  <img src="assets/images/home2-night-stargazing.jpg" alt="Sub-Hull LED Glow and Starlight"
-                    loading="lazy" class="snake-card-img">
-                  <span class="snake-milestone-marker">DARK SKY</span>
-                </div>
-
-                <div class="snake-card-body">
-                  <h3 class="snake-card-title font-serif">Sub-Hull LED Glow &amp; Starlight</h3>
-                  <p class="snake-card-desc">
-                    Switch on dual underwater LED ribbons. The sub-surface illumination cuts through deep water while
-                    the Milky Way reveals itself in zero light-pollution skies.
-                  </p>
-                </div>
-
-                <div class="snake-card-footer">
-                  <span class="waypoint-tag">
-                    <svg class="waypoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      aria-hidden="true">
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    Dark Sky Reserve · 4.1 mi
-                  </span>
-                  <span class="chain-pulse-dot"></span>
-                </div>
-              </div>
-
-              <div class="card-arrow-connector arrow-left" aria-hidden="true">
-                <div class="card-arrow-circle">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="snake-card snake-card-finale" data-link="6">
-              <div class="snake-card-inner">
-                <div class="snake-card-header">
-                  <div class="chain-badge finale-badge">
-                    <svg class="chain-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                    <span class="chain-badge-text">LINK 06 · FINALE</span>
-                  </div>
-                  <span class="timeline-time-pill finale-pill">08:30 PM</span>
-                </div>
-
-                <div class="snake-card-media">
-                  <img src="assets/images/scenic-experience.jpg" alt="Lakeside Cedar Sauna and Fire Hearth"
-                    loading="lazy" class="snake-card-img">
-                  <span class="snake-milestone-marker finale-marker">WARMTH &amp; HEARTH</span>
-                </div>
-
-                <div class="snake-card-body">
-                  <h3 class="snake-card-title font-serif">Floating Sauna &amp; Cedar Hearth</h3>
-                  <p class="snake-card-desc">
-                    Dock at the torchlit pavilion. Step into the 185°F wood-fired cedar sauna, sip hot spiced cider
-                    around the open hearth, and share tales of the water.
-                  </p>
-                </div>
-
-                <div class="snake-card-footer">
-                  <span class="waypoint-tag finale-tag">
-                    <svg class="waypoint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      aria-hidden="true">
-                      <path
-                        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
-                    </svg>
-                    Base Outpost · Cedar Sauna
-                  </span>
-                  <span class="chain-pulse-dot finale-pulse"></span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section-wrap cta-section-wrap" id="cta">
-      <span id="contact" class="nav-anchor" aria-hidden="true"></span>
-      <span id="locations" class="nav-anchor" aria-hidden="true"></span>
-      <div class="section-container">
-
-        <div class="home2-cta-banner">
-          <div class="cta-banner-grid">
-            <div class="cta-banner-content">
-              <span class="cta-banner-eyebrow">YOUR BOARD IS WAITING ON DOCK 4</span>
-              <h2 class="cta-banner-title font-serif">
-                Step Directly Onto Mirrored Water. Zero Hassle.
-              </h2>
-              <p class="cta-banner-desc font-sans">
-                Book in 60 seconds with instant mobile confirmation. No deposits, zero cancellation penalty if the
-                weather
-                shifts, and complimentary valet dock departure.
-              </p>
-
-              <div class="cta-banner-actions">
-                <a href="#passes" class="cta-pill-primary">
-                  <span>Reserve Your Paddleboard Now</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-                <a href="#adventures" class="cta-pill-secondary">
-                  <span>View Route Maps</span>
-                </a>
-              </div>
-
-              <div class="cta-guarantees-row">
-                <span class="guarantee-item">✓ 100% Free Weather Reschedules</span>
-                <span class="guarantee-item">✓ Certified USCG Safety Gear</span>
-                <span class="guarantee-item">✓ Valet Dock Assist</span>
-              </div>
-            </div>
-
-            <div class="cta-circle-media">
-              <div class="cta-circle-frame">
-                <img src="assets/images/cta-paddleboard-waves.jpg"
-                  alt="Paddle board running and carving through clear ocean waves" class="cta-circle-img"
-                  loading="lazy">
-                <div class="cta-circle-badge">
-                  <span class="cta-circle-badge-dot"></span>
-                  <span>Wave &amp; Swell Ready</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-container">
+  <footer class="footer">
+    <div class="container footer-container">
 
-      <div class="footer-top-grid">
-
-        <div class="footer-brand-col">
-          <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
-            <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
-                  stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" />
-              </svg>
-            </div>
-            <div class="brand-text-group">
-              <span class="brand-name">WaveNomad</span>
-              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
-            </div>
-          </a>
-          <p class="footer-brand-paratext">
-            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries.
-            Premium touring fleets.
-          </p>
-
-          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on Facebook" title="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on YouTube" title="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-                </path>
-                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-              </svg>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on X" title="X (Twitter)">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
+      <div class="footer-col footer-brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
           </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
+          equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
         </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-col-title">Company</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1</a></li>
-            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2</a></li>
-            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
-            <li><a href="lessons.html" class="footer-link">Lessons &amp; Tours</a></li>
-            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-col-title">Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="rentals.html#collection" class="footer-link">Carbon Touring SUPs</a></li>
-            <li><a href="rentals.html#collection" class="footer-link">Inflatable Expedition Kits</a></li>
-            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
-            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
-            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-col-title">Additional Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
-            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col footer-contact-col">
-          <h4 class="footer-col-title">Contact &amp; Support</h4>
-          <ul class="footer-links-list footer-contact-list">
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Timing:</span>
-                <span class="contact-value">Daily: 06:00 AM – 08:30 PM</span>
-              </div>
-            </li>
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Location:</span>
-                <span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span>
-              </div>
-            </li>
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Mail:</span>
-                <a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a>
-              </div>
-            </li>
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                </path>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Support:</span>
-                <a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
       </div>
 
-      <div class="footer-bottom-bar">
-        <span class="footer-legal-text">
-          &copy; 2026 WaveNomad Adventures Inc. All rights reserved.
-        </span>
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-bottom-links">
-          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a>
-          <span class="footer-sublink-sep">/</span>
-          <a href="safety.html" class="footer-sublink">Privacy Policy</a>
-          <span class="footer-sublink-sep">/</span>
-          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
+      <div class="footer-col">
+        <h4 class="footer-title">Additional Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
+          <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> 404</a></li>
+          <li><a href="coming-soon.html"><i class="fa-solid fa-chevron-right"></i> cooming soon</a></li>
+          <li><a href="lessons.html#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
         </div>
       </div>
 
     </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#"
+            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
+            & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
+            Policy</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
+            Policy</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <div class="modal-backdrop" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="modal-close" id="lightbox-close">&times;</button>
+      <img src="" id="lightbox-img" alt="Gallery preview">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close">&times;</button>
+      <div class="modal-header">
+        <h3>Book Your Lesson</h3>
+        <p>Select your program and preferred schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Program / Plan *</label>
+          <select id="b-program" required>
+            <option value="Beginner Riding Lessons">Beginner Riding Lessons ($65)</option>
+            <option value="Intermediate Rider Lesson">Intermediate Rider Lesson ($85)</option>
+            <option value="Advanced & Dressage Training">Advanced & Dressage Training ($145)</option>
+            <option value="Youth Riding Lesson">Youth Riding Lesson ($60)</option>
+            <option value="Guided Sunset Trail Rides">Guided Sunset Trail Rides ($95)</option>
+            <option value="Full-Care Boarding">Full-Care Boarding</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Preferred Time Slot *</label>
+            <select id="b-time" required>
+              <option value="08:00 AM">08:00 AM - Morning</option>
+              <option value="10:30 AM">10:30 AM - Morning</option>
+              <option value="02:00 PM">02:00 PM - Afternoon</option>
+              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Experience Level & Special Requests</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="login-modal">
+    <div class="modal-card login-modal-card">
+      <button class="modal-close" id="login-close">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-check modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Access your riding progress, book slots, & manage payments</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Rider Email Address *</label>
+          <input type="email" id="l-email" placeholder="sarah.j@silverhoof.com" value="sarah.j@silverhoof.com" required>
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" value="rider12345" required>
+        </div>
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Sign In to Portal <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+        <div class="demo-login-divider"><span>OR QUICK DEMO</span></div>
+        <button type="button" class="btn btn-outline btn-full" onclick="quickDemoLogin()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Sign In as Demo Rider (Sarah Jenkins)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="rider-dashboard-modal">
+    <div class="modal-card dashboard-modal-card">
+      <button class="modal-close" id="dashboard-close">&times;</button>
+
+      <div class="dashboard-header-banner">
+        <div class="dashboard-user-info">
+          <div class="dashboard-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+          <div>
+            <h3 id="dash-user-name">Sarah Jenkins</h3>
+            <p class="dashboard-user-meta">
+              <span><i class="fa-solid fa-id-badge"></i> ID: #RH-8842</span>
+              <span class="badge-level"><i class="fa-solid fa-star"></i> Intermediate Level II</span>
+              <span>Assigned: Dakota</span>
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="closeRiderDashboard()"><i
+            class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
+      </div>
+
+      <div class="dashboard-body">
+        <div class="dashboard-tabs">
+          <button class="dash-tab-btn active" onclick="switchDashTab('overview', this)"><i
+              class="fa-solid fa-chart-pie"></i> Overview</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('book-lesson', this)"><i
+              class="fa-solid fa-calendar-plus"></i> Book Lesson Slots</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('progress-notes', this)"><i
+              class="fa-solid fa-clipboard-check"></i> Riding Progress Notes</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('trail-register', this)"><i
+              class="fa-solid fa-compass"></i> Trail Rides</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('schedule', this)"><i
+              class="fa-solid fa-clock-rotate-left"></i> Sessions Schedule</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('payments', this)"><i class="fa-solid fa-credit-card"></i>
+            Manage Payments</button>
+        </div>
+
+        <div class="dashboard-tab-content">
+
+          <div class="dash-pane active" id="pane-overview">
+            <h4>Rider Performance Overview</h4>
+            <div class="dash-stats-grid">
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-award icon-gold"></i>
+                <div class="stat-val">24</div>
+                <div class="stat-lbl">Lessons Completed</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-stopwatch icon-gold"></i>
+                <div class="stat-val">18.5</div>
+                <div class="stat-lbl">Hours Ridden</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-shield-heart icon-gold"></i>
+                <div class="stat-val">96%</div>
+                <div class="stat-lbl">Safety Score</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-wallet icon-gold"></i>
+                <div class="stat-val" id="dash-overview-balance">$65.00</div>
+                <div class="stat-lbl">Account Balance</div>
+              </div>
+            </div>
+
+            <div class="dash-next-session">
+              <div class="next-session-badge">UPCOMING SESSION</div>
+              <div class="next-session-details">
+                <div>
+                  <h5>Intermediate Jumping & Trot Transition</h5>
+                  <p><i class="fa-solid fa-calendar"></i> Tomorrow, 10:30 AM &bull; <i class="fa-solid fa-user-tie"></i>
+                    Coach Daniel Carter &bull; Horse: Dakota</p>
+                </div>
+                <button class="btn btn-gold-pill btn-sm"
+                  onclick="switchDashTab('schedule', document.querySelectorAll('.dash-tab-btn')[4])">View
+                  Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-pane" id="pane-book-lesson">
+            <h4>Book Lesson Slot by Skill Level</h4>
+            <form id="dash-book-form" onsubmit="handleDashBooking(event)">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Skill Level *</label>
+                  <select id="dash-skill-level" required>
+                    <option value="Beginner">Beginner (Mounting & Balance)</option>
+                    <option value="Intermediate" selected>Intermediate (Trot, Canter & Low Hurdles)</option>
+                    <option value="Advanced">Advanced (Show Jumping & Dressage)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Discipline / Program *</label>
+                  <select id="dash-program-select" required>
+                    <option value="Western Pleasure & Trail Prep">Western Pleasure & Trail Prep ($65)</option>
+                    <option value="English Hunt Seat & Trot">English Hunt Seat & Trot ($85)</option>
+                    <option value="Show Jumping & Canter Mastery" selected>Show Jumping & Canter Mastery ($120)</option>
+                    <option value="High-Step Precision Dressage">High-Step Precision Dressage ($145)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Date *</label>
+                  <input type="date" id="dash-date" required>
+                </div>
+                <div class="form-group">
+                  <label>Preferred Time Slot *</label>
+                  <select id="dash-time" required>
+                    <option value="08:00 AM">08:00 AM - Morning</option>
+                    <option value="10:30 AM" selected>10:30 AM - Morning</option>
+                    <option value="02:00 PM">02:00 PM - Afternoon</option>
+                    <option value="05:00 PM">05:00 PM - Sunset</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold-pill btn-full">Confirm Slot Reservation <i
+                  class="fa-solid fa-calendar-check"></i></button>
+            </form>
+          </div>
+
+          <div class="dash-pane" id="pane-progress-notes">
+            <h4>Instructor Notes & Skill Meter</h4>
+            <div class="progress-skills-grid">
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Mounting & Balance</span><span>95%</span></div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Canter Transition</span><span>80%</span></div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Rein Communication</span><span>88%</span></div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Hurdle Jump (3ft)</span><span>65%</span></div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 65%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="instructor-notes-timeline">
+              <div class="note-card">
+                <div class="note-header"><strong>Coach Daniel Carter</strong><span class="note-date">Sept 10,
+                    2026</span></div>
+                <p>"Sarah showed exceptional posture balance during canter transitions today. Ready to introduce low
+                  hurdle jumps next week."</p>
+                <div class="note-tags"><span class="tag">Canter</span><span class="tag">Posture A+</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-pane" id="pane-trail-register">
+            <h4>Upcoming Guided Trail Rides</h4>
+            <div class="trail-cards-list">
+              <div class="trail-item-card">
+                <div class="trail-info">
+                  <h5>Pine Creek Sunset Trek</h5>
+                  <p><i class="fa-solid fa-clock"></i> This Saturday, 5:00 PM &bull; 2.5 Hours Trail</p>
+                  <span class="badge-slots">3 Slots Remaining</span>
+                </div>
+                <button class="btn btn-gold-pill btn-sm" onclick="quickRegisterTrail('Pine Creek Sunset Trek')">Register
+                  ($95)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-pane" id="pane-schedule">
+            <h4>Your Scheduled Sessions</h4>
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Session</th>
+                  <th>Date & Time</th>
+                  <th>Instructor</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="dash-schedule-tbody">
+                <tr>
+                  <td>Intermediate Jumping</td>
+                  <td>Tomorrow, 10:30 AM</td>
+                  <td>Daniel Carter</td>
+                  <td><span class="status-badge confirmed">Confirmed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="dash-pane" id="pane-payments">
+            <h4>Account Balance & Invoices</h4>
+            <div class="billing-summary-box">
+              <div>
+                <span class="stat-lbl">Current Balance Due</span>
+                <div class="balance-amt">$65.00</div>
+              </div>
+              <button class="btn btn-gold-pill" onclick="payAccountBalance()">Pay Balance ($65.00)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
   <script src="home2.js"></script>
 </body>
 

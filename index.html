@@ -1,2280 +1,1012 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WaveNomad | Stand-Up Paddleboard Rental & Lessons</title>
+  <title>Silver Hoof Stables | Luxury Horseback Riding & Lessons</title>
   <meta name="description"
-    content="WaveNomad offers luxury stand-up paddleboard rentals, certified alpine clinics, scenic lake expeditions, and real-time telemetry booking for modern outdoor explorers. Explore · Paddle · Repeat.">
-  <meta name="theme-color" content="#1597B8">
+    content="Experience the freedom, build your skills, and create a deeper bond with horses at Silver Hoof Stables. Premium horseback riding, trail rides, and lessons.">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
 
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-  <header class="site-header" id="site-header">
-    <div class="header-container">
+<header class="header" id="header">
+    <div class="container header-container">
 
-      <a href="#home" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
-        <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+<a href="#home" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
         </div>
-        <div class="brand-text-group">
-          <span class="brand-name">WaveNomad</span>
-          <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
         </div>
       </a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu" id="nav-menu">
-
-          <li class="nav-item dropdown" id="home-dropdown-item">
-            <a href="index.html#home" class="nav-link active" id="home-dropdown-btn" aria-haspopup="true"
-              aria-expanded="false">
-              <span>Home</span>
-              <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-              </svg>
+<nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link active" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
             </a>
-            <ul class="dropdown-menu" id="home-dropdown-menu">
-              <li>
-                <a href="index.html" class="dropdown-link active" id="home1-option">
-                  <div class="dropdown-title">
-                    <span>Home 1: Classic</span>
-                    <span class="dropdown-badge" id="home-active-badge">Active</span>
-                  </div>
-                  <span class="dropdown-desc">Crisp morning light &amp; turquoise waters</span>
-                </a>
-              </li>
-              <li>
-                <a href="home2.html" class="dropdown-link" id="home2-option">
-                  <div class="dropdown-title">
-                    <span>Home 2: Premium</span>
-                    <span class="dropdown-badge"
-                      style="background: rgba(16, 42, 67, 0.08); color: var(--secondary-text);">Explore</span>
-                  </div>
-                  <span class="dropdown-desc">Cinematic evening golden-hour glow</span>
-                </a>
-              </li>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item active" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
             </ul>
           </li>
-
-          <li class="nav-item">
-            <a href="rentals.html" class="nav-link" id="nav-rentals-link">Rentals</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="lessons.html" class="nav-link" id="nav-lessons-link">Lessons &amp; Tours</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link" id="nav-contact-link">Contact</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="dashboard.html" class="nav-link" id="nav-dashboard-link">Dashboard</a>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+          <li class="nav-login-item">
+            <button class="btn btn-primary" onclick="openLoginModal()">
+              <i class="fa-solid fa-user"></i> Login
+            </button>
           </li>
         </ul>
       </nav>
-
       <div class="header-actions">
 
-        <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
-          title="Toggle Light / Dark Mode">
-          <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4.5"></circle>
-            <line x1="12" y1="2" x2="12" y2="4"></line>
-            <line x1="12" y1="20" x2="12" y2="22"></line>
-            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
-            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
-            <line x1="2" y1="12" x2="4" y2="12"></line>
-            <line x1="20" y1="12" x2="22" y2="12"></line>
-            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
-            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
-          </svg>
-          <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+<button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
-
-
-        <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
-          <span>Login</span>
+<button class="btn btn-primary" id="open-login-btn">
+          <i class="fa-solid fa-user"></i> Login
         </button>
 
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+<button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
 
     </div>
   </header>
 
-  <main>
-    <section class="hero-section" id="home">
+<main>
 
-      <div class="hero-canvas" aria-hidden="true">
-        <img class="hero-bg-img hero-bg-light" src="assets/images/hero-light.jpg"
-          alt="Paddleboarder standing on stand-up paddleboard in crystal clear alpine lake in morning light"
-          fetchpriority="high">
-        <img class="hero-bg-img hero-bg-dark" src="assets/images/hero-dark.jpg"
-          alt="Paddleboarder standing on stand-up paddleboard in tranquil alpine lake during golden-hour sunset"
-          loading="lazy">
-        <div class="hero-overlay-mask"></div>
-      </div>
-
-      <div class="hero-inner">
-
+<section class="hero-section" id="home">
+      <div class="container hero-container">
         <div class="hero-content">
-
-          <div class="hero-eyebrow-text">
-            <span>ADVENTURE &nbsp;·&nbsp; NATURE &nbsp;·&nbsp; COMMUNITY</span>
+          <div class="gold-divider-wrap">
+            <span class="gold-line"></span>
+            <span class="hero-welcome">PREMIUM EQUESTRIAN EXPERIENCE</span>
+            <span class="gold-line"></span>
           </div>
+          <h1 class="hero-title">Ride. Learn. <br><span class="highlight-text">Connect.</span></h1>
+          <p class="hero-subtitle">Equestrian Riding School & Horse Stables</p>
+          <p class="hero-description">
+            Discover a welcoming equestrian experience where riders of every level can build confidence, develop their
+            skills, and create lasting connections with horses.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-gold btn-large" onclick="openBookingModal()" id="hero-book-btn">
+              Book a Riding Lesson
+            </button>
+            <a href="#about" class="btn btn-outline-hero btn-large" id="hero-explore-btn">
+              Explore Our Stable <i class="fa-solid fa-compass"></i>
+            </a>
+          </div>
+        </div>
 
-          <h1 class="hero-headline font-serif">
-            <span class="headline-word">Paddle Explore</span>
-            <span class="headline-word">Belong</span>
-          </h1>
+        <div class="hero-image-wrapper">
+          <img src="images/hero_rider_sticker.png" alt="Equestrian Jumping Rider" class="hero-sticker-img">
+        </div>
+      </div>
+    </section>
 
-          <p class="hero-description font-sans">
-            Join a community of explorers and experience the world from a different view.
+<section class="feature-strip">
+      <div class="container feature-container">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-horse-head"></i>
+          </div>
+          <div class="feature-info">
+            <h3>RIDING LESSONS</h3>
+            <p>For all skill levels</p>
+          </div>
+        </div>
+
+        <div class="feature-divider"></div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <div class="feature-info">
+            <h3>TRAIL RIDES</h3>
+            <p>Explore scenic trails</p>
+          </div>
+        </div>
+
+        <div class="feature-divider"></div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="feature-info">
+            <h3>PREMIUM HORSES</h3>
+            <p>Well cared & trained</p>
+          </div>
+        </div>
+
+        <div class="feature-divider"></div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-mountain-sun"></i>
+          </div>
+          <div class="feature-info">
+            <h3>COUNTRYSIDE VIEWS</h3>
+            <p>Nature at its best</p>
+          </div>
+        </div>
+
+        <div class="feature-divider"></div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <div class="feature-info">
+            <h3>EXPERT INSTRUCTORS</h3>
+            <p>Passionate & professional</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section about-section" id="about">
+      <div class="container about-container">
+
+        <div class="about-image-column">
+          <div class="image-frame">
+            <img src="images/our_story_ranch.jpg" alt="Silver Hoof Stables Ranch House" class="about-img">
+            <div class="badge-experience">
+              <span class="exp-number">25+</span>
+              <span class="exp-text">Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-column">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            WELCOME TO SILVER HOOF
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Where Every Ride Becomes a Journey</h2>
+          <p class="about-lead">
+            Immerse yourself in a welcoming stable environment dedicated to horse-centered learning, professional riding
+            instruction, and supportive growth in breathtaking natural surroundings.
           </p>
 
-          <div class="hero-actions">
-            <a href="#rentals" class="cta-pill-primary" id="cta-join-journey">
-              <span>Join the Journey</span>
-              <span class="cta-arrow" aria-hidden="true">→</span>
-            </a>
+<div class="services-grid" style="grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0;">
+            <div class="service-card" style="padding: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="service-icon-wrapper"
+                  style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Expert Instruction</h3>
+                  <p style="font-size: 0.85rem; margin-bottom: 0;">Certified equine professionals focused on rider
+                    confidence, safety, and personal growth.</p>
+                </div>
+              </div>
+            </div>
 
-            <button class="cta-pill-secondary" id="hero-dashboard-btn" type="button">
-              <svg class="cta-pin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span>View Locations</span>
+            <div class="service-card" style="padding: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="service-icon-wrapper"
+                  style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Exceptional Horse Care</h3>
+                  <p style="font-size: 0.85rem; margin-bottom: 0;">Well-loved, healthy, and beautifully trained horses
+                    matched to your skill level.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card" style="padding: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="service-icon-wrapper"
+                  style="width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 0;">
+                  <i class="fa-solid fa-mountain-sun"></i>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Beautiful Riding Environment</h3>
+                  <p style="font-size: 0.85rem; margin-bottom: 0;">150 acres of pristine pastures, woodland trails, and
+                    climate-controlled arenas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <button class="btn btn-gold" onclick="openBookingModal()">
+              Book a Riding Lesson <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <div class="founder-quote">
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <div>
+                <strong>Eleanor Vance</strong>
+                <span>Founder & Master Equestrian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<section class="section lessons-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            HORSEBACK RIDING LESSONS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Lessons Designed for Every Rider</h2>
+          <p class="section-description">
+            Tailored equestrian instruction created to foster confidence, posture alignment, and riding mastery across
+            all age groups and experience levels.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+<div class="service-card lesson-service-card">
+            <div class="lesson-card-media">
+              <img src="images/lesson_youth_academy.jpg" alt="Young Riders Equestrian Lesson" class="lesson-card-img">
+              <div class="skill-level-badge">Ages 5 – 10</div>
+              <div class="lesson-icon-floating">
+                <i class="fa-solid fa-child-reaching"></i>
+              </div>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Young Riders</h3>
+              <p>Gentle introduction to pony care, helmet safety, balance games, and mounting fundamentals in a safe,
+                fenced arena.</p>
+              <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Young Riders')">
+                Explore Lessons <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+<div class="service-card lesson-service-card">
+            <div class="lesson-card-media">
+              <img src="images/lesson_horsemanship.jpg" alt="Teen Riders Equestrian Lesson" class="lesson-card-img">
+              <div class="skill-level-badge">Ages 11 – 17</div>
+              <div class="lesson-icon-floating">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Teen Riders</h3>
+              <p>Trot and canter control, saddle fitting, rein guidance, and confidence building for teenage equestrian
+                enthusiasts.</p>
+              <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Teen Riders')">
+                Explore Lessons <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+<div class="service-card lesson-service-card">
+            <div class="lesson-card-media">
+              <img src="images/lesson_sunset_trail.jpg" alt="Adult Riders Equestrian Lesson" class="lesson-card-img">
+              <div class="skill-level-badge">Ages 18+ Leisure</div>
+              <div class="lesson-icon-floating">
+                <i class="fa-solid fa-user-gear"></i>
+              </div>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Adult Riders</h3>
+              <p>Relaxed 1-on-1 adult instruction focusing on posture alignment, stress relief, mounting, and enjoyable
+                trail prep.</p>
+              <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Adult Riders')">
+                Explore Lessons <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+<div class="service-card lesson-service-card featured-service">
+            <div class="badge-featured">Most Popular</div>
+            <div class="lesson-card-media">
+              <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Riders Equestrian Lesson"
+                class="lesson-card-img">
+              <div class="skill-level-badge">All Ages Novice</div>
+              <div class="lesson-icon-floating">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Beginner Riders</h3>
+              <p>Safe 1-on-1 mounting, calm school horse matching, rein guidance, and fundamental equine handling.</p>
+              <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Beginner Riders')">
+                Explore Lessons <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+<div class="service-card lesson-service-card">
+            <div class="lesson-card-media">
+              <img src="images/lesson_hunter_jumper.jpg" alt="Intermediate Riders Equestrian Lesson"
+                class="lesson-card-img">
+              <div class="skill-level-badge">Trot & Canter</div>
+              <div class="lesson-icon-floating">
+                <i class="fa-solid fa-route"></i>
+              </div>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Intermediate Riders</h3>
+              <p>Canter transition, low hurdle jumps, trail readiness, and developing harmonious saddle balance.</p>
+              <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Intermediate Riders')">
+                Explore Lessons <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+<div class="service-card lesson-service-card">
+            <div class="lesson-card-media">
+              <img src="images/lesson_dressage_precision.jpg" alt="Advanced Riders Equestrian Lesson"
+                class="lesson-card-img">
+              <div class="skill-level-badge">Jumping & Dressage</div>
+              <div class="lesson-icon-floating">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Advanced Riders</h3>
+              <p>Precision dressage maneuvers, obstacle hurdle jumps (3ft+), competition preparation, and advanced
+                biomechanics.</p>
+              <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Advanced Riders')">
+                Explore Lessons <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<section class="section boarding-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            HORSE CARE & STABLING
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Exceptional Care Beyond the Ride</h2>
+          <p class="section-description">
+            Providing premium horse boarding services designed for horse comfort, professional daily care, immaculate
+            facilities, and a safe, nurturing environment.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-house-chimney-window"></i>
+            </div>
+            <h3>Full-Service Horse Boarding</h3>
+            <p>14'x14' oak wooden stalls, individual turnout paddocks, daily grooming, and 24/7 care.</p>
+            <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Full-Care Boarding')">
+              View Boarding Services <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
 
-          <div class="hero-features-inline">
-            <div class="feature-col">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M3 20L12 4l9 16H3z" />
-                  <path d="M12 4v16" />
-                  <path d="M8 14l4-5 4 5" />
-                </svg>
-              </div>
-              <span class="feature-name">Guided<br>Adventures</span>
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-tree"></i>
             </div>
-
-            <div class="feature-divider" aria-hidden="true"></div>
-
-            <div class="feature-col">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                </svg>
-              </div>
-              <span class="feature-name">Eco-Friendly<br>Practices</span>
-            </div>
-
-            <div class="feature-divider" aria-hidden="true"></div>
-
-            <div class="feature-col">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="3.5" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <span class="feature-name">Supportive<br>Community</span>
-            </div>
-
-            <div class="feature-divider" aria-hidden="true"></div>
-
-            <div class="feature-col">
-              <div class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="6" cy="18" r="3.5" />
-                  <circle cx="18" cy="18" r="3.5" />
-                  <path d="M6 14.5V6a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v2" />
-                  <path d="M18 14.5V6a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v2" />
-                  <line x1="8" y1="8" x2="16" y2="8" />
-                </svg>
-              </div>
-              <span class="feature-name">Unforgettable<br>Destinations</span>
-            </div>
+            <h3>Pasture Access</h3>
+            <p>Spacious 10-acre green pastures with herd companionship, weather shelters, and automatic waterers.</p>
+            <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Pasture Boarding')">
+              View Boarding Services <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
 
-        </div>
-
-        <div class="hero-spacer"></div>
-
-      </div>
-
-      <div class="hero-bottom-bar">
-        <div class="bottom-bar-left">
-          <svg class="sine-wave-svg" viewBox="0 0 100 20" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round">
-            <path d="M0 10 Q12.5 0 25 10 T50 10 T75 10 T100 10" />
-          </svg>
-          <span class="bottom-bar-tagline">EXPLORE MORE &nbsp;·&nbsp; LIVE BETTER</span>
-        </div>
-
-
-
-
-      </div>
-
-    </section>
-
-    <section class="section-wrap" id="rentals">
-      <div class="section-container">
-
-        <div class="section-header">
-          <span class="section-eyebrow"> PREMIUM FLEET</span>
-          <h2 class="section-headline font-serif">Engineered For Still Waters &amp; Alpine Expeditions</h2>
-          <p class="section-desc font-sans">
-            Every WaveNomad paddleboard is precision-balanced with aerospace-grade carbon construction, ultra-durable
-            drop stitch cores, dry storage bungies, and ergonomic carbon-shaft paddles.
-          </p>
-        </div>
-
-        <div class="fleet-hero-banner">
-          <img src="assets/images/rentals-fleet.jpg"
-            alt="Row of high-performance carbon fiber stand-up paddleboards lined on wooden dock by turquoise alpine lake"
-            loading="lazy">
-          <div class="fleet-banner-overlay">
-            <div class="fleet-banner-content">
-              <h3>Dockside Ready &amp; Pre-Inspected</h3>
-              <p>All rentals include Coast Guard approved buoyancy aids, dry bags, quick-release coil leashes, and
-                digital dock checkout.</p>
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-broom"></i>
             </div>
-            <a href="#booking" class="cta-pill-primary">Reserve From Fleet</a>
+            <h3>Daily Stable Care</h3>
+            <p>Daily stall cleaning, fresh pine shavings, daily hoof checks, and coat grooming care.</p>
+            <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Stable Care')">
+              View Boarding Services <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
-        </div>
 
-        <div class="fleet-filter-bar">
-          <button class="fleet-filter-btn active" data-filter="all">All Boards (3)</button>
-          <button class="fleet-filter-btn" data-filter="touring">Touring Expedition</button>
-          <button class="fleet-filter-btn" data-filter="allaround">All-Around &amp; Beginner</button>
-          <button class="fleet-filter-btn" data-filter="tandem">Tandem &amp; Family</button>
-        </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+            <h3>Feeding & Watering</h3>
+            <p>Customized organic grain feeding 3x daily, high-grade hay, and automatic heated waterer systems.</p>
+            <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Feeding')">
+              View Boarding Services <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
 
-        <div class="rentals-grid">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-building-flag"></i>
+            </div>
+            <h3>Arena & Riding Access</h3>
+            <p>Unlimited access to our 20,000 sq ft covered arena, outdoor dressage ring, and 150 acres of trails.</p>
+            <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Arena Access')">
+              View Boarding Services <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
 
-          <article class="board-card featured-card" data-category="touring">
-            <div>
-              <span class="board-badge">LONG DISTANCE &amp; GLIDE</span>
-              <h3 class="board-card-title">Apex Expedition 12'6"</h3>
-              <p class="board-card-desc">
-                Streamlined displacement nose designed to effortlessly cut through early-morning glass water and
-                maintain straight-line tracking across large alpine lakes.
-              </p>
-              <ul class="board-specs-list">
-                <li class="board-spec-row">
-                  <span class="spec-label">Dimensions</span>
-                  <span class="spec-val">12'6" × 30" × 6"</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Weight Capacity</span>
-                  <span class="spec-val">320 lbs / 145 kg</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Construction</span>
-                  <span class="spec-val">Multi-Layer Carbon Infill</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Accessories</span>
-                  <span class="spec-val">Carbon Paddle + 20L Dry Bag</span>
-                </li>
-              </ul>
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-heart-pulse"></i>
             </div>
-            <div class="board-card-footer">
-              <div class="board-pricing">
-                <span class="board-price-amount">$45</span>
-                <span class="board-price-unit">per hour / $120 day</span>
-              </div>
-              <button class="btn-card-reserve" data-board="apex">Reserve Board</button>
-            </div>
-          </article>
-
-          <article class="board-card" data-category="allaround">
-            <div>
-              <span class="board-badge">MAXIMUM STABILITY</span>
-              <h3 class="board-card-title">TerraFlow 10'6"</h3>
-              <p class="board-card-desc">
-                The ultimate confidence-builder with a wide, grippy EVA traction pad, rounded tail, and forgiving rocker
-                profile for beginners, yoga, and relaxed paddling.
-              </p>
-              <ul class="board-specs-list">
-                <li class="board-spec-row">
-                  <span class="spec-label">Dimensions</span>
-                  <span class="spec-val">10'6" × 32" × 6"</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Weight Capacity</span>
-                  <span class="spec-val">275 lbs / 125 kg</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Construction</span>
-                  <span class="spec-val">Military-Grade Drop Stitch</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Accessories</span>
-                  <span class="spec-val">Composite Paddle + PFD Vest</span>
-                </li>
-              </ul>
-            </div>
-            <div class="board-card-footer">
-              <div class="board-pricing">
-                <span class="board-price-amount">$35</span>
-                <span class="board-price-unit">per hour / $95 day</span>
-              </div>
-              <button class="btn-card-reserve" data-board="terraflow">Reserve Board</button>
-            </div>
-          </article>
-
-          <article class="board-card" data-category="tandem">
-            <div>
-              <span class="board-badge">2 PADDLERS + PET</span>
-              <h3 class="board-card-title">Summit Glide Tandem 14'0"</h3>
-              <p class="board-card-desc">
-                Engineered for dual paddlers with expansive deck real estate, dual center tracking fins, and heavy-duty
-                front and rear gear cargo webs for day-long picnics.
-              </p>
-              <ul class="board-specs-list">
-                <li class="board-spec-row">
-                  <span class="spec-label">Dimensions</span>
-                  <span class="spec-val">14'0" × 34" × 6"</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Weight Capacity</span>
-                  <span class="spec-val">480 lbs / 218 kg</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Construction</span>
-                  <span class="spec-val">Dual Fusion Drop Stitch Core</span>
-                </li>
-                <li class="board-spec-row">
-                  <span class="spec-label">Accessories</span>
-                  <span class="spec-val">2 Carbon Paddles + Dual PFDs</span>
-                </li>
-              </ul>
-            </div>
-            <div class="board-card-footer">
-              <div class="board-pricing">
-                <span class="board-price-amount">$65</span>
-                <span class="board-price-unit">per hour / $160 day</span>
-              </div>
-              <button class="btn-card-reserve" data-board="tandem">Reserve Board</button>
-            </div>
-          </article>
+            <h3>Horse Wellness Support</h3>
+            <p>Hydro-therapy leg spa, cold therapy boots, solar climate stabling, and on-site vet supervision.</p>
+            <button class="btn-text-gold service-btn" onclick="openBookingWithProgram('Wellness Support')">
+              View Boarding Services <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <section class="section-wrap alt-bg" id="lessons">
-      <div class="section-container">
+<section class="section pricing-section" id="pricing">
+      <div class="container">
 
-        <div class="section-header">
-          <span class="section-eyebrow"> MASTER THE WATER</span>
-          <h2 class="section-headline font-serif">Certified Instruction &amp; Guided Excursions</h2>
-          <p class="section-desc font-sans">
-            Whether taking your first stroke or dialing in advanced race cadence, our PSUPA-certified instructors
-            provide supportive, individualized guidance in pristine alpine conditions.
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            TRANSPARENT RATES
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Membership & Lesson Plans</h2>
+          <p class="section-description">
+            Choose a plan that fits your riding goals. Flexible single-session bookings or discounted monthly
+            memberships available.
+          </p>
+
+<div class="pricing-toggle-wrap">
+            <span class="toggle-label active" id="single-label">Single Session</span>
+            <label class="switch">
+              <input type="checkbox" id="pricing-toggle">
+              <span class="slider round"></span>
+            </label>
+            <span class="toggle-label" id="monthly-label">Monthly Membership <span class="discount-badge">Save
+                20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+
+<div class="pricing-card">
+            <div class="plan-header">
+              <h3>Discovery Rider</h3>
+              <p>Ideal for beginners trying their first lesson</p>
+            </div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-single="65" data-monthly="195">65</span>
+              <span class="period" id="period-1">/ session</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> 60-Minute Guided Lesson</li>
+              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 Certified Instructor</li>
+              <li><i class="fa-solid fa-circle-check"></i> Premium Riding Gear Included</li>
+              <li><i class="fa-solid fa-circle-check"></i> Grooming & Stable Tour</li>
+              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Priority Weekend Booking</li>
+            </ul>
+            <button class="btn btn-outline-gold plan-btn" onclick="openBookingWithPlan('Discovery Rider')">Choose
+              Plan</button>
+          </div>
+
+<div class="pricing-card featured-plan">
+            <div class="popular-ribbon">Best Value</div>
+            <div class="plan-header">
+              <h3>Equestrian Explorer</h3>
+              <p>For dedicated riders looking to build skills rapidly</p>
+            </div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-single="145" data-monthly="420">145</span>
+              <span class="period" id="period-2">/ session</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> 90-Minute Extended Lesson</li>
+              <li><i class="fa-solid fa-circle-check"></i> Dedicated Master Trainer</li>
+              <li><i class="fa-solid fa-circle-check"></i> Choice of School Horse</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sunset Trail Ride Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> Priority Weekend Slots</li>
+            </ul>
+            <button class="btn btn-gold plan-btn" onclick="openBookingWithPlan('Equestrian Explorer')">Get
+              Started</button>
+          </div>
+
+<div class="pricing-card">
+            <div class="plan-header">
+              <h3>Royal Stabling & Board</h3>
+              <p>Complete luxury care for horse owners</p>
+            </div>
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="price-val" data-single="250" data-monthly="750">250</span>
+              <span class="period" id="period-3">/ session</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Private 14x14 Climate Stall</li>
+              <li><i class="fa-solid fa-circle-check"></i> Organic Nutrition & Turnout</li>
+              <li><i class="fa-solid fa-circle-check"></i> Unlimited Arena & Trail Use</li>
+              <li><i class="fa-solid fa-circle-check"></i> 24/7 Vet & Surveillance</li>
+              <li><i class="fa-solid fa-circle-check"></i> Complimentary Grooming</li>
+            </ul>
+            <button class="btn btn-outline-gold plan-btn" onclick="openBookingWithPlan('Royal Stabling')">Inquire
+              Boarding</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+<section class="section timeline-section" id="heritage">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            OUR HERITAGE
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">The Journey of Silver Hoof</h2>
+          <p class="section-description">
+            Over two decades of passion, dedicated horse care, and building an equestrian community.
           </p>
         </div>
 
-        <div class="lessons-hero-grid">
-          <div class="lessons-media-card">
-            <img src="assets/images/lessons-tour.jpg"
-              alt="Certified instructor guiding a small group of paddleboarders on calm turquoise lake surrounded by mountains"
-              loading="lazy">
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+<div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-seedling"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">1999</span>
+              <h3>Founding of the Ranch</h3>
+              <p>Eleanor Vance purchased 50 acres of historic farmland to establish a humane sanctuary for rescue horses
+                and traditional riding instruction.</p>
+            </div>
           </div>
 
-          <div class="lessons-copy-col">
-            <span class="board-badge">INTIMATE RATIO 1:4</span>
-            <h3 style="font-size: 2rem; font-weight: 700; margin: 0.5rem 0 1rem; color: var(--primary-text);"
-              class="font-serif">
-              Learn Fast. Paddle Further. Stay Safe.
-            </h3>
-            <p style="color: var(--secondary-text); font-size: 0.98rem; line-height: 1.65; margin-bottom: 1.5rem;">
-              Every clinic begins with dry-land ergonomics, foundational board handling, and core engagement techniques
-              before transitioning onto calm, mirror-flat bay water with safety boat coverage.
+<div class="timeline-item right">
+            <div class="timeline-dot"><i class="fa-solid fa-trophy"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2006</span>
+              <h3>Championship Arena Construction</h3>
+              <p>Inaugurated our 20,000 sq ft covered indoor arena equipped with shock-absorbing dustless footing,
+                hosting regional dressage championships.</p>
+            </div>
+          </div>
+
+<div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-mountain"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2014</span>
+              <h3>150-Acres Trail Network Expansion</h3>
+              <p>Acquired adjacent woodland trails, creating scenic 10-mile private loops featuring creek crossings,
+                wooden bridges, and hilltop vistas.</p>
+            </div>
+          </div>
+
+<div class="timeline-item right">
+            <div class="timeline-dot"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020</span>
+              <h3>Equine Wellness & Therapy Center</h3>
+              <p>Launched our dedicated therapeutic riding initiative, assisting veterans and young adults in building
+                emotional resilience through horse partnership.</p>
+            </div>
+          </div>
+
+<div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-crown"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025</span>
+              <h3>Luxury Eco-Stables & Today</h3>
+              <p>Unveiled solar-powered climate stabling and private equestrian lounges, setting the gold standard for
+                luxury horse care nationwide.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+<section class="section journals-section" id="journals">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            EQUESTRIAN JOURNAL
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Latest Articles & Insights</h2>
+          <p class="section-description">
+            Expert riding guides, equine care advice, and stories from our stables.
+          </p>
+        </div>
+
+        <div class="journals-grid">
+
+          <article class="journal-card">
+            <div class="journal-img-box">
+              <img src="images/hero_sunset_riding.jpg" alt="Riding Posture Tips">
+              <span class="journal-category">Riding Tips</span>
+            </div>
+            <div class="journal-content">
+              <div class="journal-meta">
+                <span><i class="fa-regular fa-calendar"></i> Sept 12, 2026</span>
+                <span><i class="fa-regular fa-user"></i> Master Trainer</span>
+              </div>
+              <h3>Mastering Your Seat & Balance: 5 Core Exercises for Riders</h3>
+              <p>Discover how simple core engagement and soft hands transform your riding harmony and horse
+                communication.</p>
+              <a href="#" class="journal-link">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="journal-card">
+            <div class="journal-img-box">
+              <img src="images/our_story_ranch.jpg" alt="Equine Nutrition">
+              <span class="journal-category">Horse Health</span>
+            </div>
+            <div class="journal-content">
+              <div class="journal-meta">
+                <span><i class="fa-regular fa-calendar"></i> Aug 28, 2026</span>
+                <span><i class="fa-regular fa-user"></i> Dr. Sarah Jenkins</span>
+              </div>
+              <h3>Autumn Equine Care: Preparing Your Horse for Seasonal Changes</h3>
+              <p>Essential advice on coat grooming, hay diet adjustments, and joint care as cooler autumn trail weather
+                arrives.</p>
+              <a href="#" class="journal-link">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="journal-card">
+            <div class="journal-img-box">
+              <img src="images/horse_valkyrie.jpg" alt="Dressage Basics">
+              <span class="journal-category">Dressage</span>
+            </div>
+            <div class="journal-content">
+              <div class="journal-meta">
+                <span><i class="fa-regular fa-calendar"></i> Aug 14, 2026</span>
+                <span><i class="fa-regular fa-user"></i> Eleanor Vance</span>
+              </div>
+              <h3>Understanding Horse Body Language & Ear Positions</h3>
+              <p>Learn to read the subtle emotional signals your horse sends through their ears, tail carriage, and
+                breathing patterns.</p>
+              <a href="#" class="journal-link">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+<section class="section gallery-section" id="gallery">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            VISUAL MOMENTS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Life at Silver Hoof</h2>
+          <p class="section-description">
+            Explore glimpses of our majestic horses, picturesque trails, and vibrant riding community.
+          </p>
+
+<div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Photos</button>
+            <button class="filter-btn" data-filter="horses">Our Horses</button>
+            <button class="filter-btn" data-filter="trails">Trail Rides</button>
+            <button class="filter-btn" data-filter="ranch">Stables & Ranch</button>
+            <button class="filter-btn" data-filter="jumping">Show Jumping</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+
+<div class="gallery-item" data-category="jumping">
+            <img src="images/gallery_jumping.jpg" alt="Show Jumping Hurdle Practice">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Grand Hurdle Leap</h4>
+              <p>Show Jumping</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="trails">
+            <img src="images/gallery_trail_creek.jpg" alt="Mountain Stream Trail Ride">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Pine Creek Stream Crossing</h4>
+              <p>Trail Rides</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="ranch">
+            <img src="images/gallery_stable_bonding.jpg" alt="Rider Bonding with Gray Horse in Stables">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Morning Horse Bonding</h4>
+              <p>Stables & Ranch</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="trails">
+            <img src="images/hero_sunset_riding.jpg" alt="Golden Hour Sunset Trail Ride">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Sunset Ridge Trek</h4>
+              <p>Trail Rides</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="ranch">
+            <img src="images/our_story_ranch.jpg" alt="Historic Ranch House & Barn">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Main Stable Lodge</h4>
+              <p>Stables & Ranch</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="horses">
+            <img src="images/horse_valkyrie.jpg" alt="Valkyrie Dressage Warmblood">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Valkyrie in Motion</h4>
+              <p>Our Horses</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="horses">
+            <img src="images/horse_apollo.jpg" alt="Apollo Palomino Stallion">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Apollo in the Meadow</h4>
+              <p>Our Horses</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="horses">
+            <img src="images/horse_sierra.jpg" alt="Sierra Chestnut Thoroughbred">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Sierra Arena Practice</h4>
+              <p>Our Horses</p>
+            </div>
+          </div>
+
+<div class="gallery-item" data-category="horses">
+            <img src="images/horse_dakota.jpg" alt="Dakota Grey Arabian">
+            <div class="gallery-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <h4>Dakota Morning Care</h4>
+              <p>Our Horses</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+<section class="section testimonials-section" id="testimonials">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            RIDER TESTIMONIALS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Loved by Riders, Trusted by Families</h2>
+          <p class="section-description">
+            Discover why beginner students, experienced equestrians, and horse owners choose Silver Hoof Stables for
+            lessons, trail adventures, and full-care stabling.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+<div class="testimonial-card">
+            <div class="quote-bg-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Silver Hoof Stables completely transformed my riding confidence. As an adult beginner, but the
+              instructors were patient, encouraging, and paired me with the gentlest school horse!"
             </p>
-
-            <div class="academy-perks-grid">
-              <div class="perk-item">
-                <div class="perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </div>
-                <div class="perk-text">
-                  <h5>PSUPA &amp; ACA Certified</h5>
-                  <p>World-accredited wilderness instructors</p>
-                </div>
-              </div>
-
-              <div class="perk-item">
-                <div class="perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                </div>
-                <div class="perk-text">
-                  <h5>GoPro 4K Clip Pack</h5>
-                  <p>Complimentary action of your session</p>
-                </div>
-              </div>
-
-              <div class="perk-item">
-                <div class="perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                </div>
-                <div class="perk-text">
-                  <h5>Stroke Video Analysis</h5>
-                  <p>Biomechanic review for effortless gliding</p>
-                </div>
-              </div>
-
-              <div class="perk-item">
-                <div class="perk-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
-                <div class="perk-text">
-                  <h5>100% Weather Guarantee</h5>
-                  <p>Free rescheduling or wind exceeds 10kts</p>
-                </div>
+            <div class="testimonial-author">
+              <img src="images/instructor_eleanor.jpg" alt="Victoria Sterling" class="author-avatar">
+              <div class="author-info">
+                <h4>Victoria Sterling</h4>
+                <p>Adult Trail Explorer Rider &bull; <span class="verified-badge"><i
+                      class="fa-solid fa-circle-check"></i>
+                    Verified Rider</span></p>
               </div>
             </div>
-
           </div>
+
+<div class="testimonial-card">
+            <div class="quote-bg-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The 150-acre private trail network is breathtaking! Crossing the pine stream at sunset with trainer
+              Marcus was an unforgettable experience for our family."
+            </p>
+            <div class="testimonial-author">
+              <img src="images/instructor_marcus.jpg" alt="David & Clara Vance" class="author-avatar">
+              <div class="author-info">
+                <h4>David & Clara Vance</h4>
+                <p>Weekend Trail Enthusiasts &bull; <span class="verified-badge"><i
+                      class="fa-solid fa-circle-check"></i> Verified Rider</span></p>
+              </div>
+            </div>
+          </div>
+
+<div class="testimonial-card">
+            <div class="quote-bg-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "I've boarded my Thoroughbred here for over 3 years. The climate-controlled stalls, 24/7 care, and
+              immaculate indoor arena make Silver Hoof the premier facility in California."
+            </p>
+            <div class="testimonial-author">
+              <img src="images/our_story_ranch.jpg" alt="Dr. Julian Ross" class="author-avatar">
+              <div class="author-info">
+                <h4>Dr. Julian Ross</h4>
+                <p>Royal Stabling Member &bull; <span class="verified-badge"><i class="fa-solid fa-circle-check"></i>
+                    Verified Owner</span></p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="tours-card-grid">
-
-          <div class="tour-card">
-            <div class="tour-card-header">
-              <span class="tour-duration-badge">90 MINS CLINIC</span>
-              <h4 class="tour-card-title">SUP Fundamentals</h4>
-              <p class="tour-card-desc">For newcomers. Balance control, forward stroke efficiency, pivot turns, and
-                deep-water board re-entry.</p>
-            </div>
-            <div>
-              <div class="tour-meta-row">
-                <span>Skill: Beginner</span>
-                <span>Max 4 Paddlers</span>
-              </div>
-              <div class="tour-card-bottom">
-                <span class="tour-price">$65</span>
-                <a href="#booking" class="btn-card-reserve">Book Lesson</a>
-              </div>
-            </div>
+<div class="trust-stats-strip">
+          <div class="trust-stat-item">
+            <span class="trust-number">4.95 / 5.0</span>
+            <span class="trust-label">Average Rider Rating</span>
           </div>
-
-          <div class="tour-card">
-            <div class="tour-card-header">
-              <span class="tour-duration-badge">2.5 HOURS TOUR</span>
-              <h4 class="tour-card-title">Alpine Cove Discovery</h4>
-              <p class="tour-card-desc">Guided scenic trek across glacier-carved waterways, secret pine inlets, and
-                eagle nesting sanctuaries.</p>
-            </div>
-            <div>
-              <div class="tour-meta-row">
-                <span>Skill: All Levels</span>
-                <span>Max 6 Paddlers</span>
-              </div>
-              <div class="tour-card-bottom">
-                <span class="tour-price">$85</span>
-                <a href="#booking" class="btn-card-reserve">Book Tour</a>
-              </div>
-            </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat-item">
+            <span class="trust-number">1,200+</span>
+            <span class="trust-label">Active Riding Students</span>
           </div>
-
-          <div class="tour-card">
-            <div class="tour-card-header">
-              <span class="tour-duration-badge">75 MINS FLOW</span>
-              <h4 class="tour-card-title">Floating SUP Yoga</h4>
-              <p class="tour-card-desc">Gentle vinyasa flow on anchored stability boards during glassy morning water.
-                Sound therapy and deep breathwork.</p>
-            </div>
-            <div>
-              <div class="tour-meta-row">
-                <span>Skill: All Levels</span>
-                <span>Max 8 Paddlers</span>
-              </div>
-              <div class="tour-card-bottom">
-                <span class="tour-price">$50</span>
-                <a href="#booking" class="btn-card-reserve">Book Yoga</a>
-              </div>
-            </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat-item">
+            <span class="trust-number">100%</span>
+            <span class="trust-label">Equine Welfare Standard</span>
           </div>
-
-          <div class="tour-card">
-            <div class="tour-card-header">
-              <span class="tour-duration-badge">2 HOURS ADVANCED</span>
-              <h4 class="tour-card-title">Cadence &amp; Race Mastery</h4>
-              <p class="tour-card-desc">High-cadence efficiency, drafting tactics, downwind bump catching, and
-                cross-chop stabilization drills.</p>
-            </div>
-            <div>
-              <div class="tour-meta-row">
-                <span>Skill: Intermediate+</span>
-                <span>Max 3 Paddlers</span>
-              </div>
-              <div class="tour-card-bottom">
-                <span class="tour-price">$110</span>
-                <a href="#booking" class="btn-card-reserve">Book Clinic</a>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </section>
 
-    <section class="section-wrap" id="visual-moments" data-section="visual-moments">
-      <div class="section-container">
+<section class="section cta-banner-section" id="cta">
+      <div class="container">
+        <div class="cta-card">
 
-        <div class="section-header">
-          <span class="section-eyebrow">CAPTURED ON THE WATER · GUEST STORIES</span>
-          <h2 class="section-headline font-serif">Visual Moments In Stand-Up Paddleboard Rental</h2>
-          <p class="section-desc font-sans">
-            Glimpse genuine dawn reflections, tranquil emerald coves, sunset glides, and tail-wagging canine co-pilots
-            captured by our paddleboard rental community.
-          </p>
-        </div>
-
-        <div class="moments-bento-grid" id="moments-grid">
-
-          <article class="moment-card" data-category="calm" data-index="0">
-            <div class="moment-media-wrapper" role="button" tabindex="0"
-              aria-label="View photo: Mirror Stillness and Alpine Sunburst">
-              <img src="assets/images/moment-sunrise-glide.jpg"
-                alt="Stand-up paddleboarder gliding across calm mirror-like alpine lake with misty sunrise sunburst"
-                class="moment-img" loading="lazy">
-              <div class="moment-overlay"></div>
-
-              <div class="moment-badges-top">
-                <span class="moment-badge badge-sunrise">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="5" />
-                    <line x1="12" y1="1" x2="12" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="23" />
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                    <line x1="1" y1="12" x2="3" y2="12" />
-                    <line x1="21" y1="12" x2="23" y2="12" />
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                  </svg>
-                  06:15 AM Dawn Patrol
-                </span>
-                <span class="moment-condition-pill">Glass Water · 62°F</span>
-              </div>
-
-              <div class="moment-actions-float">
-                <button class="moment-like-btn" type="button" aria-label="Like this photo" data-likes="148">
-                  <svg class="heart-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                    stroke-width="2" aria-hidden="true">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                    </path>
-                  </svg>
-                  <span class="like-count">148</span>
-                </button>
-                <button class="moment-expand-btn" type="button" aria-label="Open full visual preview" data-index="0">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <polyline points="9 21 3 21 3 15"></polyline>
-                    <line x1="21" y1="3" x2="14" y2="10"></line>
-                    <line x1="3" y1="21" x2="10" y2="14"></line>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="moment-card-content">
-                <div class="moment-location-row">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Glacial Peak Lake · Emerald Cove</span>
-                </div>
-                <h3 class="moment-title font-serif">Mirror Stillness &amp; Alpine Sunburst</h3>
-                <p class="moment-snippet">
-                  "Rented the Apex Carbon 12'6 at first light. Total mirror glass water and alpine silence. Absolutely
-                  spiritual."
-                </p>
-                <div class="moment-meta-row">
-                  <span class="moment-gear-tag">Board: Apex Carbon Touring 12'6"</span>
-                  <span class="moment-paddler">Paddler: Sarah T.</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="moment-card" data-category="wellness" data-index="1">
-            <div class="moment-media-wrapper" role="button" tabindex="0"
-              aria-label="View photo: Morning Prana and Balance">
-              <img src="assets/images/moment-sup-yoga.jpg"
-                alt="Woman practicing yoga dancer pose on paddleboard on crystal clear mountain lake" class="moment-img"
-                loading="lazy">
-              <div class="moment-overlay"></div>
-
-              <div class="moment-badges-top">
-                <span class="moment-badge badge-wellness">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" />
-                    <circle cx="12" cy="12" r="4" />
-                  </svg>
-                  SUP Yoga Flow
-                </span>
-                <span class="moment-condition-pill">Still Air</span>
-              </div>
-
-              <div class="moment-actions-float">
-                <button class="moment-like-btn" type="button" aria-label="Like this photo" data-likes="194">
-                  <svg class="heart-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                    stroke-width="2" aria-hidden="true">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                    </path>
-                  </svg>
-                  <span class="like-count">194</span>
-                </button>
-                <button class="moment-expand-btn" type="button" aria-label="Open full visual preview" data-index="1">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <polyline points="9 21 3 21 3 15"></polyline>
-                    <line x1="21" y1="3" x2="14" y2="10"></line>
-                    <line x1="3" y1="21" x2="10" y2="14"></line>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="moment-card-content">
-                <div class="moment-location-row">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Whispering Pines Cove</span>
-                </div>
-                <h3 class="moment-title font-serif">Morning Prana &amp; Balance</h3>
-                <p class="moment-snippet">
-                  "The extra 34-inch beam on the Zen Bamboo board made warrior poses feel like floating on cloud nine."
-                </p>
-                <div class="moment-meta-row">
-                  <span class="moment-gear-tag">Board: Zen Bamboo All-Around 10'8"</span>
-                  <span class="moment-paddler">Instructor: Maya L.</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="moment-card" data-category="cove" data-index="2">
-            <div class="moment-media-wrapper" role="button" tabindex="0" aria-label="View photo: Hidden Granite Waters">
-              <img src="assets/images/moment-cove-explore.jpg"
-                alt="Two paddleboarders paddling through crystal clear green granite canyon water" class="moment-img"
-                loading="lazy">
-              <div class="moment-overlay"></div>
-
-              <div class="moment-badges-top">
-                <span class="moment-badge badge-cove">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polygon points="3 11 22 2 13 21 11 13 3 11" />
-                  </svg>
-                  Secret Narrows
-                </span>
-                <span class="moment-condition-pill">25ft Clarity</span>
-              </div>
-
-              <div class="moment-actions-float">
-                <button class="moment-like-btn" type="button" aria-label="Like this photo" data-likes="167">
-                  <svg class="heart-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                    stroke-width="2" aria-hidden="true">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                    </path>
-                  </svg>
-                  <span class="like-count">167</span>
-                </button>
-                <button class="moment-expand-btn" type="button" aria-label="Open full visual preview" data-index="2">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <polyline points="9 21 3 21 3 15"></polyline>
-                    <line x1="21" y1="3" x2="14" y2="10"></line>
-                    <line x1="3" y1="21" x2="10" y2="14"></line>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="moment-card-content">
-                <div class="moment-location-row">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Granite Canyon Passage</span>
-                </div>
-                <h3 class="moment-title font-serif">Hidden Granite Waters</h3>
-                <p class="moment-snippet">
-                  "Only accessible by paddleboard. Water so crystalline you see trout swimming beneath your fins."
-                </p>
-                <div class="moment-meta-row">
-                  <span class="moment-gear-tag">Kit: Touring Discovery Duo</span>
-                  <span class="moment-paddler">Guests: Chloe &amp; Marcus</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="moment-card" data-category="community" data-index="3">
-            <div class="moment-media-wrapper" role="button" tabindex="0" aria-label="View photo: First Mate Barnaby">
-              <img src="assets/images/moment-dog-pilot.jpg"
-                alt="Smiling golden retriever in life jacket sitting on inflatable SUP board on clear lake"
-                class="moment-img" loading="lazy">
-              <div class="moment-overlay"></div>
-
-              <div class="moment-badges-top">
-                <span class="moment-badge badge-pup">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="3" />
-                    <circle cx="6" cy="8" r="2" />
-                    <circle cx="18" cy="8" r="2" />
-                    <circle cx="9" cy="16" r="2" />
-                    <circle cx="15" cy="16" r="2" />
-                  </svg>
-                  Dog-Friendly Approved
-                </span>
-                <span class="moment-condition-pill">Tail Wags 100%</span>
-              </div>
-
-              <div class="moment-actions-float">
-                <button class="moment-like-btn" type="button" aria-label="Like this photo" data-likes="312">
-                  <svg class="heart-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                    stroke-width="2" aria-hidden="true">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                    </path>
-                  </svg>
-                  <span class="like-count">312</span>
-                </button>
-                <button class="moment-expand-btn" type="button" aria-label="Open full visual preview" data-index="3">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <polyline points="9 21 3 21 3 15"></polyline>
-                    <line x1="21" y1="3" x2="14" y2="10"></line>
-                    <line x1="3" y1="21" x2="10" y2="14"></line>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="moment-card-content">
-                <div class="moment-location-row">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Sunnyside Sandy Shallows</span>
-                </div>
-                <h3 class="moment-title font-serif">First Mate Barnaby</h3>
-                <p class="moment-snippet">
-                  "WaveNomad gave us a free pup PFD and claw-guard deck pad. Barnaby didn't want to get off!"
-                </p>
-                <div class="moment-meta-row">
-                  <span class="moment-gear-tag">Board: Voyager Inflatable 11'0"</span>
-                  <span class="moment-paddlers">Guests: Emma &amp; Barnaby</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="moment-card" data-category="calm" data-index="4">
-            <div class="moment-media-wrapper" role="button" tabindex="0"
-              aria-label="View photo: Floating in Liquid Glass">
-              <img src="assets/images/moment-aerial-view.jpg"
-                alt="Aerial drone view of two paddleboards floating on turquoise clear alpine water" class="moment-img"
-                loading="lazy">
-              <div class="moment-overlay"></div>
-
-              <div class="moment-badges-top">
-                <span class="moment-badge badge-aerial">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <circle cx="12" cy="12" r="3" />
-                    <circle cx="12" cy="12" r="8" />
-                    <line x1="12" y1="2" x2="12" y2="4" />
-                    <line x1="12" y1="20" x2="12" y2="22" />
-                  </svg>
-                  Aerial Drone View
-                </span>
-                <span class="moment-condition-pill">Zero Currents</span>
-              </div>
-
-              <div class="moment-actions-float">
-                <button class="moment-like-btn" type="button" aria-label="Like this photo" data-likes="228">
-                  <svg class="heart-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                    stroke-width="2" aria-hidden="true">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                    </path>
-                  </svg>
-                  <span class="like-count">228</span>
-                </button>
-                <button class="moment-expand-btn" type="button" aria-label="Open full visual preview" data-index="4">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <polyline points="9 21 3 21 3 15"></polyline>
-                    <line x1="21" y1="3" x2="14" y2="10"></line>
-                    <line x1="3" y1="21" x2="10" y2="14"></line>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="moment-card-content">
-                <div class="moment-location-row">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Alpine Basin Shallows</span>
-                </div>
-                <h3 class="moment-title font-serif">Floating in Liquid Glass</h3>
-                <p class="moment-snippet">
-                  "Looking down from the bluff, the rental boards looked like they were suspended weightlessly in
-                  mid-air."
-                </p>
-                <div class="moment-meta-row">
-                  <span class="moment-gear-tag">Boards: Twin Apex Touring Fleet</span>
-                  <span class="moment-paddlers">Paddlers: Dave &amp; Julian</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="moment-card" data-category="sunset" data-index="5">
-            <div class="moment-media-wrapper" role="button" tabindex="0"
-              aria-label="View photo: Vermillion Skies and Twilight Calm">
-              <img src="assets/images/moment-sunset-glow.jpg"
-                alt="Paddleboarder silhouette at sunset with vivid orange and magenta sky reflected on lake"
-                class="moment-img" loading="lazy">
-              <div class="moment-overlay"></div>
-
-              <div class="moment-badges-top">
-                <span class="moment-badge badge-sunset">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M17 18a5 5 0 0 0-10 0" />
-                    <line x1="12" y1="2" x2="12" y2="9" />
-                    <line x1="4.22" y1="10.22" x2="5.64" y2="11.64" />
-                    <line x1="1" y1="18" x2="3" y2="18" />
-                    <line x1="21" y1="18" x2="23" y2="18" />
-                    <line x1="18.36" y1="11.64" x2="19.78" y2="10.22" />
-                    <line x1="23" y1="22" x2="1" y2="22" />
-                  </svg>
-                  Golden Hour Twilight
-                </span>
-                <span class="moment-condition-pill">Sub-Hull LED Glow</span>
-              </div>
-
-              <div class="moment-actions-float">
-                <button class="moment-like-btn" type="button" aria-label="Like this photo" data-likes="287">
-                  <svg class="heart-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                    stroke-width="2" aria-hidden="true">
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                    </path>
-                  </svg>
-                  <span class="like-count">287</span>
-                </button>
-                <button class="moment-expand-btn" type="button" aria-label="Open full visual preview" data-index="5">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <polyline points="9 21 3 21 3 15"></polyline>
-                    <line x1="21" y1="3" x2="14" y2="10"></line>
-                    <line x1="3" y1="21" x2="10" y2="14"></line>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="moment-card-content">
-                <div class="moment-location-row">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>Sunset Point Rental Dock</span>
-                </div>
-                <h3 class="moment-title font-serif">Vermillion Skies &amp; Twilight Calm</h3>
-                <p class="moment-snippet">
-                  "Ended our 4-hour rental right as the sky ignited. The dock crew handed us warm spiced cider as we
-                  came in."
-                </p>
-                <div class="moment-meta-row">
-                  <span class="moment-gear-tag">Board: Solstice Twilight Edition</span>
-                  <span class="moment-paddlers">Paddler: Alicia R.</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-
-      </div>
-    </section>
-
-    <div class="moment-lightbox-modal" id="moment-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
-      <div class="lightbox-dialog">
-        <button class="lightbox-close-btn" id="lightbox-close" type="button" aria-label="Close modal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          <svg class="cta-bg-leaf-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none"
             aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <path d="M250 50C150 150 50 250 150 400C250 450 350 350 400 250C450 150 350 50 250 50Z"
+              stroke="var(--clr-antique-gold)" stroke-opacity="0.12" stroke-width="2" />
+            <path d="M250 50C250 150 220 280 150 400" stroke="var(--clr-antique-gold)" stroke-opacity="0.12"
+              stroke-width="1.5" />
+            <path d="M200 180C170 170 140 180 120 200" stroke="var(--clr-antique-gold)" stroke-opacity="0.12"
+              stroke-width="1.5" />
+            <path d="M225 260C190 260 160 280 140 310" stroke="var(--clr-antique-gold)" stroke-opacity="0.12"
+              stroke-width="1.5" />
           </svg>
-        </button>
-        <button class="lightbox-nav-btn btn-prev" id="lightbox-prev" type="button" aria-label="Previous photo">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            aria-hidden="true">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <button class="lightbox-nav-btn btn-next" id="lightbox-next" type="button" aria-label="Next photo">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            aria-hidden="true">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
 
-        <div class="lightbox-content-wrap">
-          <div class="lightbox-media">
-            <img src="assets/images/moment-sunrise-glide.jpg" alt="Enlarged visual moment" id="lightbox-img"
-              class="lightbox-image">
-          </div>
-          <div class="lightbox-info-pane">
-            <div>
-              <div class="lightbox-header-row">
-                <span class="lightbox-badge" id="lightbox-badge">Featured Moment</span>
-                <div class="lightbox-counter" id="lightbox-counter">1 / 6</div>
-              </div>
-              <h3 class="lightbox-title font-serif" id="lightbox-title">Title Here</h3>
-              <div class="lightbox-location" id="lightbox-location">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  aria-hidden="true">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <span id="lightbox-loc-text">Location</span>
-              </div>
-              <p class="lightbox-desc" id="lightbox-desc">Description</p>
+<div class="cta-left-content">
 
-              <div class="lightbox-details-grid">
-                <div class="lb-detail-card">
-                  <span class="lb-d-label">Board Model</span>
-                  <span class="lb-d-val" id="lightbox-board">Apex Carbon 12'6"</span>
-                </div>
-                <div class="lb-detail-card">
-                  <span class="lb-d-label">Water &amp; Weather</span>
-                  <span class="lb-d-val" id="lightbox-conditions">Glass Water · 62°F</span>
-                </div>
-                <div class="lb-detail-card">
-                  <span class="lb-d-label">Paddler</span>
-                  <span class="lb-d-val" id="lightbox-paddler">Guest</span>
-                </div>
-              </div>
-            </div>
 
-            <div class="lightbox-footer-actions">
-              <button class="lightbox-like-btn" id="lightbox-like-btn" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  aria-hidden="true">
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                  </path>
-                </svg>
-                <span id="lightbox-like-count">148 Likes</span>
+            <h2 class="cta-main-title">
+              Transform Your Riding with
+              <span class="cta-highlight-italic">Silver Hoof's Finest Experience</span>
+            </h2>
+
+<ul class="cta-features-list">
+              <li class="cta-feature-item">
+                <i class="fa-solid fa-check cta-check-icon"></i>
+                <span>Free safety gear & helmet rental on first lesson</span>
+              </li>
+              <li class="cta-feature-item">
+                <i class="fa-solid fa-check cta-check-icon"></i>
+                <span>30-day rider satisfaction guarantee</span>
+              </li>
+              <li class="cta-feature-item">
+                <i class="fa-solid fa-check cta-check-icon"></i>
+                <span>Personalised instructor & horse matching</span>
+              </li>
+            </ul>
+
+            <div class="cta-buttons-row">
+              <button class="btn btn-cta-primary" onclick="openBookingModal()">
+                Start My Journey <i class="fa-solid fa-arrow-right"></i>
               </button>
-              <a href="#booking" class="cta-pill-primary" id="lightbox-book-btn">Rent This Board →</a>
+              <button class="btn btn-cta-secondary" onclick="openRiderDashboard()">
+                Explore Dashboard <i class="fa-solid fa-gauge-high"></i>
+              </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-    <section class="section-wrap alt-bg" id="safety">
-      <div class="section-container">
-
-        <div class="section-header">
-          <span class="section-eyebrow">PROTOCOLS &amp; TELEMETRY</span>
-          <h2 class="section-headline font-serif">Real-Time Lake Conditions &amp; Safety Standards</h2>
-          <p class="section-desc font-sans">
-            Our IoT-linked shoreline sensors stream real-time water telemetry and weather predictions so you launch with
-            full peace of mind.
-          </p>
-        </div>
-
-        <div class="telemetry-dashboard-wrap">
-          <div class="telemetry-status-header">
-            <div class="station-badge">
-              <span class="station-beacon" aria-hidden="true"></span>
-              <div class="station-info">
-                <h4>Alpine Station 04 · Emerald Basin Kiosk</h4>
-                <p>Telemetry updated live every 60 seconds via satellite link</p>
-              </div>
-            </div>
-            <div class="station-status-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <span>GREEN FLAG: All Waterways Calm &amp; Open</span>
-            </div>
+            <p class="cta-subtext">No commitment. Cancel anytime. 100% satisfaction guaranteed.</p>
           </div>
 
-          <div class="telemetry-metrics-grid">
-            <div class="metric-tile">
-              <div class="metric-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
-              <span class="metric-label">Water Temperature</span>
-              <span class="metric-value">64.2°F</span>
-              <span class="metric-sub">17.9°C · Optimal Range</span>
+<div class="cta-right-visual">
+            <div class="cta-bg-circles">
+              <div class="circle-ring ring-outer"></div>
+              <div class="circle-ring ring-inner"></div>
             </div>
 
-            <div class="metric-tile">
-              <div class="metric-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
-                </svg>
-              </div>
-              <span class="metric-label">Wind Velocity</span>
-              <span class="metric-value">3.4 kts</span>
-              <span class="metric-sub">NW Light Breeze · Glass surface</span>
-            </div>
+            <div class="cta-circle-img-wrap">
+              <img src="images/hero_sunset_riding.jpg" alt="Equestrian Riding Experience" class="cta-circle-img">
 
-            <div class="metric-tile">
-              <div class="metric-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <path
-                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-              </div>
-              <span class="metric-label">Water Clarity Depth</span>
-              <span class="metric-value">28.5 ft</span>
-              <span class="metric-sub">Secchi Grade: Glacial Pure</span>
-            </div>
 
-            <div class="metric-tile">
-              <div class="metric-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="4" />
-                  <path
-                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                </svg>
-              </div>
-              <span class="metric-label">UV Radiance Index</span>
-              <span class="metric-value">4.0</span>
-              <span class="metric-sub">Moderate · UV Shirt Advised</span>
-            </div>
-
-            <div class="metric-tile">
-              <div class="metric-icon-wrap">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 12h5l3 7 4-14 3 7h5" />
-                </svg>
-              </div>
-              <span class="metric-label">Lake Wave Height</span>
-              <span class="metric-value">&lt; 0.2 ft</span>
-              <span class="metric-sub">Mirror condition · Zero chop</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="safety-pledge-grid">
-
-          <div class="safety-card">
-            <div class="safety-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-            </div>
-            <h4>USCG Type III Life Vests</h4>
-            <p>Every paddler is fitted with low-profile, ergonomic high-buoyancy life vests that never restrict paddle
-              rotation.</p>
-          </div>
-
-          <div class="safety-card">
-            <div class="safety-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 8v8M8 12h8" />
-              </svg>
-            </div>
-            <h4>Quick-Release Leash Kits</h4>
-            <p>Calf and waist-belt safety leashes equipped with instantaneous release pull tabs for quick detachment
-              when required.</p>
-          </div>
-
-          <div class="safety-card">
-            <div class="safety-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-              </svg>
-            </div>
-            <h4>Garmin inReach SOS Link</h4>
-            <p>Our dock master and tour guides maintain continuous satellite beacon monitoring with emergency rescue
-              vessels standing by.</p>
-          </div>
-
-          <div class="safety-card">
-            <div class="safety-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-              </svg>
-            </div>
-            <h4>Digital Weather Gate</h4>
-            <p>Automatic rental pause trigger if sustained gusts exceed 12 knots, with full no-hassle customer refund
-              guarantees.</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section-wrap" id="timeline">
-      <div id="dashboard" style="position: absolute; margin-top: -90px;" aria-hidden="true"></div>
-
-      <div class="section-container">
-
-        <div class="section-header">
-          <span class="section-eyebrow">YOUR JOURNEY FROM SHORE TO WATER</span>
-          <h2 class="section-headline font-serif">The Expedition Experience Timeline</h2>
-          <p class="section-desc font-sans">
-            From seamless digital gear matching to gliding across mirror-still alpine waters and sunset lakeside
-            returns,
-            explore how effortless and inspiring your paddle day is designed to be.
-          </p>
-        </div>
-
-        <div class="timeline-tab-bar" role="tablist" aria-label="Timeline Views">
-          <button class="timeline-tab-btn active" id="tab-rental-flow" role="tab" aria-selected="true"
-            aria-controls="timeline-pane-flow">
-            <svg class="tab-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>Rental Experience Flow (Step-by-Step)</span>
-          </button>
-
-          <button class="timeline-tab-btn" id="tab-daily-schedule" role="tab" aria-selected="false"
-            aria-controls="timeline-pane-schedule">
-            <svg class="tab-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            <span>Daily Lake Schedule (Hours &amp; Tours)</span>
-          </button>
-        </div>
-
-        <div class="timeline-pane active" id="timeline-pane-flow" role="tabpanel" aria-labelledby="tab-rental-flow">
-          <div class="timeline-track">
-
-            <div class="timeline-item timeline-left">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-number">01</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">Phase 01 · Pre-Arrival</span>
-                    <span class="timeline-time-estimate">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      3 Min
-                    </span>
-                  </div>
-                  <span class="timeline-status-pill status-ready">Digital Pass</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Smart Gear Match &amp; Calibration</h3>
-                <p class="timeline-card-desc">
-                  Fast online gear reservation. Our system auto-matches paddle length to your height and prepares your
-                  instant contactless dock pass.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Paddle Auto-Calibrated</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Digital e-Waiver</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Zero Queues</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-right">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-number">02</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">Phase 02 · Dock Arrival</span>
-                    <span class="timeline-time-estimate">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      5 Min
-                    </span>
-                  </div>
-                  <span class="timeline-status-pill status-active">Locker Scan</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Contactless Waterfront Check-In</h3>
-                <p class="timeline-card-desc">
-                  Scan your QR pass at your assigned dock locker to release your staged board, Type-III PFD, leash, and
-                  dry pouch.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Staged at Private Slip</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Type-III USCG Vest</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Dry Bag Included</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-left">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-number">03</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">Phase 03 · Pre-Launch</span>
-                    <span class="timeline-time-estimate">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      7 Min
-                    </span>
-                  </div>
-                  <span class="timeline-status-pill status-ready">PSUPA Certified</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Alpine Telemetry &amp; Safety Briefing</h3>
-                <p class="timeline-card-desc">
-                  Quick orientation on lake wind velocity, surface glass conditions, and protected cove routes with
-                  paired GPS safety beacon.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Live Radar &amp; Wind Map</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Waterproof Route Guide</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Stance Alignment Check</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-right">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-number">04</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">Phase 04 · On The Water</span>
-                    <span class="timeline-time-estimate">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      1 – 8 Hrs
-                    </span>
-                  </div>
-                  <span class="timeline-status-pill status-active">Open Water</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Pure Alpine Lake Glide</h3>
-                <p class="timeline-card-desc">
-                  Glide across glassy turquoise waters with 28-foot clarity. Explore granite boulder shoals, hidden
-                  inlets, or practice tranquil SUP yoga.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>28-Ft Water Clarity</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Bungee Cargo Deck</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Motor-Free Protected Bay</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-left">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-number">05</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">Phase 05 · Return</span>
-                    <span class="timeline-time-estimate">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      Post-Paddle
-                    </span>
-                  </div>
-                  <span class="timeline-status-pill status-ready">Tea Lounge</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Seamless Return &amp; Lakeside Lounge</h3>
-                <p class="timeline-card-desc">
-                  Glide into your reserved slip for valet gear check-in. Unwind on our sun deck with warm cedar towels,
-                  chilled water, and herbal tea.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Hands-Free Dock Valet</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Warm Cedar Towels</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Complimentary Tea</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="timeline-pane" id="timeline-pane-schedule" role="tabpanel" aria-labelledby="tab-daily-schedule">
-          <div class="timeline-track">
-
-            <div class="timeline-item timeline-left">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-time-icon">🌅</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">06:30 AM – 08:30 AM</span>
-                    <span class="timeline-time-estimate">2 Hours</span>
-                  </div>
-                  <span class="timeline-status-pill status-active">Glass Water</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Dawn Mirror &amp; Alpine Sunrise</h3>
-                <p class="timeline-card-desc">
-                  Tranquil mirror-still waters before thermal winds rise. Watch morning sun crown granite summits with
-                  complimentary dockside pour-over coffee.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Peak Glass (&lt;1 kt wind)</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Pour-Over Coffee Included</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-right">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-time-icon">🌲</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">10:00 AM – 01:00 PM</span>
-                    <span class="timeline-time-estimate">3 Hours</span>
-                  </div>
-                  <span class="timeline-status-pill status-ready">Guided</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Granite Cove Eco-Expedition</h3>
-                <p class="timeline-card-desc">
-                  Naturalist-led exploration navigating sheer granite walls, island bird habitats, and a secluded
-                  shoreside organic trail lunch stop.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Technique Coaching</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Gourmet Beach Lunch</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-left">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-time-icon">☀️</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">02:00 PM – 05:30 PM</span>
-                    <span class="timeline-time-estimate">2–4 Hrs</span>
-                  </div>
-                  <span class="timeline-status-pill status-active">Warm Sun</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Sunlit Leisure &amp; Family Cruise</h3>
-                <p class="timeline-card-desc">
-                  Warmest water temperatures of the day. Perfect for recreational cruising, tandem exploration, child
-                  &amp; dog-friendly SUP paddling, or swimming.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Stable Touring Crafts</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Youth &amp; Pet Vests</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item timeline-right">
-              <div class="timeline-node" aria-hidden="true">
-                <span class="node-time-icon">✨</span>
-              </div>
-              <div class="timeline-card">
-                <div class="timeline-card-header">
-                  <div class="timeline-meta-group">
-                    <span class="timeline-step-badge">06:45 PM – 08:45 PM</span>
-                    <span class="timeline-time-estimate">2 Hours</span>
-                  </div>
-                  <span class="timeline-status-pill status-ready">LED Glow</span>
-                </div>
-                <h3 class="timeline-card-title font-serif">Twilight Alpenglow &amp; Starlight Paddle</h3>
-                <p class="timeline-card-desc">
-                  Watch golden alpenglow fade across the skyline, then activate 2,000-lumen underwater LED lights
-                  illuminating water beneath your board.
-                </p>
-                <div class="timeline-perks-list">
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Underwater LED Illumination</span>
-                  </div>
-                  <div class="perk-chip">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Lakeside Campfire Return</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section-wrap alt-bg" id="testimonials">
-      <span id="booking" class="anchor-target" aria-hidden="true" style="position: absolute; top: -80px;"></span>
-      <div class="section-container">
-
-        <div class="section-header">
-          <span class="section-eyebrow">COMMUNITY STORIES</span>
-          <h2 class="section-headline font-serif">Loved by Modern Explorers</h2>
-          <p class="section-desc font-sans">
-            Hear from sunrise gliders, wilderness adventurers, and academy paddlers who have experienced the silence
-            and majesty of our alpine lake sanctuaries.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="testimonials-marquee-wrapper" aria-label="Customer Testimonials Carousel">
-        <div class="testimonials-marquee-track">
-
-          <div class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Glacial Sunrise</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“The quietest, most spiritual morning of my life”</h4>
-            <p class="testimonial-quote">
-              Gliding across Emerald Bay at 6 AM before motorized boats are permitted was transcendental. The Starboard
-              Carbon board glided effortlessly through 28-foot clear water, and the dockside pour-over coffee afterwards
-              was pure alpine luxury.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #1597B8, #0D6980);">ER</div>
-              <div class="author-info">
-                <h5>Elena Rostova <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>San Francisco, CA · Emerald Bay Expedition</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Summit Tandem</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Best tandem board we've ever paddled”</h4>
-            <p class="testimonial-quote">
-              Most rental shops give you heavy, clunky foam boards. WaveNomad's fleet is genuinely elite tier. The
-              tandem 14' was rock solid even with our golden retriever on board. The contactless QR dock locker check-in
-              was delightfully smooth.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #0284C7, #0369A1);">MV</div>
-              <div class="author-info">
-                <h5>Marcus &amp; Diana Vance <span class="verified-badge" title="Verified Paddler"><svg
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Reno, NV · Season Pass Holders</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Mastery Clinic</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Transformed my stroke technique in 90 mins”</h4>
-            <p class="testimonial-quote">
-              Instructor Julian used video analysis to break down my forward catch and core rotation. In just one
-              morning clinic, I cut my paddle effort in half and learned how to safely handle alpine thermal wind
-              changes like a seasoned pro.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #10B981, #059669);">DC</div>
-              <div class="author-info">
-                <h5>David Chen <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Seattle, WA · PSUPA Technique Clinic</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Night LED Glow</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Submerged LED lights are totally unreal”</h4>
-            <p class="testimonial-quote">
-              Even as a Tahoe resident of 12 years, the twilight tour blew me away. Paddling into the vermillion sunset
-              with 2,000-lumen underwater beams illuminating granite boulders underneath felt like floating in outer
-              space.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #8B5CF6, #6D28D9);">AP</div>
-              <div class="author-info">
-                <h5>Amara Patel <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Tahoe City, CA · Starlight Glow Tour</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Apex Carbon 12'6"</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Top-of-the-line carbon touring gear”</h4>
-            <p class="testimonial-quote">
-              I booked an all-day explorer pass to circumnavigate Fannette Island. The Apex carbon board tracked like an
-              arrow with negligible drag. Having Garmin inReach SOS units synced into every rental gave complete peace
-              of mind.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #F59E0B, #D97706);">CT</div>
-              <div class="author-info">
-                <h5>Christian Thorne <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Boulder, CO · Full Day Explorer Pass</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Weather Guarantee</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Flawless hospitality and care”</h4>
-            <p class="testimonial-quote">
-              When morning wind kicked up over 10 knots, WaveNomad proactively shifted our launch slot to afternoon
-              glass without a single extra fee. The warm cedar dock towels and chilled herbal tea made it feel like a
-              5-star mountain sanctuary.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #EC4899, #BE185D);">SB</div>
-              <div class="author-info">
-                <h5>Sophie Becker &amp; Liam <span class="verified-badge" title="Verified Paddler"><svg
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Austin, TX · Granite Cove Tour</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card" aria-hidden="true">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Glacial Sunrise</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“The quietest, most spiritual morning of my life”</h4>
-            <p class="testimonial-quote">
-              Gliding across Emerald Bay at 6 AM before motorized boats are permitted was transcendental. The Starboard
-              Carbon board glided effortlessly through 28-foot clear water, and the dockside pour-over coffee afterwards
-              was pure alpine luxury.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #1597B8, #0D6980);">ER</div>
-              <div class="author-info">
-                <h5>Elena Rostova <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>San Francisco, CA · Emerald Bay Expedition</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card" aria-hidden="true">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Summit Tandem</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Best tandem board we've ever paddled”</h4>
-            <p class="testimonial-quote">
-              Most rental shops give you heavy, clunky foam boards. WaveNomad's fleet is genuinely elite tier. The
-              tandem 14' was rock solid even with our golden retriever on board. The contactless QR dock locker check-in
-              was delightfully smooth.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #0284C7, #0369A1);">MV</div>
-              <div class="author-info">
-                <h5>Marcus &amp; Diana Vance <span class="verified-badge" title="Verified Paddler"><svg
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Reno, NV · Season Pass Holders</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card" aria-hidden="true">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Mastery Clinic</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Transformed my stroke technique in 90 mins”</h4>
-            <p class="testimonial-quote">
-              Instructor Julian used video analysis to break down my forward catch and core rotation. In just one
-              morning clinic, I cut my paddle effort in half and learned how to safely handle alpine thermal wind
-              changes like a seasoned pro.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #10B981, #059669);">DC</div>
-              <div class="author-info">
-                <h5>David Chen <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Seattle, WA · PSUPA Technique Clinic</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card" aria-hidden="true">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Night LED Glow</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Submerged LED lights are totally unreal”</h4>
-            <p class="testimonial-quote">
-              Even as a Tahoe resident of 12 years, the twilight tour blew me away. Paddling into the vermillion sunset
-              with 2,000-lumen underwater beams illuminating granite boulders underneath felt like floating in outer
-              space.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #8B5CF6, #6D28D9);">AP</div>
-              <div class="author-info">
-                <h5>Amara Patel <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Tahoe City, CA · Starlight Glow Tour</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card" aria-hidden="true">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Apex Carbon 12'6"</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Top-of-the-line carbon touring gear”</h4>
-            <p class="testimonial-quote">
-              I booked an all-day explorer pass to circumnavigate Fannette Island. The Apex carbon board tracked like an
-              arrow with negligible drag. Having Garmin inReach SOS units synced into every rental gave complete peace
-              of mind.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #F59E0B, #D97706);">CT</div>
-              <div class="author-info">
-                <h5>Christian Thorne <span class="verified-badge" title="Verified Paddler"><svg viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Boulder, CO · Full Day Explorer Pass</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card" aria-hidden="true">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars">
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                <svg viewBox="0 0 24 24">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <span class="testimonial-tag">Weather Guarantee</span>
-            </div>
-            <h4 class="testimonial-headline font-serif">“Flawless hospitality and care”</h4>
-            <p class="testimonial-quote">
-              When morning wind kicked up over 10 knots, WaveNomad proactively shifted our launch slot to afternoon
-              glass without a single extra fee. The warm cedar dock towels and chilled herbal tea made it feel like a
-              5-star mountain sanctuary.
-            </p>
-            <div class="testimonial-author-row">
-              <div class="author-avatar" style="background: linear-gradient(135deg, #EC4899, #BE185D);">SB</div>
-              <div class="author-info">
-                <h5>Sophie Becker &amp; Liam <span class="verified-badge" title="Verified Paddler"><svg
-                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg></span></h5>
-                <p>Austin, TX · Granite Cove Tour</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-card-wrap" id="contact">
-      <span id="booking" class="anchor-target" style="position: absolute; top: -80px;" aria-hidden="true"></span>
-      <div class="luxury-cta-card">
-        <div class="cta-card-content">
-          <span class="cta-card-badge">JOIN THE WAVENOMAD COMMUNITY</span>
-          <h2 class="cta-card-headline font-serif">Ready to glide across crystal waters?</h2>
-          <p class="cta-card-desc font-sans">
-            Experience the profound silence and majesty of our alpine lakes. Reserve your high-performance board or join
-            a sunrise tour with certified local guides today.
-          </p>
-          <div class="cta-card-buttons">
-            <a href="#booking" class="cta-pill-primary">
-              <span>Book Your Journey Today</span>
-              <span class="cta-arrow" aria-hidden="true">→</span>
-            </a>
-            <a href="#rentals" class="cta-pill-secondary">
-              <span>Explore Rental Fleet</span>
-            </a>
-          </div>
-          <div class="cta-trust-bar">
-            <div class="trust-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-              <span>4.97 / 5.0 (1,400+ Verified Paddlers)</span>
-            </div>
-            <div class="trust-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <span>100% Weather Refund Guarantee</span>
-            </div>
-            <div class="trust-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-              <span>Instant Contactless Dock Pass</span>
             </div>
           </div>
         </div>
@@ -2283,173 +1015,524 @@
 
   </main>
 
+<footer class="footer">
+    <div class="container footer-container">
 
-  <footer class="site-footer">
-    <div class="footer-container">
-
-      <div class="footer-top-grid">
-
-        <div class="footer-brand-col">
-          <a href="#home" class="brand-link" aria-label="WaveNomad Home">
-            <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
-                  stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" />
-              </svg>
-            </div>
-            <div class="brand-text-group">
-              <span class="brand-name">WaveNomad</span>
-              <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
-            </div>
-          </a>
-          <p class="footer-brand-paratext">
-            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries.
-            Premium touring fleets.
-          </p>
-
-          <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on Facebook" title="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on YouTube" title="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-                </path>
-                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-              </svg>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
-              aria-label="WaveNomad on X" title="X (Twitter)">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
+<div class="footer-col footer-brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
           </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
+          equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
         </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-col-title">Company</h4>
-          <ul class="footer-links-list">
-            <li><a href="#home" class="footer-link footer-home1-trigger">Home 1 </a></li>
-            <li><a href="#home" class="footer-link footer-home2-trigger">Home 2 </a></li>
-            <li><a href="#rentals" class="footer-link">Fleet Rentals</a></li>
-            <li><a href="#visual-moments" class="footer-link">Visual Moments</a></li>
-            <li><a href="#safety" class="footer-link">Safety &amp; Telemetry</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-col-title">Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="#rentals" class="footer-link">Carbon Touring SUPs</a></li>
-            <li><a href="#rentals" class="footer-link">Inflatable Expedition Kits</a></li>
-            <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
-            <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
-            <li><a href="#safety" class="footer-link">Contactless Dock Lockers</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-col-title">Additional Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="#rentals" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
-            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col footer-contact-col">
-          <h4 class="footer-col-title">Contact &amp; Support</h4>
-          <ul class="footer-links-list footer-contact-list">
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Timing:</span>
-                <span class="contact-value">Daily: 06:00 AM – 08:30 PM</span>
-              </div>
-            </li>
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Location:</span>
-                <span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span>
-              </div>
-            </li>
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Mail:</span>
-                <a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a>
-              </div>
-            </li>
-            <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                </path>
-              </svg>
-              <div class="contact-text-wrap">
-                <span class="contact-label">Support:</span>
-                <a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
       </div>
 
-      <div class="footer-bottom-bar">
-        <span class="footer-legal-text">
-          &copy; 2026 WaveNomad Adventures Inc. All rights reserved.
-        </span>
+<div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-bottom-links">
-          <a href="#safety" class="footer-sublink">Terms &amp; Conditions</a>
-          <span class="footer-sublink-sep">/</span>
-          <a href="#safety" class="footer-sublink">Privacy Policy</a>
-          <span class="footer-sublink-sep">/</span>
-          <a href="#safety" class="footer-sublink">Cookie Policy</a>
+<div class="footer-col">
+        <h4 class="footer-title">Additional Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
+          <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> 404</a></li>
+          <li><a href="coming-soon.html"><i class="fa-solid fa-chevron-right"></i> cooming soon</a></li>
+          <li><a href="lessons.html#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+        </ul>
+      </div>
+
+<div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
         </div>
       </div>
 
     </div>
+
+<div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#"
+            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
+            & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
+            Policy</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
+            Policy</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/main.js"></script>
+<div class="modal-backdrop" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="modal-close" id="lightbox-close">&times;</button>
+      <img src="" id="lightbox-img" alt="Gallery preview">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+<div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close">&times;</button>
+      <div class="modal-header">
+        <h3>Book Your Lesson</h3>
+        <p>Select your program and preferred schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Program / Plan *</label>
+          <select id="b-program" required>
+            <option value="Beginner Riding Lessons">Beginner Riding Lessons ($65)</option>
+            <option value="Advanced & Dressage Training">Advanced & Dressage Training ($145)</option>
+            <option value="Guided Sunset Trail Rides">Guided Sunset Trail Rides ($95)</option>
+            <option value="Discovery Rider Plan">Discovery Rider Plan ($65)</option>
+            <option value="Equestrian Explorer Plan">Equestrian Explorer Plan ($145)</option>
+            <option value="Royal Stabling & Board">Royal Stabling & Board</option>
+            <option value="Equine Therapy & Wellness">Equine Therapy & Wellness</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Preferred Time Slot *</label>
+            <select id="b-time" required>
+              <option value="08:00 AM">08:00 AM - Morning</option>
+              <option value="10:30 AM">10:30 AM - Morning</option>
+              <option value="02:00 PM">02:00 PM - Afternoon</option>
+              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Experience Level & Special Requests</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-full">
+          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+<div class="modal-backdrop" id="login-modal">
+    <div class="modal-card login-modal-card">
+      <button class="modal-close" id="login-close">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-check modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Access your riding progress, book slots, & manage payments</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Rider Email Address *</label>
+          <input type="email" id="l-email" placeholder="sarah.j@silverhoof.com" value="sarah.j@silverhoof.com" required>
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" value="rider12345" required>
+        </div>
+        <button type="submit" class="btn btn-gold btn-full">
+          Sign In to Portal <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+        <div class="demo-login-divider"><span>OR QUICK DEMO</span></div>
+        <button type="button" class="btn btn-outline btn-full" onclick="quickDemoLogin()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Sign In as Demo Rider (Sarah Jenkins)
+        </button>
+      </form>
+    </div>
+  </div>
+
+<div class="modal-backdrop" id="rider-dashboard-modal">
+    <div class="modal-card dashboard-modal-card">
+      <button class="modal-close" id="dashboard-close">&times;</button>
+
+<div class="dashboard-header-banner">
+        <div class="dashboard-user-info">
+          <div class="dashboard-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+          <div>
+            <h3 id="dash-user-name">Sarah Jenkins</h3>
+            <p class="dashboard-user-meta">
+              <span><i class="fa-solid fa-id-badge"></i> ID: #RH-8842</span>
+              <span class="badge-level"><i class="fa-solid fa-star"></i> Intermediate Level II</span>
+              <span>Assigned: Dakota</span>
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="closeRiderDashboard()"><i
+            class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
+      </div>
+
+<div class="dashboard-body">
+        <div class="dashboard-tabs">
+          <button class="dash-tab-btn active" onclick="switchDashTab('overview', this)"><i
+              class="fa-solid fa-chart-pie"></i> Overview</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('book-lesson', this)"><i
+              class="fa-solid fa-calendar-plus"></i> Book Lesson Slots</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('progress-notes', this)"><i
+              class="fa-solid fa-clipboard-check"></i> Riding Progress Notes</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('trail-register', this)"><i
+              class="fa-solid fa-compass"></i> Trail Rides</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('schedule', this)"><i
+              class="fa-solid fa-clock-rotate-left"></i> Sessions Schedule</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('payments', this)"><i class="fa-solid fa-credit-card"></i>
+            Manage Payments</button>
+        </div>
+
+<div class="dashboard-tab-content">
+
+<div class="dash-pane active" id="pane-overview">
+            <h4>Rider Performance Overview</h4>
+            <div class="dash-stats-grid">
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-award icon-gold"></i>
+                <div class="stat-val">24</div>
+                <div class="stat-lbl">Lessons Completed</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-stopwatch icon-gold"></i>
+                <div class="stat-val">18.5</div>
+                <div class="stat-lbl">Hours Ridden</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-shield-heart icon-gold"></i>
+                <div class="stat-val">96%</div>
+                <div class="stat-lbl">Safety Score</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-wallet icon-gold"></i>
+                <div class="stat-val" id="dash-overview-balance">$65.00</div>
+                <div class="stat-lbl">Account Balance</div>
+              </div>
+            </div>
+
+            <div class="dash-next-session">
+              <div class="next-session-badge">UPCOMING SESSION</div>
+              <div class="next-session-details">
+                <div>
+                  <h5>Intermediate Jumping & Trot Transition</h5>
+                  <p><i class="fa-solid fa-calendar"></i> Tomorrow, 10:30 AM &bull; <i class="fa-solid fa-user-tie"></i>
+                    Coach Marcus Sterling &bull; Horse: Dakota</p>
+                </div>
+                <button class="btn btn-gold btn-sm"
+                  onclick="switchDashTab('schedule', document.querySelectorAll('.dash-tab-btn')[4])">View
+                  Details</button>
+              </div>
+            </div>
+          </div>
+
+<div class="dash-pane" id="pane-book-lesson">
+            <h4>Book Lesson Slot by Skill Level</h4>
+            <form id="dash-book-form" onsubmit="handleDashBooking(event)">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Skill Level *</label>
+                  <select id="dash-skill-level" required>
+                    <option value="Beginner">Beginner (Mounting & Balance)</option>
+                    <option value="Intermediate" selected>Intermediate (Trot, Canter & Low Hurdles)</option>
+                    <option value="Advanced">Advanced (Show Jumping & Dressage)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Discipline / Program *</label>
+                  <select id="dash-program-select" required>
+                    <option value="Western Pleasure & Trail Prep">Western Pleasure & Trail Prep ($65)</option>
+                    <option value="English Hunt Seat & Trot">English Hunt Seat & Trot ($85)</option>
+                    <option value="Show Jumping & Canter Mastery" selected>Show Jumping & Canter Mastery ($120)</option>
+                    <option value="High-Step Precision Dressage">High-Step Precision Dressage ($145)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Preferred Date *</label>
+                  <input type="date" id="dash-book-date" required>
+                </div>
+                <div class="form-group">
+                  <label>Time Slot *</label>
+                  <select id="dash-book-time" required>
+                    <option value="08:00 AM">08:00 AM - Early Morning</option>
+                    <option value="10:30 AM" selected>10:30 AM - Late Morning</option>
+                    <option value="02:00 PM">02:00 PM - Afternoon</option>
+                    <option value="05:00 PM">05:00 PM - Golden Sunset</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Preferred Instructor</label>
+                  <select id="dash-instructor-select">
+                    <option value="Eleanor Vance">Eleanor Vance (Master Trainer)</option>
+                    <option value="Marcus Sterling" selected>Marcus Sterling (Jumping & Dressage)</option>
+                    <option value="Sophia Chen">Sophia Chen (Youth & Trail)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Preferred Horse Companion</label>
+                  <select id="dash-horse-select">
+                    <option value="Dakota" selected>Dakota (Gentle Arabian)</option>
+                    <option value="Apollo">Apollo (Golden Palomino)</option>
+                    <option value="Sierra">Sierra (Agile Thoroughbred)</option>
+                    <option value="Valkyrie">Valkyrie (Friesian Warmblood)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-full">Confirm Slot Booking <i
+                  class="fa-solid fa-circle-check"></i></button>
+            </form>
+          </div>
+
+<div class="dash-pane" id="pane-progress-notes">
+            <h4>Instructor Riding Progress & Feedback Notes</h4>
+
+            <div class="progress-skills-grid">
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap">
+                  <span>Posture & Seat Alignment</span>
+                  <strong>92 / 100</strong>
+                </div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap">
+                  <span>Trot to Canter Transition</span>
+                  <strong>88 / 100</strong>
+                </div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap">
+                  <span>Jump Clearance Record</span>
+                  <strong>3.5 Feet</strong>
+                </div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap">
+                  <span>Rein Control & Heel Position</span>
+                  <strong>95 / 100</strong>
+                </div>
+                <div class="meter-bar-track">
+                  <div class="meter-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="instructor-notes-timeline">
+              <h5>Instructor Session Log & Feedback</h5>
+
+              <div class="note-card">
+                <div class="note-header">
+                  <strong><i class="fa-solid fa-user-tie"></i> Coach Marcus Sterling</strong>
+                  <span class="note-date">Sep 12, 2026</span>
+                </div>
+                <p>"Sarah demonstrated fantastic stability during trot-canter transitions today with Dakota. Her heel
+                  position remained down consistently over 3ft hurdles. Next goal: 3.5ft hurdle jump prep!"</p>
+                <div class="note-tags"><span class="tag">Canter Transition</span><span class="tag">Hurdles 3.0ft</span>
+                </div>
+              </div>
+
+              <div class="note-card">
+                <div class="note-header">
+                  <strong><i class="fa-solid fa-user-tie"></i> Eleanor Vance (Founder)</strong>
+                  <span class="note-date">Sep 05, 2026</span>
+                </div>
+                <p>"Excellent rapport and calm demeanor with Dakota. Soft hands on reins and smooth mounting posture.
+                  Ready to advance into intermediate show jumping exercises."</p>
+                <div class="note-tags"><span class="tag">Posture 95%</span><span class="tag">Mounting</span></div>
+              </div>
+            </div>
+          </div>
+
+<div class="dash-pane" id="pane-trail-register">
+            <h4>Register for Guided Scenic Trail Rides</h4>
+            <p class="subtext">Join our group trail rides across 150 acres of private woodland loops & mountain ridges.
+            </p>
+
+            <div class="trail-cards-list">
+              <div class="trail-item-card">
+                <div class="trail-info">
+                  <h5>Sunset Mountain Ridge Loop</h5>
+                  <p><i class="fa-solid fa-clock"></i> 90 Mins &bull; <i class="fa-solid fa-mountain"></i> Moderate
+                    &bull; <i class="fa-solid fa-calendar-day"></i> Sat, 5:00 PM</p>
+                  <span class="badge-slots">4 Slots Left</span>
+                </div>
+                <button class="btn btn-gold btn-sm"
+                  onclick="registerTrailRide('Sunset Mountain Ridge Loop', 95)">Register ($95)</button>
+              </div>
+
+              <div class="trail-item-card">
+                <div class="trail-info">
+                  <h5>Pine Creek Stream Crossing</h5>
+                  <p><i class="fa-solid fa-clock"></i> 60 Mins &bull; <i class="fa-solid fa-leaf"></i> Easy / All Levels
+                    &bull; <i class="fa-solid fa-calendar-day"></i> Sun, 9:30 AM</p>
+                  <span class="badge-slots">6 Slots Left</span>
+                </div>
+                <button class="btn btn-gold btn-sm"
+                  onclick="registerTrailRide('Pine Creek Stream Crossing', 65)">Register ($65)</button>
+              </div>
+
+              <div class="trail-item-card">
+                <div class="trail-info">
+                  <h5>High Meadow Gallop & Ridge</h5>
+                  <p><i class="fa-solid fa-clock"></i> 120 Mins &bull; <i class="fa-solid fa-fire"></i> Advanced &bull;
+                    <i class="fa-solid fa-calendar-day"></i> Next Sat, 8:00 AM
+                  </p>
+                  <span class="badge-slots">2 Slots Left</span>
+                </div>
+                <button class="btn btn-gold btn-sm"
+                  onclick="registerTrailRide('High Meadow Gallop & Ridge', 120)">Register ($120)</button>
+              </div>
+            </div>
+          </div>
+
+<div class="dash-pane" id="pane-schedule">
+            <h4>Upcoming Session Schedules</h4>
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Program / Ride</th>
+                  <th>Instructor</th>
+                  <th>Horse</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-tbody">
+                <tr>
+                  <td><strong>Sep 17, 10:30 AM</strong></td>
+                  <td>Show Jumping Mastery</td>
+                  <td>Coach Marcus</td>
+                  <td>Dakota</td>
+                  <td><span class="status-badge confirmed">Confirmed</span></td>
+                  <td><button class="btn-text-danger" onclick="cancelScheduleItem(this)">Cancel</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Sep 22, 02:00 PM</strong></td>
+                  <td>Precision Dressage</td>
+                  <td>Eleanor Vance</td>
+                  <td>Valkyrie</td>
+                  <td><span class="status-badge confirmed">Confirmed</span></td>
+                  <td><button class="btn-text-danger" onclick="cancelScheduleItem(this)">Cancel</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+<div class="dash-pane" id="pane-payments">
+            <h4>Manage Billing & Payments</h4>
+
+            <div class="billing-summary-box">
+              <div>
+                <span class="lbl">Outstanding Balance</span>
+                <h3 class="balance-amt" id="dash-payment-amt">$65.00</h3>
+              </div>
+              <button class="btn btn-gold" id="btn-pay-balance" onclick="processAccountPayment()">Pay Balance Now
+                ($65.00) <i class="fa-solid fa-lock"></i></button>
+            </div>
+
+            <h5>Payment Method</h5>
+            <div class="card-method-box">
+              <i class="fa-brands fa-cc-visa card-icon"></i>
+              <div>
+                <strong>Visa ending in 4242</strong>
+                <p>Expires 12/28 &bull; Primary Payment Card</p>
+              </div>
+              <span class="badge-default">Default</span>
+            </div>
+
+            <h5>Payment History & Invoices</h5>
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="payment-tbody">
+                <tr>
+                  <td>Sep 12, 2026</td>
+                  <td>Intermediate Show Jumping Session</td>
+                  <td>$85.00</td>
+                  <td><span class="status-badge confirmed">Paid</span></td>
+                </tr>
+                <tr>
+                  <td>Sep 05, 2026</td>
+                  <td>Guided Sunset Trail Ride</td>
+                  <td>$95.00</td>
+                  <td><span class="status-badge confirmed">Paid</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="index.js"></script>
 </body>
 
 </html>

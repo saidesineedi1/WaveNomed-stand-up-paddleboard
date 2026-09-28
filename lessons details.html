@@ -9,8 +9,8 @@
     content="Explore detailed curriculum, gear specifications, certified instructor credentials, and live reservation scheduling for WaveNomad SUP lessons.">
   <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,14 +29,7 @@
 
       <a href="index.html#home" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
         <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+          <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
         </div>
         <div class="brand-text-group">
           <span class="brand-name">WaveNomad</span>
@@ -124,11 +117,10 @@
           </svg>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+        <button class="action-control-btn rtl-btn" id="lang-toggle-btn" aria-label="Toggle text direction"
+          title="Toggle text direction">
+          <span class="rtl-text-ltr">RTL</span>
+          <span class="rtl-text-rtl">LTR</span>
         </button>
 
         <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member Login">
@@ -142,7 +134,6 @@
 
     </div>
   </header>
-
 
   <main id="main-content">
 
@@ -217,7 +208,8 @@
             </div>
 
             <h1 class="hero-main-title" id="hero-main-title">Beginner SUP Fundamentals</h1>
-            <p class="hero-subtitle" id="hero-subtitle">First Stroke &amp; Calm Water Balance</p>
+            <p class="hero-subtitle" id="hero-subtitle">First Stroke &amp; <span class="section-headline-accent">Calm
+                Water Balance</span></p>
 
             <p class="hero-lead-synopsis" id="hero-lead-synopsis">
               Eliminate all fear in minutes. Learn zero-roll stance, knee-to-feet transition drills, and smooth
@@ -296,7 +288,6 @@
       </div>
     </section>
 
-
     <section class="lesson-details-body-section">
       <div class="details-container">
 
@@ -306,7 +297,8 @@
 
             <div class="details-card-block">
               <span class="block-eyebrow">PROGRAM OVERVIEW</span>
-              <h2 class="block-title" id="overview-title">What Makes This Lesson Transformative</h2>
+              <h2 class="block-title" id="overview-title">What Makes This Lesson <span
+                  class="section-headline-accent">Transformative</span></h2>
               <div class="block-text" id="overview-desc">
                 <p>
                   Most beginner paddlers struggle because generic rental facilities hand them unsuitable gear and push
@@ -326,7 +318,7 @@
 
             <div class="details-card-block" id="curriculum-block">
               <span class="block-eyebrow">STEP-BY-STEP PROGRESSION</span>
-              <h2 class="block-title">Session Curriculum Breakdown</h2>
+              <h2 class="block-title">Session Curriculum <span class="section-headline-accent">Breakdown</span></h2>
               <p class="block-sub">Every minute of your lesson is engineered for smooth, progressive mastery.</p>
 
               <div class="curriculum-timeline" id="curriculum-timeline-container">
@@ -335,7 +327,7 @@
 
             <div class="details-card-block">
               <span class="block-eyebrow">EQUIPMENT &amp; CONCIERGE VALET</span>
-              <h2 class="block-title">Everything Included in Your Pass</h2>
+              <h2 class="block-title">Everything Included in <span class="section-headline-accent">Your Pass</span></h2>
               <p class="block-sub">We supply top-tier carbon equipment so you focus entirely on your glide.</p>
 
               <div class="included-perks-grid">
@@ -431,7 +423,7 @@
 
             <div class="details-card-block coach-profile-block">
               <span class="block-eyebrow">YOUR LEAD INSTRUCTOR</span>
-              <h2 class="block-title">Learn from World-Class Guides</h2>
+              <h2 class="block-title">Learn from <span class="section-headline-accent">World-Class Guides</span></h2>
 
               <div class="coach-profile-card">
                 <div class="coach-avatar-frame">
@@ -467,7 +459,7 @@
 
             <div class="details-card-block">
               <span class="block-eyebrow">PREPARATION &amp; CHECKLIST</span>
-              <h2 class="block-title">What to Bring to Pier 4</h2>
+              <h2 class="block-title">What to Bring to <span class="section-headline-accent">Pier 4</span></h2>
 
               <div class="preparation-dual-grid">
                 <div class="prep-column">
@@ -494,7 +486,7 @@
 
             <div class="details-card-block">
               <span class="block-eyebrow">COMMON QUESTIONS</span>
-              <h2 class="block-title">Frequently Asked Questions</h2>
+              <h2 class="block-title">Frequently Asked <span class="section-headline-accent">Questions</span></h2>
 
               <div class="faq-accordion-group" id="faq-container">
                 <div class="faq-item active">
@@ -555,7 +547,6 @@
             </div>
 
           </div>
-
 
           <aside class="details-booking-column">
 
@@ -656,7 +647,6 @@
       </div>
     </section>
 
-
     <section class="other-programs-section">
       <div class="details-container">
 
@@ -703,13 +693,18 @@
 
   </main>
 
-
   <div class="details-modal-backdrop" id="reserve-modal" aria-hidden="true" role="dialog" aria-modal="true"
     aria-labelledby="modal-pass-title">
     <div class="details-modal-card">
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">×</button>
 
-      <div class="modal-header-icon" aria-hidden="true">🌊</div>
+      <div class="modal-header-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 12c4 0 5-3 8-3s4 3 8 3 4-3 4-3"></path>
+          <path d="M2 17c4 0 5-3 8-3s4 3 8 3 4-3 4-3"></path>
+        </svg>
+      </div>
       <h3 class="modal-title" id="modal-pass-title">Complete Your Water Pass</h3>
       <p class="modal-desc">
         Your staging slot is held for 15 minutes. Enter your guest credentials to issue your digital pass.
@@ -766,18 +761,13 @@
     </div>
   </div>
 
-
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-top-grid">
         <div class="footer-brand-col">
           <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
             <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-              </svg>
+              <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
             </div>
             <div class="brand-text-group">
               <span class="brand-name">WaveNomad</span>
@@ -785,20 +775,42 @@
             </div>
           </a>
           <p class="footer-brand-paratext">
-            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries. Premium touring fleets.
+            Crafting world-class stand-up paddleboard journeys across pristine alpine lakes and coastal sanctuaries.
+            Premium touring fleets.
           </p>
           <div class="footer-brand-socials" aria-label="WaveNomad Social Networks">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on Facebook" title="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on YouTube" title="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="WaveNomad on X" title="X (Twitter)">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link"
+              aria-label="WaveNomad on X" title="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -825,30 +837,53 @@
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Additional Links</h4>
           <ul class="footer-links-list">
-            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a>
+            </li>
             <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="coming-soon.html" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
           </ul>
         </div>
         <div class="footer-nav-col footer-contact-col">
           <h4 class="footer-col-title">Contact &amp; Support</h4>
           <ul class="footer-links-list footer-contact-list">
             <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <div class="contact-text-wrap"><span class="contact-label">Timing:</span><span class="contact-value">Daily: 06:00 AM – 08:30 PM</span></div>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div class="contact-text-wrap"><span class="contact-label">Timing:</span><span
+                  class="contact-value">Daily: 06:00 AM – 08:30 PM</span></div>
             </li>
             <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <div class="contact-text-wrap"><span class="contact-label">Location:</span><span class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span></div>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="contact-text-wrap"><span class="contact-label">Location:</span><span
+                  class="contact-value">Emerald Basin Pier 4, Lake Tahoe</span></div>
             </li>
             <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <div class="contact-text-wrap"><span class="contact-label">Mail:</span><a href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a></div>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <div class="contact-text-wrap"><span class="contact-label">Mail:</span><a
+                  href="mailto:explore@wavenomad.com" class="contact-link">explore@wavenomad.com</a></div>
             </li>
             <li class="footer-contact-item">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <div class="contact-text-wrap"><span class="contact-label">Support:</span><a href="tel:+18005559283" class="contact-link">+1 (800) 555-PADDLE</a></div>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <div class="contact-text-wrap"><span class="contact-label">Support:</span><a href="tel:+18005559283"
+                  class="contact-link">+1 (800) 555-PADDLE</a></div>
             </li>
           </ul>
         </div>
@@ -856,7 +891,8 @@
       <div class="footer-bottom-bar">
         <span class="footer-legal-text">&copy; 2026 WaveNomad Adventures Inc. All rights reserved.</span>
         <div class="footer-bottom-links">
-          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a><span class="footer-sublink-sep">/</span>
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a><span
+            class="footer-sublink-sep">/</span>
           <a href="safety.html" class="footer-sublink">Privacy Policy</a><span class="footer-sublink-sep">/</span>
           <a href="safety.html" class="footer-sublink">Cookie Policy</a>
         </div>

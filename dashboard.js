@@ -1,13 +1,7 @@
-/**
- * WaveNomad — Guest Expedition Portal Dashboard Engine
- * Strict Alignment with Reference Dashboard Architecture & Interactions
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // =========================================================================
-  // 01. TOAST NOTIFICATION ENGINE
-  // =========================================================================
   const toastContainer = document.getElementById('dash-toast-container');
 
   const showToast = (message, type = 'info', duration = 3500) => {
@@ -25,9 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, duration);
   };
 
-  // =========================================================================
-  // 02. SIDEBAR TAB NAVIGATION (MATCHING REFERENCE TABS)
-  // =========================================================================
   const sidebarNavItems = document.querySelectorAll('.sidebar-nav-item');
   const portalViews = document.querySelectorAll('.portal-view');
   const sidebar = document.getElementById('dashboard-sidebar');
@@ -44,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       view.classList.toggle('active', isMatch);
     });
 
-    // Close mobile sidebar if open
     if (sidebar && sidebar.classList.contains('mobile-open')) {
       sidebar.classList.remove('mobile-open');
     }
@@ -57,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile Sidebar Toggle
   const mobileToggle = document.getElementById('sidebar-mobile-toggle');
   if (mobileToggle && sidebar) {
     mobileToggle.addEventListener('click', (e) => {
@@ -72,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Return to Main Website Dropdown
   const returnWrap = document.getElementById('return-menu-wrap');
   const btnReturn = document.getElementById('btn-sidebar-return');
   if (btnReturn && returnWrap) {
@@ -88,15 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================================================
-  // 03. TOP BAR: THEME, RTL, NOTIFICATIONS & PROFILE
-  // =========================================================================
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const moonIcon = document.getElementById('theme-icon-moon');
   const sunIcon = document.getElementById('theme-icon-sun');
   const htmlElement = document.documentElement;
 
-  // Dark / Light Theme
   const applyTheme = (theme) => {
     if (theme === 'light') {
       htmlElement.setAttribute('data-theme', 'light');
@@ -122,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // RTL Direction
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   const langLabel = document.getElementById('lang-label');
 
@@ -151,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Notifications Bell
   const notifWrap = document.getElementById('notif-wrap');
   const notifBtn = document.getElementById('notif-btn');
   const btnClearNotifs = document.getElementById('btn-clear-notifs');
@@ -179,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // User Profile Dropdown & Guest Switcher
   const userWrap = document.getElementById('topbar-user-wrap');
   const userBtn = document.getElementById('topbar-user-btn');
   const guestSwitchButtons = document.querySelectorAll('.tud-switch-btn');
@@ -251,9 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================================================================
-  // 04. CHART RANGE TOGGLE (6 MONTHS / 1 YEAR)
-  // =========================================================================
   const chartRangeButtons = document.querySelectorAll('.cfilter-btn');
   chartRangeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -264,9 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================================================================
-  // 05. MODAL SYSTEM (BOOKING, QR KEY, WAIVER)
-  // =========================================================================
   const modalBooking = document.getElementById('modal-booking-wizard');
   const btnQuickBooking = document.getElementById('btn-quick-new-booking');
   const btnPortalBook = document.getElementById('btn-portal-book-slot');
@@ -299,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // QR Key Modal
   const modalQr = document.getElementById('modal-qr-pass');
   const btnQuickQr = document.getElementById('btn-quick-open-qr');
   const btnCloseQr = document.getElementById('btn-close-qr');
@@ -325,7 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnModalNfc) btnModalNfc.addEventListener('click', simulateNfc);
   if (btnView3Nfc) btnView3Nfc.addEventListener('click', simulateNfc);
 
-  // Waiver Signature Modal
   const modalWaiver = document.getElementById('modal-waiver-pad');
   const btnOpenWaiver = document.getElementById('btn-open-sign-pad-main');
   const btnCloseWaiver = document.getElementById('btn-close-waiver');
@@ -338,7 +311,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCloseWaiver) btnCloseWaiver.addEventListener('click', () => closeModal(modalWaiver));
   if (btnCancelWaiver) btnCancelWaiver.addEventListener('click', () => closeModal(modalWaiver));
 
-  // Canvas drawing
   if (sigCanvas) {
     const ctx = sigCanvas.getContext('2d');
     let drawing = false;
@@ -390,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Copy PIN Button
   const btnCopyPin = document.getElementById('btn-copy-pin-main');
   if (btnCopyPin) {
     btnCopyPin.addEventListener('click', () => {
@@ -400,7 +371,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Save Settings
   const btnSaveSettings = document.getElementById('btn-save-settings');
   if (btnSaveSettings) {
     btnSaveSettings.addEventListener('click', () => {
@@ -408,7 +378,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Download PDF / Print Receipt
   const btnDownloadWaiver = document.getElementById('btn-download-waiver');
   if (btnDownloadWaiver) {
     btnDownloadWaiver.addEventListener('click', () => {
@@ -425,7 +394,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Top Search Filter
+  document.querySelectorAll('.btn-extend-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      showToast('✓ Extended reservation by +1 Hour ($20 added to invoice)', 'success');
+    });
+  });
+
+  document.querySelectorAll('.btn-cancel-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (confirm('Are you sure you want to cancel this reservation?')) {
+        showToast('Reservation cancelled. Full refund issued to original card.', 'info');
+      }
+    });
+  });
+
+  document.querySelectorAll('.btn-msg-coach-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      showToast('Opening direct channel to Coach Marcus...', 'info');
+    });
+  });
+
+  document.querySelectorAll('.btn-cal-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      showToast('✓ Calendar event file (.ics) downloaded!', 'success');
+    });
+  });
+
+  const btnAddCard = document.getElementById('btn-add-card-main');
+  if (btnAddCard) {
+    btnAddCard.addEventListener('click', () => {
+      showToast('Secure payment gateway ready. Enter new card details.', 'info');
+    });
+  }
+
   const topSearch = document.getElementById('topbar-search-input');
   if (topSearch) {
     topSearch.addEventListener('input', (e) => {

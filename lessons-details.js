@@ -1,13 +1,7 @@
-/**
- * WaveNomad — Lesson Program Details Interactive Engine
- * File: lessons details.js
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --------------------------------------------------------------------------
-  // 01. COMPREHENSIVE PROGRAM DATASTORE
-  // --------------------------------------------------------------------------
   const programsData = {
     beginner: {
       id: 'beginner',
@@ -202,13 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --------------------------------------------------------------------------
-  // 02. DOM ELEMENT SELECTORS
-  // --------------------------------------------------------------------------
   const breadcrumbCurrentLabel = document.getElementById('breadcrumb-current-label');
   const programPills = document.querySelectorAll('.program-pill-btn');
 
-  // Hero Elements (Split Card Left & Content Right)
   const heroDynamicImage = document.getElementById('hero-dynamic-image');
   const heroCardStagePill = document.getElementById('hero-card-stage-pill');
   const heroCardRatingText = document.getElementById('hero-card-rating-text');
@@ -227,21 +217,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const metricPrice = document.getElementById('metric-price');
   const btnHeroReserveCta = document.getElementById('btn-hero-reserve-cta');
 
-  // Overview & Competencies
   const overviewTitle = document.getElementById('overview-title');
   const overviewDesc = document.getElementById('overview-desc');
   const competenciesContainer = document.getElementById('competencies-container');
 
-  // Curriculum Timeline
   const curriculumTimelineContainer = document.getElementById('curriculum-timeline-container');
 
-  // Coach Profile
   const coachAvatarImg = document.getElementById('coach-avatar-img');
   const coachName = document.getElementById('coach-name');
   const coachRole = document.getElementById('coach-role');
   const coachQuote = document.getElementById('coach-quote');
 
-  // Sticky Booking Widget
   const widgetProgramName = document.getElementById('widget-program-name');
   const widgetDateInput = document.getElementById('widget-date-input');
   const widgetTimeSelect = document.getElementById('widget-time-select');
@@ -253,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const widgetTotalVal = document.getElementById('widget-total-val');
   const btnOpenReserveModal = document.getElementById('btn-open-reserve-modal');
 
-  // Modal Elements
   const reserveModal = document.getElementById('reserve-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const modalSummaryProgram = document.getElementById('modal-summary-program');
@@ -264,14 +249,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalSuccessState = document.getElementById('modal-success-state');
   const btnDoneModal = document.getElementById('btn-done-modal');
 
-  // Other Programs Switch Buttons
   const switchProgramBtns = document.querySelectorAll('.switch-program-btn');
 
-  // State
   let currentProgramId = 'beginner';
   let guestCount = 1;
 
-  // Initialize Date Input with Tomorrow's Date
   if (widgetDateInput) {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -282,26 +264,20 @@ document.addEventListener('DOMContentLoaded', () => {
     widgetDateInput.min = `${yyyy}-${mm}-${dd}`;
   }
 
-  // --------------------------------------------------------------------------
-  // 03. RENDER PROGRAM DETAILS FUNCTION
-  // --------------------------------------------------------------------------
   const renderProgram = (programId) => {
     const data = programsData[programId] || programsData.beginner;
     currentProgramId = data.id;
 
-    // Update Pills
     programPills.forEach(pill => {
       const isMatch = pill.getAttribute('data-lesson-id') === currentProgramId;
       pill.classList.toggle('active', isMatch);
       pill.setAttribute('aria-selected', isMatch);
     });
 
-    // Update Breadcrumb
     if (breadcrumbCurrentLabel) {
       breadcrumbCurrentLabel.textContent = data.title;
     }
 
-    // Update Hero with smooth fade
     if (heroDynamicImage) {
       heroDynamicImage.style.opacity = '0.3';
       setTimeout(() => {
@@ -310,14 +286,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 150);
     }
 
-    // Update Left Floating Image Card Badges & Coach Chip
     if (heroCardStagePill) heroCardStagePill.textContent = data.stageCardPill || data.stageBadge;
     if (heroCardRatingText) heroCardRatingText.textContent = data.ratingShort || '4.98 (240+)';
     if (heroCardCoachAvatar) heroCardCoachAvatar.src = data.coach.avatar;
     if (heroCardCoachName) heroCardCoachName.textContent = data.coach.name;
     if (heroCardCoachRole) heroCardCoachRole.textContent = data.coachChipRole || `${data.coach.name.split(' ')[0]}'s Staging · Pier 4`;
 
-    // Update Right Column Content
     if (heroStageBadge) heroStageBadge.textContent = data.stageBadge;
     if (heroRatingText) heroRatingText.textContent = data.ratingText;
     if (heroMainTitle) heroMainTitle.textContent = data.title;
@@ -329,13 +303,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (metricLevel) metricLevel.textContent = data.level;
     if (metricPrice) metricPrice.textContent = data.rateStr;
 
-    // Overview
     if (overviewTitle) overviewTitle.textContent = data.overviewTitle;
     if (overviewDesc) {
       overviewDesc.innerHTML = `<p>${data.overviewP1}</p><p>${data.overviewP2}</p>`;
     }
 
-    // Competencies
     if (competenciesContainer) {
       competenciesContainer.innerHTML = '';
       data.competencies.forEach(comp => {
@@ -349,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Curriculum Timeline
     if (curriculumTimelineContainer) {
       curriculumTimelineContainer.innerHTML = '';
       data.curriculum.forEach(step => {
@@ -368,20 +339,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Coach Profile
     if (coachAvatarImg) coachAvatarImg.src = data.coach.avatar;
     if (coachName) coachName.textContent = data.coach.name;
     if (coachRole) coachRole.textContent = data.coach.role;
     if (coachQuote) coachQuote.textContent = data.coach.quote;
 
-    // Sticky Booking Widget updates
     if (widgetProgramName) widgetProgramName.textContent = data.title;
     updateWidgetPricing();
   };
 
-  // --------------------------------------------------------------------------
-  // 04. PRICING RECALCULATION
-  // --------------------------------------------------------------------------
   const updateWidgetPricing = () => {
     const data = programsData[currentProgramId] || programsData.beginner;
     const total = data.rate * guestCount;
@@ -397,9 +363,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --------------------------------------------------------------------------
-  // 05. GUEST STEPPER CONTROLS
-  // --------------------------------------------------------------------------
   if (stepperMinusBtn && stepperCountVal) {
     stepperMinusBtn.addEventListener('click', () => {
       if (guestCount > 1) {
@@ -420,14 +383,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 06. PROGRAM SWITCHER TABS & CAROUSEL BUTTONS
-  // --------------------------------------------------------------------------
   programPills.forEach(pill => {
     pill.addEventListener('click', () => {
       const targetId = pill.getAttribute('data-lesson-id');
       renderProgram(targetId);
-      // Update URL query parameter without page reload
+
       const newUrl = `${window.location.pathname}?lesson=${targetId}`;
       window.history.replaceState({ lesson: targetId }, '', newUrl);
     });
@@ -443,7 +403,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero Card Book Program CTA Button
   if (btnHeroReserveCta) {
     btnHeroReserveCta.addEventListener('click', () => {
       if (btnOpenReserveModal) {
@@ -455,18 +414,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 07. FAQ ACCORDION INTERACTIVITY
-  // --------------------------------------------------------------------------
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const btn = item.querySelector('.faq-question-btn');
     if (btn) {
       btn.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        // Close other items
+
         faqItems.forEach(other => other.classList.remove('active'));
-        // Toggle current item
+
         if (!isActive) {
           item.classList.add('active');
           btn.setAttribute('aria-expanded', 'true');
@@ -477,9 +433,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --------------------------------------------------------------------------
-  // 08. RESERVATION CONFIRMATION MODAL
-  // --------------------------------------------------------------------------
   if (btnOpenReserveModal && reserveModal) {
     btnOpenReserveModal.addEventListener('click', () => {
       const data = programsData[currentProgramId] || programsData.beginner;
@@ -492,7 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (modalSummaryDatetime) modalSummaryDatetime.textContent = `${dateVal} at ${timeVal}`;
       if (modalSummaryPrice) modalSummaryPrice.textContent = `$${totalAmount} USD`;
 
-      // Reset form / success state
       if (reservationModalForm) reservationModalForm.style.display = 'block';
       if (modalSuccessState) modalSuccessState.style.display = 'none';
 
@@ -544,9 +496,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 09. URL QUERY PARAMETER INITIALIZATION
-  // --------------------------------------------------------------------------
   const urlParams = new URLSearchParams(window.location.search);
   const requestedLesson = urlParams.get('lesson');
   if (requestedLesson && programsData[requestedLesson]) {
@@ -555,10 +504,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProgram('beginner');
   }
 
-  // --------------------------------------------------------------------------
-  // 10. GLOBAL NAVBAR FUNCTIONALITY (Matching Home 1 / main.js)
-  // --------------------------------------------------------------------------
-  // Scroll Glass Blur Effect
   const siteHeader = document.getElementById('site-header');
   window.addEventListener('scroll', () => {
     if (siteHeader) {
@@ -570,7 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // Home Dropdown functionality (Home 1 / Home 2)
   const homeDropdownItem = document.getElementById('home-dropdown-item');
   const homeDropdownBtn = document.getElementById('home-dropdown-btn');
 
@@ -589,7 +533,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Theme Mode Toggle (Light / Dark)
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const sunIcon = document.getElementById('theme-icon-sun');
   const moonIcon = document.getElementById('theme-icon-moon');
@@ -616,7 +559,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // RTL / LTR Direction Toggle
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   const langLabel = document.getElementById('lang-label');
   if (langToggleBtn) {
@@ -632,7 +574,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Menu Toggle (matching Home 1)
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   if (menuToggle && navMenu) {
@@ -642,13 +583,20 @@ document.addEventListener('DOMContentLoaded', () => {
       menuToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close on navigation click
     navMenu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
         menuToggle.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+  }
+
+  const navLoginBtn = document.getElementById('nav-login-btn');
+  if (navLoginBtn) {
+    navLoginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'login.html';
     });
   }
 

@@ -1,7 +1,4 @@
-/**
- * WaveNomad - Home 2: Sunset & Twilight Paddleboard Experience
- * Interactive controller for Home 2 page (Matching Reference Behavior)
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
@@ -18,16 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
 });
 
-/* ==========================================================================
-   1. Light & Dark Mode Toggle (Synchronized with Home 1)
-   ========================================================================== */
 function initThemeToggle() {
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const sunIcon = document.getElementById('theme-icon-sun');
   const moonIcon = document.getElementById('theme-icon-moon');
   const htmlRoot = document.documentElement;
 
-  // Retrieve existing or saved theme (supporting both storage keys)
   const savedTheme = localStorage.getItem('wavenomad-theme') || localStorage.getItem('wavenomad_theme') || 'light';
   applyTheme(savedTheme);
 
@@ -54,9 +47,6 @@ function initThemeToggle() {
   }
 }
 
-/* ==========================================================================
-   2. RTL / LTR Direction Toggle (Synchronized with Home 1)
-   ========================================================================== */
 function initDirectionToggle() {
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   const langLabel = document.getElementById('lang-label');
@@ -96,9 +86,6 @@ function initDirectionToggle() {
   }
 }
 
-/* ==========================================================================
-   3. Dropdown Menu Toggle (Home 1 / Home 2 switcher)
-   ========================================================================== */
 function initDropdown() {
   const homeDropdownItem = document.getElementById('home-dropdown-item');
   const homeDropdownBtn = document.getElementById('home-dropdown-btn');
@@ -118,7 +105,6 @@ function initDropdown() {
     });
   }
 
-  // Already on Home 2, smooth scroll to top
   if (home2Option && homeDropdownItem) {
     home2Option.addEventListener('click', () => {
       homeDropdownItem.classList.remove('open');
@@ -126,7 +112,6 @@ function initDropdown() {
     });
   }
 
-  // Navigating to Home 1
   if (home1Option && homeDropdownItem) {
     home1Option.addEventListener('click', () => {
       homeDropdownItem.classList.remove('open');
@@ -134,9 +119,6 @@ function initDropdown() {
   }
 }
 
-/* ==========================================================================
-   4. Mobile Navigation Menu Toggle
-   ========================================================================== */
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -150,7 +132,6 @@ function initMobileMenu() {
       menuToggle.setAttribute('aria-expanded', isOpen.toString());
     });
 
-    // Close when clicking nav links
     navMenu.querySelectorAll('.nav-link:not(.dropdown > .nav-link)').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -160,7 +141,6 @@ function initMobileMenu() {
       });
     });
 
-    // Close when clicking outside
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('open')) {
         navMenu.classList.remove('open');
@@ -171,9 +151,6 @@ function initMobileMenu() {
   }
 }
 
-/* ==========================================================================
-   5. Header Scroll Effect
-   ========================================================================== */
 function initHeaderScroll() {
   const header = document.getElementById('site-header');
   if (!header) return;
@@ -190,22 +167,16 @@ function initHeaderScroll() {
   handleScroll();
 }
 
-/* ==========================================================================
-   6. Header Action Buttons
-   ========================================================================== */
 function initHeaderActions() {
   const navLoginBtn = document.getElementById('nav-login-btn');
   if (navLoginBtn) {
     navLoginBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      window.location.href = 'dashboard.html';
+      window.location.href = 'login.html';
     });
   }
 }
 
-/* ==========================================================================
-   5. Interactive Quick Launch Calculator (Hero Drawer)
-   ========================================================================== */
 function initQuickLaunchCalculator() {
   const expSelect = document.getElementById('quick-exp-select');
   const durationSelect = document.getElementById('quick-duration');
@@ -249,9 +220,6 @@ function initQuickLaunchCalculator() {
   updatePrice();
 }
 
-/* ==========================================================================
-   6. 01 The Paddleboard Experience: Pillar Interaction
-   ========================================================================== */
 function initExperiencePillars() {
   const pillarCards = document.querySelectorAll('.exp-pillar-card');
   const hotspotPins = document.querySelectorAll('.hotspot-pin');
@@ -261,7 +229,6 @@ function initExperiencePillars() {
       pillarCards.forEach(c => c.classList.remove('active'));
       card.classList.add('active');
 
-      // Pulse corresponding hotspot pin if present
       if (hotspotPins[index]) {
         hotspotPins.forEach(p => p.querySelector('.hotspot-dot').style.transform = 'scale(1)');
         const activeDot = hotspotPins[index].querySelector('.hotspot-dot');
@@ -286,9 +253,6 @@ function initExperiencePillars() {
   });
 }
 
-/* ==========================================================================
-   7. 03 Your Day on the Water: Step Interaction & Rotating Cards Coordination
-   ========================================================================== */
 function initDayFlowSteps() {
   const stepItems = document.querySelectorAll('.flow-step-item');
   const rotatorTrack = document.getElementById('day-rotator-track');
@@ -296,7 +260,6 @@ function initDayFlowSteps() {
   const btnPrev = document.getElementById('rotator-btn-prev');
   const btnNext = document.getElementById('rotator-btn-next');
 
-  // Coordinated step click: updates steps and highlights corresponding card
   stepItems.forEach(item => {
     item.addEventListener('click', () => {
       stepItems.forEach(s => s.classList.remove('active'));
@@ -314,7 +277,6 @@ function initDayFlowSteps() {
     });
   });
 
-  // Clicking any card highlights corresponding step on the right
   rotatorCards.forEach(card => {
     card.addEventListener('click', () => {
       const stepRef = card.getAttribute('data-step-ref');
@@ -329,7 +291,6 @@ function initDayFlowSteps() {
     });
   });
 
-  // Up button: rotates / nudges cards upwards
   if (btnPrev && rotatorTrack) {
     btnPrev.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -341,7 +302,6 @@ function initDayFlowSteps() {
     });
   }
 
-  // Down button: rotates / nudges cards downwards
   if (btnNext && rotatorTrack) {
     btnNext.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -354,9 +314,6 @@ function initDayFlowSteps() {
   }
 }
 
-/* ==========================================================================
-   8. 05 Passes Selection Interaction
-   ========================================================================== */
 function initPassesAndAddons() {
   const passButtons = document.querySelectorAll('.btn-pass-action');
 
@@ -366,22 +323,19 @@ function initPassesAndAddons() {
       const passCard = btn.closest('.pass-card');
       const passName = passCard ? passCard.querySelector('.pass-name')?.textContent : 'Adventure Pass';
 
-      // Update button text with brief confirmation feedback
       const originalText = btn.textContent;
-      btn.textContent = `✓ ${passName} Selected`;
+      btn.textContent = `✓ ${passName} Selected - Redirecting...`;
       btn.style.background = '#10B981';
 
       setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = '';
-      }, 2200);
+        window.location.href = 'rentals.html#plans';
+      }, 1000);
     });
   });
 }
 
-/* ==========================================================================
-   9. 04 Live Telemetry Real-Time Clock & Sunset Countdown
-   ========================================================================== */
 function initTelemetryLiveClock() {
   const timeDisplay = document.getElementById('intel-time-display');
   const sunsetTimer = document.getElementById('sunset-timer');
@@ -397,13 +351,13 @@ function initTelemetryLiveClock() {
     timeDisplay.textContent = `Telemetry Updated: ${hours}:${minutes}:${seconds} (Live)`;
 
     if (sunsetTimer) {
-      // Calculate realistic remaining time to sunset (~18:45)
+
       const targetSunset = new Date();
       targetSunset.setHours(18, 45, 0, 0);
 
       let diffMs = targetSunset - now;
       if (diffMs < 0) {
-        // Sunset passed for today, show evening stars mode
+
         sunsetTimer.textContent = 'Milky Way Night Mode Active';
       } else {
         const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
@@ -417,9 +371,6 @@ function initTelemetryLiveClock() {
   setInterval(updateTelemetryTime, 10000);
 }
 
-/* ==========================================================================
-   10. Smooth Scrolling for Anchor Links
-   ========================================================================== */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

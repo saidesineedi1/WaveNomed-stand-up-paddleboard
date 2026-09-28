@@ -1,20 +1,7 @@
-/**
- * WaveNomad — Safety & Conditions Water Intelligence Script
- * Handles:
- *  1. Theme System (Light / Dark mode persistence)
- *  2. RTL / Reading Direction Toggle
- *  3. Header & Search Interactivity
- *  4. Radar Telemetry Multi-Sensor Switching
- *  5. Continuous Vertical Safety Timeline Scroll Animations
- *  6. Conditions Guide Dynamic Water Simulator (Calm, Moderate, Challenging)
- *  7. Pre-Paddle Readiness Interactive Checklist
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // =========================================================================
-  // 1. THEME TOGGLE (LIGHT / DARK) SYSTEM (MATCHING HOME 1 SYSTEM)
-  // =========================================================================
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const sunIcon = document.getElementById('theme-icon-sun');
   const moonIcon = document.getElementById('theme-icon-moon');
@@ -45,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================================================
-  // 2. RTL / LTR DIRECTION TOGGLE (MATCHING HOME 1 SYSTEM)
-  // =========================================================================
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   const langLabel = document.getElementById('lang-label');
 
@@ -83,9 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================================================
-  // 3. HEADER SCROLL, DROPDOWN & MOBILE MENU INTERACTION (MATCHING HOME 1)
-  // =========================================================================
   const siteHeader = document.getElementById('site-header');
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -95,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const home2Option = document.getElementById('home2-option');
   const navLoginBtn = document.getElementById('nav-login-btn');
 
-  // Header Scrolled Glass Effect
   if (siteHeader) {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -108,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  // Home 1 / Home 2 Dropdown Logic
   if (homeDropdownBtn && homeDropdownItem) {
     homeDropdownBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -134,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Hamburger Menu
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isOpen = menuToggle.classList.toggle('open');
@@ -151,17 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Member Login Handler
   if (navLoginBtn) {
     navLoginBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      window.location.href = 'dashboard.html';
+      window.location.href = 'login.html';
     });
   }
 
-  // =========================================================================
-  // 4. SECTION 02: RADAR TELEMETRY SENSOR SWITCHING
-  // =========================================================================
   const sensorData = {
     pier4: {
       name: 'Pier 4 Shore Basin',
@@ -238,7 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = sensorData[key];
       if (!data) return;
 
-      // Smooth content transition
       if (sensorNameElem) sensorNameElem.textContent = data.name;
       if (sensorStatusElem) {
         sensorStatusElem.innerHTML = `<span class="hud-pulse-ring" style="width: 8px; height: 8px;"></span><span>${data.status}</span>`;
@@ -252,9 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================================================================
-  // 5. SECTION 03: CONTINUOUS VERTICAL SAFETY PROTOCOL TIMELINE
-  // =========================================================================
   const timelineRows = document.querySelectorAll('.protocol-step-row');
   const spineFill = document.getElementById('protocol-spine-fill');
 
@@ -283,9 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateTimelineProgress, { passive: true });
   updateTimelineProgress(); // Initial check
 
-  // =========================================================================
-  // 6. SECTION 04: CONDITIONS GUIDE WATER SIMULATOR (CALM / MODERATE / CHALLENGING)
-  // =========================================================================
   const tierButtons = {
     calm: document.getElementById('btn-state-calm'),
     moderate: document.getElementById('btn-state-moderate'),
@@ -393,12 +360,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (simParamSkill) simParamSkill.textContent = cfg.skillParam;
     if (simParamBoard) simParamBoard.textContent = cfg.boardParam;
 
-    // Morph SVG wave geometry
     if (wavePath1) wavePath1.setAttribute('d', cfg.d1);
     if (wavePath2) wavePath2.setAttribute('d', cfg.d2);
     if (wavePath3) wavePath3.setAttribute('d', cfg.d3);
 
-    // Update canvas background mood
     if (waveCanvasBox) {
       waveCanvasBox.style.background = cfg.skylineGrad;
     }
@@ -411,9 +376,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // =========================================================================
-  // 7. SECTION 05: WATER READINESS INTERACTIVE CHECKLIST
-  // =========================================================================
   const checklistItems = document.querySelectorAll('.checklist-item');
   const readinessStatusText = document.getElementById('readiness-status-text');
 

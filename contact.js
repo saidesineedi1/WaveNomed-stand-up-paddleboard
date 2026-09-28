@@ -1,22 +1,7 @@
-/**
- * WaveNomad — Contact & Concierge Water Intelligence Script
- *
- * Handles:
- *  1. WaveNomad Theme System (Light / Dark mode persistence matching Home 1)
- *  2. WaveNomad RTL / Reading Direction System (Arabic / English text direction)
- *  3. Header Scroll, Dropdown & Mobile Menu Interactivity
- *  4. Hero Water Ripple Ambient Dynamics & Interactive Topic Pills
- *  5. Section 02 Editorial Panels Quick-Select & Smooth Scroll Routing
- *  6. Section 03 Floating Contact Form with Real-Time Validation & Success State
- *  7. Section 04 Stylized Minimal Map SVG Route Line Drawing via IntersectionObserver
- *  8. Section 05 Final Connection Smooth Anchor Handlers
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // =========================================================================
-  // 1. THEME TOGGLE (LIGHT / DARK) SYSTEM — EXACT HOME 1 PARITY
-  // =========================================================================
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const sunIcon = document.getElementById('theme-icon-sun');
   const moonIcon = document.getElementById('theme-icon-moon');
@@ -47,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================================================
-  // 2. RTL / LTR DIRECTION TOGGLE — EXACT HOME 1 PARITY
-  // =========================================================================
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   const langLabel = document.getElementById('lang-label');
 
@@ -85,9 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================================================
-  // 3. HEADER SCROLL, DROPDOWN & MOBILE MENU — EXACT HOME 1 PARITY
-  // =========================================================================
   const siteHeader = document.getElementById('site-header');
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -96,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const home1Option = document.getElementById('home1-option');
   const home2Option = document.getElementById('home2-option');
 
-  // Header Scrolled Glass Effect
   if (siteHeader) {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -109,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  // Home 1 / Home 2 Dropdown Navigation Logic
   if (homeDropdownBtn && homeDropdownItem) {
     homeDropdownBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -138,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Hamburger Menu
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isOpen = menuToggle.classList.toggle('open');
@@ -161,14 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navLoginBtn) {
       navLoginBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = 'dashboard.html';
+        window.location.href = 'login.html';
       });
     }
   }
 
-  // =========================================================================
-  // 4. HERO SECTION: INTERACTIVE WATER RIPPLE & TOPIC PILLS
-  // =========================================================================
   const rippleStage = document.getElementById('contact-ripple-stage');
   const rippleWrapper = document.getElementById('shoreline-ripple-container');
   const topicPills = document.querySelectorAll('.ripple-topic-pill');
@@ -178,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const messageInput = document.getElementById('contact-message');
   const formCard = document.getElementById('contact-form-wrapper');
 
-  // Subtle Mouse-Responsive Tilt on Ripple Canvas (Restrained & Calm)
   if (rippleStage && rippleWrapper && window.matchMedia('(pointer: fine)').matches) {
     let mouseX = 0, mouseY = 0;
     let currentX = 0, currentY = 0;
@@ -189,14 +161,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = rippleStage.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
       const centerY = rect.top + rect.height / 2;
-      // Normalised offset (-1 to 1)
+
       mouseX = (e.clientX - centerX) / (rect.width / 2);
       mouseY = (e.clientY - centerY) / (rect.height / 2);
     };
 
     const updateTilt = () => {
       if (isHovering) {
-        // Smooth interpolation
+
         currentX += (mouseX * 7 - currentX) * 0.08;
         currentY += (mouseY * 7 - currentY) * 0.08;
         rippleWrapper.style.transform = `perspective(800px) rotateX(${-currentY}deg) rotateY(${currentX}deg) translateZ(10px)`;
@@ -230,12 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Helper: Select Enquiry Topic, Smoothly Scroll to Form, and Focus Name Input
-   */
+  
   const routeToConciergeForm = (topicValue) => {
     if (topicSelect && topicValue) {
-      // Map topic names accurately to select options
+
       const normalizedTopic = {
         'Rental': 'Rental',
         'Rentals': 'Rental',
@@ -250,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }[topicValue] || topicValue;
 
       topicSelect.value = normalizedTopic;
-      // Trigger change event for floating label state
+
       topicSelect.dispatchEvent(new Event('change', { bubbles: true }));
       topicSelect.classList.remove('is-invalid');
       const topicError = document.getElementById('topic-error-msg');
@@ -261,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
       planningSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Gentle pulse feedback on the form card to guide the eye
     if (formCard) {
       formCard.classList.remove('pulse-highlight');
       void formCard.offsetWidth; // Reflow
@@ -269,13 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => formCard.classList.remove('pulse-highlight'), 1400);
     }
 
-    // Set focus on Name field after smooth scroll begins
     setTimeout(() => {
       if (fullNameInput) fullNameInput.focus({ preventScroll: true });
     }, 450);
   };
 
-  // Wire up Hero Topic Pills (Click & Keyboard Enter/Space)
   topicPills.forEach(pill => {
     const handlePillSelect = (e) => {
       e.preventDefault();
@@ -291,9 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================================================================
-  // 5. SECTION 02: EDITORIAL CONTACT OPTIONS (2x2 GRID CARDS)
-  // =========================================================================
   const contactPanels = document.querySelectorAll('.contact-panel-card');
 
   contactPanels.forEach(panel => {
@@ -304,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     panel.addEventListener('click', handlePanelClick);
 
-    // Keyboard accessibility for interactive panels
     panel.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -313,9 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================================================================
-  // 6. SECTION 03: FLOATING CONTACT FORM & VALIDATION ENGINE
-  // =========================================================================
   const contactForm = document.getElementById('contact-planning-form');
   const emailInput = document.getElementById('contact-email');
   const phoneInput = document.getElementById('contact-phone');
@@ -324,18 +284,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const successState = document.getElementById('form-success-state');
   const sendAnotherBtn = document.getElementById('btn-send-another');
 
-  // Error message elements
   const nameError = document.getElementById('name-error-msg');
   const emailError = document.getElementById('email-error-msg');
   const topicError = document.getElementById('topic-error-msg');
   const msgError = document.getElementById('msg-error-msg');
 
-  // Email format validation regex
   const isValidEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   };
 
-  // Clear validation styling on typing
   const bindInputClearing = (inputEl, errorEl) => {
     if (!inputEl) return;
     const clearError = () => {
@@ -353,12 +310,10 @@ document.addEventListener('DOMContentLoaded', () => {
   bindInputClearing(topicSelect, topicError);
   bindInputClearing(messageInput, msgError);
 
-  // Validate form fields on submit
   const validateForm = () => {
     let isValid = true;
     let firstInvalidField = null;
 
-    // 1. Full Name
     if (!fullNameInput || fullNameInput.value.trim().length < 2) {
       isValid = false;
       if (fullNameInput) {
@@ -370,7 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!firstInvalidField) firstInvalidField = fullNameInput;
     }
 
-    // 2. Email Address
     if (!emailInput || !isValidEmail(emailInput.value)) {
       isValid = false;
       if (emailInput) {
@@ -382,7 +336,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!firstInvalidField) firstInvalidField = emailInput;
     }
 
-    // 3. Topic Selection
     if (!topicSelect || !topicSelect.value) {
       isValid = false;
       if (topicSelect) {
@@ -394,7 +347,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!firstInvalidField) firstInvalidField = topicSelect;
     }
 
-    // 4. Message
     if (!messageInput || messageInput.value.trim().length < 5) {
       isValid = false;
       if (messageInput) {
@@ -413,7 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return isValid;
   };
 
-  // Form Submit Handler
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -422,7 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Enter Loading State
       if (submitBtn) {
         submitBtn.classList.add('is-loading');
         submitBtn.setAttribute('disabled', 'true');
@@ -430,19 +380,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btnText) btnText.textContent = 'Transmitting Note...';
       }
 
-      // Simulated network concierge transmission
       setTimeout(() => {
-        // Hide Form
+
         contactForm.style.display = 'none';
 
-        // Reveal Success State
         if (successState) {
           successState.style.display = 'flex';
           successState.classList.add('is-revealed');
           successState.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        // Reset submit button state
         if (submitBtn) {
           submitBtn.classList.remove('is-loading');
           submitBtn.removeAttribute('disabled');
@@ -453,7 +400,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // "Send Another Note" Reset Handler
   if (sendAnotherBtn) {
     sendAnotherBtn.addEventListener('click', () => {
       if (contactForm) {
@@ -464,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
         successState.style.display = 'none';
         successState.classList.remove('is-revealed');
       }
-      // Clear all potential error states
+
       [fullNameInput, emailInput, phoneInput, dateInput, topicSelect, messageInput].forEach(field => {
         if (field) {
           field.classList.remove('is-invalid');
@@ -482,9 +428,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // =========================================================================
-  // 7. SECTION 04: MEET US BY THE WATER (STYLIZED SVG MAP ANIMATION)
-  // =========================================================================
   const mapCard = document.getElementById('waterfront-map-card');
   const routePath = document.getElementById('map-route-path');
 
@@ -498,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             mapCard.classList.add('is-inview');
-            // Animate route line smoothly
+
             routePath.style.transition = 'stroke-dashoffset 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
             routePath.style.strokeDashoffset = '0';
             observer.unobserve(mapCard);
@@ -508,23 +451,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       mapObserver.observe(mapCard);
     } catch (e) {
-      // Fallback for environments where getTotalLength is not available
+
       mapCard.classList.add('is-inview');
     }
   }
 
-  // Get Directions link enhancement
   const directionsBtn = document.getElementById('loc-directions-btn');
   if (directionsBtn) {
     directionsBtn.addEventListener('click', (e) => {
-      // Directs to Emerald Bay Pier Lake Tahoe coordinates
+
       directionsBtn.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=Emerald+Bay+Lake+Tahoe');
     });
   }
 
-  // =========================================================================
-  // 8. SECTION 05: FINAL CONNECTION CTA SMOOTH ANCHOR
-  // =========================================================================
   const finalCtaBtn = document.getElementById('final-start-conversation-btn');
   const heroCtaBtn = document.getElementById('hero-start-conversation-btn');
 
@@ -539,7 +478,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupSmoothContactScroll(heroCtaBtn);
   setupSmoothContactScroll(finalCtaBtn);
 
-  // Smooth scroll for internal links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');

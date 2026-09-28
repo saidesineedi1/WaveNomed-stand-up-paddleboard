@@ -9,8 +9,8 @@
     content="WaveNomad offers luxury stand-up paddleboard rentals, certified alpine clinics, scenic lake expeditions, and real-time telemetry booking for modern outdoor explorers. Explore · Paddle · Repeat.">
   <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,14 +28,7 @@
 
       <a href="#home" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
         <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+          <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
         </div>
         <div class="brand-text-group">
           <span class="brand-name">WaveNomad</span>
@@ -123,14 +116,11 @@
           </svg>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+        <button class="action-control-btn rtl-btn" id="lang-toggle-btn" aria-label="Toggle text direction"
+          title="Toggle text direction">
+          <span class="rtl-text-ltr">RTL</span>
+          <span class="rtl-text-rtl">LTR</span>
         </button>
-
-
 
         <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
           <span>Login</span>
@@ -169,7 +159,7 @@
 
           <h1 class="hero-headline font-serif">
             <span class="headline-word">Paddle Explore</span>
-            <span class="headline-word">Belong</span>
+            <span class="headline-word hero-headline-accent">Belong.</span>
           </h1>
 
           <p class="hero-description font-sans">
@@ -177,19 +167,19 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#rentals" class="cta-pill-primary" id="cta-join-journey">
+            <a href="./rentals.html" class="cta-pill-primary" id="cta-join-journey">
               <span>Join the Journey</span>
               <span class="cta-arrow" aria-hidden="true">→</span>
             </a>
 
-            <button class="cta-pill-secondary" id="hero-dashboard-btn" type="button">
+            <a href="./contact.html" class="cta-pill-secondary" id="hero-dashboard-btn">
               <svg class="cta-pin-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               <span>View Locations</span>
-            </button>
+            </a>
           </div>
 
           <div class="hero-features-inline">
@@ -265,9 +255,6 @@
           <span class="bottom-bar-tagline">EXPLORE MORE &nbsp;·&nbsp; LIVE BETTER</span>
         </div>
 
-
-
-
       </div>
 
     </section>
@@ -277,7 +264,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow"> PREMIUM FLEET</span>
-          <h2 class="section-headline font-serif">Engineered For Still Waters &amp; Alpine Expeditions</h2>
+          <h2 class="section-headline font-serif">Engineered For Still Waters &amp; <span
+              class="section-headline-accent">Alpine Expeditions</span></h2>
           <p class="section-desc font-sans">
             Every WaveNomad paddleboard is precision-balanced with aerospace-grade carbon construction, ultra-durable
             drop stitch cores, dry storage bungies, and ergonomic carbon-shaft paddles.
@@ -294,7 +282,7 @@
               <p>All rentals include Coast Guard approved buoyancy aids, dry bags, quick-release coil leashes, and
                 digital dock checkout.</p>
             </div>
-            <a href="#booking" class="cta-pill-primary">Reserve From Fleet</a>
+            <a href="./contact.html" class="cta-pill-primary">Reserve From Fleet</a>
           </div>
         </div>
 
@@ -339,7 +327,7 @@
                 <span class="board-price-amount">$45</span>
                 <span class="board-price-unit">per hour / $120 day</span>
               </div>
-              <button class="btn-card-reserve" data-board="apex">Reserve Board</button>
+              <a href="./rentals.html" class="btn-card-reserve" data-board="apex">Reserve Board</a>
             </div>
           </article>
 
@@ -375,7 +363,7 @@
                 <span class="board-price-amount">$35</span>
                 <span class="board-price-unit">per hour / $95 day</span>
               </div>
-              <button class="btn-card-reserve" data-board="terraflow">Reserve Board</button>
+              <a href="./rentals.html" class="btn-card-reserve" data-board="terraflow">Reserve Board</a>
             </div>
           </article>
 
@@ -411,7 +399,7 @@
                 <span class="board-price-amount">$65</span>
                 <span class="board-price-unit">per hour / $160 day</span>
               </div>
-              <button class="btn-card-reserve" data-board="tandem">Reserve Board</button>
+              <a href="./rentals.html" class="btn-card-reserve" data-board="tandem">Reserve Board</a>
             </div>
           </article>
 
@@ -424,7 +412,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow"> MASTER THE WATER</span>
-          <h2 class="section-headline font-serif">Certified Instruction &amp; Guided Excursions</h2>
+          <h2 class="section-headline font-serif">Certified Instruction &amp; <span
+              class="section-headline-accent">Guided Excursions</span></h2>
           <p class="section-desc font-sans">
             Whether taking your first stroke or dialing in advanced race cadence, our PSUPA-certified instructors
             provide supportive, individualized guidance in pristine alpine conditions.
@@ -522,7 +511,7 @@
               </div>
               <div class="tour-card-bottom">
                 <span class="tour-price">$65</span>
-                <a href="#booking" class="btn-card-reserve">Book Lesson</a>
+                <a href="lessons-details.html?lesson=beginner" class="btn-card-reserve">Book Lesson</a>
               </div>
             </div>
           </div>
@@ -541,7 +530,7 @@
               </div>
               <div class="tour-card-bottom">
                 <span class="tour-price">$85</span>
-                <a href="#booking" class="btn-card-reserve">Book Tour</a>
+                <a href="lessons.html#tours" class="btn-card-reserve">Book Tour</a>
               </div>
             </div>
           </div>
@@ -560,7 +549,7 @@
               </div>
               <div class="tour-card-bottom">
                 <span class="tour-price">$50</span>
-                <a href="#booking" class="btn-card-reserve">Book Yoga</a>
+                <a href="lessons.html#tours" class="btn-card-reserve">Book Yoga</a>
               </div>
             </div>
           </div>
@@ -579,7 +568,7 @@
               </div>
               <div class="tour-card-bottom">
                 <span class="tour-price">$110</span>
-                <a href="#booking" class="btn-card-reserve">Book Clinic</a>
+                <a href="lessons-details.html?lesson=intermediate" class="btn-card-reserve">Book Clinic</a>
               </div>
             </div>
           </div>
@@ -594,7 +583,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow">CAPTURED ON THE WATER · GUEST STORIES</span>
-          <h2 class="section-headline font-serif">Visual Moments In Stand-Up Paddleboard Rental</h2>
+          <h2 class="section-headline font-serif"><span class="section-headline-accent">Visual Moments</span> In
+            Stand-Up Paddleboard Rental</h2>
           <p class="section-desc font-sans">
             Glimpse genuine dawn reflections, tranquil emerald coves, sunset glides, and tail-wagging canine co-pilots
             captured by our paddleboard rental community.
@@ -994,7 +984,6 @@
 
         </div>
 
-
       </div>
     </section>
 
@@ -1069,20 +1058,20 @@
                 </svg>
                 <span id="lightbox-like-count">148 Likes</span>
               </button>
-              <a href="#booking" class="cta-pill-primary" id="lightbox-book-btn">Rent This Board →</a>
+              <a href="./rentals.html" class="cta-pill-primary" id="lightbox-book-btn">Rent This Board →</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
     <section class="section-wrap alt-bg" id="safety">
       <div class="section-container">
 
         <div class="section-header">
           <span class="section-eyebrow">PROTOCOLS &amp; TELEMETRY</span>
-          <h2 class="section-headline font-serif">Real-Time Lake Conditions &amp; Safety Standards</h2>
+          <h2 class="section-headline font-serif">Real-Time <span class="section-headline-accent">Lake Conditions</span>
+            &amp; Safety Standards</h2>
           <p class="section-desc font-sans">
             Our IoT-linked shoreline sensors stream real-time water telemetry and weather predictions so you launch with
             full peace of mind.
@@ -1231,7 +1220,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow">YOUR JOURNEY FROM SHORE TO WATER</span>
-          <h2 class="section-headline font-serif">The Expedition Experience Timeline</h2>
+          <h2 class="section-headline font-serif">The <span class="section-headline-accent">Expedition Experience</span>
+            Timeline</h2>
           <p class="section-desc font-sans">
             From seamless digital gear matching to gliding across mirror-still alpine waters and sunset lakeside
             returns,
@@ -1679,7 +1669,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow">COMMUNITY STORIES</span>
-          <h2 class="section-headline font-serif">Loved by Modern Explorers</h2>
+          <h2 class="section-headline font-serif">Loved by <span class="section-headline-accent">Modern Explorers</span>
+          </h2>
           <p class="section-desc font-sans">
             Hear from sunrise gliders, wilderness adventurers, and academy paddlers who have experienced the silence
             and majesty of our alpine lake sanctuaries.
@@ -2240,17 +2231,18 @@
       <div class="luxury-cta-card">
         <div class="cta-card-content">
           <span class="cta-card-badge">JOIN THE WAVENOMAD COMMUNITY</span>
-          <h2 class="cta-card-headline font-serif">Ready to glide across crystal waters?</h2>
+          <h2 class="cta-card-headline font-serif">Ready to glide across <span class="section-headline-accent">crystal
+              waters?</span></h2>
           <p class="cta-card-desc font-sans">
             Experience the profound silence and majesty of our alpine lakes. Reserve your high-performance board or join
             a sunrise tour with certified local guides today.
           </p>
           <div class="cta-card-buttons">
-            <a href="#booking" class="cta-pill-primary">
+            <a href="./contact.html" class="cta-pill-primary">
               <span>Book Your Journey Today</span>
               <span class="cta-arrow" aria-hidden="true">→</span>
             </a>
-            <a href="#rentals" class="cta-pill-secondary">
+            <a href="./rentals.html" class="cta-pill-secondary">
               <span>Explore Rental Fleet</span>
             </a>
           </div>
@@ -2283,7 +2275,6 @@
 
   </main>
 
-
   <footer class="site-footer">
     <div class="footer-container">
 
@@ -2292,13 +2283,7 @@
         <div class="footer-brand-col">
           <a href="#home" class="brand-link" aria-label="WaveNomad Home">
             <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
-                  stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" />
-              </svg>
+              <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
             </div>
             <div class="brand-text-group">
               <span class="brand-name">WaveNomad</span>
@@ -2350,32 +2335,33 @@
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Company</h4>
           <ul class="footer-links-list">
-            <li><a href="#home" class="footer-link footer-home1-trigger">Home 1 </a></li>
-            <li><a href="#home" class="footer-link footer-home2-trigger">Home 2 </a></li>
-            <li><a href="#rentals" class="footer-link">Fleet Rentals</a></li>
-            <li><a href="#visual-moments" class="footer-link">Visual Moments</a></li>
-            <li><a href="#safety" class="footer-link">Safety &amp; Telemetry</a></li>
+            <li><a href="index.html" class="footer-link footer-home1-trigger">Home 1 </a></li>
+            <li><a href="home2.html" class="footer-link footer-home2-trigger">Home 2 </a></li>
+            <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
+            <li><a href="index.html#visual-moments" class="footer-link">Visual Moments</a></li>
+            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
           </ul>
         </div>
 
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Services</h4>
           <ul class="footer-links-list">
-            <li><a href="#rentals" class="footer-link">Carbon Touring SUPs</a></li>
-            <li><a href="#rentals" class="footer-link">Inflatable Expedition Kits</a></li>
+            <li><a href="rentals.html" class="footer-link">Carbon Touring SUPs</a></li>
+            <li><a href="rentals.html" class="footer-link">Inflatable Expedition Kits</a></li>
             <li><a href="lessons.html#tours" class="footer-link">Guided Sunset Excursions</a></li>
             <li><a href="lessons.html#progression" class="footer-link">PSUPA Coaching Clinics</a></li>
-            <li><a href="#safety" class="footer-link">Contactless Dock Lockers</a></li>
+            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
           </ul>
         </div>
 
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Additional Links</h4>
           <ul class="footer-links-list">
-            <li><a href="#rentals" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="rentals.html" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
             <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="coming-soon.html" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
           </ul>
         </div>
 
@@ -2438,11 +2424,11 @@
         </span>
 
         <div class="footer-bottom-links">
-          <a href="#safety" class="footer-sublink">Terms &amp; Conditions</a>
+          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a>
           <span class="footer-sublink-sep">/</span>
-          <a href="#safety" class="footer-sublink">Privacy Policy</a>
+          <a href="safety.html" class="footer-sublink">Privacy Policy</a>
           <span class="footer-sublink-sep">/</span>
-          <a href="#safety" class="footer-sublink">Cookie Policy</a>
+          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
         </div>
       </div>
 

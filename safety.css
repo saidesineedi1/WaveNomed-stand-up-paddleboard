@@ -1,11 +1,5 @@
-/* ==========================================================================
-   WaveNomad — Safety & Conditions Water Intelligence Stylesheet
-   Focus: Water Intelligence, Radar Telemetry, Conditions Guide, Readiness
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   00. BASE & CONTAINER UTILITIES
-   -------------------------------------------------------------------------- */
+
 .safety-page-body {
   background-color: var(--bg-primary);
   color: var(--primary-text);
@@ -25,6 +19,16 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
 }
 
 .section-title-wrap {
@@ -85,7 +89,6 @@
   margin-bottom: 0;
 }
 
-/* Monospace telemetry data chip style */
 .telemetry-tag {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 0.72rem;
@@ -95,9 +98,6 @@
   color: var(--primary-accent);
 }
 
-/* --------------------------------------------------------------------------
-   01. SECTION 01 — HERO BANNER (EXACT HOME 1 SYSTEM ALIGNMENT)
-   -------------------------------------------------------------------------- */
 .safety-hero-section {
   position: relative;
   min-height: 100vh;
@@ -287,9 +287,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   02. SECTION 02 — LIVE WATER CONDITIONS (WATER INTELLIGENCE RADAR)
-   -------------------------------------------------------------------------- */
 .conditions-intel-section {
   position: relative;
   background: var(--bg-secondary);
@@ -305,7 +302,6 @@
   margin-top: 2.5rem;
 }
 
-/* Circular Marine Telemetry / Radar Radar Stage (Left) */
 .marine-radar-display {
   position: relative;
   background: var(--surface-card);
@@ -322,11 +318,12 @@
   overflow: hidden;
 }
 
-/* Background Circular Compass Coordinate Grid */
 .radar-grid-rings {
   position: relative;
   width: 400px;
+  max-width: 90vw;
   height: 400px;
+  max-height: 90vw;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   display: flex;
@@ -383,7 +380,6 @@
   background: var(--border-color);
 }
 
-/* Live Sensor Node Pings on Radar */
 .radar-sensor-ping {
   position: absolute;
   cursor: pointer;
@@ -435,12 +431,10 @@
   box-shadow: var(--shadow-subtle);
 }
 
-/* Sensor Locations on Radar Map */
 .sensor-pier4 { top: 62%; left: 38%; }
 .sensor-emerald { top: 32%; left: 68%; }
 .sensor-fjord { top: 24%; left: 28%; }
 
-/* Radar Coordinate Stamp */
 .radar-coord-stamp {
   position: absolute;
   bottom: 1.5rem;
@@ -452,7 +446,6 @@
   flex-direction: column;
 }
 
-/* Telemetry Data Details Deck (Right) */
 .telemetry-details-deck {
   display: flex;
   flex-direction: column;
@@ -486,7 +479,6 @@
   text-transform: uppercase;
 }
 
-/* Telemetry Grid (6 Metrics) */
 .telemetry-metrics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -546,9 +538,6 @@
   color: var(--secondary-text);
 }
 
-/* --------------------------------------------------------------------------
-   03. SECTION 03 — SAFETY PROTOCOL (CONTINUOUS VERTICAL TIMELINE)
-   -------------------------------------------------------------------------- */
 .safety-protocol-section {
   position: relative;
   background: var(--bg-primary);
@@ -561,7 +550,6 @@
   padding: 1rem 0;
 }
 
-/* Continuous Vertical Animated Safety Line */
 .protocol-spine-line {
   position: absolute;
   top: 30px;
@@ -584,7 +572,6 @@
   transition: height 0.6s ease;
 }
 
-/* Protocol Step Item */
 .protocol-step-row {
   position: relative;
   display: flex;
@@ -597,7 +584,6 @@
   margin-bottom: 0;
 }
 
-/* Node Bullet */
 .protocol-step-node {
   position: relative;
   z-index: 2;
@@ -624,7 +610,6 @@
   box-shadow: 0 0 22px rgba(21, 151, 184, 0.45);
 }
 
-/* Step Content Card - Compact Height with Preserved Width */
 .protocol-step-card {
   flex-grow: 1;
   background: var(--surface-card);
@@ -673,7 +658,6 @@
   margin-bottom: 0.75rem;
 }
 
-/* Bulleted Sub-checklist */
 .protocol-check-pills {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -695,9 +679,6 @@
   font-size: 0.88rem;
 }
 
-/* --------------------------------------------------------------------------
-   04. SECTION 04 — CONDITIONS GUIDE (INTERACTIVE WATER CONDITION SLIDER)
-   -------------------------------------------------------------------------- */
 .conditions-guide-section {
   position: relative;
   background: var(--bg-secondary);
@@ -705,7 +686,6 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Large Horizontal Condition Slider Bar */
 .condition-slider-track-wrap {
   max-width: 820px;
   margin: 0 auto 3rem;
@@ -752,7 +732,6 @@
   background: currentColor;
 }
 
-/* Condition Simulator Showcase Deck */
 .condition-sim-card {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
@@ -767,7 +746,6 @@
   overflow: hidden;
 }
 
-/* Dynamic Animated Water Surface Canvas (Left) */
 .wave-sim-canvas-box {
   position: relative;
   width: 100%;
@@ -816,7 +794,6 @@
   backdrop-filter: blur(8px);
 }
 
-/* Animated SVG Wave Layers */
 .sim-waves-svg {
   width: 100%;
   height: 180px;
@@ -842,7 +819,6 @@
   to { transform: translateX(-40px); }
 }
 
-/* Condition Details Text (Right) */
 .condition-details-box {
   display: flex;
   flex-direction: column;
@@ -875,7 +851,6 @@
   margin-bottom: 2rem;
 }
 
-/* Key Parameters Matrix */
 .condition-param-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -906,9 +881,6 @@
   color: var(--primary-text);
 }
 
-/* --------------------------------------------------------------------------
-   05. SECTION 05 — WATER READINESS (PRE-PADDLE LAUNCH READINESS CHECK)
-   -------------------------------------------------------------------------- */
 .readiness-section {
   position: relative;
   background: var(--bg-primary);
@@ -924,7 +896,6 @@
   border: 1px solid var(--border-color);
 }
 
-/* Photographic Backdrop Canvas */
 .readiness-backdrop-canvas {
   position: absolute;
   inset: 0;
@@ -982,7 +953,6 @@
   margin: 0 auto;
 }
 
-/* Luxury Readiness Check Deck - Compact Height */
 .readiness-check-deck {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
@@ -1026,7 +996,6 @@
   color: #10B981;
 }
 
-/* Interactive Checklist Items - Compact Spacing */
 .readiness-checklist-list {
   display: flex;
   flex-direction: column;
@@ -1084,7 +1053,6 @@
   text-transform: uppercase;
 }
 
-/* Compact Deck Clearance Footer */
 .readiness-deck-footer {
   display: flex;
   align-items: center;
@@ -1123,7 +1091,6 @@
   transform: translateX(3px);
 }
 
-/* Supporting Trust Indicators Row */
 .readiness-trust-band {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1151,9 +1118,6 @@
   color: #E2F1F8;
 }
 
-/* --------------------------------------------------------------------------
-   06. SECTION 06 — SAFETY CTA CARD (COMPACT LUXURY CTA)
-   -------------------------------------------------------------------------- */
 .safety-cta-section {
   padding: 1.5rem var(--site-gutter) 4.5rem;
 }
@@ -1283,9 +1247,6 @@
   gap: 0.35rem;
 }
 
-/* --------------------------------------------------------------------------
-   06. RESPONSIVE DESIGN
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .safety-conditions-hud {
     grid-template-columns: 1fr 1fr;
@@ -1392,7 +1353,6 @@
   }
 }
 
-/* RTL Support */
 [dir="rtl"] .protocol-spine-line {
   left: auto;
   right: 30px;

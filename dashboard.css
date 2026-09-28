@@ -1,16 +1,10 @@
-/* ==========================================================================
-   WaveNomad — Guest Expedition Dashboard Stylesheet
-   Color Palette: Strict Alignment with WaveNomad Home 1 (Morning Fresh Alpine & Twilight)
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   00. HOME 1 CORE DESIGN SYSTEM TOKENS
-   -------------------------------------------------------------------------- */
+
 :root {
   --portal-sidebar-w: 280px;
   --portal-topbar-h: 88px;
 
-  /* Home 1 Light Mode Color Palette (Morning Fresh Alpine) */
+  
   --bg-primary: #F4FAFC;
   --bg-secondary: #E7F3F7;
   --surface-card: #FFFFFF;
@@ -22,7 +16,7 @@
   --border-color: #C7DCE3;
   --btn-text: #FFFFFF;
 
-  /* Dashboard Specialized Tokens */
+  
   --portal-bg: #F4FAFC;
   --portal-sidebar-bg: #E7F3F7;
   --portal-card-bg: #FFFFFF;
@@ -32,7 +26,7 @@
   --portal-active-pill: #1597B8;
   --portal-active-text: #FFFFFF;
 
-  /* Accents */
+  
   --portal-cyan: #1597B8;
   --portal-cyan-light: #20B8D1;
   --portal-cyan-soft: #C9EEF5;
@@ -50,7 +44,6 @@
   --badge-glow: rgba(21, 151, 184, 0.25);
 }
 
-/* Home 1 Dark Mode Color Palette (Evening Twilight / Golden-Hour) */
 [data-theme="dark"] {
   --bg-primary: #071923;
   --bg-secondary: #0B2632;
@@ -63,7 +56,7 @@
   --border-color: #24505D;
   --btn-text: #041217;
 
-  /* Dashboard Specialized Tokens */
+  
   --portal-bg: #071923;
   --portal-sidebar-bg: #0B2632;
   --portal-card-bg: #102F3B;
@@ -73,7 +66,7 @@
   --portal-active-pill: #20B8D1;
   --portal-active-text: #071923;
 
-  /* Accents */
+  
   --portal-cyan: #20B8D1;
   --portal-cyan-light: #48D2E5;
   --portal-cyan-soft: #123F4C;
@@ -91,9 +84,16 @@
   --badge-glow: rgba(32, 184, 209, 0.65);
 }
 
-/* --------------------------------------------------------------------------
-   01. BASE APP RESET
-   -------------------------------------------------------------------------- */
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
+}
+
 *,
 *::before,
 *::after {
@@ -140,18 +140,12 @@ img {
 .text-sm { font-size: 0.8rem; }
 .text-center { text-align: center; }
 
-/* --------------------------------------------------------------------------
-   02. APP LAYOUT STRUCTURE
-   -------------------------------------------------------------------------- */
 .dashboard-app-layout {
   display: flex;
   min-height: 100vh;
   position: relative;
 }
 
-/* --------------------------------------------------------------------------
-   03. LEFT SIDEBAR NAVIGATION
-   -------------------------------------------------------------------------- */
 .dashboard-sidebar {
   width: var(--portal-sidebar-w);
   background-color: var(--portal-sidebar-bg);
@@ -176,7 +170,6 @@ img {
   border-left: 1px solid var(--portal-card-border);
 }
 
-/* Sidebar Brand Logo */
 .sidebar-brand-wrap {
   margin-bottom: 2.2rem;
   padding-bottom: 1.2rem;
@@ -201,10 +194,20 @@ img {
   flex-shrink: 0;
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .sidebar-brand-link:hover .sidebar-brand-emblem {
   transform: rotate(10deg);
+}
+
+.sidebar-brand-emblem img,
+.brand-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .sidebar-brand-emblem svg {
@@ -235,7 +238,6 @@ img {
   margin-top: 0.15rem;
 }
 
-/* Sidebar Navigation Items */
 .sidebar-section-label {
   display: block;
   font-size: 0.7rem;
@@ -309,7 +311,6 @@ img {
   text-overflow: ellipsis;
 }
 
-/* Badges inside Sidebar Nav */
 .sidebar-badge {
   font-size: 0.7rem;
   font-weight: 800;
@@ -357,7 +358,6 @@ img {
   100% { transform: scale(0.9); opacity: 0.8; }
 }
 
-/* Sidebar Footer (VIP Member Badge & Return Menu) */
 .sidebar-footer-card {
   margin-top: 2rem;
   display: flex;
@@ -411,7 +411,6 @@ img {
   color: var(--portal-text-muted);
 }
 
-/* Return to Main Site Dropdown */
 .sidebar-return-dropdown-wrap {
   position: relative;
 }
@@ -503,9 +502,6 @@ img {
   background: var(--primary-accent);
 }
 
-/* --------------------------------------------------------------------------
-   04. MAIN APP VIEWPORT
-   -------------------------------------------------------------------------- */
 .dashboard-viewport {
   flex: 1;
   margin-left: var(--portal-sidebar-w);
@@ -521,9 +517,6 @@ img {
   margin-right: var(--portal-sidebar-w);
 }
 
-/* --------------------------------------------------------------------------
-   05. TOP BAR (HOME 1 DESIGN STYLING)
-   -------------------------------------------------------------------------- */
 .dashboard-topbar {
   height: var(--portal-topbar-h);
   padding: 0 2.5rem;
@@ -567,7 +560,6 @@ img {
   line-height: 1.15;
 }
 
-/* Topbar Controls Block */
 .topbar-controls-block {
   display: flex;
   align-items: center;
@@ -589,7 +581,6 @@ img {
   border-radius: 2px;
 }
 
-/* Search Box */
 .topbar-search-box {
   display: flex;
   align-items: center;
@@ -627,7 +618,6 @@ img {
   color: var(--portal-text-muted);
 }
 
-/* Topbar Pill Buttons & Icons */
 .topbar-pill-btn {
   background: var(--portal-card-bg);
   border: 1px solid var(--portal-card-border);
@@ -672,7 +662,6 @@ img {
   height: 18px;
 }
 
-/* Notification Bell Dropdown */
 .topbar-notif-wrap {
   position: relative;
 }
@@ -767,7 +756,6 @@ img {
   display: block;
 }
 
-/* User Profile Pill */
 .topbar-user-wrap {
   position: relative;
 }
@@ -831,7 +819,6 @@ img {
   transform: rotate(180deg);
 }
 
-/* User Profile Dropdown */
 .topbar-user-dropdown {
   position: absolute;
   top: calc(100% + 10px);
@@ -951,9 +938,6 @@ img {
   height: 16px;
 }
 
-/* --------------------------------------------------------------------------
-   06. MAIN DASHBOARD VIEWPORT
-   -------------------------------------------------------------------------- */
 .dashboard-main-view {
   flex: 1;
   padding: 0 2.5rem 3rem;
@@ -973,9 +957,6 @@ img {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --------------------------------------------------------------------------
-   07. TOP 4 METRICS ROW (MATCHING REFERENCE UI WITH HOME 1 PALETTE)
-   -------------------------------------------------------------------------- */
 .portal-metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1110,9 +1091,6 @@ img {
   color: var(--portal-text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   08. CHARTS GRID (HOME 1 TURQUOISE GLOW & CATEGORY BARS)
-   -------------------------------------------------------------------------- */
 .portal-charts-grid {
   display: grid;
   grid-template-columns: 1.8fr 1.2fr;
@@ -1160,7 +1138,6 @@ img {
   color: var(--portal-text-muted);
 }
 
-/* Chart Filter Toggle (6 Months / 1 Year) */
 .chart-filter-toggle {
   display: flex;
   background: var(--bg-secondary);
@@ -1183,7 +1160,6 @@ img {
   color: #FFFFFF;
 }
 
-/* Legend Strip */
 .chart-legend-strip {
   display: flex;
   align-items: center;
@@ -1213,7 +1189,6 @@ img {
   background: var(--portal-cyan-light);
 }
 
-/* SVG Line Chart */
 .svg-chart-container {
   width: 100%;
   height: 240px;
@@ -1232,7 +1207,6 @@ img {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Right Card: Category Bar Chart */
 .category-bars-chart {
   display: flex;
   gap: 1rem;
@@ -1302,7 +1276,6 @@ img {
   white-space: nowrap;
 }
 
-/* Slider Track at bottom of bar chart */
 .chart-slider-track {
   width: 100%;
   height: 8px;
@@ -1318,9 +1291,6 @@ img {
   border-radius: 999px;
 }
 
-/* --------------------------------------------------------------------------
-   09. OVERVIEW QUICK STRIP
-   -------------------------------------------------------------------------- */
 .overview-quick-strip {
   margin-top: 1.5rem;
 }
@@ -1372,7 +1342,6 @@ img {
   flex-wrap: wrap;
 }
 
-/* Home 1 Style Buttons */
 .dash-btn {
   display: inline-flex;
   align-items: center;
@@ -1425,9 +1394,6 @@ img {
   color: var(--portal-coral);
 }
 
-/* --------------------------------------------------------------------------
-   10. OTHER VIEWS (BOOKINGS, EQUIPMENT, WEATHER, WAIVERS, BILLING)
-   -------------------------------------------------------------------------- */
 .view-header-strip {
   display: flex;
   justify-content: space-between;
@@ -1449,7 +1415,6 @@ img {
   color: var(--portal-text-muted);
 }
 
-/* Booking Stream */
 .portal-reservations-stream {
   display: flex;
   flex-direction: column;
@@ -1556,7 +1521,6 @@ img {
   flex-wrap: wrap;
 }
 
-/* Equipment Grid */
 .equipment-portal-grid {
   display: grid;
   grid-template-columns: 340px 1fr;
@@ -1652,7 +1616,6 @@ img {
   color: var(--portal-text-muted);
 }
 
-/* Weather Grid */
 .weather-grid-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1677,7 +1640,6 @@ img {
   border-radius: 999px;
 }
 
-/* Waiver Certificate Box */
 .waiver-cert-box {
   border: 1px solid var(--primary-accent);
   background: linear-gradient(135deg, var(--portal-card-bg) 0%, var(--soft-accent) 100%);
@@ -1732,7 +1694,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Billing Table */
 .portal-doc-table {
   width: 100%;
   border-collapse: collapse;
@@ -1772,7 +1733,6 @@ img {
   color: #FFFFFF;
 }
 
-/* Settings Form Grid */
 .settings-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1820,9 +1780,6 @@ img {
   gap: 1rem;
 }
 
-/* --------------------------------------------------------------------------
-   11. MODALS
-   -------------------------------------------------------------------------- */
 .portal-modal-overlay {
   position: fixed;
   top: 0;
@@ -1930,9 +1887,6 @@ img {
   border-radius: 4px;
 }
 
-/* --------------------------------------------------------------------------
-   12. TOAST NOTIFICATIONS
-   -------------------------------------------------------------------------- */
 .portal-toast-container {
   position: fixed;
   bottom: 2rem;
@@ -1963,9 +1917,6 @@ img {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --------------------------------------------------------------------------
-   13. RESPONSIVE BREAKPOINTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .dashboard-sidebar {
     transform: translateX(-100%);
@@ -1993,21 +1944,62 @@ img {
   }
 }
 
+.topbar-pill-btn.rtl-btn,
 .topbar-pill-btn.rtl-toggle-btn {
   height: 34px;
   min-height: 34px;
   max-height: 34px;
-  min-width: 84px;
-  padding: 3px;
+  min-width: 48px;
+  padding: 0 12px;
   border-radius: 999px;
   display: inline-flex !important;
-  flex-direction: row !important;
-  direction: ltr !important;
   align-items: center;
-  justify-content: space-between;
-  gap: 2px;
+  justify-content: center;
   cursor: pointer;
   user-select: none;
   background: var(--portal-card-bg, #ffffff);
   border: 1px solid var(--portal-card-border, rgba(16, 42, 67, 0.18));
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--portal-text-dark, #102a43);
+  transition: all 0.2s ease;
+}
+
+.topbar-pill-btn.rtl-btn:hover,
+.topbar-pill-btn.rtl-toggle-btn:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+  background: var(--soft-accent);
+  transform: translateY(-1px);
+}
+
+html:not([dir="rtl"]) .topbar-pill-btn .rtl-text-rtl {
+  display: none !important;
+}
+html:not([dir="rtl"]) .topbar-pill-btn .rtl-text-ltr {
+  display: inline !important;
+}
+
+html[dir="rtl"] .topbar-pill-btn .rtl-text-ltr {
+  display: none !important;
+}
+html[dir="rtl"] .topbar-pill-btn .rtl-text-rtl {
+  display: inline !important;
+}
+
+[data-theme="dark"] .topbar-pill-btn.rtl-btn,
+[data-theme="dark"] .topbar-pill-btn.rtl-toggle-btn {
+  background: var(--portal-dark-card, #102a43);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .topbar-pill-btn.rtl-btn:hover,
+[data-theme="dark"] .topbar-pill-btn.rtl-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
 }

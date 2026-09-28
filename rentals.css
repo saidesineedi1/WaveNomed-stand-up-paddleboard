@@ -1,12 +1,10 @@
-/* ==========================================================================
-   WaveNomad - Rentals Page Stylesheet
-   Luxury Outdoor Equipment Showroom & Interactive Rental Configurator
-   100% Brand Consistency with Home 1 Design System
-   ========================================================================== */
 
-/* ==========================================================================
-   01. HERO SECTION (CINEMATIC WATER-LEVEL SHOWROOM)
-   ========================================================================== */
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
 .rentals-hero-section {
   position: relative;
   min-height: 100vh;
@@ -42,7 +40,6 @@
   filter: brightness(0.82) contrast(1.1);
 }
 
-/* Water Ripples */
 .hero-ripple {
   position: absolute;
   right: 28%;
@@ -89,7 +86,6 @@
   }
 }
 
-/* Sunlight Shimmer Sweep */
 .hero-light-sweep {
   position: absolute;
   inset: 0;
@@ -119,7 +115,6 @@
   }
 }
 
-/* Water Caustics & Vignette Overlay */
 .hero-vignette-overlay {
   position: absolute;
   inset: 0;
@@ -146,7 +141,6 @@
   pointer-events: none;
 }
 
-/* Hero Content Block */
 .rentals-hero-container {
   position: relative;
   z-index: 2;
@@ -209,9 +203,14 @@
   margin-bottom: 1.25rem;
 }
 
-.hero-headline-accent {
-  color: var(--primary-accent);
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
   position: relative;
+  display: inline;
 }
 
 .rentals-hero-desc {
@@ -230,7 +229,6 @@
   margin-bottom: 2.8rem;
 }
 
-/* Primary Action Button (Brand Standard) */
 .btn-primary-action,
 .btn-primary-reserve {
   display: inline-flex;
@@ -292,7 +290,6 @@
   transform: translateX(4px);
 }
 
-/* Service Perks Strip */
 .rentals-hero-perks {
   display: flex;
   align-items: center;
@@ -318,7 +315,6 @@
   flex-shrink: 0;
 }
 
-/* Scroll Cue */
 .hero-scroll-cue {
   position: absolute;
   bottom: 2rem;
@@ -398,16 +394,11 @@
   }
 }
 
-
-/* ==========================================================================
-   02. RENTAL COLLECTION (IMMERSIVE BOARD SHOWROOM SELECTOR)
-   ========================================================================== */
 .rentals-collection-section {
   position: relative;
   padding: 5.5rem var(--site-gutter) 6rem;
 }
 
-/* Horizontal Category Filter Bar */
 .collection-category-bar {
   display: flex;
   align-items: center;
@@ -460,18 +451,16 @@
   transform: scale(1.3);
 }
 
-/* Showroom Stage Outer Container */
 .showroom-stage {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-/* Navigation Arrow Overlays */
 .showroom-nav-arrow {
   position: absolute;
   top: calc(1rem + 190px);
-  /* card padding-top + half image frame height (380px/2) */
+  
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
@@ -503,7 +492,6 @@
   right: -1.6rem;
 }
 
-/* Showroom Grid */
 .showroom-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -511,7 +499,6 @@
   align-items: stretch;
 }
 
-/* Visual Presentation Deck */
 .showroom-visual-wrap {
   display: flex;
   flex-direction: column;
@@ -588,7 +575,6 @@
   pointer-events: none;
 }
 
-/* Thumbnail Quick-Switcher Strip */
 .showroom-thumb-strip {
   display: flex;
   gap: 0.75rem;
@@ -638,7 +624,6 @@
   color: var(--primary-accent);
 }
 
-/* Specifications Card */
 .showroom-specs-card {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
@@ -702,7 +687,6 @@
   margin-bottom: 0.85rem;
 }
 
-/* Metric Grid */
 .specs-data-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -759,7 +743,6 @@
   transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Included Equipment */
 .specs-included-box {
   margin-bottom: 0.85rem;
 }
@@ -785,7 +768,6 @@
   color: var(--secondary-text);
 }
 
-/* Action Footer */
 .specs-footer-action {
   display: flex;
   align-items: center;
@@ -834,10 +816,6 @@
   font-size: 0.9rem;
 }
 
-
-/* ==========================================================================
-   03. BOARD DETAIL EXPERIENCE (BUILT FOR YOUR WATER)
-   ========================================================================== */
 .rentals-detail-section {
   position: relative;
   padding: 6rem var(--site-gutter) 6.5rem;
@@ -855,7 +833,6 @@
   justify-content: center;
 }
 
-/* Centered Board Presentation */
 .detail-board-container {
   position: relative;
   width: 100%;
@@ -892,7 +869,6 @@
   z-index: -1;
 }
 
-/* Interactive Hotspot Pins on Board */
 .board-hotspot-pin {
   position: absolute;
   width: 32px;
@@ -947,7 +923,6 @@
   color: var(--primary-accent);
 }
 
-/* Pin Coordinates along the horizontal board */
 .pin-stability {
   top: 22%;
   left: 48%;
@@ -973,7 +948,6 @@
   left: 64%;
 }
 
-/* Floating Specification Callout Cards */
 .spec-callout-card {
   position: absolute;
   width: 250px;
@@ -1028,7 +1002,6 @@
   border-radius: 4px;
 }
 
-/* Callout Positions around the central board */
 .callout-stability {
   top: 0;
   left: 45%;
@@ -1055,16 +1028,11 @@
   right: 2%;
 }
 
-
-/* ==========================================================================
-   04. RENTAL PLANS & AVAILABILITY (DURATION SELECTOR)
-   ========================================================================== */
 .rentals-plans-section {
   position: relative;
   padding: 6rem var(--site-gutter) 6.5rem;
 }
 
-/* Duration Selector Bar */
 .duration-selector-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1144,7 +1112,6 @@
   color: rgba(255, 255, 255, 0.88);
 }
 
-/* Selected Plan Expansion Card */
 .selected-plan-card {
   max-width: 1080px;
   margin: 0 auto;
@@ -1255,7 +1222,6 @@
   color: var(--primary-text);
 }
 
-/* Plan Quick Stats Strip */
 .plan-quick-stats {
   display: flex;
   gap: 0.75rem;
@@ -1318,7 +1284,6 @@
   width: 100%;
 }
 
-/* Features Column */
 .plan-features-column {
   border-left: 1px solid var(--border-color);
   padding-left: 3.2rem;
@@ -1400,16 +1365,11 @@
   flex-shrink: 0;
 }
 
-
-/* ==========================================================================
-   05. RENTAL JOURNEY + CINEMATIC FINAL CTA
-   ========================================================================== */
 .rentals-journey-section {
   position: relative;
   padding: 6.5rem var(--site-gutter) 7rem;
 }
 
-/* Horizontal 5-Stage Journey Track */
 .journey-track-wrap {
   position: relative;
   max-width: 1220px;
@@ -1539,9 +1499,6 @@
   border-radius: 6px;
 }
 
-/* ==========================================================================
-   CINEMATIC FINAL RENTAL CTA BANNER
-   ========================================================================== */
 .rentals-final-cta-banner {
   position: relative;
   max-width: 840px;
@@ -1662,10 +1619,6 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-
-/* ==========================================================================
-   06. INTERACTIVE RESERVATION CONFIGURATOR MODAL
-   ========================================================================== */
 .reservation-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1885,7 +1838,6 @@
   font-size: 1rem;
 }
 
-/* Success State Box */
 .modal-success-state {
   text-align: center;
   padding: 2rem 1rem 1rem;
@@ -1922,10 +1874,6 @@
   margin-bottom: 1.8rem;
 }
 
-
-/* ==========================================================================
-   07. RESPONSIVE DESIGN FOR RENTALS SHOWROOM
-   ========================================================================== */
 @media (max-width: 1200px) {
   .interactive-board-stage {
     min-height: 520px;

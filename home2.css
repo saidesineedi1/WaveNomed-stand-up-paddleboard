@@ -1,11 +1,7 @@
-/* ==========================================================================
-   WaveNomad - Home 2: Sunset & Twilight Paddleboard Experience
-   Styles aligned with Home 1 typography and color tokens
-   ========================================================================== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/* --- Light Mode Color Palette (Alpine Fresh Daylight) --- */
 :root {
   --bg-primary: #F4FAFC;
   --bg-secondary: #E7F3F7;
@@ -17,8 +13,6 @@
   --soft-accent: #C9EEF5;
   --border-color: #C7DCE3;
   --btn-text: #FFFFFF;
-
-  /* Glassmorphism & Header */
   --nav-bg: rgba(244, 250, 252, 0.85);
   --nav-border: rgba(199, 220, 227, 0.65);
   --glass-bg: rgba(255, 255, 255, 0.82);
@@ -37,7 +31,11 @@
   --site-gutter: clamp(2.5rem, 5.5vw, 6.5rem);
 }
 
-/* --- Dark Mode Color Palette (Sunset Alpenglow & Twilight) --- */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
 [data-theme="dark"] {
   --bg-primary: #071923;
   --bg-secondary: #0B2632;
@@ -50,7 +48,7 @@
   --border-color: #24505D;
   --btn-text: #041217;
 
-  /* Glassmorphism & Header */
+  
   --nav-bg: rgba(7, 25, 35, 0.78);
   --nav-border: rgba(36, 80, 93, 0.6);
   --glass-bg: rgba(16, 47, 59, 0.85);
@@ -67,7 +65,6 @@
       rgba(32, 184, 209, 0.22) 100%);
 }
 
-/* --- Base & Reset --- */
 *,
 *::before,
 *::after {
@@ -120,7 +117,6 @@ img {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* --- Global Section Wrappers --- */
 .section-wrap {
   padding: 6.5rem var(--site-gutter);
   position: relative;
@@ -162,15 +158,22 @@ img {
   letter-spacing: -0.02em;
 }
 
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
+}
+
 .section-desc {
   font-size: 1.05rem;
   color: var(--secondary-text);
   line-height: 1.65;
 }
 
-/* ==========================================================================
-   BUTTONS & HOVER EFFECTS (CONSISTENT WITH HOME 1)
-   ========================================================================== */
 .btn-header-login,
 .cta-pill-primary,
 .btn-card-reserve,
@@ -213,7 +216,6 @@ img {
   margin-top: 1rem;
 }
 
-/* Dark Mode Primary Button */
 [data-theme="dark"] .btn-header-login,
 [data-theme="dark"] .cta-pill-primary,
 [data-theme="dark"] .btn-card-reserve,
@@ -223,7 +225,6 @@ img {
   box-shadow: 0 0 22px rgba(28, 181, 216, 0.55);
 }
 
-/* Primary Button Hover States */
 .btn-header-login:hover,
 .cta-pill-primary:hover,
 .btn-card-reserve:hover,
@@ -243,7 +244,6 @@ img {
   box-shadow: 0 0 30px rgba(72, 210, 229, 0.8);
 }
 
-/* Secondary Button (Frosted Glass with Cyan Tint Hover) */
 .cta-pill-secondary {
   display: inline-flex;
   align-items: center;
@@ -283,9 +283,6 @@ img {
   box-shadow: 0 6px 20px rgba(32, 184, 209, 0.35);
 }
 
-/* ==========================================================================
-   HEADER & NAVIGATION (REFERENCE ALIGNMENT AS HOME 1)
-   ========================================================================== */
 .site-header {
   position: absolute;
   top: 0;
@@ -337,7 +334,6 @@ img {
   gap: 1.5rem;
 }
 
-/* Circular Emblem & Logo */
 .brand-link {
   display: flex;
   align-items: center;
@@ -355,10 +351,20 @@ img {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .brand-link:hover .brand-emblem-circle {
   transform: scale(1.05);
+}
+
+.brand-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .brand-emblem-svg {
@@ -388,7 +394,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Nav Menu & Reference Underline */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -468,7 +473,6 @@ img {
   transform: rotate(180deg);
 }
 
-/* Dropdown Menu */
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 0.6rem);
@@ -532,7 +536,6 @@ img {
   margin-top: 0.15rem;
 }
 
-/* Header Controls Right */
 .header-actions {
   display: flex;
   align-items: center;
@@ -627,115 +630,78 @@ img {
   transform: scale(1.1);
 }
 
+.action-control-btn.rtl-btn,
 .lang-pill-btn,
 .rtl-toggle-btn {
   height: 34px;
   min-height: 34px;
   max-height: 34px;
-  min-width: 84px;
-  padding: 3px;
+  min-width: 48px;
+  padding: 0 12px;
   margin: 0;
   box-sizing: border-box;
   flex-shrink: 0;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(16, 42, 67, 0.22);
   display: inline-flex !important;
-  flex-direction: row !important;
-  direction: ltr !important;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2px;
-  cursor: pointer;
-  user-select: none;
-  transition: var(--transition-smooth);
-}
-
-.rtl-toggle-btn .rtl-opt {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 8px;
-  height: 26px;
-  line-height: 1;
-  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.70rem;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--secondary-text, #627d98);
-  transition: all 0.22s ease;
-  pointer-events: none;
+  color: var(--primary-text);
+  transition: var(--transition-smooth);
 }
 
-/* Default / LTR mode: left side (LTR) active */
-html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-ltr {
-  background: var(--primary-accent, #1597B8);
-  color: #ffffff !important;
-  box-shadow: 0 1px 4px rgba(21, 151, 184, 0.35);
-}
-
-html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-rtl {
-  background: transparent;
-  color: var(--secondary-text, #627d98);
-  box-shadow: none;
-}
-
-/* RTL mode: right side (RTL) active */
-html[dir="rtl"] .rtl-toggle-btn .rtl-opt-rtl {
-  background: var(--primary-accent, #1597B8);
-  color: #ffffff !important;
-  box-shadow: 0 1px 4px rgba(21, 151, 184, 0.35);
-}
-
-html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
-  background: transparent;
-  color: var(--secondary-text, #627d98);
-  box-shadow: none;
-}
-
-/* Dark Theme states */
-[data-theme="dark"] .lang-pill-btn,
-[data-theme="dark"] .rtl-toggle-btn {
-  background: rgba(16, 42, 67, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-}
-
-[data-theme="dark"] html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-ltr {
-  background: var(--primary-accent, #20B8D1);
-  color: #031525 !important;
-  box-shadow: 0 1px 6px rgba(32, 184, 209, 0.45);
-}
-
-[data-theme="dark"] html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-rtl {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-[data-theme="dark"] html[dir="rtl"] .rtl-toggle-btn .rtl-opt-rtl {
-  background: var(--primary-accent, #20B8D1);
-  color: #031525 !important;
-  box-shadow: 0 1px 6px rgba(32, 184, 209, 0.45);
-}
-
-[data-theme="dark"] html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
-  color: rgba(255, 255, 255, 0.65);
-}
-
+.action-control-btn.rtl-btn:hover,
 .lang-pill-btn:hover,
 .rtl-toggle-btn:hover {
   border-color: var(--primary-accent);
-  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-accent);
+  background: rgba(255, 255, 255, 0.88);
   transform: translateY(-1px);
 }
 
+[data-theme="dark"] .action-control-btn.rtl-btn,
+[data-theme="dark"] .lang-pill-btn,
+[data-theme="dark"] .rtl-toggle-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .action-control-btn.rtl-btn:hover,
 [data-theme="dark"] .lang-pill-btn:hover,
 [data-theme="dark"] .rtl-toggle-btn:hover {
-  background: rgba(16, 42, 67, 0.85);
+  background: rgba(255, 255, 255, 0.2);
   border-color: var(--primary-accent);
+  color: var(--primary-accent);
   transform: translateY(-1px);
+}
+
+html:not([dir="rtl"]) .rtl-btn .rtl-text-rtl,
+html:not([dir="rtl"]) .rtl-toggle-btn .rtl-text-rtl {
+  display: none !important;
+}
+html:not([dir="rtl"]) .rtl-btn .rtl-text-ltr,
+html:not([dir="rtl"]) .rtl-toggle-btn .rtl-text-ltr {
+  display: inline !important;
+}
+
+html[dir="rtl"] .rtl-btn .rtl-text-ltr,
+html[dir="rtl"] .rtl-toggle-btn .rtl-text-ltr {
+  display: none !important;
+}
+html[dir="rtl"] .rtl-btn .rtl-text-rtl,
+html[dir="rtl"] .rtl-toggle-btn .rtl-text-rtl {
+  display: inline !important;
 }
 
 .btn-header-login {
@@ -810,7 +776,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Nav anchor offset helper */
 .nav-anchor {
   display: block;
   position: relative;
@@ -821,17 +786,12 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   padding: 0;
 }
 
-/* ==========================================================================
-   PREMIUM HERO BANNER (EXCLUSIVE HOME 2 SUNSET HERO)
-   ========================================================================== */
 .home2-hero {
   position: relative;
-  height: 110vh;
-  min-height: 480px;
-  max-height: 680px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   overflow: hidden;
   padding: 0;
 }
@@ -872,7 +832,7 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   top: 16%;
   right: 14%;
   font-family: 'Caveat', cursive;
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-size: clamp(2.3rem, 3.3vw, 3.4rem);
   font-weight: 700;
   color: var(--hero-script-color);
   transform: rotate(-7deg);
@@ -888,7 +848,11 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   max-width: 1480px;
   width: 100%;
   margin: 0 auto;
-  padding: 5.2rem var(--site-gutter) 2.2rem;
+  padding: 6.8rem var(--site-gutter) 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .home2-hero-grid {
@@ -896,13 +860,26 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3.5rem;
   align-items: center;
+  width: 100%;
 }
 
-/* Left Hero Copy */
 .home2-hero-copy {
   display: flex;
   flex-direction: column;
-  max-width: 540px;
+  max-width: 530px;
+  animation: fadeInHero 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInHero {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .home2-live-telemetry-badge {
@@ -915,12 +892,12 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   -webkit-backdrop-filter: blur(12px);
   padding: 0.35rem 0.95rem;
   border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   color: var(--primary-accent);
   width: fit-content;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.1rem;
   box-shadow: var(--shadow-subtle);
 }
 
@@ -949,35 +926,47 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
 }
 
 .home2-hero-title {
-  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-size: clamp(3.4rem, 5.2vw, 5.2rem);
   font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  line-height: 1.0;
+  letter-spacing: -0.025em;
   color: var(--primary-text);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .home2-hero-title {
+  color: #ffffff;
+}
+
+.home2-hero-title .headline-word {
+  display: block;
 }
 
 .title-highlight {
-  background: linear-gradient(135deg, #F8D8A8 0%, #20B8D1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
 }
 
 .home2-hero-desc {
-  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
-  line-height: 1.58;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.6;
   color: var(--secondary-text);
-  margin-bottom: 1.4rem;
-  max-width: 530px;
+  margin-bottom: 1.8rem;
+  max-width: 480px;
+}
+
+[data-theme="dark"] .home2-hero-desc {
+  color: #E2F1F8;
 }
 
 .home2-hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.9rem;
-  margin-bottom: 1.6rem;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
 }
 
 .cta-arrow {
@@ -988,47 +977,67 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateX(4px);
 }
 
-/* Trust Bar Strip */
 .home2-hero-trust-bar {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
-  padding-top: 1.2rem;
+  justify-content: space-between;
+  gap: 1.2rem;
+  max-width: 480px;
+  padding-top: 1.4rem;
   border-top: 1px solid var(--border-color);
 }
 
 .trust-stat {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
 
 .stat-big {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--primary-text);
-  line-height: 1.2;
+  line-height: 1.1;
+}
+
+[data-theme="dark"] .stat-big {
+  color: #ffffff;
 }
 
 .stat-sub {
   font-size: 0.74rem;
   color: var(--secondary-text);
   font-weight: 600;
+  line-height: 1.25;
+}
+
+[data-theme="dark"] .stat-sub {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .trust-divider {
   width: 1px;
   height: 28px;
   background: var(--border-color);
+  opacity: 0.55;
 }
 
-/* Right Side: Clean scenic space matching Home 1 */
 .hero-spacer {
   display: block;
 }
 
-/* ==========================================================================
-   01. THE PADDLEBOARD EXPERIENCE
-   ========================================================================== */
+[dir="rtl"] .home2-hero-copy {
+  text-align: right;
+}
+
+[dir="rtl"] .home2-hero-actions {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .home2-hero-trust-bar {
+  justify-content: space-between;
+}
+
 .experience-showcase-grid {
   display: grid;
   grid-template-columns: 1.12fr 0.98fr;
@@ -1132,7 +1141,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   background: rgba(32, 184, 209, 0.18);
 }
 
-/* Media & Hotspot Card */
 .experience-visual-col {
   position: relative;
   display: flex;
@@ -1173,7 +1181,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   pointer-events: none;
 }
 
-/* Floating Hotspot Pins */
 .hotspot-pin {
   position: absolute;
   width: 32px;
@@ -1284,9 +1291,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: var(--secondary-text);
 }
 
-/* ==========================================================================
-   02. CHOOSE YOUR ADVENTURE
-   ========================================================================== */
 .adventures-card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1430,9 +1434,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   font-size: 0.82rem;
 }
 
-/* ==========================================================================
-   03. YOUR DAY ON THE WATER
-   ========================================================================== */
 .day-flow-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -1440,7 +1441,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   align-items: center;
 }
 
-/* Rotator Container & Vertical Track (Up to Down Flow) */
 .day-rotator-container {
   position: relative;
   height: 470px;
@@ -1451,7 +1451,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: var(--shadow-elevated);
 }
 
-/* Glass Edge Fades (Smooth in/out visual fade) */
 .rotator-fade-top,
 .rotator-fade-bottom {
   position: absolute;
@@ -1472,7 +1471,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   background: linear-gradient(0deg, var(--surface-card) 0%, transparent 100%);
 }
 
-/* Top Floating Bar: Live Indicator + Prev/Next Controls */
 .rotator-header-bar {
   position: absolute;
   top: 1rem;
@@ -1552,7 +1550,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: scale(1.08);
 }
 
-/* Continuous Vertical Up-to-Down Rotating Track */
 .day-rotator-track {
   display: flex;
   flex-direction: column;
@@ -1576,7 +1573,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* Individual Rotator Card */
 .rotator-card {
   position: relative;
   border-radius: 18px;
@@ -1685,7 +1681,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   overflow: hidden;
 }
 
-/* Flow Steps Vertical Timeline - Compact Cards */
 .day-flow-steps-col {
   display: flex;
   flex-direction: column;
@@ -1782,9 +1777,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   line-height: 1.4;
 }
 
-/* ==========================================================================
-   04. LIVE WATER INTELLIGENCE
-   ========================================================================== */
 .intel-dashboard-card {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
@@ -1886,7 +1878,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   max-width: 140px;
 }
 
-/* Modern Metric Icon */
 .metric-icon-wrap {
   width: 32px;
   height: 32px;
@@ -1911,7 +1902,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 4px 12px var(--badge-glow);
 }
 
-/* Aligned Main Values */
 .metric-main-val {
   font-size: 2rem;
   font-weight: 700;
@@ -1930,7 +1920,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: var(--secondary-text);
 }
 
-/* Standardized Badge Slot */
 .metric-badge-slot {
   min-height: 32px;
   display: flex;
@@ -1965,7 +1954,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 6px #10B981;
 }
 
-/* Bottom Note (Pinned to Bottom with standard height) */
 .metric-note {
   margin-top: auto;
   padding-top: 0.75rem;
@@ -2010,9 +1998,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   font-style: italic;
 }
 
-/* ==========================================================================
-   05. YOUR ADVENTURE PASS
-   ========================================================================== */
 .passes-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2142,10 +2127,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   font-size: 0.88rem;
 }
 
-
-/* ==========================================================================
-   06. EXPEDITION TIMELINE (SNAKE & CHAIN ORDER)
-   ========================================================================== */
 .snake-timeline-section {
   position: relative;
   overflow: hidden;
@@ -2159,7 +2140,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin: 0 auto;
 }
 
-/* Rows for Snake serpentine layout - Generous card-to-card gap */
 .snake-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2172,8 +2152,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-bottom: 0;
 }
 
-/* Row 2: Reverse flow (Links 04, 05, 06) */
-/* On desktop (>992px), Link 04 sits on right under Link 03, Link 05 in center, Link 06 on left */
 @media (min-width: 993px) {
   .snake-row-reverse [data-link="4"] {
     grid-column: 3;
@@ -2189,7 +2167,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* Snake Card Container - Compact & Sleek */
 .snake-card {
   position: relative;
   display: flex;
@@ -2216,7 +2193,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: var(--shadow-elevated), 0 0 18px rgba(21, 151, 184, 0.15);
 }
 
-/* Card Header: Chain Badge & Time Pill */
 .snake-card-header {
   display: flex;
   align-items: center;
@@ -2300,7 +2276,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   border-color: rgba(242, 142, 43, 0.35);
 }
 
-/* Card Media - Compact Height */
 .snake-card-media {
   position: relative;
   width: 100%;
@@ -2345,7 +2320,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Card Body - Tight & Readable */
 .snake-card-body {
   display: flex;
   flex-direction: column;
@@ -2369,7 +2343,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   flex-grow: 1;
 }
 
-/* Card Footer: Waypoint & Pulse Dot */
 .snake-card-footer {
   display: flex;
   align-items: center;
@@ -2433,10 +2406,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* ==========================================================================
-   CARD-TO-CARD FLOW ARROWS (DESKTOP & MOBILE)
-   Centered in the card gap with plenty of breathing room (never touches cards)
-   ========================================================================== */
 .card-arrow-connector {
   position: absolute;
   z-index: 10;
@@ -2446,21 +2415,18 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   pointer-events: none;
 }
 
-/* Rightward arrows for Row 1: centered precisely in the 3.2rem gap */
 .card-arrow-connector.arrow-right {
   right: -1.6rem;
   top: 50%;
   transform: translate(50%, -50%);
 }
 
-/* Leftward arrows for Row 2: centered precisely in the 3.2rem gap */
 .card-arrow-connector.arrow-left {
   left: -1.6rem;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* Hidden by default on desktop, shown on mobile */
 .card-arrow-connector.mobile-only-arrow {
   display: none;
 }
@@ -2507,10 +2473,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateX(-2px);
 }
 
-/* ==========================================================================
-   DOWNWARD ROW CONNECTOR (From Card 03 down to Card 04 on Desktop)
-   Centered with ample vertical clearance so it does not touch cards
-   ========================================================================== */
 .snake-row-connector {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2550,9 +2512,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN FOR SNAKE TIMELINE
-   ========================================================================== */
 @media (max-width: 992px) {
   .snake-row {
     grid-template-columns: 1fr;
@@ -2561,14 +2520,14 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
     margin: 0 auto;
   }
 
-  /* Restore natural DOM flow on tablet/mobile so Link 04, 05, 06 are sequential */
+  
   .snake-row-reverse [data-link="4"],
   .snake-row-reverse [data-link="5"],
   .snake-row-reverse [data-link="6"] {
     grid-column: auto;
   }
 
-  /* Adjust arrow connectors to point DOWN on mobile/tablet centered in the 3rem gap */
+  
   .card-arrow-connector.arrow-right,
   .card-arrow-connector.arrow-left,
   .card-arrow-connector.mobile-only-arrow {
@@ -2592,7 +2551,7 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
     transform: rotate(90deg) translateY(2px);
   }
 
-  /* Hide desktop row connector on mobile since mobile-only-arrow handles Card 3 -> 4 */
+  
   .snake-row-connector {
     display: none;
   }
@@ -2633,9 +2592,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* ==========================================================================
-   07. LUXURY CTA CARD (LEFT CONTENT + RIGHT CIRCULAR WAVE IMAGE)
-   ========================================================================== */
 .cta-section-wrap {
   padding: 2.2rem var(--site-gutter) 4rem;
 }
@@ -2733,7 +2689,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: var(--secondary-text);
 }
 
-/* Right Side Circular Image Frame */
 .cta-circle-media {
   display: flex;
   align-items: center;
@@ -2806,9 +2761,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 8px #10B981;
 }
 
-/* ==========================================================================
-   PREMIUM LUXURY FOOTER (MATCHING HOME 1 REFERENCE)
-   ========================================================================== */
 .site-footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -2823,7 +2775,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin: 0 auto;
 }
 
-/* 5-Column Grid with Perfect Baseline Alignment */
 .footer-top-grid {
   display: grid;
   grid-template-columns: 1.35fr 1fr 1fr 1.05fr 1.35fr;
@@ -2832,7 +2783,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-bottom: 1.5rem;
 }
 
-/* Brand Column & Paratext */
 .footer-brand-col {
   display: flex;
   flex-direction: column;
@@ -2846,7 +2796,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   max-width: 320px;
 }
 
-/* 4 Social Icons directly after paratext */
 .footer-brand-socials {
   display: flex;
   align-items: center;
@@ -2887,7 +2836,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: scale(1.1);
 }
 
-/* Identical Column Header Typography Across All Columns */
 .footer-nav-col {
   display: flex;
   flex-direction: column;
@@ -2906,7 +2854,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   align-items: center;
 }
 
-/* Uniform Vertical Rhythm and Exact Line Heights Across All Columns */
 .footer-links-list {
   list-style: none;
   padding: 0;
@@ -2939,7 +2886,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateX(3px);
 }
 
-/* Badge Pill inside Links */
 .footer-badge-pill {
   font-size: 0.65rem;
   font-weight: 700;
@@ -2954,7 +2900,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   vertical-align: middle;
 }
 
-/* Contact & Support Column - Strictly Same Line Height & Alignment */
 .footer-contact-list {
   list-style: none;
   padding: 0;
@@ -3017,7 +2962,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   text-decoration: underline;
 }
 
-/* Footer Bottom Bar */
 .footer-bottom-bar {
   border-top: 1px solid var(--border-color);
   padding-top: 0.85rem;
@@ -3061,9 +3005,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   user-select: none;
 }
 
-/* ==========================================================================
-   RTL DIRECTION SUPPORT
-   ========================================================================== */
 [dir="rtl"] {
   direction: rtl;
   text-align: right;
@@ -3099,9 +3040,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateX(-6px);
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (TABLET & MOBILE)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .adventures-card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3192,12 +3130,12 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
 
   .home2-hero {
     height: auto;
-    min-height: 480px;
-    padding: 5.5rem 0 2.5rem;
+    min-height: auto;
+    padding: 0;
   }
 
   .home2-hero-container {
-    padding: 0 var(--site-gutter);
+    padding: 7rem var(--site-gutter) 3.5rem;
   }
 
   .hero-spacer {
@@ -3283,16 +3221,22 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 
   .home2-hero {
-    min-height: 420px;
-    padding: 5rem 0 2rem;
+    min-height: auto;
+    padding: 0;
   }
 
   .home2-hero-container {
-    padding: 0 var(--site-gutter);
+    padding: 6.5rem var(--site-gutter) 2.5rem;
   }
 
   .home2-hero-title {
-    font-size: 2.15rem;
+    font-size: 2.85rem;
+  }
+
+  .home2-hero-trust-bar {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .home2-cta-banner {

@@ -1,14 +1,8 @@
-/**
- * WaveNomad — Lessons & Tours Luxury Experience Client Engine
- * Focus: People, Instruction, Progression, Guided Routes & Booking
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const html = document.documentElement;
 
-  // --------------------------------------------------------------------------
-  // 01. THEME MODE & RTL SYNCHRONIZATION (IDENTICAL SYSTEM AS HOME 1)
-  // --------------------------------------------------------------------------
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const themeIconSun = document.getElementById('theme-icon-sun');
   const themeIconMoon = document.getElementById('theme-icon-moon');
@@ -42,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // RTL / LTR toggle
   const applyDirection = (isRtl) => {
     if (isRtl) {
       html.setAttribute('dir', 'rtl');
@@ -67,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header scroll detection
   if (siteHeader) {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -80,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  // Mobile menu toggle
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -89,14 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 02. SECTION 02 — ACCREDITED LESSON PROGRAMS (3 LESSONS CARDS)
-  // Cards directly link to 'lessons details.html?lesson=beginner|intermediate|advanced'
-  // --------------------------------------------------------------------------
-
-  // --------------------------------------------------------------------------
-  // 03. SECTION 03 — GUIDED TOURS (INTERACTIVE ARTISTIC ROUTE MAP)
-  // --------------------------------------------------------------------------
   const toursData = {
     sunset: {
       id: 'sunset',
@@ -153,19 +136,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const waypoints = document.querySelectorAll('.map-waypoint-marker');
 
   const updateTourSelection = (tourKey) => {
-    // Update route cards
+
     tourCards.forEach(card => {
       const matches = card.getAttribute('data-tour') === tourKey;
       card.classList.toggle('active', matches);
     });
 
-    // Update SVG route paths
     routePaths.forEach(path => {
       const matches = path.getAttribute('data-tour') === tourKey;
       path.classList.toggle('active', matches);
     });
 
-    // Update Waypoints
     waypoints.forEach(wp => {
       const matches = wp.getAttribute('data-tour') === tourKey;
       wp.classList.toggle('active', matches);
@@ -186,9 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --------------------------------------------------------------------------
-  // 04. SECTION 04 — MEET YOUR GUIDES (EDITORIAL INSTRUCTOR SHOWCASE)
-  // --------------------------------------------------------------------------
   const guidesData = [
     {
       id: 'alex',
@@ -274,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const guide = guidesData[currentGuideIndex];
     if (!guide) return;
 
-    // Cross-fade portrait
     if (guidePhoto) {
       guidePhoto.style.opacity = '0';
       guidePhoto.style.transform = 'scale(0.97)';
@@ -297,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (guideStat3) guideStat3.textContent = guide.stat3Val;
     if (guideStat3Lab) guideStat3Lab.textContent = guide.stat3Lab;
 
-    // Certifications list
     if (guideCertsList) {
       guideCertsList.innerHTML = '';
       guide.certs.forEach(c => {
@@ -308,7 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Avatar active state
     guideAvatarBtns.forEach((btn, idx) => {
       btn.classList.toggle('active', idx === currentGuideIndex);
     });
@@ -326,9 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
     guideNextBtn.addEventListener('click', () => updateGuide(currentGuideIndex + 1));
   }
 
-  // --------------------------------------------------------------------------
-  // 05. SECTION 05 — BOOK YOUR EXPERIENCE (LUXURY INTERACTION ENGINE)
-  // --------------------------------------------------------------------------
   const experiencePills = document.querySelectorAll('.config-group[data-group="goal"] .config-pill-btn');
   const levelPills = document.querySelectorAll('.config-group[data-group="level"] .config-pill-btn');
   const activityPills = document.querySelectorAll('.config-group[data-group="activity"] .config-pill-btn');
@@ -407,9 +379,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   recalculatePrice();
 
-  // --------------------------------------------------------------------------
-  // 06. CONFIRMATION RESERVATION MODAL
-  // --------------------------------------------------------------------------
   const lessonsModal = document.getElementById('lessons-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const modalSummaryActivity = document.getElementById('modal-summary-activity');
@@ -468,6 +437,14 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.style.background = '';
         }, 1800);
       }
+    });
+  }
+
+  const navLoginBtn = document.getElementById('nav-login-btn');
+  if (navLoginBtn) {
+    navLoginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'login.html';
     });
   }
 });

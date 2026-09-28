@@ -1,168 +1,183 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon | Silver Hoof Stables</title>
+  <title>Coming Soon | WaveNomad Standup Paddleboard Rental</title>
   <meta name="description"
-    content="Something extraordinary is galloping your way. Silver Hoof Stables is unveiling a new equestrian experience. Join the waitlist for early access.">
+    content="Something extraordinary is launching soon at WaveNomad. Be the first to know about our next-generation paddle tours and alpine expeditions.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-  <link rel="icon" type="image/jpeg" href="favicon.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="coming-soon.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="coming-soon.css">
 </head>
 
-<body>
+<body class="coming-soon-body">
 
-<button class="cs-theme-btn" id="cs-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
-    <i class="fa-solid fa-moon" id="cs-theme-icon"></i>
-  </button>
+  
+  <div class="cs-top-controls" id="cs-controls">
+    <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+      title="Toggle Light / Dark Mode">
+      <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4.5"></circle>
+        <line x1="12" y1="2" x2="12" y2="4"></line>
+        <line x1="12" y1="20" x2="12" y2="22"></line>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+        <line x1="2" y1="12" x2="4" y2="12"></line>
+        <line x1="20" y1="12" x2="22" y2="12"></line>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+      </svg>
+      <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </div>
 
-<main class="cs-fullpage">
-    <section class="cs-section">
+  
+  <div class="cs-bg-glow glow-top" aria-hidden="true"></div>
+  <div class="cs-bg-glow glow-bottom" aria-hidden="true"></div>
 
-<div class="cs-orb cs-orb-1"></div>
-      <div class="cs-orb cs-orb-2"></div>
+  
+  <main class="cs-viewport-wrapper">
+    <div class="cs-card">
 
-<div class="cs-card">
-
-<div class="cs-badge">
-          <i class="fa-solid fa-horse-head"></i>
-          UNVEILING SOON &bull; SILVER HOOF STABLES
-        </div>
-
-<h1 class="cs-title">A New Equestrian<br>Experience is Coming</h1>
-
-<p class="cs-desc">
-          Our riding masters and stable curators are crafting something extraordinary — an elite equestrian
-          journey unlike anything before. Prepare for premier lessons, trail rides, and luxury stabling.
-        </p>
-
-<div class="cs-countdown" id="cs-countdown">
-          <div class="cs-time-block">
-            <span class="cs-time-num" id="cs-days">00</span>
-            <span class="cs-time-label">Days</span>
+      
+      <div class="cs-brand">
+        <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+          <div class="brand-emblem-circle">
+            <img src="assets/images/logo.png" alt="WaveNomad Emblem" class="brand-logo-img">
           </div>
-          <span class="cs-colon">:</span>
-          <div class="cs-time-block">
-            <span class="cs-time-num" id="cs-hours">00</span>
-            <span class="cs-time-label">Hours</span>
+          <div class="brand-text">
+            <span class="brand-title">WaveNomad</span>
+            <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
           </div>
-          <span class="cs-colon">:</span>
-          <div class="cs-time-block">
-            <span class="cs-time-num" id="cs-minutes">00</span>
-            <span class="cs-time-label">Minutes</span>
-          </div>
-          <span class="cs-colon">:</span>
-          <div class="cs-time-block">
-            <span class="cs-time-num" id="cs-seconds">00</span>
-            <span class="cs-time-label">Seconds</span>
-          </div>
-        </div>
-
-<form class="cs-form" id="cs-form" onsubmit="handleWaitlist(event)">
-          <div class="cs-input-wrap">
-            <i class="fa-regular fa-envelope cs-input-icon"></i>
-            <input
-              type="email"
-              id="cs-email"
-              class="cs-email-input"
-              placeholder="Enter your email for early access..."
-              required
-              autocomplete="email">
-            <button type="submit" class="cs-submit-btn">
-              Join Waitlist <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </form>
-
-<p class="cs-trust-note">
-          <i class="fa-regular fa-shield-check"></i>
-          Receive priority booking & exclusive launch offer &bull; Zero spam
-        </p>
-
-<a href="index.html" class="cs-back-btn">
-          <i class="fa-solid fa-house-chimney"></i> Back to Stables
         </a>
-
       </div>
-    </section>
+
+      
+      <div class="cs-hero-wrap">
+        <span class="cs-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="badge-sparkle">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+          </svg>
+          Something Extraordinary is Launching
+        </span>
+
+        <h1 class="cs-title">Next-Gen Alpine Expeditions</h1>
+        <p class="cs-script-subtitle">Unlocking new waterways &amp; moonlight paddles</p>
+      </div>
+
+      
+      <div class="cs-countdown-grid" id="countdown-grid">
+        <div class="countdown-unit">
+          <span class="count-num" id="count-days">42</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="countdown-unit">
+          <span class="count-num" id="count-hours">18</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="countdown-unit">
+          <span class="count-num" id="count-mins">35</span>
+          <span class="count-label">Minutes</span>
+        </div>
+        <div class="countdown-unit">
+          <span class="count-num" id="count-secs">50</span>
+          <span class="count-label">Seconds</span>
+        </div>
+      </div>
+
+      
+      <form class="cs-notify-form" id="cs-notify-form" novalidate>
+        <div class="input-pill-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="input-mail-icon">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <input type="email" id="cs-email-input" class="cs-email-input" placeholder="Enter your email for early VIP access..." required>
+          <button type="submit" class="cs-submit-btn">
+            <span>Notify Me</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="btn-arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      
+      <div class="cs-toast" id="cs-toast" role="status" aria-live="polite">
+        <span class="toast-message" id="toast-message">✓ VIP Invitation Sent! We'll keep you updated.</span>
+      </div>
+
+      
+      <div class="cs-links-section">
+        <span class="cs-links-label">Explore Current Waters:</span>
+        <div class="cs-links-grid">
+          <a href="index.html" class="cs-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+          </a>
+
+          <a href="rentals.html" class="cs-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Rentals</span>
+          </a>
+
+          <a href="lessons.html" class="cs-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+            </svg>
+            <span>Lessons</span>
+          </a>
+
+          <a href="safety.html" class="cs-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Safety</span>
+          </a>
+
+          <a href="contact.html" class="cs-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <script>
-    (function () {
-      const html = document.documentElement;
-      const btn = document.getElementById('cs-theme-toggle');
-      const icon = document.getElementById('cs-theme-icon');
-
-      const saved = localStorage.getItem('theme');
-      if (saved) html.setAttribute('data-theme', saved);
-
-      function syncIcon() {
-        const isDark = html.getAttribute('data-theme') === 'dark';
-        icon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
-      }
-
-      syncIcon();
-
-      btn.addEventListener('click', function () {
-        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        syncIcon();
-      });
-    })();
-    const TARGET = new Date('2027-06-01T00:00:00').getTime();
-
-    function updateCountdown() {
-      const now = Date.now();
-      const diff = TARGET - now;
-
-      if (diff <= 0) {
-        document.getElementById('cs-days').textContent    = '00';
-        document.getElementById('cs-hours').textContent   = '00';
-        document.getElementById('cs-minutes').textContent = '00';
-        document.getElementById('cs-seconds').textContent = '00';
-        return;
-      }
-
-      const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById('cs-days').textContent    = String(days).padStart(2, '0');
-      document.getElementById('cs-hours').textContent   = String(hours).padStart(2, '0');
-      document.getElementById('cs-minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('cs-seconds').textContent = String(seconds).padStart(2, '0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-    function handleWaitlist(e) {
-      e.preventDefault();
-      const email = document.getElementById('cs-email').value.trim();
-      const btn = document.querySelector('.cs-submit-btn');
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> You\'re In!';
-      btn.style.background = '#4CAF82';
-      btn.disabled = true;
-      document.getElementById('cs-email').value = '';
-      setTimeout(() => {
-        btn.innerHTML = 'Join Waitlist <i class="fa-solid fa-arrow-right"></i>';
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 3500);
-    }
-  </script>
-
+  <script src="coming-soon.js"></script>
 </body>
+
 </html>

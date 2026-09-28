@@ -9,8 +9,8 @@
     content="Explore WaveNomad's luxury paddleboard rental showroom. Discover carbon touring SUPs, all-round cruisers, flexible hourly & full-day rental durations, and dockside concierge prep.">
   <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,14 +29,7 @@
 
       <a href="index.html" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
         <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+          <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
         </div>
         <div class="brand-text-group">
           <span class="brand-name">WaveNomad</span>
@@ -125,11 +118,10 @@
           </svg>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+        <button class="action-control-btn rtl-btn" id="lang-toggle-btn" aria-label="Toggle text direction"
+          title="Toggle text direction">
+          <span class="rtl-text-ltr">RTL</span>
+          <span class="rtl-text-rtl">LTR</span>
         </button>
 
         <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
@@ -226,13 +218,12 @@
       </a>
     </section>
 
-
     <section class="section-wrap alt-bg rentals-collection-section" id="collection">
       <div class="section-container">
 
         <div class="section-header text-center">
           <span class="section-eyebrow">HANDCRAFTED SUP FLEET</span>
-          <h2 class="section-headline font-serif">Choose Your Board.</h2>
+          <h2 class="section-headline font-serif">Choose Your <span class="section-headline-accent">Board.</span></h2>
           <p class="section-desc font-sans">
             Each WaveNomad board is custom-shaped with aerospace carbon rails and optimized displacement geometry.
             Select your discipline to configure your water experience.
@@ -400,13 +391,13 @@
       </div>
     </section>
 
-
     <section class="section-wrap rentals-detail-section" id="details">
       <div class="section-container">
 
         <div class="section-header text-center">
           <span class="section-eyebrow">PRECISION ENGINEERING</span>
-          <h2 class="section-headline font-serif">Built for Your Water.</h2>
+          <h2 class="section-headline font-serif">Built for <span class="section-headline-accent">Your Water.</span>
+          </h2>
           <p class="section-desc font-sans">
             Aerospace carbon construction meets hydrodynamic alpine tuning. Every contour is engineered for zero-drag
             glide and unmatched stability.
@@ -513,13 +504,13 @@
       </div>
     </section>
 
-
     <section class="section-wrap alt-bg rentals-plans-section" id="plans">
       <div class="section-container">
 
         <div class="section-header text-center">
           <span class="section-eyebrow">FLEXIBLE WATER INTERVALS</span>
-          <h2 class="section-headline font-serif">Your Time. Your Pace.</h2>
+          <h2 class="section-headline font-serif">Your Time. <span class="section-headline-accent">Your Pace.</span>
+          </h2>
           <p class="section-desc font-sans">
             Whether you desire a spontaneous morning paddle or a full sunrise-to-starlight alpine excursion, our
             flexible passes include complete concierge equipment.
@@ -578,7 +569,6 @@
               </p>
             </div>
 
-
             <div class="plan-quick-stats" id="plan-quick-stats">
               <div class="plan-stat-chip">
                 <svg class="stat-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -620,7 +610,6 @@
                 </div>
               </div>
             </div>
-
 
             <button class="btn-primary-reserve plan-action-btn" id="plan-reserve-btn">
               <span id="plan-btn-text">Reserve for 2 Hours →</span>
@@ -690,13 +679,13 @@
       </div>
     </section>
 
-
     <section class="section-wrap rentals-journey-section" id="journey">
       <div class="section-container">
 
         <div class="section-header text-center">
           <span class="section-eyebrow">SEAMLESS ON-WATER PROTOCOL</span>
-          <h2 class="section-headline font-serif">From Shore to Open Water.</h2>
+          <h2 class="section-headline font-serif">From Shore to <span class="section-headline-accent">Open Water.</span>
+          </h2>
           <p class="section-desc font-sans">
             Our five-stage protocol guarantees zero waiting and maximum time exploring mirror waters.
           </p>
@@ -785,7 +774,6 @@
 
         </div>
 
-
         <div class="rentals-final-cta-banner" id="rentals-final-cta">
 
           <div class="final-cta-canvas" aria-hidden="true">
@@ -798,7 +786,7 @@
             <span class="final-cta-eyebrow">DOCK 4 VALET IS READY</span>
 
             <h2 class="final-cta-headline font-serif">
-              The Water Is Waiting.
+              The Water Is <span class="section-headline-accent">Waiting.</span>
             </h2>
 
             <p class="final-cta-desc font-sans">
@@ -838,7 +826,6 @@
     </section>
 
   </main>
-
 
   <div class="reservation-modal-backdrop" id="reservation-modal" aria-hidden="true" role="dialog" aria-modal="true"
     aria-labelledby="modal-title">
@@ -982,7 +969,6 @@
     </div>
   </div>
 
-
   <div class="reservation-modal-backdrop" id="login-modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="reservation-modal-container login-modal-box">
       <button class="modal-close-btn" id="login-close-btn" aria-label="Close Login Modal">
@@ -1016,7 +1002,6 @@
     </div>
   </div>
 
-
   <footer class="site-footer">
     <div class="footer-container">
 
@@ -1025,13 +1010,7 @@
         <div class="footer-brand-col">
           <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
             <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
-                  stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" />
-              </svg>
+              <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
             </div>
             <div class="brand-text-group">
               <span class="brand-name">WaveNomad</span>
@@ -1105,10 +1084,12 @@
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Additional Links</h4>
           <ul class="footer-links-list">
-            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a>
+            </li>
             <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="coming-soon.html" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
           </ul>
         </div>
 

@@ -1,14 +1,8 @@
-/**
- * WaveNomad - Rentals Page Interactive Client Logic
- * Luxury Showroom, Product Visualizer, Plan Configurator & Booking Engine
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const html = document.documentElement;
 
-  // =========================================================================
-  // 01. THEME & RTL MANAGEMENT (MATCHING HOME 1 SYSTEM)
-  // =========================================================================
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const themeIconSun = document.getElementById('theme-icon-sun');
   const themeIconMoon = document.getElementById('theme-icon-moon');
@@ -44,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // RTL / LTR Direction Toggle
   const applyDirection = (isRtl) => {
     if (isRtl) {
       html.setAttribute('dir', 'rtl');
@@ -77,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header Scrolled Glass Effect
   if (siteHeader) {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -90,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  // Mobile Menu Toggle
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -100,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Dropdown on mobile
   const homeDropdownItem = document.getElementById('home-dropdown-item');
   const homeDropdownBtn = document.getElementById('home-dropdown-btn');
   if (homeDropdownBtn && homeDropdownItem) {
@@ -112,10 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-  // =========================================================================
-  // 02. SECTION 02: SHOWROOM BOARD COLLECTION SELECTOR
-  // =========================================================================
   const boardsData = {
     allround: {
       id: 'allround',
@@ -220,14 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     currentBoardIndex = boardKeys.indexOf(key);
 
-    // Update active pill
     categoryPills.forEach(pill => {
       const isSelected = pill.getAttribute('data-category') === key;
       pill.classList.toggle('active', isSelected);
       pill.setAttribute('aria-selected', isSelected);
     });
 
-    // Update active thumbnail
     thumbBtns.forEach(thumb => {
       thumb.classList.toggle('active', thumb.getAttribute('data-category') === key);
     });
@@ -270,7 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Click on category tabs
   categoryPills.forEach(pill => {
     pill.addEventListener('click', () => {
       const cat = pill.getAttribute('data-category');
@@ -278,7 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Click on thumbnail strip
   thumbBtns.forEach(thumb => {
     thumb.addEventListener('click', () => {
       const cat = thumb.getAttribute('data-category');
@@ -286,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Prev / Next arrows
   if (prevBoardBtn) {
     prevBoardBtn.addEventListener('click', () => {
       currentBoardIndex = (currentBoardIndex - 1 + boardKeys.length) % boardKeys.length;
@@ -301,15 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-  // =========================================================================
-  // 03. SECTION 03: BOARD DETAIL VISUALIZER CALLOUTS & 3D TILT
-  // =========================================================================
   const detailBoardWrap = document.getElementById('detail-board-wrap');
   const hotspotPins = document.querySelectorAll('.board-hotspot-pin');
   const specCards = document.querySelectorAll('.spec-callout-card');
 
-  // Hotspot and Card hover synchronization
   const highlightSpec = (specId) => {
     hotspotPins.forEach(pin => {
       pin.classList.toggle('active', pin.getAttribute('data-spec') === specId);
@@ -329,7 +305,6 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('click', () => highlightSpec(card.getAttribute('data-spec')));
   });
 
-  // Subtle 3D perspective tilt on mouse move
   if (detailBoardWrap && window.innerWidth > 992) {
     detailBoardWrap.addEventListener('mousemove', (e) => {
       const rect = detailBoardWrap.getBoundingClientRect();
@@ -345,10 +320,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-  // =========================================================================
-  // 04. SECTION 04: RENTAL PLANS DURATION SELECTOR
-  // =========================================================================
   const plansData = {
     '1hr': {
       tierName: '1 HOUR · RAPID SESSION',
@@ -433,10 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-  // =========================================================================
-  // 05. SECTION 05: WATERLINE PROGRESS ANIMATION
-  // =========================================================================
   const waterlineFill = document.getElementById('waterline-fill');
   const journeySection = document.getElementById('journey');
 
@@ -453,10 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
     onScrollWaterline();
   }
 
-
-  // =========================================================================
-  // 06. RESERVATION CONFIGURATOR MODAL LOGIC
-  // =========================================================================
   const reservationModal = document.getElementById('reservation-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const rentalConfigForm = document.getElementById('rental-config-form');
@@ -468,11 +431,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalSuccessBox = document.getElementById('modal-success-box');
   const successDoneBtn = document.getElementById('success-done-btn');
 
-  // Trigger buttons
   const planReserveBtn = document.getElementById('plan-reserve-btn');
   const finalReserveBtn = document.getElementById('final-reserve-btn');
 
-  // Set today's date in datepicker
   if (modalDateInput) {
     const today = new Date().toISOString().split('T')[0];
     modalDateInput.value = today;
@@ -589,20 +550,15 @@ document.addEventListener('DOMContentLoaded', () => {
     successDoneBtn.addEventListener('click', closeReservationModal);
   }
 
-
-  // =========================================================================
-  // 07. LOGIN MODAL LOGIC (MATCHING HOME 1 SYSTEM)
-  // =========================================================================
   const navLoginBtn = document.getElementById('nav-login-btn');
   const loginModal = document.getElementById('login-modal');
   const loginCloseBtn = document.getElementById('login-close-btn');
   const loginForm = document.getElementById('login-form');
 
-  if (navLoginBtn && loginModal) {
-    navLoginBtn.addEventListener('click', () => {
-      loginModal.classList.add('open');
-      loginModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+  if (navLoginBtn) {
+    navLoginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'login.html';
     });
   }
 
@@ -634,7 +590,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard accessibility (Escape to close modals)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeReservationModal();

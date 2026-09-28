@@ -9,8 +9,8 @@
     content="WaveNomad Guest Portal for booking paddleboard rental slots or lessons, tracking equipment reservation status, viewing weather and water condition alerts, accessing waiver forms, and managing payments.">
   <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,13 +31,7 @@
       <div class="sidebar-brand-wrap">
         <a href="index.html" class="sidebar-brand-link" title="WaveNomad Home">
           <div class="sidebar-brand-emblem">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-              <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.25" stroke="currentColor"
-                stroke-width="2" stroke-linejoin="round" />
-              <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" />
-            </svg>
+            <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
           </div>
           <div class="sidebar-brand-text">
             <span class="sidebar-brand-title">WAVENOMAD</span>
@@ -218,7 +212,7 @@
             <span>GUEST EXPEDITION PORTAL</span>
           </div>
           <h1 class="topbar-heading">
-            Welcome back, <span id="topbar-user-name">Dashboard</span>
+            Welcome back, <span id="topbar-user-name" class="section-headline-accent">Dashboard</span>
           </h1>
         </div>
 
@@ -239,11 +233,10 @@
               aria-label="Search bookings and lessons">
           </div>
 
-          <button class="topbar-pill-btn rtl-toggle-btn" id="lang-toggle-btn" aria-label="Toggle RTL reading direction"
-            title="Toggle RTL mode">
-            <span class="rtl-opt rtl-opt-ltr">LTR</span>
-            <span class="rtl-opt rtl-opt-rtl">RTL</span>
-            <span id="lang-label" style="display: none;">LTR</span>
+          <button class="topbar-pill-btn rtl-btn" id="lang-toggle-btn" aria-label="Toggle text direction"
+            title="Toggle text direction">
+            <span class="rtl-text-ltr">RTL</span>
+            <span class="rtl-text-rtl">LTR</span>
           </button>
 
           <button class="topbar-icon-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Theme"
@@ -482,7 +475,7 @@
             <div class="portal-card chart-card-large">
               <div class="pcard-header">
                 <div>
-                  <h2 class="pcard-title">Revenue &amp; Visitor Growth</h2>
+                  <h2 class="pcard-title">Revenue &amp; <span class="section-headline-accent">Visitor Growth</span></h2>
                   <span class="pcard-subtitle">Monthly trend comparison for board rentals &amp; PSUPA clinics</span>
                 </div>
                 <div class="chart-filter-toggle">
@@ -558,7 +551,7 @@
             <div class="portal-card chart-card-side">
               <div class="pcard-header">
                 <div>
-                  <h2 class="pcard-title">Fleet Activity &amp; Disciplines</h2>
+                  <h2 class="pcard-title">Fleet Activity &amp; <span class="section-headline-accent">Disciplines</span></h2>
                   <span class="pcard-subtitle">Volume across rental fleet, coaching clinics &amp; sunset tours</span>
                 </div>
               </div>
@@ -656,7 +649,7 @@
         <section class="portal-view" id="view-bookings">
           <div class="view-header-strip">
             <div>
-              <h2 class="view-title">Bookings &amp; Rental Slots</h2>
+              <h2 class="view-title">Bookings &amp; <span class="section-headline-accent">Rental Slots</span></h2>
               <p class="view-desc">Schedule high-performance paddleboards, certified technique coaching, and view
                 equipment readiness.</p>
             </div>
@@ -734,7 +727,7 @@
         <section class="portal-view" id="view-equipment">
           <div class="view-header-strip">
             <div>
-              <h2 class="view-title">Smart Dock Lockers &amp; Live Telemetry</h2>
+              <h2 class="view-title">Smart Dock Lockers &amp; <span class="section-headline-accent">Live Telemetry</span></h2>
               <p class="view-desc">Contactless dock access keys, automated PIN code dispensing, and live GPS safety
                 beacon telemetry.</p>
             </div>
@@ -805,7 +798,7 @@
         <section class="portal-view" id="view-weather">
           <div class="view-header-strip">
             <div>
-              <h2 class="view-title">Lake Tahoe Weather &amp; Ultrasonic Telemetry</h2>
+              <h2 class="view-title">Lake Tahoe Weather &amp; <span class="section-headline-accent">Ultrasonic Telemetry</span></h2>
               <p class="view-desc">Live environmental telemetry from Emerald Basin Buoy #04 with real-time gust
                 warnings.</p>
             </div>
@@ -841,7 +834,7 @@
         <section class="portal-view" id="view-waivers">
           <div class="view-header-strip">
             <div>
-              <h2 class="view-title">Digital Liability Waivers &amp; Safety Compliance</h2>
+              <h2 class="view-title">Digital Liability Waivers &amp; <span class="section-headline-accent">Safety Compliance</span></h2>
               <p class="view-desc">Legally binding electronic waivers and cold-water hypothermia acknowledgements.</p>
             </div>
             <button class="dash-btn dash-btn-primary" id="btn-open-sign-pad-main">
@@ -873,7 +866,7 @@
         <section class="portal-view" id="view-billing">
           <div class="view-header-strip">
             <div>
-              <h2 class="view-title">Billing, Invoices &amp; WaveRewards</h2>
+              <h2 class="view-title">Billing, Invoices &amp; <span class="section-headline-accent">WaveRewards</span></h2>
               <p class="view-desc">Manage encrypted payment cards, track security deposit holds, and download tax
                 receipts.</p>
             </div>
@@ -924,7 +917,7 @@
         <section class="portal-view" id="view-settings">
           <div class="view-header-strip">
             <div>
-              <h2 class="view-title">Portal Settings &amp; Preferences</h2>
+              <h2 class="view-title">Portal Settings &amp; <span class="section-headline-accent">Preferences</span></h2>
               <p class="view-desc">Configure notification alerts, preferred board sizing, and linked emergency contacts.
               </p>
             </div>
@@ -962,7 +955,6 @@
     </div>
 
   </div>
-
 
   <div class="portal-modal-overlay" id="modal-booking-wizard">
     <div class="portal-modal-window">

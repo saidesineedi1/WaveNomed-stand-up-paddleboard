@@ -1,137 +1,226 @@
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  
-  syncAuthThemeAndRtl();
+document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
+  initDirectionToggle();
+  initPasswordVisibility();
+  initLoginForm();
+  initSocialButtons();
 });
 
-function syncAuthThemeAndRtl() {
-  const htmlEl = document.documentElement;
-  const themeIcon = document.getElementById('theme-icon');
-  const rtlToggleBtn = document.getElementById('rtl-toggle');
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const themeModeText = document.getElementById('theme-mode-text');
+  const sunIcon = document.getElementById('theme-icon-sun');
+  const moonIcon = document.getElementById('theme-icon-moon');
+  const htmlRoot = document.documentElement;
 
-  const savedTheme = localStorage.getItem('silverhoof_theme') || 'dark';
-  htmlEl.setAttribute('data-theme', savedTheme);
-  if (themeIcon) {
-    themeIcon.className = savedTheme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+  const savedTheme = localStorage.getItem('wavenomad-theme') || localStorage.getItem('wavenomad_theme') || 'light';
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+      localStorage.setItem('wavenomad-theme', newTheme);
+      localStorage.setItem('wavenomad_theme', newTheme);
+    });
   }
 
-  const savedDir = localStorage.getItem('silverhoof_dir') || 'ltr';
-  htmlEl.setAttribute('dir', savedDir);
-  if (rtlToggleBtn) {
-    rtlToggleBtn.textContent = savedDir === 'rtl' ? 'LTR' : 'RTL';
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      htmlRoot.setAttribute('data-theme', 'dark');
+      if (sunIcon) sunIcon.style.display = 'none';
+      if (moonIcon) moonIcon.style.display = 'block';
+      if (themeModeText) themeModeText.textContent = 'Light Mode';
+    } else {
+      htmlRoot.removeAttribute('data-theme');
+      if (sunIcon) sunIcon.style.display = 'block';
+      if (moonIcon) moonIcon.style.display = 'none';
+      if (themeModeText) themeModeText.textContent = 'Dark Mode';
+    }
   }
 }
 
-function togglePasswordVisibility(fieldId, iconEl) {
-  const inputEl = document.getElementById(fieldId);
-  if (!inputEl) return;
+function initDirectionToggle() {
+  const langToggleBtn = document.getElementById('lang-toggle-btn') || document.getElementById('rtl-toggle-btn');
+  const htmlRoot = document.documentElement;
 
-  if (inputEl.type === 'password') {
-    inputEl.type = 'text';
-    iconEl.classList.remove('fa-eye');
-    iconEl.classList.add('fa-eye-slash');
-  } else {
-    inputEl.type = 'password';
-    iconEl.classList.remove('fa-eye-slash');
-    iconEl.classList.add('fa-eye');
+  const isRtlSaved = localStorage.getItem('wavenomad-rtl') === 'true' || localStorage.getItem('wavenomad_direction') === 'rtl';
+  applyDirection(isRtlSaved);
+
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+      const isRtl = htmlRoot.getAttribute('dir') === 'rtl';
+      applyDirection(!isRtl);
+    });
+  }
+
+  function applyDirection(isRtl) {
+    if (isRtl) {
+      htmlRoot.setAttribute('dir', 'rtl');
+      htmlRoot.setAttribute('lang', 'ar');
+      localStorage.setItem('wavenomad-rtl', 'true');
+      localStorage.setItem('wavenomad_direction', 'rtl');
+    } else {
+      htmlRoot.removeAttribute('dir');
+      htmlRoot.setAttribute('lang', 'en');
+      localStorage.setItem('wavenomad-rtl', 'false');
+      localStorage.setItem('wavenomad_direction', 'ltr');
+    }
   }
 }
 
-function handleSocialAuth(provider) {
-  showAuthToast(`Connecting with ${provider}... Please wait.`);
+function initPasswordVisibility() {
+  const toggleBtn = document.getElementById('toggle-password');
+  const passwordInput = document.getElementById('login-password');
+  if (!toggleBtn || !passwordInput) return;
 
-  setTimeout(() => {
-    localStorage.setItem('sh_is_logged_in', 'true');
-    localStorage.setItem('sh_user_name', `${provider} Rider User`);
-    showAuthToast(`Success! Authenticated via ${provider}. Directing to dashboard...`, 'success');
+  const eyeShow = toggleBtn.querySelector('.eye-show');
+  const eyeHide = toggleBtn.querySelector('.eye-hide');
 
-    setTimeout(() => {
-      window.location.href = 'dash.html';
-    }, 1100);
-  }, 900);
+  toggleBtn.addEventListener('click', () => {
+    const isPassword = passwordInput.getAttribute('type') === 'password';
+    if (isPassword) {
+      passwordInput.setAttribute('type', 'text');
+      toggleBtn.setAttribute('aria-label', 'Hide password');
+      if (eyeShow) eyeShow.style.display = 'none';
+      if (eyeHide) eyeHide.style.display = 'block';
+    } else {
+      passwordInput.setAttribute('type', 'password');
+      toggleBtn.setAttribute('aria-label', 'Show password');
+      if (eyeShow) eyeShow.style.display = 'block';
+      if (eyeHide) eyeHide.style.display = 'none';
+    }
+  });
 }
 
-function handleLoginPageSubmit(event) {
-  event.preventDefault();
-
+function initLoginForm() {
+  const form = document.getElementById('login-form');
   const emailInput = document.getElementById('login-email');
   const passwordInput = document.getElementById('login-password');
-  const submitBtn = document.querySelector('.auth-submit-btn');
+  const emailGroup = document.getElementById('group-username');
+  const passwordGroup = document.getElementById('group-password');
+  const emailError = document.getElementById('email-error');
+  const passwordError = document.getElementById('password-error');
+  const rememberCheckbox = document.getElementById('remember-me');
 
-  if (!emailInput || !passwordInput) return;
-
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
-
-  if (!email || !password) {
-    showAuthToast('Please enter both your email address and password.', 'error');
-    return;
+  const savedRemember = localStorage.getItem('wavenomad_remember_user');
+  if (savedRemember && emailInput && rememberCheckbox) {
+    emailInput.value = savedRemember;
+    rememberCheckbox.checked = true;
   }
 
-if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...`;
+  if (emailInput) {
+    emailInput.addEventListener('input', () => {
+      emailGroup.classList.remove('has-error');
+      if (emailError) emailError.textContent = '';
+    });
   }
 
-  setTimeout(() => {
-    
-    const username = email.split('@')[0].replace(/[\._]/g, ' ');
-    const formattedName = username.charAt(0).toUpperCase() + username.slice(1);
+  if (passwordInput) {
+    passwordInput.addEventListener('input', () => {
+      passwordGroup.classList.remove('has-error');
+      if (passwordError) passwordError.textContent = '';
+    });
+  }
 
-    localStorage.setItem('sh_is_logged_in', 'true');
-    localStorage.setItem('sh_user_email', email);
-    localStorage.setItem('sh_user_name', formattedName || 'Sarah Vance');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
 
-    showAuthToast(`Welcome back, ${formattedName}! Loading your portal...`, 'success');
+      const emailValue = emailInput.value.trim();
+      if (!emailValue) {
+        isValid = false;
+        emailGroup.classList.add('has-error');
+        if (emailError) emailError.textContent = 'Please enter your email or username.';
+      } else if (emailValue.includes('@') && !isValidEmail(emailValue)) {
+        isValid = false;
+        emailGroup.classList.add('has-error');
+        if (emailError) emailError.textContent = 'Please enter a valid email address.';
+      }
 
-    setTimeout(() => {
-      window.location.href = 'dash.html';
-    }, 1100);
-  }, 900);
+      const passwordValue = passwordInput.value;
+      if (!passwordValue) {
+        isValid = false;
+        passwordGroup.classList.add('has-error');
+        if (passwordError) passwordError.textContent = 'Please enter your password.';
+      } else if (passwordValue.length < 6) {
+        isValid = false;
+        passwordGroup.classList.add('has-error');
+        if (passwordError) passwordError.textContent = 'Password must be at least 6 characters.';
+      }
+
+      if (isValid) {
+
+        if (rememberCheckbox && rememberCheckbox.checked) {
+          localStorage.setItem('wavenomad_remember_user', emailValue);
+        } else {
+          localStorage.removeItem('wavenomad_remember_user');
+        }
+
+        showToast('✓ Welcome back! Signing in to WaveNomad...');
+
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1200);
+      }
+    });
+  }
+
+  const forgotLink = document.getElementById('forgot-password-link');
+  if (forgotLink) {
+    forgotLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const emailInput = document.getElementById('login-email');
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      if (emailVal) {
+        showToast(`✓ Password reset instructions sent to ${emailVal}!`);
+      } else {
+        showToast('Please enter your email above and click Forget Password.');
+      }
+    });
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 }
 
-function showAuthToast(message, type = 'info') {
-  let toastContainer = document.getElementById('auth-toast');
-  if (!toastContainer) {
-    toastContainer = document.createElement('div');
-    toastContainer.id = 'auth-toast';
-    toastContainer.style.cssText = `
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 9999;
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #FFFFFF;
-      background: #2B2118;
-      border: 1.5px solid #C6A15B;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      transition: all 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-    `;
-    document.body.appendChild(toastContainer);
+function initSocialButtons() {
+  const googleBtn = document.getElementById('btn-google-login');
+  const appleBtn = document.getElementById('btn-apple-login');
+
+  if (googleBtn) {
+    googleBtn.addEventListener('click', () => {
+      showToast('Connecting with Google Account...');
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1000);
+    });
   }
 
-  let icon = '<i class="fa-solid fa-circle-info" style="color:#C6A15B;"></i>';
-  if (type === 'success') {
-    icon = '<i class="fa-solid fa-circle-check" style="color:#10B981;"></i>';
-  } else if (type === 'error') {
-    icon = '<i class="fa-solid fa-circle-exclamation" style="color:#EF4444;"></i>';
+  if (appleBtn) {
+    appleBtn.addEventListener('click', () => {
+      showToast('Connecting with Apple ID...');
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1000);
+    });
   }
+}
 
-  toastContainer.innerHTML = `${icon} <span>${message}</span>`;
-  toastContainer.style.opacity = '1';
-  toastContainer.style.transform = 'translateY(0)';
+function showToast(message) {
+  const toast = document.getElementById('auth-toast');
+  const toastMsg = document.getElementById('toast-message');
+  if (!toast) return;
+
+  if (toastMsg) toastMsg.textContent = message;
+  toast.classList.add('show');
 
   setTimeout(() => {
-    toastContainer.style.opacity = '0';
-    toastContainer.style.transform = 'translateY(20px)';
-  }, 4000);
+    toast.classList.remove('show');
+  }, 3500);
 }

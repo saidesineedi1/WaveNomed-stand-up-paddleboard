@@ -9,8 +9,8 @@
     content="Experience certified stand-up paddleboard lessons, progressive skills coaching, and scenic guided tours on pristine alpine waters with WaveNomad. Learn the water. Live the adventure.">
   <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,14 +29,7 @@
 
       <a href="index.html" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
         <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+          <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
         </div>
         <div class="brand-text-group">
           <span class="brand-name">WaveNomad</span>
@@ -126,11 +119,10 @@
           </svg>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+        <button class="action-control-btn rtl-btn" id="lang-toggle-btn" aria-label="Toggle text direction"
+          title="Toggle text direction">
+          <span class="rtl-text-ltr">RTL</span>
+          <span class="rtl-text-rtl">LTR</span>
         </button>
 
         <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member Login">
@@ -148,7 +140,6 @@
     </div>
   </header>
 
-
   <main id="main-content">
 
     <section class="lessons-hero" id="hero">
@@ -165,7 +156,7 @@
 
             <h1 class="hero-display-title">
               Learn the Water.<br>
-              Live the <span class="highlight-script">Adventure.</span>
+              Live the <span class="section-headline-accent">Adventure.</span>
             </h1>
 
             <p class="hero-subtext">
@@ -242,13 +233,13 @@
       </div>
     </section>
 
-
     <section class="lessons-section-wrap alt-bg lessons-catalog-section" id="progression">
       <div class="lessons-container">
 
         <div class="lessons-catalog-header text-center">
           <span class="section-tag-eyebrow">ACCREDITED LESSON PROGRAMS</span>
-          <h2 class="lessons-headline">Master the Water at Every Stage.</h2>
+          <h2 class="lessons-headline">Master the Water at <span class="section-headline-accent">Every Stage.</span>
+          </h2>
           <p class="lessons-lead-desc">
             From your very first calm-water glide to advanced deep-water navigation, choose a structured lesson taught
             by PSUPA-certified master instructors.
@@ -263,7 +254,8 @@
                 class="lesson-card-img" loading="lazy">
               <span class="lesson-card-badge badge-beginner">STAGE 01 · BEGINNER</span>
               <div class="lesson-card-price-pill">
-                <span class="price-currency">$</span><span class="price-val">65</span><span class="price-unit">/ paddler</span>
+                <span class="price-currency">$</span><span class="price-val">65</span><span class="price-unit">/
+                  paddler</span>
               </div>
             </div>
 
@@ -289,7 +281,8 @@
 
               <h3 class="lesson-card-title">Beginner SUP Fundamentals</h3>
               <p class="lesson-card-desc">
-                Ideal for first-timers and nervous paddlers. Master wide-beam board balance, correct paddle sizing, zero-roll stance, and safe dock recoveries.
+                Ideal for first-timers and nervous paddlers. Master wide-beam board balance, correct paddle sizing,
+                zero-roll stance, and safe dock recoveries.
               </p>
 
               <ul class="lesson-card-features">
@@ -299,9 +292,10 @@
               </ul>
 
               <div class="lesson-card-footer">
-                <a href="lessons details.html?lesson=beginner" class="lesson-view-btn" id="btn-view-beginner">
+                <a href="lessons-details.html?lesson=beginner" class="lesson-view-btn" id="btn-view-beginner">
                   <span>View Details</span>
-                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow"
+                    aria-hidden="true">
                     <path fill-rule="evenodd"
                       d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                       clip-rule="evenodd" />
@@ -317,7 +311,8 @@
                 class="lesson-card-img" loading="lazy">
               <span class="lesson-card-badge badge-popular">MOST POPULAR · STAGE 02</span>
               <div class="lesson-card-price-pill">
-                <span class="price-currency">$</span><span class="price-val">95</span><span class="price-unit">/ paddler</span>
+                <span class="price-currency">$</span><span class="price-val">95</span><span class="price-unit">/
+                  paddler</span>
               </div>
             </div>
 
@@ -343,7 +338,8 @@
 
               <h3 class="lesson-card-title">Intermediate Technique &amp; Glide</h3>
               <p class="lesson-card-desc">
-                For paddlers ready to eliminate fatigue and conquer open water. Master cantilever power stroke, pivot turns, cadence acceleration, and chop handling.
+                For paddlers ready to eliminate fatigue and conquer open water. Master cantilever power stroke, pivot
+                turns, cadence acceleration, and chop handling.
               </p>
 
               <ul class="lesson-card-features">
@@ -353,9 +349,11 @@
               </ul>
 
               <div class="lesson-card-footer">
-                <a href="lessons details.html?lesson=intermediate" class="lesson-view-btn primary" id="btn-view-intermediate">
+                <a href="lessons-details.html?lesson=intermediate" class="lesson-view-btn primary"
+                  id="btn-view-intermediate">
                   <span>View Details</span>
-                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow"
+                    aria-hidden="true">
                     <path fill-rule="evenodd"
                       d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                       clip-rule="evenodd" />
@@ -371,7 +369,8 @@
                 class="lesson-card-img" loading="lazy">
               <span class="lesson-card-badge badge-elite">1-ON-1 ELITE · ALL LEVELS</span>
               <div class="lesson-card-price-pill">
-                <span class="price-currency">$</span><span class="price-val">145</span><span class="price-unit">/ session</span>
+                <span class="price-currency">$</span><span class="price-val">145</span><span class="price-unit">/
+                  session</span>
               </div>
             </div>
 
@@ -395,7 +394,8 @@
 
               <h3 class="lesson-card-title">Private Masterclass Coaching</h3>
               <p class="lesson-card-desc">
-                Bespoke private mentorship tailored to your personal goals: 4K stroke biomechanics video analysis, downwind routing, or endurance pacing.
+                Bespoke private mentorship tailored to your personal goals: 4K stroke biomechanics video analysis,
+                downwind routing, or endurance pacing.
               </p>
 
               <ul class="lesson-card-features">
@@ -405,9 +405,10 @@
               </ul>
 
               <div class="lesson-card-footer">
-                <a href="lessons details.html?lesson=advanced" class="lesson-view-btn" id="btn-view-advanced">
+                <a href="lessons-details.html?lesson=advanced" class="lesson-view-btn" id="btn-view-advanced">
                   <span>View Details</span>
-                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="btn-arrow"
+                    aria-hidden="true">
                     <path fill-rule="evenodd"
                       d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                       clip-rule="evenodd" />
@@ -422,13 +423,12 @@
       </div>
     </section>
 
-
     <section class="lessons-section-wrap tours-section" id="tours">
       <div class="lessons-container">
 
         <div class="tours-header-wrap text-center">
           <span class="section-tag-eyebrow">SIGNATURE EXPEDITIONS &amp; SCENIC ROUTES</span>
-          <h2 class="lessons-headline">Follow the Water.</h2>
+          <h2 class="lessons-headline">Follow the <span class="section-headline-accent">Water.</span></h2>
           <p class="lessons-lead-desc">
             Paddle beyond the dock. Journey across secret emerald bays, sunset glassy coves, and high-altitude mountain
             fjords with our senior water naturalists.
@@ -608,13 +608,13 @@
       </div>
     </section>
 
-
     <section class="lessons-section-wrap alt-bg guides-section" id="guides">
       <div class="lessons-container">
 
         <div class="text-center">
           <span class="section-tag-eyebrow">CERTIFIED PSUPA INSTRUCTORS &amp; NATURALISTS</span>
-          <h2 class="lessons-headline">Guided by People Who Know the Water.</h2>
+          <h2 class="lessons-headline">Guided by People Who <span class="section-headline-accent">Know the Water.</span>
+          </h2>
           <p class="lessons-lead-desc">
             Our instructors aren't just athletes; they are lifelong water stewards, swiftwater rescue certified, and
             dedicated to building your lifelong connection to stand-up paddling.
@@ -704,7 +704,6 @@
       </div>
     </section>
 
-
     <section class="lessons-section-wrap booking-section" id="booking">
       <div class="lessons-container">
 
@@ -717,7 +716,8 @@
 
           <div class="booking-cta-content">
             <span class="booking-cta-eyebrow">YOUR NEXT ADVENTURE</span>
-            <h2 class="booking-cta-title">Ready to Experience the Water?</h2>
+            <h2 class="booking-cta-title">Ready to Experience the <span class="section-headline-accent">Water?</span>
+            </h2>
             <p class="booking-cta-desc">
               Whether taking your first stroke or exploring scenic alpine routes, our dockside team has your board and
               certified guide ready at Pier 4.
@@ -755,13 +755,18 @@
 
   </main>
 
-
   <div class="lessons-modal-backdrop" id="lessons-modal" aria-hidden="true" role="dialog" aria-modal="true"
     aria-labelledby="modal-booking-title">
     <div class="lessons-modal-card">
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">×</button>
 
-      <div class="modal-header-icon" aria-hidden="true">🌊</div>
+      <div class="modal-header-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 12c4 0 5-3 8-3s4 3 8 3 4-3 4-3"></path>
+          <path d="M2 17c4 0 5-3 8-3s4 3 8 3 4-3 4-3"></path>
+        </svg>
+      </div>
       <h3 class="modal-title" id="modal-booking-title">Complete Your Reservation</h3>
       <p class="modal-desc">Your water experience is held for 15 minutes. Enter your guest details to issue your digital
         pass.</p>
@@ -803,7 +808,6 @@
     </div>
   </div>
 
-
   <footer class="site-footer">
     <div class="footer-container">
 
@@ -812,13 +816,7 @@
         <div class="footer-brand-col">
           <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
             <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
-                  stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" />
-              </svg>
+              <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
             </div>
             <div class="brand-text-group">
               <span class="brand-name">WaveNomad</span>
@@ -892,10 +890,12 @@
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Additional Links</h4>
           <ul class="footer-links-list">
-            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a>
+            </li>
             <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="coming-soon.html" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
           </ul>
         </div>
 

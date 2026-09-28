@@ -9,8 +9,8 @@
     content="WaveNomad Home 2: Experience luxury carbon stand-up paddleboard rentals, twilight alpenglow tours, live lake intelligence, and seamless dock valet service.">
   <meta name="theme-color" content="#1597B8">
 
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%231597B8' stroke-width='4'/><path d='M20 68 L48 30 L62 52 L72 38 L88 68 Z' fill='%231597B8'/><path d='M12 74 C26 62 42 80 58 70 C72 60 84 76 92 70' stroke='%2320B8D1' stroke-width='5' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,14 +28,7 @@
 
       <a href="home2.html#home" class="brand-link" id="brand-logo" aria-label="WaveNomad Home">
         <div class="brand-emblem-circle">
-          <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-            <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor"
-              stroke-width="2" stroke-linejoin="round" />
-            <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" />
-          </svg>
+          <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
         </div>
         <div class="brand-text-group">
           <span class="brand-name">WaveNomad</span>
@@ -123,11 +116,10 @@
           </svg>
         </button>
 
-        <button class="action-control-btn lang-pill-btn rtl-toggle-btn" id="lang-toggle-btn"
-          aria-label="Switch text direction" title="Mode: LTR (Click to switch to RTL)">
-          <span class="rtl-opt rtl-opt-ltr">LTR</span>
-          <span class="rtl-opt rtl-opt-rtl">RTL</span>
-          <span id="lang-label" style="display: none;">LTR</span>
+        <button class="action-control-btn rtl-btn" id="lang-toggle-btn" aria-label="Toggle text direction"
+          title="Toggle text direction">
+          <span class="rtl-text-ltr">RTL</span>
+          <span class="rtl-text-rtl">LTR</span>
         </button>
 
         <button class="btn-header-login" id="nav-login-btn" aria-label="Open Member login">
@@ -156,7 +148,6 @@
         <div class="home2-hero-overlay"></div>
       </div>
 
-
       <div class="home2-hero-container">
         <div class="home2-hero-grid">
 
@@ -166,23 +157,21 @@
               <span class="telemetry-label">SUNSET GLOW EXPEDITIONS · LAKE GLASS INDEX: 9.8/10</span>
             </div>
 
-            <h1 class="home2-hero-title font-serif">
-              Glide Into The <span class="title-highlight">Golden Hour</span> &amp; Alpine Silence
+            <h1 class="home2-hero-title hero-headline font-serif">
+              <span class="headline-word">Glide Into The</span>
+              <span class="headline-word"><span
+                  class="title-highlight hero-headline-accent section-headline-accent">Golden Hour.</span></span>
             </h1>
 
-            <p class="home2-hero-desc font-sans">
+            <p class="home2-hero-desc hero-description font-sans">
               Handcrafted aerospace carbon paddleboards, certified glacial guides, and illuminated evening tours across
               still, mirrored alpine sanctuaries.
             </p>
 
-            <div class="home2-hero-actions">
+            <div class="home2-hero-actions hero-actions">
               <a href="#passes" class="cta-pill-primary" id="home2-hero-cta">
                 <span>Reserve Your Board</span>
-                <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+                <span class="cta-arrow" aria-hidden="true">→</span>
               </a>
 
               <a href="#intelligence" class="cta-pill-secondary">
@@ -224,7 +213,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow"> THE PADDLEBOARD EXPERIENCE</span>
-          <h2 class="section-headline font-serif">Engineering The Purest Glide on Alpine Water</h2>
+          <h2 class="section-headline font-serif">Engineering The <span class="section-headline-accent">Purest
+              Glide</span> on Alpine Water</h2>
           <p class="section-desc font-sans">
             Every WaveNomad craft is sculpted from aerospace-grade carbon weave with dual-chamber safety, delivering
             unmatched stiffness, silent hydrodynamics, and effortless stability across still mountain waters.
@@ -324,7 +314,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow"> CHOOSE YOUR ADVENTURE</span>
-          <h2 class="section-headline font-serif">Tailored Journeys Across Pristine Glacial Waters</h2>
+          <h2 class="section-headline font-serif"><span class="section-headline-accent">Tailored Journeys</span> Across
+            Pristine Glacial Waters</h2>
           <p class="section-desc font-sans">
             Whether seeking meditative stillness at first light or paddling between sheer granite cliffs into glowing
             sunset waters, select your dream alpine route.
@@ -463,7 +454,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow">YOUR DAY ON THE WATER</span>
-          <h2 class="section-headline font-serif">From Dock Arrival to Sunset Glow: Your Seamless Day</h2>
+          <h2 class="section-headline font-serif">From Dock Arrival to Sunset Glow: <span
+              class="section-headline-accent">Your Seamless Day</span></h2>
           <p class="section-desc font-sans">
             We’ve eliminated friction from outdoor recreation. Zero gear hauling, zero pump fatigue, and zero logistical
             stress. Here is how your day unfolds.
@@ -676,7 +668,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow">LIVE WATER INTELLIGENCE</span>
-          <h2 class="section-headline font-serif">Real-Time Glacial Lake Telemetry &amp; Glass Index</h2>
+          <h2 class="section-headline font-serif">Real-Time Glacial Lake Telemetry &amp; <span
+              class="section-headline-accent">Glass Index</span></h2>
           <p class="section-desc font-sans">
             Live environmental sensor data beamed continuously from offshore solar buoys. Know water transparency, wind
             gusts, and surface glass index before you step foot on the dock.
@@ -806,7 +799,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow"> YOUR ADVENTURE PASS</span>
-          <h2 class="section-headline font-serif">Transparent Passes with Everything Included</h2>
+          <h2 class="section-headline font-serif">Transparent Passes with <span
+              class="section-headline-accent">Everything Included</span></h2>
           <p class="section-desc font-sans">
             No surprise equipment fees at the dock. Every WaveNomad pass includes carbon paddleboard, lightweight PFD,
             waterproof phone case, safety tether, and full dock valet service.
@@ -882,7 +876,6 @@
 
         </div>
 
-
       </div>
     </section>
 
@@ -893,7 +886,8 @@
 
         <div class="section-header">
           <span class="section-eyebrow">EXPEDITION CHRONOLOGY</span>
-          <h2 class="section-headline font-serif">The Twilight Sequence: Continuous Chain Order</h2>
+          <h2 class="section-headline font-serif">The Twilight Sequence: <span
+              class="section-headline-accent">Continuous Chain Order</span></h2>
           <p class="section-desc font-sans">
             Follow the interlocking chain of your alpine water journey. Flow from afternoon dock check-in through hidden
             cove exploration, sunset alpenglow, and starry night illumination to our floating cedar sauna.
@@ -1248,7 +1242,7 @@
             <div class="cta-banner-content">
               <span class="cta-banner-eyebrow">YOUR BOARD IS WAITING ON DOCK 4</span>
               <h2 class="cta-banner-title font-serif">
-                Step Directly Onto Mirrored Water. Zero Hassle.
+                Step Directly Onto <span class="section-headline-accent">Mirrored Water.</span> Zero Hassle.
               </h2>
               <p class="cta-banner-desc font-sans">
                 Book in 60 seconds with instant mobile confirmation. No deposits, zero cancellation penalty if the
@@ -1304,13 +1298,7 @@
         <div class="footer-brand-col">
           <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
             <div class="brand-emblem-circle">
-              <svg class="brand-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.2" stroke-opacity="0.9" />
-                <path d="M10 32L21 14L29 26L34 19L40 32H10Z" fill="currentColor" fill-opacity="0.18"
-                  stroke="currentColor" stroke-width="2" />
-                <path d="M7 35C14 29 20 38 29 33C36 28 41 35 44 32" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" />
-              </svg>
+              <img src="assets/images/logo.png" alt="WaveNomad Logo" class="brand-emblem-img">
             </div>
             <div class="brand-text-group">
               <span class="brand-name">WaveNomad</span>
@@ -1384,10 +1372,12 @@
         <div class="footer-nav-col">
           <h4 class="footer-col-title">Additional Links</h4>
           <ul class="footer-links-list">
-            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a></li>
+            <li><a href="rentals.html#plans" class="footer-link footer-pricing-trigger">Fleet Rates &amp; Pricing</a>
+            </li>
             <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
-            <li><a href="index.html#404" class="footer-link" id="footer-link-404">404 Error Page</a></li>
-            <li><a href="index.html#coming-soon" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link" id="footer-link-404">404 Error Page</a></li>
+            <li><a href="coming-soon.html" class="footer-link" id="footer-link-coming-soon">Coming Soon</a></li>
           </ul>
         </div>
 

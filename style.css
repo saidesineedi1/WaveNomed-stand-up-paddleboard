@@ -1,11 +1,7 @@
-/* ==========================================================================
-   WaveNomad - Stand-Up Paddleboard Rental & Lessons
-   Exact Reference Design Alignment & Styling
-   ========================================================================== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/* --- Light Mode Color Palette (Morning Fresh Alpine) --- */
 :root {
   --bg-primary: #F4FAFC;
   --bg-secondary: #E7F3F7;
@@ -18,7 +14,7 @@
   --border-color: #C7DCE3;
   --btn-text: #FFFFFF;
 
-  /* Glassmorphism & Header */
+  
   --nav-bg: rgba(244, 250, 252, 0.72);
   --nav-border: rgba(199, 220, 227, 0.55);
   --glass-bg: rgba(255, 255, 255, 0.75);
@@ -41,7 +37,6 @@
   --site-gutter: clamp(2.5rem, 5.5vw, 6.5rem);
 }
 
-/* --- Dark Mode Color Palette (Golden-Hour / Evening Twilight) --- */
 [data-theme="dark"] {
   --bg-primary: #071923;
   --bg-secondary: #0B2632;
@@ -54,7 +49,7 @@
   --border-color: #24505D;
   --btn-text: #041217;
 
-  /* Glassmorphism & Header */
+  
   --nav-bg: rgba(7, 25, 35, 0.65);
   --nav-border: rgba(36, 80, 93, 0.55);
   --glass-bg: rgba(16, 47, 59, 0.8);
@@ -75,7 +70,6 @@
   --hero-script-color: #F8D8A8;
 }
 
-/* --- Base & Reset --- */
 *,
 *::before,
 *::after {
@@ -128,7 +122,6 @@ img {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* --- Section Global Layouts --- */
 .section-wrap {
   padding: 6.5rem var(--site-gutter);
   position: relative;
@@ -170,15 +163,22 @@ img {
   letter-spacing: -0.02em;
 }
 
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
+}
+
 .section-desc {
   font-size: 1.05rem;
   color: var(--secondary-text);
   line-height: 1.65;
 }
 
-/* ==========================================================================
-   HEADER & NAVIGATION (REFERENCE ALIGNMENT)
-   ========================================================================== */
 .site-header {
   position: absolute;
   top: 0;
@@ -230,7 +230,6 @@ img {
   gap: 1.5rem;
 }
 
-/* Circular Emblem & Logo */
 .brand-link {
   display: flex;
   align-items: center;
@@ -248,10 +247,20 @@ img {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .brand-link:hover .brand-emblem-circle {
   transform: scale(1.05);
+}
+
+.brand-emblem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .brand-emblem-svg {
@@ -281,7 +290,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Nav Menu & Reference Underline */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -361,7 +369,6 @@ img {
   transform: rotate(180deg);
 }
 
-/* Dropdown Menu */
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 0.6rem);
@@ -425,7 +432,6 @@ img {
   margin-top: 0.15rem;
 }
 
-/* Header Controls Right */
 .header-actions {
   display: flex;
   align-items: center;
@@ -520,115 +526,78 @@ img {
   transform: scale(1.1);
 }
 
+.action-control-btn.rtl-btn,
 .lang-pill-btn,
 .rtl-toggle-btn {
   height: 34px;
   min-height: 34px;
   max-height: 34px;
-  min-width: 84px;
-  padding: 3px;
+  min-width: 48px;
+  padding: 0 12px;
   margin: 0;
   box-sizing: border-box;
   flex-shrink: 0;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(16, 42, 67, 0.22);
   display: inline-flex !important;
-  flex-direction: row !important;
-  direction: ltr !important;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2px;
-  cursor: pointer;
-  user-select: none;
-  transition: var(--transition-smooth);
-}
-
-.rtl-toggle-btn .rtl-opt {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 8px;
-  height: 26px;
-  line-height: 1;
-  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.70rem;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--secondary-text, #627d98);
-  transition: all 0.22s ease;
-  pointer-events: none;
+  color: var(--primary-text);
+  transition: var(--transition-smooth);
 }
 
-/* Default / LTR mode: left side (LTR) active */
-html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-ltr {
-  background: var(--primary-accent, #1597B8);
-  color: #ffffff !important;
-  box-shadow: 0 1px 4px rgba(21, 151, 184, 0.35);
-}
-
-html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-rtl {
-  background: transparent;
-  color: var(--secondary-text, #627d98);
-  box-shadow: none;
-}
-
-/* RTL mode: right side (RTL) active */
-html[dir="rtl"] .rtl-toggle-btn .rtl-opt-rtl {
-  background: var(--primary-accent, #1597B8);
-  color: #ffffff !important;
-  box-shadow: 0 1px 4px rgba(21, 151, 184, 0.35);
-}
-
-html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
-  background: transparent;
-  color: var(--secondary-text, #627d98);
-  box-shadow: none;
-}
-
-/* Dark Theme states */
-[data-theme="dark"] .lang-pill-btn,
-[data-theme="dark"] .rtl-toggle-btn {
-  background: rgba(16, 42, 67, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-}
-
-[data-theme="dark"] html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-ltr {
-  background: var(--primary-accent, #20B8D1);
-  color: #031525 !important;
-  box-shadow: 0 1px 6px rgba(32, 184, 209, 0.45);
-}
-
-[data-theme="dark"] html:not([dir="rtl"]) .rtl-toggle-btn .rtl-opt-rtl {
-  color: rgba(255, 255, 255, 0.65);
-}
-
-[data-theme="dark"] html[dir="rtl"] .rtl-toggle-btn .rtl-opt-rtl {
-  background: var(--primary-accent, #20B8D1);
-  color: #031525 !important;
-  box-shadow: 0 1px 6px rgba(32, 184, 209, 0.45);
-}
-
-[data-theme="dark"] html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
-  color: rgba(255, 255, 255, 0.65);
-}
-
+.action-control-btn.rtl-btn:hover,
 .lang-pill-btn:hover,
 .rtl-toggle-btn:hover {
   border-color: var(--primary-accent);
-  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-accent);
+  background: rgba(255, 255, 255, 0.88);
   transform: translateY(-1px);
 }
 
+[data-theme="dark"] .action-control-btn.rtl-btn,
+[data-theme="dark"] .lang-pill-btn,
+[data-theme="dark"] .rtl-toggle-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .action-control-btn.rtl-btn:hover,
 [data-theme="dark"] .lang-pill-btn:hover,
 [data-theme="dark"] .rtl-toggle-btn:hover {
-  background: rgba(16, 42, 67, 0.85);
+  background: rgba(255, 255, 255, 0.2);
   border-color: var(--primary-accent);
+  color: var(--primary-accent);
   transform: translateY(-1px);
+}
+
+html:not([dir="rtl"]) .rtl-btn .rtl-text-rtl,
+html:not([dir="rtl"]) .rtl-toggle-btn .rtl-text-rtl {
+  display: none !important;
+}
+html:not([dir="rtl"]) .rtl-btn .rtl-text-ltr,
+html:not([dir="rtl"]) .rtl-toggle-btn .rtl-text-ltr {
+  display: inline !important;
+}
+
+html[dir="rtl"] .rtl-btn .rtl-text-ltr,
+html[dir="rtl"] .rtl-toggle-btn .rtl-text-ltr {
+  display: none !important;
+}
+html[dir="rtl"] .rtl-btn .rtl-text-rtl,
+html[dir="rtl"] .rtl-toggle-btn .rtl-text-rtl {
+  display: inline !important;
 }
 
 .btn-header-login {
@@ -702,9 +671,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ==========================================================================
-   01. HERO BANNER SECTION (EXACT REFERENCE COMPOSITION)
-   ========================================================================== */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -716,7 +682,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   overflow: hidden;
 }
 
-/* Crossfading Backgrounds */
 .hero-canvas {
   position: absolute;
   top: 0;
@@ -766,7 +731,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transition: background 0.5s ease;
 }
 
-/* Top Right Cursive Floating Text: "Nature Moves Us ~" matching reference */
 .hero-floating-script {
   position: absolute;
   top: 16%;
@@ -802,7 +766,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   letter-spacing: -0.05em;
 }
 
-/* Hero Content Grid */
 .hero-inner {
   position: relative;
   z-index: 5;
@@ -833,7 +796,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* Eyebrow */
 .hero-eyebrow-text {
   display: inline-flex;
   align-items: center;
@@ -861,7 +823,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
-/* Large Stacked Headline */
 .hero-headline {
   font-size: clamp(3.4rem, 5.2vw, 5.2rem);
   font-weight: 700;
@@ -879,7 +840,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   display: block;
 }
 
-/* Supporting Text */
 .hero-description {
   font-size: clamp(1rem, 1.2vw, 1.12rem);
   font-weight: 600;
@@ -895,7 +855,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
 }
 
-/* CTAs (Pill Shaped matching reference) */
 .hero-actions {
   display: flex;
   align-items: center;
@@ -1007,7 +966,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 24px rgba(32, 184, 209, 0.45), 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
-/* 4-Item Feature Strip directly under CTAs */
 .hero-features-inline {
   display: flex;
   align-items: center;
@@ -1069,7 +1027,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   min-height: 150px;
 }
 
-/* Hero Bottom Bar */
 .hero-bottom-bar {
   position: relative;
   z-index: 8;
@@ -1200,9 +1157,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 14px rgba(56, 220, 245, 0.4);
 }
 
-/* ==========================================================================
-   02. RENTALS SECTION
-   ========================================================================== */
 .fleet-hero-banner {
   border-radius: 20px;
   overflow: hidden;
@@ -1430,9 +1384,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 28px rgba(72, 210, 229, 0.75);
 }
 
-/* ==========================================================================
-   03. LESSONS & TOURS SECTION
-   ========================================================================== */
 .lessons-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -1582,12 +1533,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: var(--primary-accent);
 }
 
-/* ==========================================================================
-   04. VISUAL MOMENTS IN STAND-UP PADDLEBOARD RENTAL
-   ========================================================================== */
-
-
-/* Visual Moments Showcase Grid - Clean, balanced 3-column layout */
 .moments-bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1614,7 +1559,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: var(--shadow-elevated), 0 0 25px -5px var(--badge-glow);
 }
 
-/* Media wrapper & Smooth Zoom */
 .moment-media-wrapper {
   position: relative;
   width: 100%;
@@ -1655,7 +1599,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transition: opacity 0.3s ease;
 }
 
-/* Top Floating Badges */
 .moment-badges-top {
   position: absolute;
   top: 1.25rem;
@@ -1700,7 +1643,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   font-weight: 600;
 }
 
-/* Action Buttons (Like + Expand) */
 .moment-actions-float {
   position: absolute;
   top: 1.25rem;
@@ -1765,7 +1707,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   100% { transform: scale(1); }
 }
 
-/* Moment Card Content Bottom */
 .moment-card-content {
   position: absolute;
   bottom: 0;
@@ -1834,12 +1775,10 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: #A9C4CC;
 }
 
-/* Card Filtering Hide/Show */
 .moment-card.is-filtered-out {
   display: none !important;
 }
 
-/* Lightbox Modal */
 .moment-lightbox-modal {
   position: fixed;
   inset: 0;
@@ -2077,11 +2016,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: #FF4D6D;
 }
 
-
-
-/* ==========================================================================
-   05. SAFETY & WATER CONDITIONS SECTION
-   ========================================================================== */
 .telemetry-dashboard-wrap {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
@@ -2254,9 +2188,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   line-height: 1.55;
 }
 
-/* ==========================================================================
-   06. EXPEDITION & RENTAL TIMELINE SECTION
-   ========================================================================== */
 .timeline-tab-bar {
   display: flex;
   align-items: center;
@@ -2334,7 +2265,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   padding: 0.8rem 0;
 }
 
-/* Center connecting spine line */
 .timeline-track::before {
   content: '';
   position: absolute;
@@ -2382,7 +2312,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-left: auto;
 }
 
-/* Compact Glowing Timeline Node */
 .timeline-node {
   position: absolute;
   left: 50%;
@@ -2420,7 +2349,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   line-height: 1;
 }
 
-/* Compact Timeline Cards */
 .timeline-card {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
@@ -2535,9 +2463,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   border-color: var(--primary-accent);
 }
 
-/* ==========================================================================
-   07. TESTIMONIALS SECTION (Auto-Scrolling Right to Left Marquee)
-   ========================================================================== */
 #testimonials {
   position: relative;
   overflow: hidden;
@@ -2555,7 +2480,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-bottom: 2.2rem;
 }
 
-/* Auto-Scrolling Marquee Wrapper & Track */
 .testimonials-marquee-wrapper {
   width: 100%;
   overflow: hidden;
@@ -2586,7 +2510,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* Compact Testimonial Card Styling */
 .testimonial-card {
   width: clamp(260px, 20vw, 305px);
   flex-shrink: 0;
@@ -2724,7 +2647,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   text-overflow: ellipsis;
 }
 
-/* RTL Support */
 [dir="rtl"] .testimonial-card {
   margin-right: 0;
   margin-left: 2.25rem;
@@ -2744,7 +2666,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .testimonial-card {
     width: 250px;
@@ -2758,9 +2679,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   }
 }
 
-/* ==========================================================================
-   CTA CARD SECTION
-   ========================================================================== */
 .cta-card-wrap {
   padding: 2.2rem var(--site-gutter) 4rem;
 }
@@ -2861,9 +2779,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   color: var(--primary-accent);
 }
 
-/* ==========================================================================
-   SLIDE-OUT DASHBOARD DRAWER
-   ========================================================================== */
 .dashboard-drawer-backdrop {
   position: fixed;
   top: 0;
@@ -3079,9 +2994,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 28px rgba(72, 210, 229, 0.75);
 }
 
-/* ==========================================================================
-   PREMIUM LUXURY FOOTER
-   ========================================================================== */
 .site-footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -3096,7 +3008,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin: 0 auto;
 }
 
-/* 5-Column Grid with Perfect Baseline Alignment */
 .footer-top-grid {
   display: grid;
   grid-template-columns: 1.35fr 1fr 1fr 1.05fr 1.35fr;
@@ -3105,7 +3016,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-bottom: 1.5rem;
 }
 
-/* Brand Column & Paratext */
 .footer-brand-col {
   display: flex;
   flex-direction: column;
@@ -3119,7 +3029,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   max-width: 320px;
 }
 
-/* 4 Social Icons directly after paratext */
 .footer-brand-socials {
   display: flex;
   align-items: center;
@@ -3160,7 +3069,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: scale(1.1);
 }
 
-/* Identical Column Header Typography Across All Columns */
 .footer-nav-col {
   display: flex;
   flex-direction: column;
@@ -3179,7 +3087,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   align-items: center;
 }
 
-/* Uniform Vertical Rhythm and Exact Line Heights Across All Columns */
 .footer-links-list {
   list-style: none;
   padding: 0;
@@ -3212,7 +3119,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   transform: translateX(3px);
 }
 
-/* Badge Pill inside Links */
 .footer-badge-pill {
   font-size: 0.65rem;
   font-weight: 700;
@@ -3227,7 +3133,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   vertical-align: middle;
 }
 
-/* Contact & Support Column - Strictly Same Line Height & Alignment */
 .footer-contact-list {
   list-style: none;
   padding: 0;
@@ -3290,7 +3195,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   text-decoration: underline;
 }
 
-/* Footer Bottom Bar */
 .footer-bottom-bar {
   border-top: 1px solid var(--border-color);
   padding-top: 0.85rem;
@@ -3401,9 +3305,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   height: 16px;
 }
 
-/* ==========================================================================
-   INTERACTIVE FOOTER MODALS (404, COMING SOON, DASHBOARD)
-   ========================================================================== */
 .footer-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -3598,7 +3499,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   box-shadow: 0 0 20px rgba(32, 184, 209, 0.4);
 }
 
-/* Upcoming features list */
 .upcoming-features-list {
   display: flex;
   flex-direction: column;
@@ -3636,7 +3536,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin: 0.2rem 0 0;
 }
 
-/* Dashboard preview modal layout */
 .dashboard-preview-header {
   display: flex;
   justify-content: space-between;
@@ -3724,9 +3623,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-bottom: 0.25rem;
 }
 
-/* ==========================================================================
-   RTL Styles
-   ========================================================================== */
 [dir="rtl"] {
   direction: rtl;
   text-align: right;
@@ -3799,9 +3695,6 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
   margin-left: 0;
 }
 
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
 @media (max-width: 1200px) {
   .rentals-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3851,7 +3744,7 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
     min-height: 380px;
   }
 
-  /* Visual Moments Tablet Responsive */
+  
   .moments-bento-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
@@ -3993,7 +3886,7 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
     grid-template-columns: 1fr;
   }
 
-  /* Visual Moments Mobile Responsive */
+  
   .moments-bento-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -4012,8 +3905,7 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
     border-radius: 20px;
   }
 
-
-  /* Timeline Mobile & Tablet Responsive */
+  
   .timeline-track::before {
     left: 16px;
     transform: none;
@@ -4137,5 +4029,28 @@ html[dir="rtl"] .rtl-toggle-btn .rtl-opt-ltr {
 
   .luxury-cta-card {
     padding: 2.2rem 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-headline {
+    font-size: 2.3rem !important;
+  }
+
+  .nav-logo-brand {
+    gap: 0.4rem;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .header-actions {
+    gap: 0.4rem;
+  }
+
+  .action-control-btn.rtl-btn {
+    padding: 0 8px;
+    font-size: 0.72rem;
   }
 }

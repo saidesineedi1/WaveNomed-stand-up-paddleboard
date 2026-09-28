@@ -1,10 +1,7 @@
-/**
- * WaveNomad - Stand-Up Paddleboard Rental & Lessons
- * Interactive Client Scripts & Booking Engine
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Elements
+
   const html = document.documentElement;
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
   const themeIconSun = document.getElementById('theme-icon-sun');
@@ -34,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sliderPrevBtn = document.getElementById('slider-prev-btn');
   const sliderNextBtn = document.getElementById('slider-next-btn');
 
-  // --- Theme Toggle Logic (Matching Reference: Sun in Light Mode, Moon in Dark Mode) ---
   const applyTheme = (theme) => {
     if (theme === 'dark') {
       html.setAttribute('data-theme', 'dark');
@@ -61,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Slide Arrow Controls
   if (sliderPrevBtn) {
     sliderPrevBtn.addEventListener('click', () => {
       applyTheme('light');
@@ -74,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Header Scrolled Glass Effect
   if (siteHeader) {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -87,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  // --- RTL / LTR Toggle Logic ---
   const applyDirection = (isRtl) => {
     if (isRtl) {
       html.setAttribute('dir', 'rtl');
@@ -120,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Home 1 / Home 2 Dropdown Logic ---
   if (homeDropdownBtn && homeDropdownItem) {
     homeDropdownBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -147,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Mobile Hamburger Menu ---
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
@@ -162,12 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Button Navigation Handlers ---
   const navLoginBtn = document.getElementById('nav-login-btn');
   if (navLoginBtn) {
     navLoginBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      window.location.href = 'dashboard.html';
+      window.location.href = 'login.html';
     });
   }
 
@@ -187,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Timeline Tab Switcher ---
   const tabFlow = document.getElementById('tab-rental-flow');
   const tabSchedule = document.getElementById('tab-daily-schedule');
   const paneFlow = document.getElementById('timeline-pane-flow');
@@ -215,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Newsletter Toast/Notification ---
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -234,7 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Rentals Filter Buttons ---
   const filterBtns = document.querySelectorAll('.fleet-filter-btn');
   const boardCards = document.querySelectorAll('.board-card');
 
@@ -254,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Interactive Booking Engine Calculator ---
   const bookingType = document.getElementById('booking-exp-type');
   const bookingGear = document.getElementById('booking-gear');
   const bookingDuration = document.getElementById('booking-duration');
@@ -273,14 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const durationMultiplier = parseFloat(bookingDuration.value) || 1;
     const paddlers = parseInt(bookingPaddlers.value) || 1;
 
-    // Check gear rate
     if (bookingGear) {
       if (bookingGear.value === 'apex') baseRate = 45;
       else if (bookingGear.value === 'terraflow') baseRate = 35;
       else if (bookingGear.value === 'tandem') baseRate = 65;
     }
 
-    // Check experience type
     if (bookingType && bookingType.value === 'tour') {
       baseRate = 85;
     } else if (bookingType && bookingType.value === 'lesson') {
@@ -289,7 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const calculatedBase = baseRate * durationMultiplier * paddlers;
 
-    // Addons
     let addonsTotal = 0;
     addonCheckboxes.forEach(cb => {
       const parentPill = cb.closest('.addon-pill');
@@ -314,10 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (bookingPaddlers) bookingPaddlers.addEventListener('change', updateBookingTotal);
   addonCheckboxes.forEach(cb => cb.addEventListener('change', updateBookingTotal));
 
-  // Initialize calculation
   updateBookingTotal();
 
-  // Booking Form Submission
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -340,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Quick action from rental cards to auto-select board in booking form
   const reserveButtons = document.querySelectorAll('.btn-card-reserve');
   reserveButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -357,7 +337,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Footer Redesign Interactive Handlers ---
   const footerHome1Trigger = document.querySelector('.footer-home1-trigger');
   const footerHome2Trigger = document.querySelector('.footer-home2-trigger');
   const footerPricingTrigger = document.querySelector('.footer-pricing-trigger');
@@ -369,7 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDashboard = document.getElementById('modal-dashboard');
   const footerScrollTopBtn = document.getElementById('footer-scroll-top-btn');
 
-  // Home 1 / Home 2 Links from Footer
   if (footerHome1Trigger) {
     footerHome1Trigger.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -390,7 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Modal helper functions
   const openFooterModal = (modal) => {
     if (!modal) return;
     modal.classList.add('active');
@@ -408,17 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const allFooterModals = [modal404, modalComingSoon, modalDashboard].filter(Boolean);
 
   if (footerLink404) {
-    footerLink404.addEventListener('click', (e) => {
-      e.preventDefault();
-      openFooterModal(modal404);
-    });
+
   }
 
   if (footerLinkComingSoon) {
-    footerLinkComingSoon.addEventListener('click', (e) => {
-      e.preventDefault();
-      openFooterModal(modalComingSoon);
-    });
+
   }
 
   if (footerLinkDashboard) {
@@ -429,14 +400,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   allFooterModals.forEach((modal) => {
-    // Backdrop click
+
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeFooterModal(modal);
       }
     });
 
-    // Close buttons inside modal
     const closeBtns = modal.querySelectorAll('.footer-modal-close, .footer-modal-close-trigger, .modal-close-and-scroll');
     closeBtns.forEach((btn) => {
       btn.addEventListener('click', (e) => {
@@ -455,7 +425,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Modal 404 Return to Home Button
   const modal404HomeBtn = document.getElementById('modal-404-home-btn');
   if (modal404HomeBtn) {
     modal404HomeBtn.addEventListener('click', (e) => {
@@ -465,7 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Footer Back to Top Button
   if (footerScrollTopBtn) {
     footerScrollTopBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -473,9 +441,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================================================
-  // Visual Moments in Stand-Up Paddleboard Rental (Filter, Lightbox, Likes, Share)
-  // ==========================================================================
   const momentsData = [
     {
       index: 0,
@@ -571,7 +536,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const momentCards = document.querySelectorAll('.moment-card');
 
-  // 2. Likes Interactions on Cards
   momentCards.forEach((card) => {
     const likeBtn = card.querySelector('.moment-like-btn');
     const index = parseInt(card.dataset.index, 10);
@@ -587,7 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Card Media click opens Lightbox
     const mediaWrap = card.querySelector('.moment-media-wrapper');
     if (mediaWrap && !isNaN(index)) {
       mediaWrap.addEventListener('click', () => {
@@ -610,7 +573,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Cinematic Lightbox
   const lightboxModal = document.getElementById('moment-lightbox');
   const lbImg = document.getElementById('lightbox-img');
   const lbBadge = document.getElementById('lightbox-badge');
@@ -699,7 +661,6 @@ document.addEventListener('DOMContentLoaded', () => {
       lbLikeBtn.classList.toggle('liked', item.liked);
       if (lbLikeCount) lbLikeCount.textContent = `${item.likes} Likes`;
 
-      // Sync with card
       const targetCard = document.querySelector(`.moment-card[data-index="${currentLbIndex}"]`);
       if (targetCard) {
         const cardLikeBtn = targetCard.querySelector('.moment-like-btn');
@@ -712,7 +673,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard navigation (ESC to close dropdowns and modals, Arrows for Lightbox)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (homeDropdownItem) homeDropdownItem.classList.remove('open');

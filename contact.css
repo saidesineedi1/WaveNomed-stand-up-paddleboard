@@ -1,11 +1,5 @@
-/* ==========================================================================
-   WaveNomad — Contact & Concierge Experience Stylesheet
-   Focus: Personal Connection, Concierge, Easy Communication, Adventure Planning
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   00. BASE & CONTAINER SYSTEM
-   -------------------------------------------------------------------------- */
+
 .contact-page-body {
   background-color: var(--bg-primary);
   color: var(--primary-text);
@@ -16,6 +10,16 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
 }
 
 .contact-section-wrap {
@@ -75,9 +79,6 @@
   margin: 0 auto;
 }
 
-/* --------------------------------------------------------------------------
-   01. SECTION 01 — HERO (CALM SHORELINE WITH CIRCULAR EXPANDING RIPPLE)
-   -------------------------------------------------------------------------- */
 .contact-hero-section {
   position: relative;
   min-height: 100vh;
@@ -97,7 +98,6 @@
   }
 }
 
-/* Natural Light Shoreline Gradient Mask */
 .contact-hero-mask {
   background: linear-gradient(
     90deg,
@@ -162,7 +162,6 @@
   flex-wrap: wrap;
 }
 
-/* Shoreline Ripple Stage (Right Column) */
 .contact-hero-stage {
   display: flex;
   align-items: center;
@@ -174,19 +173,22 @@
 .shoreline-ripple-wrapper {
   position: relative;
   width: 460px;
+  max-width: 90vw;
   height: 460px;
+  max-height: 90vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Concentric Expanding Water Ripples */
 .water-ripple {
   position: absolute;
   border-radius: 50%;
   border: 1.5px solid rgba(21, 151, 184, 0.32);
   pointer-events: none;
   transition: transform 0.4s ease;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .ripple-ring-1 {
@@ -228,7 +230,6 @@
   }
 }
 
-/* Central Coordinates Beacon */
 .ripple-center-beacon {
   position: absolute;
   display: flex;
@@ -269,7 +270,6 @@
   color: var(--secondary-text);
 }
 
-/* Editorial Floating Topic Labels Around Ripple */
 .ripple-topic-pill {
   position: absolute;
   display: inline-flex;
@@ -317,7 +317,6 @@
   color: var(--primary-text);
 }
 
-/* Symmetrical Positions around circle */
 .pill-rentals {
   top: 18px;
   left: 50%;
@@ -380,9 +379,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   02. SECTION 02 — CONTACT OPTIONS (4 LARGE EDITORIAL IMAGE-BACKED PANELS)
-   -------------------------------------------------------------------------- */
 .contact-options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -412,7 +408,6 @@
   box-shadow: var(--shadow-elevated), 0 0 24px rgba(32, 184, 209, 0.2);
 }
 
-/* Background Image Canvas */
 .panel-image-canvas {
   position: absolute;
   inset: 0;
@@ -435,7 +430,6 @@
   transform: scale(1.06);
 }
 
-/* Vignette Layer */
 .panel-vignette-overlay {
   position: absolute;
   inset: 0;
@@ -458,7 +452,6 @@
   );
 }
 
-/* Water Ripple Cue on Card */
 .panel-ripple-cue {
   position: absolute;
   top: 1.4rem;
@@ -498,7 +491,6 @@
   transform: scale(1.08);
 }
 
-/* Content Body */
 .panel-content-body {
   position: relative;
   z-index: 4;
@@ -576,9 +568,6 @@
   transform: translateX(5px);
 }
 
-/* --------------------------------------------------------------------------
-   03. SECTION 03 — CONTACT EXPERIENCE (EDITORIAL + FLOATING FORM)
-   -------------------------------------------------------------------------- */
 .planning-split-grid {
   display: grid;
   grid-template-columns: 1fr 1.08fr;
@@ -607,7 +596,6 @@
   max-width: 480px;
 }
 
-/* Information Blocks */
 .planning-info-blocks {
   display: flex;
   flex-direction: column;
@@ -671,7 +659,6 @@
   color: var(--primary-text);
 }
 
-/* Guarantee Note */
 .concierge-guarantee-note {
   display: flex;
   align-items: center;
@@ -705,7 +692,6 @@
   margin: 0;
 }
 
-/* Floating Form Card */
 .floating-form-card {
   position: relative;
   background: var(--surface-card);
@@ -750,7 +736,6 @@
   margin: 0;
 }
 
-/* Floating Label Inputs */
 .form-field-group {
   position: relative;
   margin-bottom: 1.6rem;
@@ -796,7 +781,6 @@
   transform-origin: left top;
 }
 
-/* Floating Label Active State (when input has value or focus) */
 .floating-input:focus ~ .floating-label,
 .floating-input:not(:placeholder-shown) ~ .floating-label,
 .floating-select:focus ~ .floating-label,
@@ -818,7 +802,6 @@
   box-shadow: 0 0 0 3px rgba(21, 151, 184, 0.15);
 }
 
-/* Date input specific handling */
 .date-input {
   color: var(--primary-text);
 }
@@ -832,7 +815,6 @@
   filter: invert(0.9);
 }
 
-/* Select Chevron */
 .select-chevron {
   position: absolute;
   right: 1.1rem;
@@ -848,7 +830,6 @@
   cursor: pointer;
 }
 
-/* Error message */
 .field-error-msg {
   display: none;
   font-size: 0.74rem;
@@ -869,7 +850,6 @@
   display: block;
 }
 
-/* Submit Button & States */
 .form-submit-btn {
   width: 100%;
   padding: 1.05rem 2rem;
@@ -912,7 +892,6 @@
   line-height: 1.5;
 }
 
-/* Success Card */
 .form-success-card {
   text-align: center;
   padding: 2.5rem 1.5rem;
@@ -992,9 +971,6 @@
   text-underline-offset: 4px;
 }
 
-/* --------------------------------------------------------------------------
-   04. SECTION 04 — MEET US BY THE WATER (MINIMAL MAP + LOCATION DETAILS)
-   -------------------------------------------------------------------------- */
 .location-split-stage {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -1026,7 +1002,6 @@
   color: rgba(32, 184, 209, 0.15);
 }
 
-/* Animated Route Line drawing */
 .map-route-line {
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
@@ -1037,7 +1012,6 @@
   stroke-dashoffset: 0;
 }
 
-/* Marker Ripple Rings */
 .marker-pulse-ring-1 {
   animation: mapMarkerRipple 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
 }
@@ -1104,7 +1078,6 @@
   color: var(--primary-text);
 }
 
-/* Location Details Card (Right) */
 .location-details-card {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
@@ -1153,7 +1126,6 @@
   flex-shrink: 0;
 }
 
-/* Opening Hours Box */
 .location-hours-box {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
@@ -1200,7 +1172,6 @@
   border-top: 1px dashed var(--border-color);
 }
 
-/* Action Links */
 .location-action-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1257,9 +1228,6 @@
   transform: translateX(4px);
 }
 
-/* --------------------------------------------------------------------------
-   05. SECTION 05 — FINAL CONNECTION (FULL-WIDTH CINEMATIC GOLDEN-HOUR)
-   -------------------------------------------------------------------------- */
 .final-connection-section {
   position: relative;
   min-height: 320px;
@@ -1349,7 +1317,6 @@
   font-size: 0.92rem;
 }
 
-/* Category Strip below CTA */
 .final-category-strip {
   display: flex;
   align-items: center;
@@ -1368,9 +1335,6 @@
   color: #20B8D1;
 }
 
-/* --------------------------------------------------------------------------
-   06. RESPONSIVE BREAKPOINTS (MATCHING HOME 1 SYSTEM)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1120px) {
   .contact-hero-inner {
     grid-template-columns: 1fr;
@@ -1459,9 +1423,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   07. RTL DIRECTION SUPPORT
-   -------------------------------------------------------------------------- */
 [dir="rtl"] .contact-eyebrow::before {
   margin-left: 0.6rem;
   margin-right: 0;

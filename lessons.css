@@ -1,11 +1,5 @@
-/* ==========================================================================
-   WaveNomad — Lessons & Tours Luxury Experience Stylesheet
-   Focus: People, Instruction, Progression, Guided Routes, Editorial Mastery
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   00. BASE & CONTAINER OVERRIDES SPECIFIC TO LESSONS PAGE
-   -------------------------------------------------------------------------- */
+
 .lessons-page-body {
   background-color: var(--bg-primary);
   color: var(--primary-text);
@@ -86,9 +80,6 @@
   margin-right: auto;
 }
 
-/* --------------------------------------------------------------------------
-   01. SECTION 01 — HERO (CINEMATIC GUIDED SESSION WITH EXPEDITION GROUP)
-   -------------------------------------------------------------------------- */
 .lessons-hero {
   position: relative;
   min-height: 94vh;
@@ -181,6 +172,16 @@
   margin-left: 0.2rem;
 }
 
+.hero-headline-accent,
+.headline-accent,
+.section-headline-accent,
+.highlight-word,
+.title-accent {
+  color: var(--primary-accent) !important;
+  position: relative;
+  display: inline;
+}
+
 .hero-subtext {
   font-size: clamp(1.05rem, 1.35vw, 1.25rem);
   line-height: 1.6;
@@ -243,7 +244,6 @@
   transform: translateY(-2px);
 }
 
-/* Quick Metrics Bar Under CTAs */
 .hero-stats-band {
   display: flex;
   align-items: center;
@@ -273,7 +273,6 @@
   letter-spacing: 0.06em;
 }
 
-/* Visual Stage: Parallax Cinematic Composition */
 .hero-visual-stage {
   position: relative;
   width: 100%;
@@ -302,7 +301,6 @@
   transform: scale(1.03);
 }
 
-/* Water Ripple & Caustic Overlays */
 .hero-water-caustic-layer {
   position: absolute;
   inset: 0;
@@ -311,7 +309,6 @@
   pointer-events: none;
 }
 
-/* Floating Status Pills on Photo */
 .hero-floating-chip {
   position: absolute;
   background: rgba(255, 255, 255, 0.88);
@@ -385,7 +382,6 @@
   gap: 0.4rem;
 }
 
-/* Subtle Animated Ripple SVG Trail */
 .hero-svg-trail {
   position: absolute;
   bottom: 0;
@@ -412,9 +408,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --------------------------------------------------------------------------
-   02. SECTION 02 — ACCREDITED LESSON PROGRAMS (3 LESSONS CARDS)
-   -------------------------------------------------------------------------- */
 .lessons-catalog-section {
   position: relative;
   background: var(--bg-secondary);
@@ -427,7 +420,6 @@
   margin-bottom: 3.5rem;
 }
 
-/* 3 Lessons Cards Grid */
 .lessons-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -458,7 +450,6 @@
   box-shadow: var(--shadow-elevated), 0 10px 30px rgba(21, 151, 184, 0.1);
 }
 
-/* Card Media Frame */
 .lesson-card-media {
   position: relative;
   width: 100%;
@@ -509,7 +500,6 @@
   border: 1px solid rgba(245, 158, 11, 0.45);
 }
 
-/* Card Price Pill */
 .lesson-card-price-pill {
   position: absolute;
   bottom: 0.9rem;
@@ -545,7 +535,6 @@
   margin-left: 0.2rem;
 }
 
-/* Card Body */
 .lesson-card-body {
   padding: 1.8rem;
   display: flex;
@@ -590,7 +579,6 @@
   flex-grow: 1;
 }
 
-/* Feature Check List */
 .lesson-card-features {
   list-style: none;
   padding: 0;
@@ -615,7 +603,6 @@
   font-size: 0.85rem;
 }
 
-/* Card Footer & View Details Button */
 .lesson-card-footer {
   margin-top: auto;
   padding-top: 1.2rem;
@@ -668,9 +655,6 @@
   box-shadow: 0 8px 22px rgba(21, 151, 184, 0.45);
 }
 
-/* --------------------------------------------------------------------------
-   03. SECTION 03 — GUIDED TOURS (INTERACTIVE ARTISTIC ROUTE EXPERIENCE)
-   -------------------------------------------------------------------------- */
 .tours-section {
   position: relative;
   background: var(--bg-primary);
@@ -707,7 +691,6 @@
   margin-top: 2.5rem;
 }
 
-/* Abstract Lake Route Map (Left) */
 .tours-map-canvas {
   position: relative;
   background: var(--surface-card);
@@ -729,7 +712,6 @@
   direction: ltr;
 }
 
-/* SVG Map Stylings */
 .map-contour-land {
   fill: var(--bg-secondary);
   stroke: var(--border-color);
@@ -827,7 +809,6 @@
   color: var(--secondary-text);
 }
 
-/* Tour Selector Cards Stack (Right Column) */
 .tours-card-stack {
   display: flex;
   flex-direction: column;
@@ -942,9 +923,6 @@
   color: var(--primary-accent);
 }
 
-/* --------------------------------------------------------------------------
-   04. SECTION 04 — MEET YOUR GUIDES (EDITORIAL INSTRUCTOR SHOWCASE)
-   -------------------------------------------------------------------------- */
 .guides-section {
   position: relative;
   background: var(--bg-secondary);
@@ -966,7 +944,6 @@
   overflow: hidden;
 }
 
-/* Left: Large Editorial Action / Portrait Photo */
 .guide-portrait-column {
   position: relative;
 }
@@ -1010,7 +987,6 @@
   text-transform: uppercase;
 }
 
-/* Right: Editorial Biography & Statistics */
 .guide-bio-column {
   display: flex;
   flex-direction: column;
@@ -1034,7 +1010,6 @@
   margin-bottom: 1.4rem;
 }
 
-/* Editorial Quote */
 .guide-quote-box {
   position: relative;
   padding-left: 1.4rem;
@@ -1050,7 +1025,6 @@
   color: var(--primary-text);
 }
 
-/* Three Metric Highlight Cards */
 .guide-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1083,7 +1057,6 @@
   letter-spacing: 0.05em;
 }
 
-/* Certifications Pill Row */
 .guide-certs-wrap {
   margin-bottom: 2.2rem;
 }
@@ -1114,7 +1087,6 @@
   color: var(--primary-text);
 }
 
-/* Carousel Navigator Switcher */
 .guides-carousel-controls {
   display: flex;
   align-items: center;
@@ -1182,9 +1154,6 @@
   border-color: var(--primary-accent);
 }
 
-/* --------------------------------------------------------------------------
-   05. SECTION 05 — READY FOR THE WATER (COMPACT CTA CARD)
-   -------------------------------------------------------------------------- */
 .booking-section {
   position: relative;
   background: var(--bg-primary);
@@ -1204,7 +1173,6 @@
   text-align: center;
 }
 
-/* Photographic Backdrop Canvas */
 .booking-cta-canvas {
   position: absolute;
   inset: 0;
@@ -1276,7 +1244,6 @@
   margin: 0 auto 1.75rem;
 }
 
-/* Actions Row */
 .booking-cta-actions {
   display: flex;
   align-items: center;
@@ -1346,7 +1313,6 @@
   color: #FFFFFF;
 }
 
-/* Trust Perks */
 .booking-cta-perks {
   display: flex;
   align-items: center;
@@ -1358,9 +1324,6 @@
   color: rgba(226, 241, 248, 0.88);
 }
 
-/* --------------------------------------------------------------------------
-   06. RESERVATION CONFIRMATION MODAL
-   -------------------------------------------------------------------------- */
 .lessons-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1385,11 +1348,11 @@
 .lessons-modal-card {
   background: var(--surface-card);
   border: 1px solid var(--border-color);
-  border-radius: 24px;
+  border-radius: 18px;
   width: 100%;
-  max-width: 580px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-  padding: 2.5rem;
+  max-width: 480px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  padding: 1.6rem 1.8rem;
   position: relative;
   transform: translateY(20px);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1401,10 +1364,10 @@
 
 .modal-close-btn {
   position: absolute;
-  top: 1.4rem;
-  right: 1.4rem;
-  width: 36px;
-  height: 36px;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   background: var(--bg-secondary);
@@ -1423,71 +1386,78 @@
 }
 
 .modal-header-icon {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: var(--soft-accent);
   color: var(--primary-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
 }
 
 .modal-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.8rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--primary-text);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .modal-desc {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--secondary-text);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .modal-summary-box {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 1.1rem 1.4rem;
-  margin-bottom: 1.6rem;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 1.1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem 1rem;
+  gap: 0.4rem 0.75rem;
 }
 
 .summary-item-label {
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--secondary-text);
 }
 
 .summary-item-val {
-  font-size: 0.92rem;
-  font-weight: 800;
+  font-size: 0.82rem;
+  font-weight: 700;
   color: var(--primary-text);
 }
 
 .modal-form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  margin-bottom: 1.1rem;
+  gap: 0.3rem;
+  margin-bottom: 0.85rem;
+}
+
+.modal-form-group .config-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
 }
 
 .modal-input {
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.85rem;
   border: 1.5px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--surface-card);
   color: var(--primary-text);
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   outline: none;
 }
 
@@ -1497,11 +1467,12 @@
 
 .modal-confirm-btn {
   width: 100%;
-  padding: 0.9rem;
+  padding: 0.8rem;
+  border-radius: 999px;
   background: var(--primary-accent);
   color: var(--btn-text);
   font-weight: 700;
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
@@ -1514,9 +1485,6 @@
   background: var(--accent-hover);
 }
 
-/* --------------------------------------------------------------------------
-   07. RESPONSIVE DESIGN (DESKTOP, LAPTOP, TABLET, MOBILE)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .lessons-hero-grid {
     gap: 2.5rem;
@@ -1611,7 +1579,6 @@
   }
 }
 
-/* RTL Support */
 [dir="rtl"] .hero-display-title .highlight-script {
   transform: rotate(1.5deg);
   margin-left: 0;

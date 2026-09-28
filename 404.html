@@ -1,97 +1,158 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Page Not Found | Silver Hoof Stables</title>
+  <title>404 - Page Not Found | WaveNomad Standup Paddleboard Rental</title>
   <meta name="description"
-    content="The pathway you are seeking has wandered off the trail. Return to Silver Hoof Stables home for premier equestrian lessons, trail rides, and stabling.">
+    content="The page you are looking for has drifted off course. Return to WaveNomad home or explore our rentals and lessons.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-  <link rel="icon" type="image/jpeg" href="favicon.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="404.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="404.css">
 </head>
 
-<body>
+<body class="error-page-body">
 
-<button class="err-theme-btn" id="err-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
-    <i class="fa-solid fa-moon" id="err-theme-icon"></i>
-  </button>
+  
+  <div class="error-top-controls" id="error-controls">
+    <button class="action-control-btn theme-pill-btn" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+      title="Toggle Light / Dark Mode">
+      <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4.5"></circle>
+        <line x1="12" y1="2" x2="12" y2="4"></line>
+        <line x1="12" y1="20" x2="12" y2="22"></line>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+        <line x1="2" y1="12" x2="4" y2="12"></line>
+        <line x1="20" y1="12" x2="22" y2="12"></line>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+      </svg>
+      <svg id="theme-icon-moon" class="theme-icon" style="display: none;" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </div>
 
-<main class="error-fullpage">
-    <section class="error-page-section">
-      <div class="error-page-content">
+  
+  <div class="error-bg-glow glow-top-left" aria-hidden="true"></div>
+  <div class="error-bg-glow glow-bottom-right" aria-hidden="true"></div>
 
-<div class="error-visual-wrap" aria-label="404 Error Graphic">
-          <span class="error-digit">4</span>
-          <div class="error-medallion-zero">
-            <i class="fa-solid fa-horse-head"></i>
+  
+  <main class="error-viewport-wrapper">
+    <div class="error-card">
+
+      
+      <div class="error-brand">
+        <a href="index.html" class="brand-link" aria-label="WaveNomad Home">
+          <div class="brand-emblem-circle">
+            <img src="assets/images/logo.png" alt="WaveNomad Emblem" class="brand-logo-img">
           </div>
-          <span class="error-digit">4</span>
-        </div>
-
-<div class="error-floor-shadow"></div>
-
-<div class="error-card">
-          
-          <div class="error-badge">
-            <i class="fa-solid fa-compass"></i> LOST IN THE EQUESTRIAN TRAILS
+          <div class="brand-text">
+            <span class="brand-title">WaveNomad</span>
+            <span class="brand-tagline">EXPLORE · PADDLE · REPEAT</span>
           </div>
+        </a>
+      </div>
 
-<h1 class="error-card-title">This Pathway Has Wandered Off The Trail</h1>
+      
+      <div class="error-graphic-wrap">
+        <span class="error-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="badge-icon">
+            <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+            <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+            <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+          </svg>
+          Uncharted Waters
+        </span>
 
-<p class="error-card-desc">
-            The page you are seeking may have galloped elsewhere, expired, or never existed. Let us guide you back to our
-            premier riding stables and training arenas.
-          </p>
+        <h1 class="error-code-title" aria-label="Error 404">
+          4<span class="compass-zero">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </span>4
+        </h1>
+      </div>
 
-<div class="error-actions-group">
-            <a href="index.html" class="error-btn-primary">
-              <i class="fa-solid fa-house-chimney"></i> Back to Stables
+      
+      <div class="error-content">
+        <h2 class="error-heading">Looks like you've drifted off course!</h2>
+        <p class="error-subtext">The page you're looking for has been washed away by the tide or moved to a new shore. Let's steer your paddle back to safety.</p>
+      </div>
+
+      
+      <div class="error-actions">
+        <a href="index.html" class="error-btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="btn-icon">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Return to Shore (Home)</span>
+        </a>
+
+        
+        <div class="quick-links-section">
+          <span class="quick-links-title">Or explore previous pages:</span>
+          <div class="quick-links-grid">
+            <a href="rentals.html" class="quick-link-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Fleet Rentals</span>
+            </a>
+
+            <a href="lessons.html" class="quick-link-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              <span>Paddle Lessons</span>
+            </a>
+
+            <a href="safety.html" class="quick-link-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Safety Rules</span>
+            </a>
+
+            <a href="contact.html" class="quick-link-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Contact Us</span>
             </a>
           </div>
         </div>
 
       </div>
-    </section>
+
+    </div>
   </main>
 
-<script>
-    (function () {
-      const html = document.documentElement;
-      const btn = document.getElementById('err-theme-toggle');
-      const icon = document.getElementById('err-theme-icon');
-      const saved = localStorage.getItem('theme');
-      if (saved) {
-        html.setAttribute('data-theme', saved);
-      }
-
-      function syncIcon() {
-        const isDark = html.getAttribute('data-theme') === 'dark';
-        icon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
-      }
-
-      syncIcon();
-
-      btn.addEventListener('click', function () {
-        const current = html.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        syncIcon();
-      });
-    })();
-  </script>
-
+  <script src="404.js"></script>
 </body>
 
 </html>

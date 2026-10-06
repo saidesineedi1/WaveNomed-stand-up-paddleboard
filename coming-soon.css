@@ -543,3 +543,9 @@ body.coming-soon-body {
     justify-content: center;
   }
 }
+
+@media (max-width: 440px) {
+  .cs-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

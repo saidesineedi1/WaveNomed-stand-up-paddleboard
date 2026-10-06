@@ -1342,6 +1342,35 @@
     gap: 3.5rem;
   }
 
+  .contact-hero-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-hero-content .contact-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-hero-title {
+    text-align: center;
+  }
+
+  .contact-hero-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 580px;
+  }
+
+  .contact-hero-actions {
+    justify-content: center;
+  }
+
   .planning-split-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -1349,6 +1378,43 @@
 
   .planning-editorial-column {
     position: static;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .planning-editorial-column .contact-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .planning-main-headline {
+    text-align: center;
+  }
+
+  .planning-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+
+  .planning-info-blocks {
+    width: 100%;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .concierge-guarantee-note {
+    width: 100%;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .location-split-stage {
@@ -1394,6 +1460,40 @@
 }
 
 @media (max-width: 640px) {
+  .contact-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0.85rem;
+  }
+
+  .contact-hero-actions .cta-pill-primary,
+  .contact-hero-actions .cta-pill-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-hero-title {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .contact-hero-desc {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 1.85rem;
+  }
+
+  .planning-main-headline {
+    font-size: clamp(1.9rem, 6.5vw, 2.5rem);
+  }
+
+  .planning-lead-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 2rem;
+  }
+
   .shoreline-ripple-wrapper {
     width: 320px;
     height: 320px;
@@ -1418,6 +1518,14 @@
 }
 
 @media (max-width: 480px) {
+  .contact-hero-title {
+    font-size: 2.05rem;
+  }
+
+  .planning-main-headline {
+    font-size: 1.75rem;
+  }
+
   .location-action-links {
     grid-template-columns: 1fr;
   }

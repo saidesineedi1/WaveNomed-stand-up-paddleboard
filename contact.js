@@ -118,7 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isOpen = menuToggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
+      menuToggle.classList.toggle('active', isOpen);
+      navMenu.classList.toggle('open', isOpen);
+      navMenu.classList.toggle('active', isOpen);
       menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
@@ -126,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = navMenu.querySelectorAll('.nav-link:not(.dropdown-toggle)');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        menuToggle.classList.remove('open');
-        navMenu.classList.remove('open');
+        menuToggle.classList.remove('open', 'active');
+        navMenu.classList.remove('open', 'active');
         menuToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
@@ -233,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (formCard) {
       formCard.classList.remove('pulse-highlight');
-      void formCard.offsetWidth; // Reflow
+      void formCard.offsetWidth;
       formCard.classList.add('pulse-highlight');
       setTimeout(() => formCard.classList.remove('pulse-highlight'), 1400);
     }

@@ -23,6 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const portalViews = document.querySelectorAll('.portal-view');
   const sidebar = document.getElementById('dashboard-sidebar');
 
+  const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
+  const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+
+  const closeSidebar = () => {
+    if (sidebar) sidebar.classList.remove('mobile-open');
+    if (sidebarBackdrop) sidebarBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  const openSidebar = () => {
+    if (sidebar) sidebar.classList.add('mobile-open');
+    if (sidebarBackdrop) sidebarBackdrop.classList.add('active');
+    document.body.style.overflow = '';
+  };
+
   const switchPortalView = (targetViewId) => {
     sidebarNavItems.forEach(item => {
       const isMatch = item.getAttribute('data-target') === targetViewId;
@@ -35,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       view.classList.toggle('active', isMatch);
     });
 
-    if (sidebar && sidebar.classList.contains('mobile-open')) {
-      sidebar.classList.remove('mobile-open');
-    }
+    closeSidebar();
   };
 
   sidebarNavItems.forEach(item => {
@@ -51,12 +64,28 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileToggle && sidebar) {
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      sidebar.classList.toggle('mobile-open');
+      if (sidebar.classList.contains('mobile-open')) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
     });
+
+    if (sidebarCloseBtn) {
+      sidebarCloseBtn.addEventListener('click', () => {
+        closeSidebar();
+      });
+    }
+
+    if (sidebarBackdrop) {
+      sidebarBackdrop.addEventListener('click', () => {
+        closeSidebar();
+      });
+    }
 
     document.addEventListener('click', (e) => {
       if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
-        sidebar.classList.remove('mobile-open');
+        closeSidebar();
       }
     });
   }

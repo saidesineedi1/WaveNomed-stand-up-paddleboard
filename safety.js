@@ -114,16 +114,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = menuToggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('open');
+      navMenu.classList.toggle('active', isOpen);
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.classList.toggle('active', isOpen);
       menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
+    navMenu.querySelectorAll('.nav-link:not(.dropdown-caret)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!link.closest('.dropdown-menu') && link.id !== 'home-dropdown-btn') {
+          navMenu.classList.remove('open', 'active');
+          menuToggle.classList.remove('open', 'active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
     document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('open')) {
-        menuToggle.classList.remove('open');
-        navMenu.classList.remove('open');
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && (navMenu.classList.contains('open') || navMenu.classList.contains('active'))) {
+        navMenu.classList.remove('open', 'active');
+        menuToggle.classList.remove('open', 'active');
         menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
@@ -238,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.classList.add('active');
         highestActiveIndex = idx + 1;
       } else {
-        if (idx > 1) { // Keep first two active as initial preview
+        if (idx > 1) {
           row.classList.remove('active');
         }
       }
@@ -251,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', updateTimelineProgress, { passive: true });
-  updateTimelineProgress(); // Initial check
+  updateTimelineProgress();
 
   const tierButtons = {
     calm: document.getElementById('btn-state-calm'),

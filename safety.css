@@ -1,9 +1,19 @@
-
+﻿
 
 .safety-page-body {
   background-color: var(--bg-primary);
   color: var(--primary-text);
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.safety-page-body .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .safety-section-wrap {
@@ -321,9 +331,9 @@
 .radar-grid-rings {
   position: relative;
   width: 400px;
-  max-width: 90vw;
-  height: 400px;
-  max-height: 90vw;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   display: flex;
@@ -334,8 +344,8 @@
 .radar-grid-rings::before {
   content: "";
   position: absolute;
-  width: 270px;
-  height: 270px;
+  width: 67.5%;
+  height: 67.5%;
   border-radius: 50%;
   border: 1px dashed var(--border-color);
 }
@@ -343,8 +353,8 @@
 .radar-grid-rings::after {
   content: "";
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 35%;
+  height: 35%;
   border-radius: 50%;
   border: 1px solid var(--border-color);
 }
@@ -495,7 +505,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.35rem;
+  gap: 0.5rem;
+  min-height: 130px;
   transition: var(--transition-smooth);
 }
 
@@ -506,14 +517,17 @@
 
 .metric-card-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: auto;
 }
 
 .metric-card-icon {
   width: 24px;
   height: 24px;
   color: var(--primary-accent);
+  flex-shrink: 0;
 }
 
 .metric-card-name {
@@ -522,6 +536,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--secondary-text);
+  line-height: 1.3;
 }
 
 .metric-card-value {
@@ -529,13 +544,15 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--primary-text);
-  line-height: 1.1;
+  line-height: 1.15;
+  margin-top: 0.25rem;
 }
 
 .metric-card-sub {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--secondary-text);
+  line-height: 1.35;
 }
 
 .safety-protocol-section {
@@ -1247,6 +1264,194 @@
   gap: 0.35rem;
 }
 
+.protocol-timeline-wrap {
+  max-width: 1060px;
+}
+
+.protocol-step-card {
+  padding: 1.35rem 1.6rem;
+  border-radius: 22px;
+}
+
+.protocol-card-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 1.85rem;
+  align-items: center;
+}
+
+.protocol-step-card.layout-media-right .protocol-card-grid {
+  grid-template-columns: 1fr 290px;
+}
+
+.protocol-step-media {
+  position: relative;
+  width: 100%;
+}
+
+.protocol-img-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-color);
+  height: 220px;
+  background: var(--bg-secondary);
+}
+
+.protocol-safety-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.protocol-step-card:hover .protocol-safety-img {
+  transform: scale(1.03);
+}
+
+.protocol-img-caption-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(7, 25, 35, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  padding: 0.4rem 0.75rem;
+  color: #FFFFFF;
+  font-size: 0.74rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.protocol-img-caption-badge svg {
+  flex-shrink: 0;
+  color: #20B8D1;
+}
+
+.protocol-step-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.readiness-panel-content {
+  max-width: 1060px;
+}
+
+.readiness-check-deck {
+  padding: 1.6rem 1.85rem;
+  border-radius: 22px;
+}
+
+.readiness-deck-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.readiness-media-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 380px;
+}
+
+.readiness-img-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-subtle);
+  background: var(--bg-secondary);
+}
+
+.readiness-spotlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.readiness-check-deck:hover .readiness-spotlight-img {
+  transform: scale(1.02);
+}
+
+.readiness-img-overlay-card {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  background: rgba(7, 25, 35, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.overlay-card-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #20B8D1;
+}
+
+.overlay-card-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.overlay-card-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.overlay-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #E2F1F8;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.readiness-checklist-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media (max-width: 1200px) {
   .safety-conditions-hud {
     grid-template-columns: 1fr 1fr;
@@ -1273,12 +1478,46 @@
 @media (max-width: 1024px) {
   .telemetry-stage-wrapper {
     grid-template-columns: 1fr;
+    gap: 2.25rem;
   }
   .condition-sim-card {
     grid-template-columns: 1fr;
   }
   .marine-radar-display {
     min-height: 440px;
+    height: auto;
+    padding: 2.5rem 2rem 3.5rem;
+  }
+  .telemetry-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .protocol-card-grid,
+  .protocol-step-card.layout-media-right .protocol-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .protocol-step-card.layout-media-right .protocol-step-media {
+    order: -1;
+  }
+
+  .protocol-img-frame {
+    height: 230px;
+  }
+
+  .readiness-deck-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .readiness-media-col,
+  .readiness-img-frame {
+    min-height: 280px;
+    height: 280px;
   }
 }
 
@@ -1297,6 +1536,50 @@
     gap: 1rem;
     margin-top: 2rem;
   }
+  .telemetry-stage-wrapper {
+    gap: 1.85rem;
+    margin-top: 1.85rem;
+  }
+  .marine-radar-display {
+    min-height: 380px;
+    padding: 2rem 1.25rem 3.5rem;
+    border-radius: 24px;
+  }
+  .radar-grid-rings {
+    width: min(320px, 80vw);
+  }
+  .radar-coord-stamp {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    text-align: center;
+    align-items: center;
+    font-size: 0.68rem;
+  }
+  .telemetry-status-banner {
+    padding: 1.25rem 1.4rem;
+    border-radius: 18px;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+  .telemetry-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.95rem;
+  }
+  .telemetry-metric-card {
+    padding: 1.15rem 1.2rem;
+    border-radius: 18px;
+    min-height: 120px;
+  }
+  .metric-card-value {
+    font-size: 1.55rem;
+  }
+  .metric-card-name {
+    font-size: 0.68rem;
+  }
+  .metric-card-sub {
+    font-size: 0.74rem;
+  }
   .protocol-step-row {
     gap: 1.2rem;
   }
@@ -1312,7 +1595,10 @@
     font-size: 0.95rem;
   }
   .protocol-step-card {
-    padding: 1.1rem 1.35rem;
+    padding: 1.15rem 1.15rem;
+  }
+  .protocol-img-frame {
+    height: 200px;
   }
   .protocol-check-pills {
     grid-template-columns: 1fr;
@@ -1328,7 +1614,12 @@
     padding: 1.85rem 1.25rem;
   }
   .readiness-check-deck {
-    padding: 1.2rem 1.15rem;
+    padding: 1.25rem 1.15rem;
+  }
+  .readiness-media-col,
+  .readiness-img-frame {
+    min-height: 240px;
+    height: 240px;
   }
   .readiness-deck-footer {
     flex-direction: column;
@@ -1393,5 +1684,339 @@
     left: auto;
     right: 23px;
     transform: translateX(50%);
+  }
+
+  [dir="rtl"] .radar-coord-stamp {
+    left: 1rem;
+    right: 1rem;
+    text-align: center;
+  }
+
+  [dir="rtl"] .telemetry-status-banner {
+    text-align: right;
+  }
+
+  [dir="rtl"] .telemetry-metric-card {
+    text-align: right;
+  }
+}
+
+@media (max-width: 540px) {
+  .telemetry-stage-wrapper {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .marine-radar-display {
+    min-height: 330px;
+    padding: 1.75rem 1rem 3.5rem;
+    border-radius: 20px;
+  }
+
+  .radar-grid-rings {
+    width: min(280px, 76vw);
+  }
+
+  .ping-label-pill {
+    font-size: 0.62rem;
+    padding: 0.12rem 0.4rem;
+    top: -22px;
+  }
+
+  .radar-coord-stamp {
+    font-size: 0.62rem;
+    bottom: 0.85rem;
+  }
+
+  .telemetry-status-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.1rem 1.15rem;
+    border-radius: 16px;
+  }
+
+  .status-badge-live {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  .telemetry-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .telemetry-metric-card {
+    padding: 1.1rem 1.25rem;
+    border-radius: 16px;
+    min-height: auto;
+    gap: 0.4rem;
+  }
+
+  .metric-card-header {
+    align-items: center;
+    margin-bottom: 0.2rem;
+  }
+
+  .metric-card-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .metric-card-name {
+    font-size: 0.7rem;
+  }
+
+  .metric-card-value {
+    font-size: 1.6rem;
+    margin-top: 0.15rem;
+  }
+
+  .metric-card-sub {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .safety-protocol-section .safety-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .safety-protocol-section .safety-headline {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .safety-protocol-section .safety-lead-desc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .protocol-timeline-wrap {
+    margin-top: 1.85rem;
+    padding: 0.5rem 0;
+  }
+
+  .protocol-step-row {
+    gap: 0.85rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .protocol-step-node {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .protocol-spine-line {
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+  }
+
+  .protocol-step-card {
+    padding: 1.05rem 0.95rem;
+    border-radius: 16px;
+  }
+
+  .protocol-card-grid,
+  .protocol-step-card.layout-media-right .protocol-card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .protocol-img-frame {
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .protocol-img-caption-badge {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.68rem;
+    gap: 0.35rem;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+  }
+
+  .protocol-step-header {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+  }
+
+  .protocol-phase-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    padding: 0.18rem 0.5rem;
+  }
+
+  .protocol-step-header .telemetry-tag {
+    font-size: 0.68rem;
+  }
+
+  .protocol-step-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .protocol-step-desc {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin-bottom: 0.65rem;
+  }
+
+  .protocol-check-pills {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .protocol-check-item {
+    font-size: 0.78rem;
+    gap: 0.4rem;
+  }
+
+  .readiness-check-deck {
+    padding: 1.15rem 0.95rem;
+    border-radius: 16px;
+  }
+
+  .readiness-deck-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .readiness-media-col,
+  .readiness-img-frame {
+    min-height: 220px;
+    height: 220px;
+    border-radius: 12px;
+  }
+
+  .readiness-img-overlay-card {
+    padding: 0.65rem 0.85rem;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 10px;
+  }
+
+  .overlay-card-title {
+    font-size: 0.82rem;
+  }
+
+  .overlay-pill {
+    font-size: 0.65rem;
+    padding: 0.18rem 0.45rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .marine-radar-display {
+    min-height: 290px;
+    padding: 1.35rem 0.65rem 3.25rem;
+    border-radius: 18px;
+  }
+
+  .radar-grid-rings {
+    width: min(230px, 72vw);
+  }
+
+  .ping-label-pill {
+    font-size: 0.58rem;
+    padding: 0.1rem 0.32rem;
+    top: -18px;
+  }
+
+  .radar-coord-stamp {
+    font-size: 0.58rem;
+    bottom: 0.65rem;
+  }
+
+  .telemetry-metric-card {
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+  }
+
+  .metric-card-value {
+    font-size: 1.4rem;
+  }
+
+  .metric-card-name {
+    font-size: 0.66rem;
+  }
+
+  .metric-card-sub {
+    font-size: 0.72rem;
+  }
+
+  .protocol-step-row {
+    gap: 0.65rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .protocol-step-node {
+    width: 34px;
+    height: 34px;
+    font-size: 0.78rem;
+  }
+
+  .protocol-spine-line {
+    left: 17px;
+    top: 17px;
+    bottom: 17px;
+  }
+
+  .protocol-step-card {
+    padding: 0.85rem 0.75rem;
+    border-radius: 14px;
+  }
+
+  .protocol-img-frame {
+    height: 155px;
+    border-radius: 10px;
+  }
+
+  .protocol-img-caption-badge {
+    font-size: 0.62rem;
+    padding: 0.25rem 0.45rem;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+  }
+
+  .protocol-step-title {
+    font-size: 1.15rem;
+  }
+
+  .protocol-step-desc {
+    font-size: 0.82rem;
+  }
+
+  .protocol-check-item {
+    font-size: 0.74rem;
+  }
+
+  .readiness-media-col,
+  .readiness-img-frame {
+    min-height: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 540px) {
+  [dir="rtl"] .protocol-spine-line {
+    right: 20px;
+    left: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  [dir="rtl"] .protocol-spine-line {
+    right: 17px;
+    left: auto;
   }
 }

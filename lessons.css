@@ -1534,9 +1534,13 @@
   }
   .guides-carousel-container {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
   }
   .guide-portrait-frame {
     height: 380px;
+    max-width: 100%;
   }
 }
 
@@ -1547,9 +1551,50 @@
   .lessons-card-grid {
     grid-template-columns: 1fr;
   }
+  .guides-carousel-container {
+    padding: 2rem 1.5rem;
+    gap: 1.85rem;
+    border-radius: 22px;
+  }
+  .guide-portrait-frame {
+    height: 320px;
+    border-radius: 18px;
+  }
+  .guide-name {
+    font-size: 1.85rem;
+    margin-bottom: 1.1rem;
+  }
+  .guide-quote-box {
+    padding-left: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .guide-quote-text {
+    font-size: 1.05rem;
+  }
   .guide-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.85rem;
+    padding: 1.1rem;
+    border-radius: 14px;
+    margin-bottom: 1.6rem;
+  }
+  .guide-stat-value {
+    font-size: 1.3rem;
+  }
+  .guide-stat-label {
+    font-size: 0.68rem;
+  }
+  .guide-certs-wrap {
+    margin-bottom: 1.75rem;
+  }
+  .guides-carousel-controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.25rem;
+  }
+  .guide-avatar-btn {
+    width: 44px;
+    height: 44px;
   }
   .booking-section {
     padding: 2.8rem 0 3.5rem;
@@ -1579,6 +1624,164 @@
   }
 }
 
+@media (max-width: 540px) {
+  .guides-section .section-tag-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+  .guides-section .lessons-headline {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .guides-section .lessons-lead-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+  .guides-carousel-container {
+    padding: 1.35rem 1rem;
+    gap: 1.35rem;
+    border-radius: 18px;
+  }
+  .guide-portrait-frame {
+    height: 250px;
+    border-radius: 14px;
+  }
+  .guide-exp-badge {
+    top: 0.85rem;
+    left: 0.85rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+  }
+  .guide-role-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+  }
+  .guide-name {
+    font-size: 1.6rem;
+    margin-bottom: 0.85rem;
+  }
+  .guide-quote-box {
+    padding-left: 0.85rem;
+    margin-bottom: 1.25rem;
+    border-left-width: 3px;
+  }
+  .guide-quote-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .guide-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+    margin-bottom: 1.35rem;
+  }
+  .guide-stat-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px dashed var(--border-color);
+  }
+  .guide-stat-box:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .guide-stat-value {
+    font-size: 1.25rem;
+  }
+  .guide-stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .guide-certs-wrap {
+    margin-bottom: 1.35rem;
+  }
+  .certs-label {
+    font-size: 0.68rem;
+    margin-bottom: 0.45rem;
+  }
+  .certs-pill-list {
+    gap: 0.45rem;
+  }
+  .cert-pill {
+    font-size: 0.72rem;
+    padding: 0.28rem 0.65rem;
+  }
+  .guides-carousel-controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.15rem;
+    width: 100%;
+  }
+  .guide-thumbs-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+  }
+  .guide-avatar-btn {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .guide-arrow-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;
+    width: 100%;
+  }
+  .guide-nav-arrow {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 380px) {
+  .guides-carousel-container {
+    padding: 1.15rem 0.8rem;
+    gap: 1.15rem;
+    border-radius: 16px;
+  }
+  .guide-portrait-frame {
+    height: 220px;
+    border-radius: 12px;
+  }
+  .guide-exp-badge {
+    top: 0.65rem;
+    left: 0.65rem;
+    padding: 0.25rem 0.55rem;
+    font-size: 0.62rem;
+  }
+  .guide-name {
+    font-size: 1.45rem;
+    margin-bottom: 0.75rem;
+  }
+  .guide-stat-value {
+    font-size: 1.15rem;
+  }
+  .guide-stat-label {
+    font-size: 0.68rem;
+  }
+  .guide-avatar-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .guide-thumbs-list {
+    gap: 0.5rem;
+  }
+  .guide-nav-arrow {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 [dir="rtl"] .hero-display-title .highlight-script {
   transform: rotate(1.5deg);
   margin-left: 0;
@@ -1590,6 +1793,29 @@
   padding-right: 1.4rem;
   border-left: none;
   border-right: 3px solid var(--primary-accent);
+}
+
+[dir="rtl"] .guide-exp-badge {
+  left: auto;
+  right: 1.4rem;
+}
+
+@media (max-width: 540px) {
+  [dir="rtl"] .guide-quote-box {
+    padding-left: 0;
+    padding-right: 0.85rem;
+  }
+  [dir="rtl"] .guide-exp-badge {
+    right: 0.85rem;
+    left: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  [dir="rtl"] .guide-exp-badge {
+    right: 0.65rem;
+    left: auto;
+  }
 }
 
 [dir="rtl"] .chip-instructor {

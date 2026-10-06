@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateBookingTotal = () => {
     if (!bookingDuration || !bookingPaddlers) return;
 
-    let baseRate = 35; // Default 1 hr rate
+    let baseRate = 35;
     const durationMultiplier = parseFloat(bookingDuration.value) || 1;
     const paddlers = parseInt(bookingPaddlers.value) || 1;
 

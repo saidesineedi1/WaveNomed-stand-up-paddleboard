@@ -83,11 +83,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      menuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('open');
+      navMenu.classList.toggle('active', isOpen);
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navMenu.querySelectorAll('.nav-link:not(.dropdown-caret)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!link.closest('.dropdown-menu') && link.id !== 'home-dropdown-btn') {
+          navMenu.classList.remove('open', 'active');
+          menuToggle.classList.remove('open', 'active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && (navMenu.classList.contains('open') || navMenu.classList.contains('active'))) {
+        navMenu.classList.remove('open', 'active');
+        menuToggle.classList.remove('open', 'active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
@@ -116,7 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
       stability: "9.6 / 10",
       stabilityPercent: "96%",
       price: "35",
-      priceMultiplier: 1.0
+      priceMultiplier: 1.0,
+      inclusions: [
+        "Lightweight Carbon Hybrid Paddle",
+        "Ergonomic USCG Approved PFD Vest",
+        "10ft Coiled Heavy-Duty Safety Leash",
+        "20L Waterproof Sealed Deck Bag"
+      ]
     },
     touring: {
       id: 'touring',
@@ -131,7 +157,13 @@ document.addEventListener('DOMContentLoaded', () => {
       stability: "8.8 / 10",
       stabilityPercent: "88%",
       price: "50",
-      priceMultiplier: 1.2
+      priceMultiplier: 1.2,
+      inclusions: [
+        "Ultra-Rigid Carbon Touring Paddle",
+        "High-Visibility Safety PFD Vest",
+        "Dual Bungee Cargo Nets & 25L Dry Bag",
+        "Navigation Whistle & Coiled Leash"
+      ]
     },
     performance: {
       id: 'performance',
@@ -146,7 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
       stability: "7.6 / 10",
       stabilityPercent: "76%",
       price: "65",
-      priceMultiplier: 1.35
+      priceMultiplier: 1.35,
+      inclusions: [
+        "Full Carbon Race Paddle (Custom Cut)",
+        "Low-Drag Competition PFD Vest",
+        "Hydrodynamic US-Box Carbon Fin",
+        "Garmin Telemetry & Hydration Mount"
+      ]
     },
     beginner: {
       id: 'beginner',
@@ -161,7 +199,13 @@ document.addEventListener('DOMContentLoaded', () => {
       stability: "9.9 / 10",
       stabilityPercent: "99%",
       price: "30",
-      priceMultiplier: 0.95
+      priceMultiplier: 0.95,
+      inclusions: [
+        "High-Stability Composite Paddle",
+        "Extra-Buoyant USCG Approved PFD",
+        "Comfort Neoprene Padded Ankle Leash",
+        "15-Min Dockside Technique Briefing"
+      ]
     },
     premium: {
       id: 'premium',
@@ -176,7 +220,13 @@ document.addEventListener('DOMContentLoaded', () => {
       stability: "9.4 / 10",
       stabilityPercent: "94%",
       price: "75",
-      priceMultiplier: 1.5
+      priceMultiplier: 1.5,
+      inclusions: [
+        "Custom Teak / Carbon Inlay Paddle",
+        "Luxury Neoprene Comfort PFD Vest",
+        "Hand-Crafted Leather-Trim Dry Bag",
+        "VIP Dock Valet Staging & Cedar Towel"
+      ]
     }
   };
 
@@ -196,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const featuredStability = document.getElementById('featured-board-stability');
   const featuredStabilityFill = document.getElementById('featured-stability-fill');
   const featuredPrice = document.getElementById('featured-board-price');
+  const featuredIncludedList = document.getElementById('featured-included-list');
   const reserveBoardBtn = document.getElementById('reserve-board-btn');
   const prevBoardBtn = document.getElementById('board-prev-btn');
   const nextBoardBtn = document.getElementById('board-next-btn');
@@ -216,30 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       thumb.classList.toggle('active', thumb.getAttribute('data-category') === key);
     });
 
-    if (animate && featuredImg) {
-      featuredImg.style.opacity = '0';
-      featuredImg.style.transform = 'scale(0.97)';
-      
-      setTimeout(() => {
-        featuredImg.src = data.image;
-        featuredImg.alt = data.name;
-        if (featuredBadge) featuredBadge.textContent = data.badge;
-        if (featuredCategoryTag) featuredCategoryTag.textContent = data.categoryTag;
-        if (featuredName) featuredName.textContent = data.name;
-        if (featuredDesc) featuredDesc.textContent = data.desc;
-        if (featuredCapacity) featuredCapacity.textContent = data.capacity;
-        if (featuredSkill) featuredSkill.textContent = data.skill;
-        if (featuredLength) featuredLength.textContent = data.length;
-        if (featuredStability) featuredStability.textContent = data.stability;
-        if (featuredStabilityFill) featuredStabilityFill.style.width = data.stabilityPercent;
-        if (featuredPrice) featuredPrice.textContent = data.price;
-        if (reserveBoardBtn) reserveBoardBtn.setAttribute('data-board-id', data.id);
-
-        featuredImg.style.opacity = '1';
-        featuredImg.style.transform = 'scale(1)';
-      }, 250);
-    } else {
-      if (featuredImg) featuredImg.src = data.image;
+    const applyBoardData = () => {
       if (featuredBadge) featuredBadge.textContent = data.badge;
       if (featuredCategoryTag) featuredCategoryTag.textContent = data.categoryTag;
       if (featuredName) featuredName.textContent = data.name;
@@ -251,6 +279,26 @@ document.addEventListener('DOMContentLoaded', () => {
       if (featuredStabilityFill) featuredStabilityFill.style.width = data.stabilityPercent;
       if (featuredPrice) featuredPrice.textContent = data.price;
       if (reserveBoardBtn) reserveBoardBtn.setAttribute('data-board-id', data.id);
+      if (featuredIncludedList && data.inclusions) {
+        featuredIncludedList.innerHTML = data.inclusions.map(item => `<li>✓ ${item}</li>`).join('');
+      }
+    };
+
+    if (animate && featuredImg) {
+      featuredImg.style.opacity = '0';
+      featuredImg.style.transform = 'scale(0.97)';
+      
+      setTimeout(() => {
+        featuredImg.src = data.image;
+        featuredImg.alt = data.name;
+        applyBoardData();
+
+        featuredImg.style.opacity = '1';
+        featuredImg.style.transform = 'scale(1)';
+      }, 250);
+    } else {
+      if (featuredImg) featuredImg.src = data.image;
+      applyBoardData();
     }
   };
 

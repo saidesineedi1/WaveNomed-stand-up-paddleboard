@@ -1,4 +1,4 @@
-
+﻿
 
 :root {
   --bg-primary: #F4FAFC;
@@ -446,8 +446,9 @@ html[dir="rtl"] .rtl-btn .rtl-text-rtl {
 .brand-tagline {
   font-size: 0.58rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   color: var(--primary-accent);
+  text-transform: uppercase;
 }
 
 .card-intro {
@@ -922,4 +923,20 @@ html[dir="rtl"] .rtl-btn .rtl-text-rtl {
     align-items: flex-start;
     gap: 0.65rem;
   }
+}
+
+.auth-card .card-brand {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.auth-card .brand-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card .card-intro {
+  text-align: center;
 }

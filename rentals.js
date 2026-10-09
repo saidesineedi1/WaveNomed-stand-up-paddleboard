@@ -71,15 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (siteHeader) {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-      } else {
-        siteHeader.classList.remove('scrolled');
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
       }
+      ticking = false;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHeaderScroll();
   }
 
   if (menuToggle && navMenu) {
@@ -456,16 +462,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const journeySection = document.getElementById('journey');
 
   if (waterlineFill && journeySection) {
-    const onScrollWaterline = () => {
+    let waterTicking = false;
+    const updateWaterline = () => {
       const rect = journeySection.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       if (rect.top < windowHeight && rect.bottom > 0) {
         const progress = Math.min(Math.max((windowHeight - rect.top) / (rect.height + 200), 0.15), 1);
         waterlineFill.style.width = `${progress * 100}%`;
       }
+      waterTicking = false;
     };
-    window.addEventListener('scroll', onScrollWaterline, { passive: true });
-    onScrollWaterline();
+    window.addEventListener('scroll', () => {
+      if (!waterTicking) {
+        window.requestAnimationFrame(updateWaterline);
+        waterTicking = true;
+      }
+    }, { passive: true });
+    updateWaterline();
   }
 
   const reservationModal = document.getElementById('reservation-modal');

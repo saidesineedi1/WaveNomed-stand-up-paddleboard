@@ -152,15 +152,21 @@ function initAboutPage() {
   }
   const siteHeader = document.getElementById('site-header');
   if (siteHeader) {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-      } else {
-        siteHeader.classList.remove('scrolled');
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
       }
+      ticking = false;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHeaderScroll();
   }
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -240,7 +246,58 @@ function initAboutPage() {
       }
     });
   });
+  initAboutHeroGallery();
   initStatCounters();
+}
+
+function initAboutHeroGallery() {
+  const stack = document.getElementById('about-card-stack');
+  const card1 = document.getElementById('about-hero-card-1');
+  const card2 = document.getElementById('about-hero-card-2');
+  const btnLayered = document.getElementById('hero-layout-layered');
+  const btnSplit = document.getElementById('hero-layout-split');
+
+  if (!stack) return;
+
+  const cards = [card1, card2].filter(Boolean);
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const isAlready = card.classList.contains('is-elevated');
+      cards.forEach((c) => c.classList.remove('is-elevated'));
+      if (!isAlready) {
+        card.classList.add('is-elevated');
+      }
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const isAlready = card.classList.contains('is-elevated');
+        cards.forEach((c) => c.classList.remove('is-elevated'));
+        if (!isAlready) {
+          card.classList.add('is-elevated');
+        }
+      }
+    });
+  });
+
+  if (btnLayered && btnSplit) {
+    btnLayered.addEventListener('click', () => {
+      stack.classList.remove('layout-split');
+      btnLayered.classList.add('active');
+      btnLayered.setAttribute('aria-pressed', 'true');
+      btnSplit.classList.remove('active');
+      btnSplit.setAttribute('aria-pressed', 'false');
+    });
+
+    btnSplit.addEventListener('click', () => {
+      stack.classList.add('layout-split');
+      btnSplit.classList.add('active');
+      btnSplit.setAttribute('aria-pressed', 'true');
+      btnLayered.classList.remove('active');
+      btnLayered.setAttribute('aria-pressed', 'false');
+    });
+  }
 }
 if (document.getElementById('about-stats')) {
   initStatCounters();

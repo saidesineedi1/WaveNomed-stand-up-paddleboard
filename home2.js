@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderActions();
   initQuickLaunchCalculator();
   initExperiencePillars();
+  initHorizonRoutePanes();
   initDayFlowSteps();
   initPassesAndAddons();
-  initTelemetryLiveClock();
   initSmoothScroll();
 });
 
@@ -155,16 +155,22 @@ function initHeaderScroll() {
   const header = document.getElementById('site-header');
   if (!header) return;
 
-  const handleScroll = () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+  let ticking = false;
+  const updateHeaderScroll = () => {
+    const isScrolled = window.scrollY > 30;
+    if (header.classList.contains('scrolled') !== isScrolled) {
+      header.classList.toggle('scrolled', isScrolled);
     }
+    ticking = false;
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeaderScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateHeaderScroll();
 }
 
 function initHeaderActions() {
@@ -224,30 +230,58 @@ function initExperiencePillars() {
   const pillarCards = document.querySelectorAll('.exp-pillar-card');
   const hotspotPins = document.querySelectorAll('.hotspot-pin');
 
-  pillarCards.forEach((card, index) => {
-    card.addEventListener('click', () => {
-      pillarCards.forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
+  function activatePillar(pillarId) {
+    if (!pillarId) return;
+    pillarCards.forEach(card => {
+      card.classList.toggle('active', card.getAttribute('data-pillar') === pillarId);
+    });
 
-      if (hotspotPins[index]) {
-        hotspotPins.forEach(p => p.querySelector('.hotspot-dot').style.transform = 'scale(1)');
-        const activeDot = hotspotPins[index].querySelector('.hotspot-dot');
-        if (activeDot) {
-          activeDot.style.transform = 'scale(1.35)';
+    hotspotPins.forEach(pin => {
+      const isMatch = pin.getAttribute('data-pillar') === pillarId;
+      const dot = pin.querySelector('.hotspot-dot');
+      if (dot) {
+        dot.style.transform = isMatch ? 'scale(1.35)' : 'scale(1)';
+        dot.style.boxShadow = isMatch ? '0 0 20px var(--primary-accent), 0 0 40px var(--primary-accent)' : '';
+        if (isMatch) {
           setTimeout(() => {
-            activeDot.style.transform = 'scale(1)';
+            dot.style.transform = 'scale(1)';
+            dot.style.boxShadow = '';
           }, 800);
         }
       }
     });
+  }
+
+  pillarCards.forEach((card, index) => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    const pillarId = card.getAttribute('data-pillar');
+
+    card.addEventListener('click', () => activatePillar(pillarId));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activatePillar(pillarId);
+      }
+    });
   });
 
-  hotspotPins.forEach((pin, index) => {
-    pin.addEventListener('click', () => {
-      if (pillarCards[index]) {
-        pillarCards.forEach(c => c.classList.remove('active'));
-        pillarCards[index].classList.add('active');
-        pillarCards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  hotspotPins.forEach(pin => {
+    const pillarId = pin.getAttribute('data-pillar');
+
+    const handlePinActivation = () => {
+      activatePillar(pillarId);
+      const targetCard = document.querySelector(`.exp-pillar-card[data-pillar="${pillarId}"]`);
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    };
+
+    pin.addEventListener('click', handlePinActivation);
+    pin.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handlePinActivation();
       }
     });
   });
@@ -336,40 +370,7 @@ function initPassesAndAddons() {
   });
 }
 
-function initTelemetryLiveClock() {
-  const timeDisplay = document.getElementById('intel-time-display');
-  const sunsetTimer = document.getElementById('sunset-timer');
 
-  if (!timeDisplay) return;
-
-  function updateTelemetryTime() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-
-    timeDisplay.textContent = `Telemetry Updated: ${hours}:${minutes}:${seconds} (Live)`;
-
-    if (sunsetTimer) {
-
-      const targetSunset = new Date();
-      targetSunset.setHours(18, 45, 0, 0);
-
-      let diffMs = targetSunset - now;
-      if (diffMs < 0) {
-
-        sunsetTimer.textContent = 'Milky Way Night Mode Active';
-      } else {
-        const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-        const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-        sunsetTimer.textContent = `Sunset Alpenglow in ${diffHrs}h ${diffMins}m`;
-      }
-    }
-  }
-
-  updateTelemetryTime();
-  setInterval(updateTelemetryTime, 10000);
-}
 
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -392,3 +393,37 @@ function initSmoothScroll() {
     });
   });
 }
+
+function initHorizonRoutePanes() {
+  const routePanes = document.querySelectorAll('.horizon-route-pane');
+  const horizonWall = document.querySelector('.adventure-horizon-wall');
+  if (!routePanes.length) return;
+
+  routePanes.forEach(pane => {
+    pane.setAttribute('tabindex', '0');
+    pane.setAttribute('role', 'region');
+
+    pane.addEventListener('mouseenter', () => {
+      routePanes.forEach(p => p.classList.remove('active'));
+      pane.classList.add('active');
+    });
+
+    pane.addEventListener('click', (e) => {
+      if (e.target.closest('.route-book-btn')) return;
+      routePanes.forEach(p => p.classList.remove('active'));
+      pane.classList.add('active');
+    });
+
+    pane.addEventListener('focus', () => {
+      routePanes.forEach(p => p.classList.remove('active'));
+      pane.classList.add('active');
+    });
+  });
+
+  if (horizonWall) {
+    horizonWall.addEventListener('mouseleave', () => {
+      routePanes.forEach(p => p.classList.remove('active'));
+    });
+  }
+}
+

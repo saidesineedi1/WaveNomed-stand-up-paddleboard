@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="about.css?v=3">
 </head>
 
 <body class="about-page">
@@ -83,10 +83,6 @@
 
           <li class="nav-item">
             <a href="lessons.html" class="nav-link" id="nav-lessons-link">Lessons &amp; Tours</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="safety.html" class="nav-link" id="nav-safety-link">Safety</a>
           </li>
 
           <li class="nav-item">
@@ -166,21 +162,76 @@
 
           
           <div class="about-hero-left">
+            <div class="hero-cards-ambient-glow" aria-hidden="true"></div>
+
             <div class="about-hero-card-stack" id="about-card-stack"
               aria-label="WaveNomad Stand-Up Paddleboard Experience Imagery">
 
-              
-              <div class="about-hero-card card-item card-1" id="about-hero-card-1">
-                <img src="assets/images/home2-hero-sunset.jpg"
-                  alt="Sunset stand-up paddleboarding across glassy alpine waters" class="hero-card-img" loading="eager"
-                  fetchpriority="high">
+              <div class="hero-layout-toggle-bar" role="group" aria-label="Image Layout Presentation">
+                <button type="button" class="hero-layout-btn active" id="hero-layout-layered" aria-pressed="true" title="Editorial Diptych View">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="3" width="14" height="14" rx="2"></rect>
+                    <rect x="8" y="7" width="14" height="14" rx="2"></rect>
+                  </svg>
+                  <span>Editorial</span>
+                </button>
+                <button type="button" class="hero-layout-btn" id="hero-layout-split" aria-pressed="false" title="Side-by-Side Dual View">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="9" height="16" rx="2"></rect>
+                    <rect x="13" y="4" width="9" height="16" rx="2"></rect>
+                  </svg>
+                  <span>Side-by-Side</span>
+                </button>
               </div>
 
-              
-              <div class="about-hero-card card-item card-2" id="about-hero-card-2">
-                <img src="assets/images/scenic-experience.jpg"
-                  alt="Scenic stand-up paddleboard glide through turquoise alpine waters" class="hero-card-img"
-                  loading="lazy">
+              <div class="about-hero-card card-item card-1" id="about-hero-card-1" tabindex="0" role="region" aria-label="Alpine Sunset Solo Paddleboard Imagery">
+                <div class="card-inner-frame">
+                  <img src="assets/images/home2-hero-sunset.jpg"
+                    alt="Sunset stand-up paddleboarding across glassy alpine waters" class="hero-card-img" loading="eager"
+                    fetchpriority="high">
+                  <div class="card-glass-sheen" aria-hidden="true"></div>
+
+                  <div class="hero-card-floating-badge badge-top-left">
+                    <span class="badge-accent-dot" aria-hidden="true"></span>
+                    <span>Glacial Solitude · 6,220 ft</span>
+                  </div>
+
+                  <div class="hero-card-meta-caption">
+                    <span class="meta-tag">EXPEDITION 01</span>
+                    <span class="meta-title">Alpine Mirror Sanctuary</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-hero-card card-item card-2" id="about-hero-card-2" tabindex="0" role="region" aria-label="Emerald Waters Guided Sunset Fleet Imagery">
+                <div class="card-inner-frame">
+                  <img src="assets/images/scenic-experience.jpg"
+                    alt="Scenic stand-up paddleboard glide through turquoise alpine waters" class="hero-card-img"
+                    loading="lazy">
+                  <div class="card-glass-sheen" aria-hidden="true"></div>
+
+                  <div class="hero-card-floating-badge badge-top-right">
+                    <span class="badge-pulse-glow" aria-hidden="true"></span>
+                    <span>Guided Sunset Fleet</span>
+                  </div>
+
+                  <div class="hero-card-meta-caption">
+                    <span class="meta-tag">EXPEDITION 02</span>
+                    <span class="meta-title">Emerald Cove Navigation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-cards-heritage-pill" id="hero-heritage-seal" aria-hidden="true">
+                <div class="heritage-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div class="heritage-pill-text">
+                  <span class="pill-title">100% 3K Carbon Hull</span>
+                  <span class="pill-sub">Hand-Crafted Rigidity</span>
+                </div>
               </div>
 
             </div>
@@ -266,7 +317,6 @@
         </div>
 
         <script>
-          /* Immediate execution counter runner for hero stats */
           (function () {
             function runHeroCounters() {
               var strip = document.getElementById('about-stats');
@@ -315,184 +365,119 @@
       <div class="about-section-container">
 
         <div class="about-section-header">
-          <div class="section-tag-eyebrow">WHAT DEFINES THE WAVENOMAD STANDARD</div>
+          <div class="section-tag-eyebrow">OUR PURPOSE &amp; GUIDING COMPASS</div>
           <h2 class="about-section-title font-serif">
-            Master-Shaped SUP Rentals, <span class="about-title-accent">Clinics &amp; Guided Tours</span>
+            Driven by Purpose, <span class="about-title-accent">Inspired by Pure Water</span>
           </h2>
           <p class="about-section-desc font-sans">
-            Every paddle stroke is supported by precision equipment, certified instructors, and an unwavering commitment
-            to water stewardship. Here is how we transform your time on the water.
+            At WaveNomad, every expedition is anchored in a higher calling: connecting human beings to natural stillness,
+            advancing lake stewardship, and pioneering the cleanest aquatic glide on alpine waters.
           </p>
         </div>
 
-        <div class="about-pillars-grid">
+        <div class="narrative-showcase">
 
-          
-          <article class="about-pillar-card">
-            <div class="pillar-image-wrap">
-              <img src="assets/images/rentals-fleet.jpg"
-                alt="WaveNomad luxury stand-up paddleboard fleet on wooden dock" loading="lazy">
-              <span class="pillar-badge">FLEET EXCELLENCE</span>
-            </div>
-            <div class="pillar-card-body">
-              <div class="pillar-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M2 12h20M2 12l5-5m-5 5l5 5M22 12l-5-5m5 5l-5 5"></path>
-                </svg>
+          <article class="narrative-row" id="about-mission">
+            <div class="narrative-media-col">
+              <div class="narrative-img-frame">
+                <img src="assets/images/scenic-experience.jpg"
+                  alt="Paddleboarders gliding across crystal emerald lake with mountain reflections"
+                  class="narrative-img" loading="lazy">
+                <div class="narrative-img-vignette"></div>
+                <div class="narrative-floating-badge">
+                  <span class="badge-accent-tag">EST. 2014 // SANCTUARY STANDARD</span>
+                  <span class="badge-title">Pure Glide &amp; Ecological Reverence</span>
+                </div>
               </div>
-              <h3 class="pillar-title font-serif">Premium Stand-Up Paddleboard Rentals</h3>
-              <p class="pillar-text">
-                Unlike mass-market rental outfitters, WaveNomad maintains custom-shaped aerospace carbon touring boards,
-                stability-tuned cruisers, and multi-chamber expedition inflatables. Every rental includes
-                precision-sized
-                carbon fiber paddles, ergonomic USCG life vests, drybags, and dockside water telemetry briefings.
+            </div>
+
+            <div class="narrative-text-col">
+              <div class="narrative-tag">
+                <span class="narrative-tag-dot"></span>
+                <span>OUR GUIDING COMPASS</span>
+              </div>
+              <h3 class="narrative-heading font-serif">
+                Our Mission: <span class="narrative-heading-accent">Transformative Connection</span> on Still Waters
+              </h3>
+              <blockquote class="narrative-lead-quote font-serif">
+                “To make world-class stand-up paddleboarding accessible, safe, and deeply transformative for every explorer.
+                We empower people to unplug from noise, build water confidence, and experience nature's majesty through
+                master-crafted equipment, compassionate guidance, and rigorous lake conservation.”
+              </blockquote>
+              <p class="narrative-body font-sans">
+                Every WaveNomad voyage begins with respect for the alpine elements. From custom-fit carbon touring hulls to
+                one-on-one safety orientations, we believe water has the power to restore peace and vitality. We eliminate
+                the intimidation of water sports through mindful coaching, welcoming both absolute beginners and seasoned
+                distance paddlers into our tranquil mountain sanctuary.
               </p>
-              <ul class="pillar-features-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Pre-calibrated carbon displacement hulls for effortless glide</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Instant contactless smart-dock lockers &amp; warm towel concierge</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Full-day, hourly, and sunset twilight reservation tiers</span>
-                </li>
-              </ul>
-              <a href="rentals.html" class="pillar-link-btn">
-                <span>Explore Board Showroom</span>
-                <span aria-hidden="true">→</span>
-              </a>
+              <div class="narrative-commitments" role="list" aria-label="Mission Commitments">
+                <div class="narrative-pill" role="listitem">
+                  <span class="pill-check-icon" aria-hidden="true">✓</span>
+                  <span>100% Certified Safety Coaches</span>
+                </div>
+                <div class="narrative-pill" role="listitem">
+                  <span class="pill-check-icon" aria-hidden="true">✓</span>
+                  <span>Zero-Waste Dock Operations</span>
+                </div>
+                <div class="narrative-pill" role="listitem">
+                  <span class="pill-check-icon" aria-hidden="true">✓</span>
+                  <span>Inclusive Community Clinics</span>
+                </div>
+              </div>
             </div>
           </article>
 
-          
-          <article class="about-pillar-card">
-            <div class="pillar-image-wrap">
-              <img src="assets/images/lessons-tour.jpg"
-                alt="Certified instructor guiding paddleboarders during scenic clinic" loading="lazy">
-              <span class="pillar-badge">ACADEMY &amp; EXPEDITIONS</span>
-            </div>
-            <div class="pillar-card-body">
-              <div class="pillar-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polygon points="12 6 12 12 16 14"></polygon>
-                </svg>
+          <div class="narrative-divider" aria-hidden="true"></div>
+
+          <article class="narrative-row narrative-row-reverse" id="about-vision">
+            <div class="narrative-media-col">
+              <div class="narrative-img-frame">
+                <img src="assets/images/moment-sunrise-glide.jpg"
+                  alt="Sunrise alpenglow over calm alpine lake as stand-up paddleboarder glides in morning silence"
+                  class="narrative-img" loading="lazy">
+                <div class="narrative-img-vignette"></div>
+                <div class="narrative-floating-badge">
+                  <span class="badge-accent-tag">THE HORIZON AHEAD // 2030 TARGET</span>
+                  <span class="badge-title">Zero-Carbon Fleet &amp; Living Waterways</span>
+                </div>
               </div>
-              <h3 class="pillar-title font-serif">Certified Lessons &amp; Lake Tours</h3>
-              <p class="pillar-text">
-                From your very first stroke to advanced downwind chop navigations, our PSUPA and ACA-certified coaches
-                build intuitive balance, core power, and confident water awareness. Experience calm sunrise progression
-                clinics, gentle SUP yoga sessions, or guided twilight expeditions along towering granite shores.
+            </div>
+
+            <div class="narrative-text-col">
+              <div class="narrative-tag">
+                <span class="narrative-tag-dot"></span>
+                <span>THE HORIZON AHEAD</span>
+              </div>
+              <h3 class="narrative-heading font-serif">
+                Our Vision: <span class="narrative-heading-accent">The Benchmark</span> in Sustainable Aquatic Exploration
+              </h3>
+              <blockquote class="narrative-lead-quote font-serif">
+                “To become the gold standard in human-powered aquatic adventures—fostering a global community of water stewards
+                where sustainable carbon board engineering, real-time alpine telemetry, and restorative wellness converge to
+                protect our planet’s purest water sanctuaries for generations to come.”
+              </blockquote>
+              <p class="narrative-body font-sans">
+                We envision an outdoor recreation model that enriches rather than exploits nature. Through zero-emission solar
+                charging docks, organic bio-composite board development, and volunteer-powered clean lake flotillas, our aim
+                is to leave every shoreline clearer and healthier than we found it, creating a sustainable legacy that endures
+                across generations.
               </p>
-              <ul class="pillar-features-list">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Low 1:4 instructor-to-paddler ratio for personalized coaching</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Bio-mechanical stroke analysis &amp; water safety certifications</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  <span>Scenic naturalist tours through emerald coves and secret lagoons</span>
-                </li>
-              </ul>
-              <a href="lessons.html" class="pillar-link-btn">
-                <span>View Lesson Progression</span>
-                <span aria-hidden="true">→</span>
-              </a>
+              <div class="narrative-commitments" role="list" aria-label="Vision Commitments">
+                <div class="narrative-pill" role="listitem">
+                  <span class="pill-check-icon" aria-hidden="true">✓</span>
+                  <span>Solar-Powered Smart Concierge</span>
+                </div>
+                <div class="narrative-pill" role="listitem">
+                  <span class="pill-check-icon" aria-hidden="true">✓</span>
+                  <span>Clean Lake Flotilla Drives</span>
+                </div>
+                <div class="narrative-pill" role="listitem">
+                  <span class="pill-check-icon" aria-hidden="true">✓</span>
+                  <span>Bio-Composite SUP Innovation</span>
+                </div>
+              </div>
             </div>
           </article>
-
-        </div>
-
-        
-        <div class="mission-vision-wrapper">
-
-          
-          <div class="mv-card mission-card">
-            <div class="mv-card-header">
-              <div class="mv-badge-pill">OUR GUIDING COMPASS</div>
-              <div class="mv-icon-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                  </polygon>
-                </svg>
-              </div>
-            </div>
-            <h3 class="mv-title font-serif">Our Mission</h3>
-            <p class="mv-statement font-sans">
-              "To make world-class stand-up paddleboarding accessible, safe, and deeply transformative for every
-              explorer.
-              We empower people to unplug from noise, build water confidence, and experience nature's majesty through
-              master-crafted equipment, compassionate guidance, and rigorous lake conservation."
-            </p>
-            <div class="mv-commitments">
-              <div class="mv-pill">100% Certified Safety Coaches</div>
-              <div class="mv-pill">Zero-Waste Dock Operations</div>
-              <div class="mv-pill">Inclusive Community Clinics</div>
-            </div>
-          </div>
-
-          
-          <div class="mv-card vision-card">
-            <div class="mv-card-header">
-              <div class="mv-badge-pill">THE HORIZON AHEAD</div>
-              <div class="mv-icon-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </div>
-            </div>
-            <h3 class="mv-title font-serif">Our Vision</h3>
-            <p class="mv-statement font-sans">
-              "To become the gold standard in human-powered aquatic adventures—fostering a global community of water
-              stewards
-              where sustainable carbon board engineering, real-time alpine telemetry, and restorative wellness converge
-              to
-              protect our planet’s purest water sanctuaries for generations to come."
-            </p>
-            <div class="mv-commitments">
-              <div class="mv-pill">Solar-Powered Smart Concierge</div>
-              <div class="mv-pill">Clean Lake Flotilla Drives</div>
-              <div class="mv-pill">Bio-Composite SUP Innovation</div>
-            </div>
-          </div>
 
         </div>
 
@@ -984,7 +969,6 @@
             <li><a href="about.html" class="footer-link active"
                 style="color: var(--primary-accent); font-weight: 700;">About Us</a></li>
             <li><a href="rentals.html" class="footer-link">Fleet Rentals</a></li>
-            <li><a href="safety.html" class="footer-link">Safety &amp; Telemetry</a></li>
           </ul>
         </div>
 
@@ -995,7 +979,7 @@
             <li><a href="rentals.html" class="footer-link">Inflatable Expedition Kits</a></li>
             <li><a href="lessons.html" class="footer-link">Guided Sunset Excursions</a></li>
             <li><a href="lessons.html" class="footer-link">PSUPA Coaching Clinics</a></li>
-            <li><a href="safety.html" class="footer-link">Contactless Dock Lockers</a></li>
+            <li><a href="rentals.html" class="footer-link">Contactless Dock Lockers</a></li>
           </ul>
         </div>
 
@@ -1003,7 +987,6 @@
           <h4 class="footer-col-title">Additional Links</h4>
           <ul class="footer-links-list">
             <li><a href="rentals.html" class="footer-link">Fleet Rates &amp; Pricing</a></li>
-            <li><a href="safety.html" class="footer-link">Safety &amp; Conditions</a></li>
             <li><a href="contact.html" class="footer-link">Contact Us</a></li>
             <li><a href="404.html" class="footer-link">404 Error Page</a></li>
             <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
@@ -1069,18 +1052,18 @@
         </span>
 
         <div class="footer-bottom-links">
-          <a href="safety.html" class="footer-sublink">Terms &amp; Conditions</a>
+          <a href="#" class="footer-sublink">Terms &amp; Conditions</a>
           <span class="footer-sublink-sep">/</span>
-          <a href="safety.html" class="footer-sublink">Privacy Policy</a>
+          <a href="#" class="footer-sublink">Privacy Policy</a>
           <span class="footer-sublink-sep">/</span>
-          <a href="safety.html" class="footer-sublink">Cookie Policy</a>
+          <a href="#" class="footer-sublink">Cookie Policy</a>
         </div>
       </div>
 
     </div>
   </footer>
 
-  <script src="about.js?v=2"></script>
+  <script src="about.js?v=3"></script>
 </body>
 
 </html>

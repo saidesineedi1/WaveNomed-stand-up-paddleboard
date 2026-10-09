@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -437,6 +437,7 @@
                         Individualized guidance in pristine alpine conditions with PSUPA-certified instructors and safety boat coverage.
                     </p>
 
+                    <!-- Luminous Trust Guarantee Strip -->
                     <div class="lessons-trust-strip" role="list" aria-label="Academy Standards">
                         <div class="trust-badge-item" role="listitem">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -457,8 +458,10 @@
                     </div>
                 </div>
 
+                <!-- Unified Screen-Fitting Studio Console -->
                 <div class="lessons-studio-console" id="lessons-studio-console">
 
+                    <!-- Left: Cinema Showcase Stage -->
                     <div class="studio-cinema-stage" id="studio-cinema-stage">
                         <div class="studio-media-backdrop">
                             <img id="studio-media-img" src="assets/images/lesson-beginner-hero.jpg" alt="SUP Fundamentals clinic on alpine bay" class="studio-img-active">
@@ -514,8 +517,10 @@
                         </div>
                     </div>
 
+                    <!-- Right: Interactive Luxury Program Deck -->
                     <div class="studio-program-deck" role="tablist" aria-label="Signature Programs and Excursions">
 
+                        <!-- Rail 01 -->
                         <button type="button" class="studio-program-rail active" role="tab" aria-selected="true" id="rail-prog-0"
                             data-title="SUP Fundamentals"
                             data-duration="90 MINS CLINIC"
@@ -547,6 +552,7 @@
                             <div class="rail-active-glow"></div>
                         </button>
 
+                        <!-- Rail 02 -->
                         <button type="button" class="studio-program-rail" role="tab" aria-selected="false" id="rail-prog-1"
                             data-title="Alpine Cove Discovery"
                             data-duration="2.5 HOURS TOUR"
@@ -578,6 +584,7 @@
                             <div class="rail-active-glow"></div>
                         </button>
 
+                        <!-- Rail 03 -->
                         <button type="button" class="studio-program-rail" role="tab" aria-selected="false" id="rail-prog-2"
                             data-title="Floating SUP Yoga"
                             data-duration="75 MINS FLOW"
@@ -609,6 +616,7 @@
                             <div class="rail-active-glow"></div>
                         </button>
 
+                        <!-- Rail 04 -->
                         <button type="button" class="studio-program-rail" role="tab" aria-selected="false" id="rail-prog-3"
                             data-title="Cadence &amp; Race Mastery"
                             data-duration="2 HOURS ADVANCED"
@@ -1159,6 +1167,7 @@
             <div class="section-container">
                 <div class="safety-showcase-grid">
 
+                    <!-- Left Column: Rich Narrative & Protocols -->
                     <div class="safety-content-col">
                         <div class="safety-header-group">
                             <span class="section-eyebrow">UNCOMPROMISING WATER PROTOCOLS &middot; ALPINE READINESS</span>
@@ -1168,6 +1177,7 @@
                             </p>
                         </div>
 
+                        <!-- 3 Luxury Protocol Spec Strips -->
                         <div class="safety-pillars-stack">
                             <div class="safety-pillar-row">
                                 <div class="pillar-icon-box" aria-hidden="true">
@@ -1220,6 +1230,7 @@
                             </div>
                         </div>
 
+                        <!-- Bottom Action & Reassurance Bar -->
                         <div class="safety-footer-action-bar">
                             <a href="#rentals" class="cta-pill-primary">
                                 <span>Explore Certified Fleet</span>
@@ -1238,9 +1249,11 @@
                         </div>
                     </div>
 
+                    <!-- Right Column: Unique 2-Image Flush Composition -->
                     <div class="safety-media-col" aria-label="Expedition safety readiness imagery">
                         <div class="safety-dual-canvas-frame">
 
+                            <!-- Image 1: Primary Dock Readiness Vista -->
                             <div class="safety-canvas-primary">
                                 <img src="assets/images/safety-readiness-dock.jpg"
                                     alt="Certified paddler with life jacket and carbon paddleboard on alpine lake dock"
@@ -1252,6 +1265,7 @@
                                 </div>
                             </div>
 
+                            <!-- Image 2: Overlapping Emerald Cove Action Vista -->
                             <div class="safety-canvas-secondary">
                                 <img src="assets/images/moment-cove-explore.jpg"
                                     alt="Paddlers exploring crystal clear emerald waters between granite cliffs"
@@ -1263,6 +1277,7 @@
                                 </div>
                             </div>
 
+                            <!-- Floating Glass Badge (Top Right) -->
                             <div class="safety-floating-badge badge-top-right">
                                 <div class="badge-icon-circle">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1275,6 +1290,7 @@
                                 </div>
                             </div>
 
+                            <!-- Floating Glass Stat Card (Bottom Left) -->
                             <div class="safety-floating-stat-card card-bottom-left">
                                 <div class="stat-big-val font-serif">&lt; 3.5m</div>
                                 <div class="stat-small-lbl">Zodiac Response Radius</div>
@@ -2597,6 +2613,23 @@
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    let report = [];
+    report.push('window.innerWidth: ' + window.innerWidth);
+    report.push('scrollWidth: ' + document.documentElement.scrollWidth);
+    const elements = document.querySelectorAll('*');
+    for (let el of elements) {
+        const rect = el.getBoundingClientRect();
+        if (rect.right > window.innerWidth + 2) {
+            report.push('OVERFLOW: ' + el.tagName + ' | class=' + el.className + ' | id=' + el.id + ' | right=' + Math.round(rect.right) + ' | width=' + Math.round(rect.width));
+        }
+    }
+    const div = document.createElement('div');
+    div.id = 'overflow-report-data';
+    div.innerText = report.join('\n');
+    document.body.appendChild(div);
+});
+</script></body>
 
 </html>

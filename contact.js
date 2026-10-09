@@ -76,15 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const home2Option = document.getElementById('home2-option');
 
   if (siteHeader) {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-      } else {
-        siteHeader.classList.remove('scrolled');
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
       }
+      ticking = false;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHeaderScroll();
   }
 
   if (homeDropdownBtn && homeDropdownItem) {

@@ -8,10 +8,10 @@
 }
 
 .details-container {
-  width: 100%;
-  max-width: var(--site-max-width, 1340px);
-  margin: 0 auto;
-  padding: 0 var(--site-gutter, 2rem);
+  width: min(100% - 2 * var(--page-gutter), var(--container-max));
+  margin-inline: auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .text-center {

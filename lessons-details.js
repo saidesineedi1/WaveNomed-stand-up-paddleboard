@@ -505,15 +505,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const siteHeader = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    if (siteHeader) {
-      if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-      } else {
-        siteHeader.classList.remove('scrolled');
+  if (siteHeader) {
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
       }
-    }
-  }, { passive: true });
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHeaderScroll();
+  }
 
   const homeDropdownItem = document.getElementById('home-dropdown-item');
   const homeDropdownBtn = document.getElementById('home-dropdown-btn');

@@ -7,9 +7,10 @@
 }
 
 .contact-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
+  width: min(100% - 2 * var(--page-gutter), var(--container-max));
+  margin-inline: auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .hero-headline-accent,
@@ -24,7 +25,11 @@
 
 .contact-section-wrap {
   position: relative;
-  padding: 7rem var(--site-gutter);
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }
 
 .contact-section-wrap.alt-bg {
@@ -81,19 +86,19 @@
 
 .contact-hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 84vh;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  padding-top: 0;
+  padding-top: var(--header-height);
+  box-sizing: border-box;
 }
 
 @media (min-width: 1121px) {
   .contact-hero-section {
-    height: 100vh;
-    min-height: 680px;
+    min-height: 640px;
     max-height: 1080px;
   }
 }
@@ -121,15 +126,15 @@
 .contact-hero-inner {
   position: relative;
   z-index: 5;
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 8.5rem var(--site-gutter) 1.5rem;
+  width: min(100% - 2 * var(--page-gutter), var(--container-max));
+  margin-inline: auto;
+  padding: 1.5rem 0 2rem;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 3.5rem;
   flex-grow: 1;
+  box-sizing: border-box;
 }
 
 .contact-hero-content {
@@ -1235,7 +1240,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 3.25rem var(--site-gutter);
+  padding: 3.25rem 0;
 }
 
 .final-connection-canvas {
@@ -1268,6 +1273,10 @@
 .final-connection-container {
   position: relative;
   z-index: 4;
+  width: min(100% - 2 * var(--page-gutter), var(--container-max));
+  margin-inline: auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .final-connection-card {
@@ -1338,7 +1347,7 @@
 @media (max-width: 1120px) {
   .contact-hero-inner {
     grid-template-columns: 1fr;
-    padding-top: 8rem;
+    padding-top: 3.5rem;
     gap: 3.5rem;
   }
 
@@ -1436,7 +1445,7 @@
 
 @media (max-width: 860px) {
   .contact-section-wrap {
-    padding: 5rem var(--site-gutter);
+    padding: 5rem 0;
   }
 
   .contact-options-grid {

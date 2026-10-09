@@ -61,15 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (siteHeader) {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-      } else {
-        siteHeader.classList.remove('scrolled');
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
       }
+      ticking = false;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHeaderScroll();
   }
 
   if (menuToggle && navMenu) {
@@ -310,17 +316,114 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const guidesShowcaseEl = document.getElementById('guides-showcase');
+  let guideTimer = null;
+  const GUIDE_AUTOPLAY_INTERVAL = 2000;
+  let isGuideHovered = false;
+
+  const startGuideAutoScroll = () => {
+    if (guideTimer) clearInterval(guideTimer);
+    guideTimer = setInterval(() => {
+      if (!isGuideHovered && !document.hidden) {
+        updateGuide(currentGuideIndex + 1);
+      }
+    }, GUIDE_AUTOPLAY_INTERVAL);
+  };
+
+  const stopGuideAutoScroll = () => {
+    if (guideTimer) {
+      clearInterval(guideTimer);
+      guideTimer = null;
+    }
+  };
+
+  const resetGuideAutoScroll = () => {
+    stopGuideAutoScroll();
+    startGuideAutoScroll();
+  };
+
+  if (guidesShowcaseEl) {
+    guidesShowcaseEl.addEventListener('mouseenter', () => {
+      isGuideHovered = true;
+    });
+    guidesShowcaseEl.addEventListener('mouseleave', () => {
+      isGuideHovered = false;
+    });
+    guidesShowcaseEl.addEventListener('touchstart', () => {
+      isGuideHovered = true;
+    }, { passive: true });
+    guidesShowcaseEl.addEventListener('touchend', () => {
+      setTimeout(() => { isGuideHovered = false; }, 2000);
+    }, { passive: true });
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopGuideAutoScroll();
+    } else {
+      startGuideAutoScroll();
+    }
+  });
+
+  startGuideAutoScroll();
+
   guideAvatarBtns.forEach((btn, idx) => {
-    btn.addEventListener('click', () => updateGuide(idx));
+    btn.addEventListener('click', () => {
+      updateGuide(idx);
+      resetGuideAutoScroll();
+    });
   });
 
   if (guidePrevBtn) {
-    guidePrevBtn.addEventListener('click', () => updateGuide(currentGuideIndex - 1));
+    guidePrevBtn.addEventListener('click', () => {
+      updateGuide(currentGuideIndex - 1);
+      resetGuideAutoScroll();
+    });
   }
 
   if (guideNextBtn) {
-    guideNextBtn.addEventListener('click', () => updateGuide(currentGuideIndex + 1));
+    guideNextBtn.addEventListener('click', () => {
+      updateGuide(currentGuideIndex + 1);
+      resetGuideAutoScroll();
+    });
   }
+
+  const safetyPins = document.querySelectorAll('.safety-hotspot-pin');
+  const safetyCards = document.querySelectorAll('.safety-tool-card');
+
+  const highlightSafetyTool = (toolId) => {
+    if (!toolId) return;
+    safetyPins.forEach(pin => {
+      pin.classList.toggle('active', pin.getAttribute('data-tool') === toolId);
+    });
+    safetyCards.forEach(card => {
+      card.classList.toggle('active', card.getAttribute('data-tool') === toolId);
+    });
+  };
+
+  safetyPins.forEach(pin => {
+    const tool = pin.getAttribute('data-tool');
+    pin.addEventListener('mouseenter', () => highlightSafetyTool(tool));
+    pin.addEventListener('click', () => highlightSafetyTool(tool));
+    pin.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        highlightSafetyTool(tool);
+      }
+    });
+  });
+
+  safetyCards.forEach(card => {
+    const tool = card.getAttribute('data-tool');
+    card.addEventListener('mouseenter', () => highlightSafetyTool(tool));
+    card.addEventListener('click', () => highlightSafetyTool(tool));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        highlightSafetyTool(tool);
+      }
+    });
+  });
 
   const experiencePills = document.querySelectorAll('.config-group[data-group="goal"] .config-pill-btn');
   const levelPills = document.querySelectorAll('.config-group[data-group="level"] .config-pill-btn');

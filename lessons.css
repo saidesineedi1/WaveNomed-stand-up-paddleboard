@@ -8,7 +8,11 @@
 
 .lessons-section-wrap {
   position: relative;
-  padding: 6.5rem var(--site-gutter);
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }
 
 .lessons-section-wrap.alt-bg {
@@ -16,9 +20,10 @@
 }
 
 .lessons-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 100%;
+  width: min(100% - 2 * var(--page-gutter), var(--container-max));
+  margin-inline: auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .section-tag-eyebrow {
@@ -82,12 +87,13 @@
 
 .lessons-hero {
   position: relative;
-  min-height: 94vh;
+  min-height: 84vh;
   display: flex;
   align-items: center;
-  padding: 7.5rem var(--site-gutter) 5rem;
+  padding: calc(var(--header-height) + 2rem) 0 4rem;
   background: var(--bg-primary);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .hero-ambient-glow {
@@ -100,6 +106,7 @@
   filter: blur(60px);
   pointer-events: none;
   z-index: 1;
+  transform: translateZ(0);
 }
 
 [data-theme="dark"] .hero-ambient-glow {
@@ -1832,3 +1839,512 @@
   margin-left: 0.6rem;
   margin-right: 0;
 }
+
+.safety-standards-section {
+  padding: clamp(2.5rem, 4.5vh, 3.5rem) 0;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 80px;
+}
+
+.safety-lessons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 2.75rem;
+  align-items: stretch;
+  min-height: 520px;
+}
+
+.safety-interactive-stage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.safety-equipment-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-elevated);
+  background: #081721;
+}
+
+.safety-equipment-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.safety-equipment-frame:hover .safety-equipment-img {
+  transform: scale(1.04);
+}
+
+.safety-equipment-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 65% 55%, rgba(5, 16, 23, 0.05) 0%, rgba(5, 16, 23, 0.45) 80%, rgba(5, 16, 23, 0.75) 100%),
+              linear-gradient(180deg, rgba(5, 16, 23, 0.25) 0%, transparent 40%, rgba(5, 16, 23, 0.6) 100%);
+  pointer-events: none;
+}
+
+.safety-hotspot-pin {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(21, 151, 184, 0.25);
+  border: 1.5px solid #20B8D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.safety-hotspot-pin:focus-visible {
+  box-shadow: 0 0 0 4px rgba(32, 184, 209, 0.5);
+}
+
+.safety-hotspot-pin .hotspot-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(32, 184, 209, 0.45);
+  animation: hotspotPing 2.2s infinite cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.safety-hotspot-pin .hotspot-dot {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #FFFFFF;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.safety-hotspot-pin:hover,
+.safety-hotspot-pin.active {
+  background: #20B8D1;
+  border-color: #FFFFFF;
+  transform: translate(-50%, -50%) scale(1.22);
+  box-shadow: 0 0 20px rgba(32, 184, 209, 0.85);
+}
+
+.safety-hotspot-pin.active .hotspot-dot {
+  transform: rotate(45deg);
+}
+
+.safety-hotspot-pin .hotspot-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(6, 21, 31, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(32, 184, 209, 0.4);
+  color: #FFFFFF;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+}
+
+.safety-hotspot-pin .hotspot-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(6, 21, 31, 0.92) transparent transparent transparent;
+}
+
+.safety-hotspot-pin:hover .hotspot-tooltip,
+.safety-hotspot-pin.active .hotspot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes hotspotPing {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  70% { transform: scale(1.9); opacity: 0; }
+  100% { transform: scale(2.1); opacity: 0; }
+}
+
+.safety-stage-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 12px;
+  background: rgba(7, 24, 35, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+[dir="rtl"] .safety-stage-badge {
+  left: auto;
+  right: 1.25rem;
+}
+
+.stage-beacon-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10B981;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.stage-beacon-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #10B981;
+  opacity: 0.45;
+  animation: pulsePing 2s infinite ease-out;
+}
+
+.stage-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-badge-name {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--primary-accent);
+  line-height: 1.2;
+}
+
+.stage-badge-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.safety-interactive-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.safety-lessons-header-group {
+  margin-bottom: 0.85rem;
+}
+
+.safety-lessons-header-group .lessons-headline {
+  font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-text);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.015em;
+}
+
+.safety-lessons-lead {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--secondary-text);
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.safety-tool-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0.95rem 0 1.15rem;
+}
+
+.safety-tool-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.55rem 0.95rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-subtle);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+.safety-tool-card:hover,
+.safety-tool-card:focus-visible,
+.safety-tool-card.active {
+  transform: translateX(5px);
+  border-color: var(--primary-accent);
+  box-shadow: var(--shadow-elevated), 0 0 16px rgba(21, 151, 184, 0.2);
+  background: linear-gradient(135deg, var(--surface-card) 0%, rgba(21, 151, 184, 0.05) 100%);
+}
+
+[dir="rtl"] .safety-tool-card:hover,
+[dir="rtl"] .safety-tool-card:focus-visible,
+[dir="rtl"] .safety-tool-card.active {
+  transform: translateX(-5px);
+}
+
+.safety-tool-card.active {
+  border-color: var(--primary-accent);
+  border-left: 3px solid var(--primary-accent);
+}
+
+[dir="rtl"] .safety-tool-card.active {
+  border-left: 1px solid var(--primary-accent);
+  border-right: 3px solid var(--primary-accent);
+}
+
+.tool-card-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--soft-accent);
+  border: 1px solid rgba(21, 151, 184, 0.25);
+  color: var(--primary-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.safety-tool-card:hover .tool-card-icon-box,
+.safety-tool-card.active .tool-card-icon-box {
+  background: var(--primary-accent);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.tool-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.tool-card-top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.tool-title-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.tool-code-tag {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--primary-accent);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.tool-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.pillar-tag {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.16rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(21, 151, 184, 0.1);
+  color: var(--primary-accent);
+  border: 1px solid rgba(21, 151, 184, 0.25);
+  white-space: nowrap;
+}
+
+.pillar-tag.telemetry-tag {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.pillar-tag.gate-tag {
+  background: rgba(245, 158, 11, 0.1);
+  color: #D97706;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+[data-theme="dark"] .pillar-tag.gate-tag {
+  color: #FBBF24;
+}
+
+.tool-card-desc {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.safety-lessons-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.safety-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  background: var(--primary-accent);
+  color: var(--btn-text);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(21, 151, 184, 0.25);
+  transition: var(--transition-smooth);
+}
+
+.safety-cta-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(21, 151, 184, 0.35);
+  color: var(--btn-text);
+}
+
+.safety-guarantee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.safety-guarantee-badge .guarantee-beacon {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10B981;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.safety-guarantee-badge .guarantee-beacon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #10B981;
+  opacity: 0.45;
+  animation: pulsePing 2s infinite ease-out;
+}
+
+.safety-guarantee-badge .guarantee-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.safety-guarantee-badge .guarantee-text strong {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  line-height: 1.2;
+}
+
+.safety-guarantee-badge .guarantee-text span {
+  font-size: 0.66rem;
+  color: var(--secondary-text);
+  line-height: 1.2;
+}
+
+.guide-avatar-btn.active {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(21, 151, 184, 0.35);
+  transform: scale(1.1);
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .safety-lessons-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    min-height: auto;
+  }
+
+  .safety-equipment-frame {
+    min-height: 400px;
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .safety-equipment-frame {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .safety-hotspot-pin {
+    width: 28px;
+    height: 28px;
+  }
+
+  .safety-hotspot-pin .hotspot-dot {
+    font-size: 0.95rem;
+  }
+
+  .safety-lessons-action-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+}
+

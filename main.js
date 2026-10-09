@@ -70,15 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (siteHeader) {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        siteHeader.classList.add('scrolled');
-      } else {
-        siteHeader.classList.remove('scrolled');
+    let ticking = false;
+    const updateHeaderScroll = () => {
+      const isScrolled = window.scrollY > 30;
+      if (siteHeader.classList.contains('scrolled') !== isScrolled) {
+        siteHeader.classList.toggle('scrolled', isScrolled);
       }
+      ticking = false;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateHeaderScroll();
   }
 
   const applyDirection = (isRtl) => {
@@ -337,6 +343,75 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const studioRails = document.querySelectorAll('.studio-program-rail');
+  const studioImg = document.getElementById('studio-media-img');
+  const studioDuration = document.getElementById('studio-cur-duration');
+  const studioSkill = document.getElementById('studio-cur-skill');
+  const studioCapacity = document.getElementById('studio-cur-capacity');
+  const studioTitle = document.getElementById('studio-cur-title');
+  const studioDesc = document.getElementById('studio-cur-desc');
+  const studioH1 = document.getElementById('studio-h1');
+  const studioH2 = document.getElementById('studio-h2');
+  const studioH3 = document.getElementById('studio-h3');
+  const studioPrice = document.getElementById('studio-cur-price');
+  const studioCtaText = document.getElementById('studio-cta-text');
+
+  if (studioRails.length > 0) {
+    studioRails.forEach(rail => {
+      const activateRail = () => {
+        if (rail.classList.contains('active')) return;
+
+        studioRails.forEach(r => {
+          r.classList.remove('active');
+          r.setAttribute('aria-selected', 'false');
+        });
+
+        rail.classList.add('active');
+        rail.setAttribute('aria-selected', 'true');
+
+        const title = rail.getAttribute('data-title');
+        const duration = rail.getAttribute('data-duration');
+        const skill = rail.getAttribute('data-skill');
+        const capacity = rail.getAttribute('data-capacity');
+        const price = rail.getAttribute('data-price');
+        const desc = rail.getAttribute('data-desc');
+        const img = rail.getAttribute('data-img');
+        const cta = rail.getAttribute('data-cta');
+        const h1 = rail.getAttribute('data-h1');
+        const h2 = rail.getAttribute('data-h2');
+        const h3 = rail.getAttribute('data-h3');
+
+        if (studioImg && img) {
+          studioImg.classList.add('stage-transitioning');
+          setTimeout(() => {
+            studioImg.src = img;
+            studioImg.alt = `${title} session on alpine lake`;
+            studioImg.classList.remove('stage-transitioning');
+          }, 180);
+        }
+
+        if (studioDuration) studioDuration.textContent = duration;
+        if (studioSkill) studioSkill.textContent = skill;
+        if (studioCapacity) studioCapacity.textContent = capacity;
+        if (studioTitle) studioTitle.textContent = title;
+        if (studioDesc) studioDesc.textContent = desc;
+        if (studioPrice) studioPrice.textContent = price;
+        if (studioCtaText) studioCtaText.textContent = cta || 'Book Lesson';
+        if (studioH1 && h1) studioH1.textContent = h1;
+        if (studioH2 && h2) studioH2.textContent = h2;
+        if (studioH3 && h3) studioH3.textContent = h3;
+      };
+
+      rail.addEventListener('click', activateRail);
+      rail.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activateRail();
+        }
+      });
+    });
+  }
 
   const footerHome1Trigger = document.querySelector('.footer-home1-trigger');
   const footerHome2Trigger = document.querySelector('.footer-home2-trigger');
